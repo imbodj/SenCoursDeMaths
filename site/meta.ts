@@ -60,11 +60,11 @@ interface SiteMeta {
  * @type {SiteMeta}
  */
 export const siteMeta: SiteMeta = {
-  title: 'agreg.skyost.eu',
-  description: 'Petit site contenant une flopée de ressources pour l\'agrégation de mathématiques : plans, développements, bibliographie, ...',
-  url: 'https://agreg.skyost.eu',
+  title:  'SenCoursDeMaths',
+  description: 'Petit site contenant une flopée de ressources pour les élèves de Terminales: leçons, exercices, exemples d\'évaluations, ...',
+  url: 'https://sen-coursdemaths.example',
   github: {
-    username: 'Skyost',
-    repository: 'Agregation',
+    username:  'imbodj',
+    repository: 'SenCoursDeMaths',
   },
 }

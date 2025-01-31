@@ -16,7 +16,7 @@ import { siteMeta } from '~/site/meta'
         >
           <h2>Copyright</h2>
           <p>
-            Copyright &copy; 2021 - <a href="https://skyost.eu">Hugo Delaunay</a>. Tous droits réservés.
+            Copyright &copy; 2021 - <a href="https://sen-coursdemaths.example">Ismaila Mbodji</a>. Tous droits réservés.
             <current-commit-sha />
           </p>
           <p class="mb-0">
@@ -90,14 +90,7 @@ import { siteMeta } from '~/site/meta'
         </b-col>
       </b-row>
       <div class="text-center mt-4">
-        <a href="https://discord.gg/4eKrcDqd">
-          <img
-            class="discord"
-            src="/images/social/discord.svg"
-            alt="Discord"
-            title="Rejoins notre Discord !"
-          >
-        </a>
+        
       </div>
     </b-container>
   </footer>

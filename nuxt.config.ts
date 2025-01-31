@@ -106,9 +106,9 @@ export default defineNuxtConfig({
       '/latex/templates/gathering.tex',
       '/latex/templates/tikzpicture.tex',
     ],
-    experimental: {
-      search: true,
-    },
+    //experimental: {
+     // search: true,
+   // },
   },
 
   googleFonts: {
@@ -118,6 +118,7 @@ export default defineNuxtConfig({
       'Noto Sans JP': true,
     },
   },
+  
 
   site: {
     url: siteMeta.url,
