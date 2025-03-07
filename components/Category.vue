@@ -7,9 +7,9 @@ const name = computed<string>(() => {
     case undefined:
       return 'Toutes les catégories'
     case 'algebra':
-      return 'Algèbre'
+      return 'Terminale'
     case 'analysis':
-      return 'Analyse'
+      return 'Première'
     default:
       return props.category
   }
