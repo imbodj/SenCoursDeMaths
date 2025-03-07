@@ -1,10 +1,10 @@
 <template>
   <header id="page-header">
     <b-container>
-      <h1>Agrégation</h1>
+      <h1>Sen Cours De Maths</h1>
       <hr>
       <p class="mb-0">
-        Plans et développements pour l'agrégation de mathématiques 2024.
+        Plans, fiches et exercices pour les mathématiques au lycée.
       </p>
     </b-container>
   </header>
