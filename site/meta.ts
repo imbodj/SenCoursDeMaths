@@ -42,11 +42,12 @@ interface SiteMeta {
  * The metadata for the site.
  */
 export const siteMeta: SiteMeta = {
-  title: 'agreg.skyost.eu',
-  description: 'Petit site contenant une flopée de ressources pour l\'agrégation de mathématiques : plans, développements, bibliographie, ...',
-  url: 'https://agreg.skyost.eu',
+  title: 'SenCoursDeMaths',
+  description: 'Petit site contenant une flopée de ressources pour les mathématiques au secondaire : plans, développements, bibliographie, ...',
+  url: 'https://imbodj.github.io/SenCoursDeMaths',
   github: {
-    username: 'Skyost',
-    repository: 'Agregation',
+    username: 'imbodj',
+    repository: 'SenCoursDeMaths',
   },
 }
+
