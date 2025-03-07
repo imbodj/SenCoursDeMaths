@@ -3,15 +3,15 @@
 Bonjour et bienvenue sur ce site où je mettrai tout un tas de ressources concernant  les mathématiques. au  lycée
 Vous trouverez donc sur ce site :
 
-* Mes [plans](https://imbodj.github.io/SenCoursDeMaths/lecons/) de leçons. Par manque de temps, et / ou d'envie, et / ou d'appétence, j'ai fait l'impasse sur certaines leçons.
+* Mes [plans](https://sencoursdemaths.vercel.app/lecons/) de leçons. Par manque de temps, et / ou d'envie, et / ou d'appétence, j'ai fait l'impasse sur certaines leçons.
 
-* Mon choix de [developpements](https://imbodj.github.io/SenCoursDeMaths/developpements/).
+* Mon choix de [developpements](https://sencoursdemaths.vercel.app/developpements/).
 
-* Quelques [fiches](https://imbodj.github.io/SenCoursDeMaths/fiches/) de leçons.
+* Quelques [fiches](https://sencoursdemaths.vercel.app/fiches/) de leçons.
 
-* Ma [bibliographie](https://imbodj.github.io/SenCoursDeMaths//bibliographie/) personnelle.
+* Ma [bibliographie](https://sencoursdemaths.vercel.app/bibliographie/) personnelle.
 
-* Une liste personnelle de [conseils généraux](https://imbodj.github.io/SenCoursDeMaths/fiches/conseils-generaux/) pour bien étudier les mathématiques
+* Une liste personnelle de [conseils généraux](https://sencoursdemaths.vercel.app/fiches/conseils-generaux/) pour bien étudier les mathématiques
 
 En espérant que le contenu de ce site vous aide dans votre cursus au lycée. Si vous avez une quelconque remarque
 / idée / correction à me soumettre, vous pouvez me contacter via [le formulaire](https://skyost.eu/fr/#contact) présent sur mon site.

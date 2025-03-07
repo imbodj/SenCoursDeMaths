@@ -27,9 +27,16 @@ export default defineNuxtModule({
     const resolver = createResolver(import.meta.url)
     const srcDir = nuxt.options.srcDir
 
-    // Retrieve commit hash information.
-    const long = execSync('git rev-parse HEAD', { cwd: srcDir }).toString().trim()
-    const short = execSync('git rev-parse --short HEAD', { cwd: srcDir }).toString().trim()
+    let long = 'unknown'
+    let short = 'unknown'
+
+    try {
+      // Retrieve commit hash information.
+      long = execSync('git rev-parse HEAD', { cwd: srcDir }).toString().trim()
+      short = execSync('git rev-parse --short HEAD', { cwd: srcDir }).toString().trim()
+    } catch (error) {
+      logger.warn('⚠️ Impossible de récupérer le commit SHA (Git non disponible)')
+    }
 
     // Write commit information to file.
     const destinationDirectoryPath = resolver.resolve(nuxt.options.srcDir, 'node_modules', `.${name}`)

@@ -63,8 +63,7 @@ export const usePdfBanner = (url: string) => useBanner({
  */
 export const useCaveatsBanner = (url: string) => useBanner({
   type: BannerType.caveats,
-  message: `Pour signaler une erreur ou suggérer une amélioration, vous pouvez modifier
-  le <a href="${url}">code source</a> de la page, ou me <a href="https://skyost.eu/#contact">contacter</a>.`,
+  message: `Pour signaler une erreur ou suggérer une amélioration  me <a href="https://sencoursdemaths.vercel.app/#contact">contacter</a>.`,
 })
 
 /**
