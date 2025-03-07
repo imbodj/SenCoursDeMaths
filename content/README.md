@@ -3,7 +3,7 @@
 Bonjour et bienvenue sur ce site où je mettrai tout un tas de ressources concernant  les mathématiques. au  lycée
 Vous trouverez donc sur ce site :
 
-* Mes [plans]((https://imbodj.github.io/SenCoursDeMaths/content/latex/lecons/) de leçons. Par manque de temps, et / ou d'envie, et / ou d'appétence, j'ai fait l'impasse sur certaines leçons.
+* Mes [plans](https://imbodj.github.io/SenCoursDeMaths/lecons/) de leçons. Par manque de temps, et / ou d'envie, et / ou d'appétence, j'ai fait l'impasse sur certaines leçons.
 
 * Mon choix de [developpements](https://imbodj.github.io/SenCoursDeMaths/developpements/).
 
