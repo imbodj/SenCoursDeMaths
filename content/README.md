@@ -8,7 +8,7 @@ Bonjour et bienvenue sur ce site où je mettrai tout un tas de ressources concer
 * Ma [bibliographie](https://sencoursdemaths.vercel.app/bibliographie/) personnelle.
 * Une liste personnelle de [conseils généraux](https://sencoursdemaths.vercel.app/fiches/conseils-generaux/).
 
-En espérant que le contenu de ce site vous aide dans votre préparation à l'oral. Si vous avez une quelconque remarque
+En espérant que le contenu de ce site vous aide dans vos études en mathématiques; si vous avez une quelconque remarque
 / idée / correction à me soumettre, vous pouvez me contacter via [le formulaire](https://sencoursdemaths.vercel.app/#contact) présent sur mon site.
 
 ## Liens utiles
