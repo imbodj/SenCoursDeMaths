@@ -2,14 +2,11 @@
 
 Bonjour et bienvenue sur ce site où je mettrai tout un tas de ressources concernant les mathématiques. au lycée Vous trouverez donc sur ce site :
 
-* Mes [plans](https://sencoursdemaths.vercel.app/lecons/) de leçons. Par manque de temps, et / ou d'envie, et / ou d'appétence,
-  et / ou de maîtrise du sujet, j'ai fait l'impasse sur les leçons _161_, _181_ et _220_.
+* Mes [plans](https://sencoursdemaths.vercel.app/lecons/) de leçons. Par manque de temps, et / ou d'envie, et / ou d'appétence, j'ai fait l'impasse sur  certaines leçons.
 * Mon choix de [developpements](https://sencoursdemaths.vercel.app/developpements/).
 * Quelques [fiches](https://sencoursdemaths.vercel.app/fiches/) de révision.
 * Ma [bibliographie](https://sencoursdemaths.vercel.app/bibliographie/) personnelle.
-* Une liste personnelle de [conseils généraux](https://sencoursdemaths.vercel.app/fiches/conseils-generaux/) écrite suite aux
-  oraux de cette année.
-* En bonus, [un historique](https://sencoursdemaths.vercel.app/historique/) de la liste des admis à l'agrégation externe depuis 1987.
+* Une liste personnelle de [conseils généraux](https://sencoursdemaths.vercel.app/fiches/conseils-generaux/).
 
 En espérant que le contenu de ce site vous aide dans votre préparation à l'oral. Si vous avez une quelconque remarque
 / idée / correction à me soumettre, vous pouvez me contacter via [le formulaire](https://sencoursdemaths.vercel.app/#contact) présent sur mon site.
