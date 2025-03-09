@@ -110,3 +110,4 @@ content/latex/lecons-developpements.tex
 content/latex/historique.tex
 content/latest-commit.json
 content/**/*.pdf
+.vercel
