@@ -1,0 +1,1 @@
+import{L as o}from"./CJpseRON.js";import{d as n,k as s,o as r}from"./DgDS_VxE.js";const p=n({__name:"LessonCard",props:{lesson:{}},setup(t){return(e,a)=>(r(),s(o,{"btn-check":"Consulter la leçon","link-prefix":"lecons",object:e.lesson},null,8,["object"]))}});export{p as _};
