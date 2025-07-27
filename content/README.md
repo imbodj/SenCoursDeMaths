@@ -7,7 +7,7 @@ Ce site a été conçu pour partager des ressources variées en mathématiques, 
 * Quelques [fiches](/fiches/) de révision.
 * Des [conseils méthodologiques](/fiches/conseils-generaux/) pour mieux apprendre et enseigner.
 
-En espérant que le contenu de ce site puisse être utile aussi bien aux élèves qu’aux enseignants dans l’étude et l’enseignement des mathématiques. Si vous avez une remarque, une suggestion ou une correction à me proposer, n’hésitez pas à me contacter via [le formulaire](/contact) disponible sur le site.
+En espérant que le contenu de ce site puisse être utile aussi bien aux élèves qu’aux enseignants dans l’étude et l’enseignement des mathématiques. Si vous avez une remarque, une suggestion ou une correction à me proposer, n’hésitez pas à me contacter via [le formulaire](/contact/) disponible sur le site.
 
 
 ## Liens utiles

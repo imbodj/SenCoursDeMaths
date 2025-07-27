@@ -62,7 +62,7 @@ message: ``,
 export const useCaveatsBanner = (url: string) => useBanner({
   type: BannerType.caveats,
   message: `Pour signaler une erreur ou suggérer une amélioration, vous pouvez modifier
-  le <a href="${url}">code source</a> de la page, ou me <a href="/contact">contacter</a>.`,
+  le <a href="${url}">code source</a> de la page, ou me <a href="/contact/">contacter</a>.`,
 })
 
 /**
