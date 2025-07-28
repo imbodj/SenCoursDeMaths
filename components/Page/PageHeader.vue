@@ -1,6 +1,11 @@
 <template>
   <header id="page-header">
     <b-container>
+        <img
+        src="/images/drapeau-senegal.png"
+        alt="Drapeau du Sénégal"
+        class="drapeau"
+      />
       <h1>Sen Cours De Maths</h1>
       <hr>
       <p class="mb-0">
@@ -39,6 +44,10 @@
     bottom: 0;
     left: 0;
     background-color: rgba(black, 0.65);
+  }
+  .drapeau {
+    width: 40px;
+    margin-bottom: 10px;
   }
 }
 </style>

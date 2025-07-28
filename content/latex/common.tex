@@ -18,6 +18,8 @@
 \usepackage{stmaryrd}
 \usepackage{tikz}
 \usepackage{tkz-euclide}
+\usepackage{tkz-tab}  % Package nécessaire pour \tkzTab
+  
 \usepackage{fontspec}
 \defaultfontfeatures[Erewhon]{FontFace = {bx}{n}{Erewhon-Bold.otf}}
 \usepackage{fourier-otf}
@@ -146,8 +148,8 @@
 \newcommand{\intof}[2]{\left]#1 \;, \;#2\right]  }
 \newcommand{\intfo}[2]{\left[#1 \;,\; #2\right[  }
 \newcommand{\intoo}[2]{\left]#1 \;,\; #2\right[  }
-
-
+\newcommand{\change}{\rule{\textwidth}{1mm}\\}
+\newcommand{\eexp}[1]{\mathrm{e}^{#1}}
 
 \providecommand{\newpar}{\\[\medskipamount]}
 
@@ -222,7 +224,7 @@
 
 \pagestyle{fancy}
 \fancyhead[L]{\truncate{0.23\textwidth}{\thepage}}
-\fancyfoot[C]{\scriptsize \href{\website}{\texttt{/}}}
+\fancyfoot[C]{\scriptsize \href{\website}{\texttt{\website}}}
 
 % Couleurs :
 
