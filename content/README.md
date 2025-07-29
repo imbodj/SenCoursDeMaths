@@ -1,11 +1,11 @@
 # Bienvenue !
 
-Bonjour et bienvenue sur Sen Cours de Maths.
-Ce site a été conçu pour partager mes cours de mathématiques, ainsi que des exercices corrigés et des fiches de révision, spécialement adaptés aux programmes du secondaire.
+
+Bonjour et bienvenue sur ce site où je mettrai  mes cours de mathématiques, ainsi que des exercices  et des fiches de révision, spécialement adaptés aux programmes du secondaire. 
 Vous y trouverez notamment :
 
 * Une [liste de cours](/lecons/). Par manque de temps, j'ai fait l'impasse sur  certaines leçons.
-* Une selection d'[exercices](/developpements/) progessifs.
+* Une selection d'[exercices](/developpements/) progressifs.
 * Quelques [fiches](/fiches/) de révision.
 * Des [conseils méthodologiques](/fiches/conseils-generaux/) pour mieux apprendre et enseigner.
 

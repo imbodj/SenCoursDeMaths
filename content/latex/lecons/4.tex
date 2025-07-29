@@ -13,7 +13,7 @@ On appelle fonction logarithme népérien,  notée $ \ln $, la primitive   sur $
 \end{definition}
 
 
-La touche \fbox{ $ \ln $} de la calculatrice permet de calculer le logarithme d'un réel.
+La touche \fbox{$ \ln $} de la calculatrice permet de calculer le logarithme d'un réel.
  
  \subsubsection*{Conséquences immédiates}
 \begin{enumerate}
@@ -115,14 +115,20 @@ Donc $ \displaystyle\lim_{x \to 0}\ln x=\displaystyle\lim_{X \to \pinf}\ln \dfra
 \subsection*{Tableau de variation }
 Des propriétés précédentes, on en déduit facilement le tableau de variation suivant.
 
+\begin{center}
+\begin{tikzpicture}
+\tkzTab[lgt=2]
+{
+	$x$ / 0.5 ,
+	$\exp^{\prime}(x)$ / 0.5,
+	$\exp(x)$ /1
+}
+{ $\minf$ , $\pinf$ }
+{ , + , }
+{-/ $0$ , +/$\pinf$ }
+\end{tikzpicture}
 
-\begin{variations}
-x           & $0$      &  & $+\infty$ \\
-\filet
-$\ln'(x)$   & \dbarre  & $+$ &  \\
-\filet  
-$\ln(x)$    & \niveau{3}{$-\infty$} & \croissant & \niveau{1}{$+\infty$}
-\end{variations}
+\end{center}
 
 
 

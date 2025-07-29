@@ -42,10 +42,10 @@ On a: $\; \displaystyle \lim_{x \to +\infty} \frac{x+1}{x^{2}-2} = 0 $ et $ \dis
 \end{example}  
 
  \subsubsection*{Comparaisons de limites}
+\begin{theorem}
+Soient $f $, $g$ et $h$ trois fonctions et $ l\in\Rr$ et  $ a= +\infty $ ou $ a=-\infty $ ou $ a\in\Rr $.
 
-Soient $f $, $g$ et $h$ trois fonctions et $ l\in\Rr$ et  $ a= +\infty $ ou $ a=-\infty $.
 
-\medskip
 %\renewcommand{\arraystretch}{2.3}
 \begin{tabularx}{\textwidth}{|X|X|X|}
 \hline
@@ -60,10 +60,10 @@ $ \abs{f(x)-l }\leq g(x) $ & $\displaystyle \lim_{x \to a}g(x)=0$ & $ \displayst
 $ g \leq f \leq h $ & $ \displaystyle \lim_{x \to a}g(x)=l $ et $ \displaystyle \lim_{x \to a}h(x)=l $ & $ \displaystyle \lim_{x \to a}f(x)=l $    \\
 \hline
 \end{tabularx}
-
+\end{theorem}
 
 \begin{remark}
-La dernière propriété est parfois appelée << le théorème des gendarmes >>.
+Le dernier théorème est parfois appelée << le théorème des gendarmes >>.
  \end{remark}
 
 \begin{example}
@@ -76,8 +76,8 @@ $ \centerdot $ On a :  $  f(x)\leq x+3$ et $\displaystyle \lim_{x \to -\infty}x-
 \item  Calculons $\displaystyle\lim_{x \to +\infty}\frac{\sin x}{x} $.\\
 
 Pour tout $ x\geq 1 $: $\quad  -1\leq\sin x \leq 1 $ \\
-En multipliant par $ \frac{1}{x} $: on a $ -\frac{1}{x}\leq \frac{\sin x}{x} \leq\frac{1}{x} $\\
-Or $\displaystyle\lim_{x \to +\infty}(-\frac{1}{x})= \displaystyle\lim_{x \to +\infty}\frac{1}{x}=0$ donc $\displaystyle\lim_{x \to +\infty}\frac{\sin x}{x}=0 $
+En multipliant par $ \dfrac{1}{x} $: on a $ -\dfrac{1}{x}\leq \dfrac{\sin x}{x} \leq\dfrac{1}{x} $\\
+Or $\displaystyle\lim_{x \to +\infty}(-\dfrac{1}{x})= \displaystyle\lim_{x \to +\infty}\dfrac{1}{x}=0$ donc $\displaystyle\lim_{x \to +\infty}\dfrac{\sin x}{x}=0 $
 \end{itemize}
 
 \end{example}
@@ -87,15 +87,15 @@ Or $\displaystyle\lim_{x \to +\infty}(-\frac{1}{x})= \displaystyle\lim_{x \to +\
 \begin{theorem}
 Soit $ f $ une fonction dérivable.
 
-Si $\displaystyle \lim_{x \to a}f^{'}(x)=l$,\;  ( $l$ réel fini ou pas) alors $\displaystyle\lim_{x \to a} \frac{f(x)-f(a)}{x-a}=l$
+\[ \text{Si}\; \displaystyle \lim_{x \to a}f^{'}(x)=l,\;  ( l \;\text{réel fini ou pas) alors \;} \displaystyle\lim_{x \to a} \dfrac{f(x)-f(a)}{x-a}=l\]
 \end{theorem}
 
 \begin{example}
-Calculons $\displaystyle\lim_{x \to 0}\frac{\sin x}{x} $
+Calculons $\displaystyle\lim_{x \to 0}\dfrac{\sin x}{x} $
 
 Posons $ f(x)=\sin x $\\
-On a $ f(0)=0 $ et  $ f^{'}(x)=\cos x$\\
- $ \displaystyle\lim_{x \to 0}f^{'}(x)=\displaystyle\lim_{x \to 0}\cos x=1 $ donc $\displaystyle \lim_{x \to 0} \frac{f(x)-f(0)}{x-0}=\displaystyle \lim_{x \to 0}\frac{\sin x}{x}=1$
+On a $ f(0)=0 $ et  $ f^{'}(x)=\cos x$
+ \[\text{Donc \;} \displaystyle \lim_{x \to 0} \frac{f(x)-f(0)}{x-0}=\displaystyle \lim_{x \to 0}\frac{\sin x}{x}=\displaystyle\lim_{x \to 0}f^{'}(x)=\displaystyle\lim_{x \to 0}\cos x =1\]
 \end{example}
 
 \subsection{Branches infinies d'une courbe}
@@ -112,6 +112,47 @@ $\displaystyle\lim_{x \to a}f(x)=\infty $ alors  la droite  d'équation $\; x=a$
 \end{definition}
 
 
+\begin{tikzpicture}[>=stealth', scale=0.5]
+\clip (-1,-3) rectangle (3,3);
+\draw[->,thick] (-1,0) -- (3,0);
+\draw[->,thick] (0,-3) -- (0,3);
+\foreach\x in {1,2}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\foreach\y in {1}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+
+\draw[thick,blue!50!black] plot[domain=0.26:2,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
+\draw[red] (0.25,3) -- (0.25,-3) node[above right] {D};
+\end{tikzpicture}
+
+\fbox{$\displaystyle \lim_{ x \to a^{+}}f(x)=\pinf $}
+
+
+\begin{tikzpicture}[>=stealth',scale=0.5]
+\clip (-3,-3) rectangle (3,3);
+\draw[->,thick] (-3,0) -- (3,0);
+\draw[->,thick] (0,-3) -- (0,3);
+\foreach\x in {1,2}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\foreach\y in {-1,1}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+\draw[thick,blue!50!black] plot[domain=-3:0.24,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
+
+\draw[red] (0.25,3) -- (0.25,-3) node[above right] {D};
+\end{tikzpicture}
+
+\fbox{$ \lim_{ x \to a^{-}}f(x)=\minf $}
+
+
+
 
 \subsubsection*{Asymptote horizontale}
 Elle traduit, graphiquement, le fait que la fonction $f$ admet une limite finie à l'infini.
@@ -122,8 +163,23 @@ Elle traduit, graphiquement, le fait que la fonction $f$ admet une limite finie 
 Si $si\;\displaystyle \lim_{x \to \infty}f(x)=b \;$ (réel) alors  la droite  $\quad y = b \;$  est une  asymptote horizontale à  la courbe $\mathcal{C} $   en $\infty$.
 \end{definition}
 
+\begin{tikzpicture}[>=stealth', scale=0.5]
+\draw[->,thick] (-7,0) -- (7,0);
+\draw[->,thick] (0,-2) -- (0,3);
+\foreach\x in {-2,1}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\node (L) at (-0.2,2) {L};
+\foreach\y in {1}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+\draw[thick,blue!50!black] plot[domain=-7:7,samples=100] (\x,{(2*\x*\x+\x-1)/(\x*\x+\x+1)}) node[above left] {$\mathscr{C}$};
+\draw[red] (7,2) -- (-7,2) node[below right] {D};
+\end{tikzpicture}
 \begin{example}
-Pour la fonction $f : x\mapsto 3+ \frac{5}{x-1} $ 
+Pour la fonction $f : x\mapsto 3+ \dfrac{5}{x-1} $ 
 \begin{itemize}
 \item la droite d'équation   $y = 3 $ est asymptote  horizontale  
 \item la droite d'équation $x = 1$ est asymptote verticale à la courbe de $f.$
@@ -136,8 +192,25 @@ Soit $f$ une fonction et $ \Delta $ la droite d'équation  $y=ax+b$.
 
 Si $\displaystyle \lim_{x \to \infty}\left(f(x)-(ax+b)\right)=0$  alors  la droite  d'équation  $y=ax+b$  est une  asymptote oblique  à la courbe de $f$ en  $\infty$.
 \end{definition}
+
+\begin{tikzpicture}[>=stealth', scale=0.5]
+\clip (-7,-4) rectangle (7,5);
+\draw[->,thick] (-7,0) -- (7,0);
+\draw[->,thick] (0,-4) -- (0,5);
+\foreach\x in {1}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\foreach\y in {1}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+%\draw[thick,blue!50!black] plot[domain=-7:0.24,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
+\draw[thick,blue!50!black] plot[domain=-7:7,samples=100] (\x,{\x+0.3/(\x-1)}) node[above left] {$\mathscr{C}$};
+\draw[red] (5,5) -- (-3,-3) node[above left] {D};
+\end{tikzpicture}
 \begin{example}
-Pour la fonction $f : x\mapsto x+ \frac{2}{x-1} $ dont la courbe est représentée ci dessous,
+Pour la fonction $f : x\mapsto x+ \dfrac{2}{x-1} $ dont la courbe est représentée ci dessous,
 la droite d'équation   $y = x $ est asymptote oblique à la courbe de $f$.
 
 \end{example}
@@ -146,8 +219,8 @@ la droite d'équation   $y = x $ est asymptote oblique à la courbe de $f$.
 Si $ f $ s'écrit sous la forme $ f(x)= ax+b + g(x) $ et si $ \displaystyle \lim_{x \to \infty}g(x)=l\; (\text{réel} )$   alors la droite $ y=ax+b+l $ est une asymptote à  $ \mathcal{C} $ en $ \infty. $
 \end{remark}
 \begin{example}
-Pour la fonction $f : x\mapsto 2x+5- \frac{2x}{x-1} $ 
-la droite d'équation   $y = 2x+3 $ est asymptote oblique à sa courbe en $ \infty$ car  $\displaystyle \lim_{x \to \infty}\frac{2x}{x-1}=2$.
+Pour la fonction $f : x\mapsto 2x+5- \dfrac{2x}{x-1} $ 
+la droite d'équation   $y = 2x+3 $ est asymptote oblique à sa courbe en $ \infty$ car  $\displaystyle \lim_{x \to \infty}\dfrac{2x}{x-1}=2$.
 \end{example}
 \subsubsection*{Position relative d'une courbe et son asymptote}
 Pour étudier la position relative de la  courbe $\mathcal{C} $ d'une fonction $ f $ par rapport à son asymptote $ \Delta : y=ax+b $, on étudie le signe de la différence $ f(x)-ax-b$.
@@ -228,17 +301,17 @@ Soit $ f (x)=\left\{\begin{array}{l} \frac{\sqrt{x}-1}{x-1}\quad \textrm{si} \qu
 
 
 Etudions la continuité   de $ f $ en 1.\\
- Pour $x\neq 1  $, $ f(x) $ existe si et seulement, si $ x\geq 0 $\quad et $x-1 \neq 0 $
+ Pour $x\neq 1  $, $ f(x) $ existe si et seulement, si $\; x\geq 0 \quad$ et $\; x-1 \neq 0 $
  
 si et seulement, si \quad $x\geq 0$ \quad   et $x\neq 1$
 
 si et seulement, si $x\in \intfo{0}{1}\cup\intoo{1}{\pinf}$
 
 Or $ f(1)= \frac{1}{2}$  d'où $ f(x) $ existe si et seulement, si  $x\in \intfo{0}{\pinf}  $ \\
-$ \displaystyle\lim_{x \to 1}f(x)=\displaystyle\lim_{x \to 1}\frac{\sqrt{x}-1}{x-1}= \displaystyle\lim_{x \to 1}\frac{1}{\sqrt{x}+1}= \frac{1}{2}$ \\donc $\displaystyle \lim_{x \to 1}f(x)=f(1)=\frac{1}{2}$\quad d'où $ f $ est continue en $ 1. $
+$ \displaystyle\lim_{x \to 1}f(x)=\displaystyle\lim_{x \to 1}\frac{\sqrt{x}-1}{x-1}= \displaystyle\lim_{x \to 1}\frac{1}{\sqrt{x}+1}= \frac{1}{2}$ \\donc $\displaystyle \lim_{x \to 1}f(x)=f(1)=\frac{1}{2}\quad$ d'où $\; f $ est continue en $ 1. $
 \end{example}
 
-\subsubsection*{ Continuité à droite $=$ continuité à gauche}
+\subsubsection*{ Continuité à droite - continuité à gauche}
 \begin{property}
 $ f $ est continue en $ a $ si et seulement, si  $\displaystyle \lim_{x \to a^{+}}f(x)=\displaystyle\lim_{x \to a^{-}}f(x)=f(a) $. 
 \end{property}
@@ -262,8 +335,8 @@ Son prolongement par continuité en $ 2$ est la fonction $ g $ définie par :
 \subsubsection*{Dérivabilité en un réel}
 \begin{definition}
 Soit $ f $ une fonction définie sur un intervalle $ I$ et $a\in I $.\\
-$ f $ est dérivable en $ a $ s'il existe un nombre réel $ l $ tel que $ \displaystyle\lim_{x \to a} \frac{f(x)-f(a)}{x-a}=l $ \\
-$ l $ est le  \textbf{nombre dérivé} de $ f $ en $ a. $ On le note             $f^{'}(a)$.
+$ f $ est dérivable en $ a $ s'il existe un nombre réel $ l $ tel que $ \displaystyle\ lim_{x \to a} \dfrac{f(x)-f(a)}{x-a}=l $ \\
+$ l $ est le  \textbf{nombre dérivé} de $ f $ en $ a. $ On le note $f^{'}(a)$.
 \end{definition}
 
 \textbf{Autre formulation de la définition}\\
@@ -276,7 +349,7 @@ Etudions  la dérivabilité  de $ f $ en 1.
 \end{example}
 \textsl{Réponse:}\\
 On avait trouvé que $D_{f}=\intfo{0}{\pinf}  $ \\
-$\displaystyle \lim_{x \to 1 } \frac{f(x)-f(1)}{x-1}=\displaystyle \lim_{x \to 1 }\frac{\frac{\sqrt{x}-1}{x-1}-\frac{1}{2}}{x-1}= \lim_{x \to 1 }\frac{2\sqrt{x}-(x+1)}{2(x-1)^{2}}=\lim_{x \to 1 } \frac{-x^{2}+2x-1}{2(x-1)^{2}(2\sqrt{x}+x+1)}=\displaystyle \lim_{x \to 1 }\frac{-1}{2(2\sqrt{x}+x+1}=-\frac{1}{8}$  \\ Donc $ f $ est dérivable en $ 1 $ et de nombre dérivé $ f'(1)= -\frac{1}{8}$.
+$\displaystyle \lim_{x \to 1 } \dfrac{f(x)-f(1)}{x-1}=\displaystyle \lim_{x \to 1 }\dfrac{\dfrac{\sqrt{x}-1}{x-1}-\frac{1}{2}}{x-1}= \lim_{x \to 1 }\dfrac{2\sqrt{x}-(x+1)}{2(x-1)^{2}}=\lim_{x \to 1 } \dfrac{-x^{2}+2x-1}{2(x-1)^{2}(2\sqrt{x}+x+1)}=\displaystyle \lim_{x \to 1 }\dfrac{-1}{2(2\sqrt{x}+x+1}=-\dfrac{1}{8}$  \\ Donc $ f $ est dérivable en $ 1 $ et de nombre dérivé $ f'(1)= -\dfrac{1}{8}$.
 \subsubsection*{Propriété}
 \begin{property}
 Si $ f $ est dérivable en a, alors $ f $ est continue en a.\\
@@ -285,7 +358,7 @@ La fonction $ x\mapsto \abs{x} $ est continue en 0 mais elle n'est pas dérivabl
 \end{property}
   \subsubsection*{Propriété : Dérivabilité à droite - dérivabilité à gauche}
   \begin{property}
-$ f $ est dérivable en $ a $ si et seulement, si :\[  \displaystyle\lim_{x \to a^{+}} \frac{f(x)-f(a)}{x-a}=\displaystyle\lim_{x \to a^{-}} \frac{f(x)-f(a)}{x-a}=l \quad \text{réel}\]
+$ f $ est dérivable en $ a $ si et seulement, si :\[  \displaystyle\lim_{x \to a^{+}} \dfrac{f(x)-f(a)}{x-a}=\displaystyle\lim_{x \to a^{-}} \dfrac{f(x)-f(a)}{x-a}=l \quad \text{réel}\]
 \[f^{'}_{d}(a)=f^{'}_{g}(a)\]
 \[\textrm{Le nombre dérivé de} \  f \ \textrm{ à droite en $ a$ = Le nombre dérivé de}\  f \ \textrm{à gauche en $a $ }\]
 \end{property}
@@ -310,30 +383,23 @@ $ y=f^{'}(a)(x-a)+ f(a) $.
 
 \medskip
 \begin{tabularx}{\textwidth}{|X|X|}
-\hline 
-Si $ \displaystyle\lim_{x \to a^{+}} \frac{f(x)-f(a)}{x-a}=\pinf $ alors
-la courbe de $f$ admet au point
-$A (a, f (a))$ une demi-tangente
-verticale dirigée vers le haut.
- & Si $\displaystyle \lim_{x \to a^{-}} \frac{f(x)-f(a)}{x-a}=\pinf $ alors 
-la courbe de $f$ admet au point
-$A (a, f (a))$ une demi-tangente
-verticale dirigée vers le bas.  \\
 \hline
-Si $ \displaystyle\lim_{x \to a^{+}} \frac{f(x)-f(a)}{x-a}=\minf $ alors
-la courbe de $f$ admet au point
-$A (a, f (a))$ une demi-tangente
-verticale dirigée vers le bas. 
-& Si  $ \lim_{x \to a^{-}} \frac{f(x)-f(a)}{x-a}=\minf $ alors
-la courbe de $f$ admet au point
-$A (a, f (a))$ une demi-tangente
-verticale dirigée vers le haut. \\
- \hline
+Si $\displaystyle \lim_{x \to a^+} \frac{f(x)-f(a)}{x-a} = +\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
+&
+Si $\displaystyle \lim_{x \to a^-} \frac{f(x)-f(a)}{x-a} = +\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le bas. 
+\\
+\hline
+Si $\displaystyle \lim_{x \to a^+} \frac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le bas. 
+&
+Si $\displaystyle \lim_{x \to a^-} \frac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
+\\
+\hline
 \end{tabularx}
-\item Si $\displaystyle \lim_{x \to a^{+}} \frac{f(x)-f(a)}{x-a}=\pinf $   et $ \displaystyle\lim_{x \to a^{-}} \frac{f(x)-f(a)}{x-a}=\minf $ alors la courbe de $ f $ admet  au  point $ A (a, f (a)) $ deux demi-tangentes verticales  dirigées vers le haut  d'équation $ x=a $.  A est un \textbf{point de rebroussement}.
-\item Si $\displaystyle \lim_{x \to a^{+}} \frac{f(x)-f(a)}{x-a}=\minf $   et $\displaystyle \lim_{x \to a^{-}} \frac{f(x)-f(a)}{x-a}=\pinf $ alors la courbe de $ f $ admet  au  point $ A (a, f (a)) $ deux demi-tangentes verticales  dirigées vers le bas  d'équation $ x=a $.  A est un point de rebroussement.
-\item Si $ \displaystyle\lim_{x \to a^{+}} \frac{f(x)-f(a)}{x-a}=\pinf $   et $ \lim_{x \to a^{-}} \frac{f(x)-f(a)}{x-a}=\pinf $ alors la courbe de $ f $ admet  au  point $ A (a, f (a)) $ deux demi-tangentes verticales de même équation $ x=a $ l'une dirigée vers le haut et l'autre vers le bas.  A est un point d'inflexion.
-\item Si $ \displaystyle \lim_{x \to a^{-}} \frac{f(x)-f(a)}{x-a}=\pinf $   et $ \displaystyle \lim_{x \to a^{-}} \frac{f(x)-f(a)}{x-a}=\minf $ alors la courbe de $ f $ admet  au  point $ A (a, f (a)) $ deux demi-tangentes verticales de même équation $ x=a $ l'une dirigée vers le haut et l'autre vers le bas.  A est un point d'inflexion à tangente verticale.
+
+\item Si $\displaystyle \lim_{x \to a^{+}} \dfrac{f(x)-f(a)}{x-a}=\pinf $   et $ \displaystyle\lim_{x \to a^{-}} \dfrac{f(x)-f(a)}{x-a}=\minf $ alors la courbe de $ f $ admet  au  point $ A (a, f (a)) $ deux demi-tangentes verticales  dirigées vers le haut  d'équation $ x=a $.  A est un \textbf{point de rebroussement}.
+\item Si $\displaystyle \lim_{x \to a^{+}} \dfrac{f(x)-f(a)}{x-a}=\minf $   et $\displaystyle \lim_{x \to a^{-}} \dfrac{f(x)-f(a)}{x-a}=\pinf $ alors la courbe de $ f $ admet  au  point $ A (a, f (a)) $ deux demi-tangentes verticales  dirigées vers le bas  d'équation $ x=a $.  A est un point de rebroussement.
+\item Si $ \displaystyle\lim_{x \to a^{+}} \dfrac{f(x)-f(a)}{x-a}=\pinf $   et $ \lim_{x \to a^{-}} \dfrac{f(x)-f(a)}{x-a}=\pinf $ alors la courbe de $ f $ admet  au  point $ A (a, f (a)) $ deux demi-tangentes verticales de même équation $ x=a $ l'une dirigée vers le haut et l'autre vers le bas.  A est un point d'inflexion.
+\item Si $ \displaystyle \lim_{x \to a^{-}} \dfrac{f(x)-f(a)}{x-a}=\pinf $   et $ \displaystyle \lim_{x \to a^{-}} \dfrac{f(x)-f(a)}{x-a}=\minf $ alors la courbe de $ f $ admet  au  point $ A (a, f (a)) $ deux demi-tangentes verticales de même équation $ x=a $ l'une dirigée vers le haut et l'autre vers le bas.  A est un point d'inflexion à tangente verticale.
 \end{enumerate}
 \subsection{Continuité et dérivabilité sur un intervalle}
 \begin{definition}
@@ -366,6 +432,7 @@ $f(x)= \sin x $   &  $\Rr$  & $ \cos x $\\
 $f(x)= \tan x $  &  $\intoo{(2k-1)\frac{\pi}{2}}{(2k+1)\frac{\pi}{2}}$, $ k\in\Zz $.  & $\small  1+\tan^{2}x $ ou $\frac{1}{\cos^{2} x} $ \\
 \hline
 \end{tabularx}
+
 
 
 \begin{property}
@@ -416,14 +483,14 @@ $ \centerdot $ Si $ f $ est dérivable sur l'intervalle $ I $ et $ g $ dérivabl
 \[\paren{g\circ f(x)}'= f'(x)\times g'[f(x)] \]
 \end{property}
 \begin{example} 
-Soit $h(x)= \cos \frac{1}{x}$. Calculons  $h'(x) $.
+Soit $h(x)= \cos \dfrac{1}{x}$. Calculons  $h'(x) $.
 
 On a   $D_{h}= \intoo{\minf}{0}\cup \intoo{0}{\pinf} $
 
 \textbf{\color{red}{Attention}}:  Avant de dériver une fonction, il est recommandé de justifier sa dérivabilité même si la question ne le précise pas.\\
-La fonction rationnelle $ x\mapsto \frac{1}{x} $ est  définie sur $ \Rre $ donc dérivable sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf}. $\\
+La fonction rationnelle $ x\mapsto \dfrac{1}{x} $ est  définie sur $ \Rre $ donc dérivable sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf}. $\\
 La fonction $ x\mapsto \cos x $ est dérivable sur $ \Rr $; en particulier sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf} $\\ D' où par  composée $ h $ est dérivable  sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf} $.\\
-Pour tout   $ x\neq 0 $  \quad :    $h'(x)=\frac{1}{x^{2}}\sin \frac{1}{x} $ 
+Pour tout   $ x\neq 0 $  \quad :    $h'(x)=\dfrac{1}{x^{2}}\sin \dfrac{1}{x} $ 
 
 \end{example}
 \begin{corollary}
@@ -435,14 +502,13 @@ $ \centerdot $ Si $ f $ est \textbf{ dérivable et strictement positive } sur $ 
 
 \subsubsection*{Formules de dérivations}
 Soient $u $ et $v $ deux fonctions dérivables, $ r\in\Zze $ et $ k\in\Rr $\\
-
-\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|X|}
+$\begin{array}{|c|c|c|c|c|c|c|c|}
 \hline 
-\textbf{Fonction }& $ ku $ &$ u+v $ & $ uv $ & $\frac{u}{v}$ & $\frac{1}{v} $ & $ \sqrt{u} $ &  $ u^{r} $ \\     
+\textbf{Fonction} & ku & u+v & uv & \frac{u}{v} & \frac{1}{v} & \sqrt{u} & u^{r} \\     
 \hline 
-\textbf{Dérivée} & $ ku' $ & $ u'+v' $ & $u'v+ v'u  $ & $ \frac{u'v- v'u }{v^{2}} $ &  $- \frac{v'}{v^{2}} $ & $ \frac{u'}{2\sqrt{u}} $ & $ ru'u^{r-1} $  \\    
+\textbf{Dérivée} & ku' & u'+v' & u'v+ v'u & \frac{u'v- v'u}{v^{2}} & -\frac{v'}{v^{2}} & \frac{u'}{2\sqrt{u}} & ru'u^{r-1} \\    
 \hline
-\end{tabularx}
+\end{array}$
 
 \bigskip
 \begin{tabularx}{\textwidth}{|X|X|X|X|}

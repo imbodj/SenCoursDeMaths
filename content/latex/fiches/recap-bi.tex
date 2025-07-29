@@ -1,0 +1,67 @@
+\input{../common}
+\everymath{\displaystyle}
+\begin{document}
+  %<*content>
+  \sheet{algebra}{recap-bi}{Détermination de la nature d'une branche infinie}
+ \summary{Récapitulatif de la détermination de la nature d'une branche infinie en $ \pinf $ ou en $ \pinf $}
+   
+\begin{center}
+\begin{tikzpicture}[
+  man/.style={rectangle,draw,fill=blue!20,text width=2.5cm,align=center,minimum height=0.8cm},
+  woman/.style={rectangle,draw,fill=red!20,rounded corners=.8ex,text width=3cm,align=center,minimum height=0.8cm},
+  node distance=1.5cm and 2cm]
+    
+  % Placement manuel des nœuds
+  \node[man] (root) {$ \displaystyle\lim_{x \to +\infty}f(x) $};
+  
+  % Niveau 1
+  \node[man, below left=of root] (inf) {$ \infty $};
+  \node[man, below right=of root] (b) {$ b $};
+  
+  % Niveau 2
+  \node[woman, below=of inf] (ratio) {$ \displaystyle\lim_{x \to +\infty}\dfrac{f(x)}{x} $};
+  \node[woman, below=of b] (horiz) {asymptote horizontale $y=b$};
+  
+  % Niveau 3
+  \node[man, below left=1.5cm and 3cm of ratio] (zero) {$ 0 $};
+  \node[man, below=1.5cm of ratio] (a) {$ a \neq 0 $};
+  \node[man, below right=1.5cm and 3cm of ratio] (inf2) {$ \infty $};
+  
+  % Niveau 4
+  \node[woman, below=of zero] (bp_ox) {BP de direction $(Ox)$};
+  \node[woman, below=of a] (limit_ax) {$ \displaystyle\lim_{x \to +\infty}(f(x)-ax) $};
+  \node[woman, below=of inf2] (bp_oy) {BP de direction $(Oy)$};
+  
+  % Niveau 5
+  \node[man, below left=1.5cm and 2cm of limit_ax] (b_final) {$ b $};
+  \node[man, below=1.5cm of limit_ax] (nexiste) {n'existe pas};
+  \node[man, below right=1.5cm and 2cm of limit_ax] (inf3) {$ \infty $};
+  
+  % Niveau 6
+  \node[woman, below=of b_final] (asymp) {asymptote $y=ax+b$};
+  \node[woman, below=of nexiste] (dir_asymp) {direction asymptotique $y=ax$};
+  \node[woman, below=of inf3] (bp_ax) {BP de direction $y=ax$};
+  
+  % Connexions
+  \draw (root) -- (inf);
+  \draw (root) -- (b);
+  \draw (inf) -- (ratio);
+  \draw (b) -- (horiz);
+  \draw (ratio) -- (zero);
+  \draw (ratio) -- (a);
+  \draw (ratio) -- (inf2);
+  \draw (zero) -- (bp_ox);
+  \draw (a) -- (limit_ax);
+  \draw (inf2) -- (bp_oy);
+  \draw (limit_ax) -- (b_final);
+  \draw (limit_ax) -- (nexiste);
+  \draw (limit_ax) -- (inf3);
+  \draw (b_final) -- (asymp);
+  \draw (nexiste) -- (dir_asymp);
+  \draw (inf3) -- (bp_ax);
+  
+\end{tikzpicture}
+\end{center}
+
+  %</content>
+\end{document}
