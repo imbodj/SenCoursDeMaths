@@ -37,7 +37,7 @@ const goBack = () => window.history.back()
       en allant sur <nuxt-link to="/">la page d'accueil</nuxt-link>.
       <span v-if="errorCode === 404">
         Si quelque chose devait se trouver ici,
-        n'hésitez pas à <a href="https://skyost.eu/fr/#contact">me contacter</a> pour me le signaler.
+        n'hésitez pas à <nuxt-link to="/contact">me contacter</nuxt-link> pour me le signaler.
       </span>
     </p>
   </div>
