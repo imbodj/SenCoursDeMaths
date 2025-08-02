@@ -1,0 +1,122 @@
+
+ \input{../common}
+
+\begin{document}
+  %<*content>
+  \sheet{algebra}{similitudes-directes}{Similitudes directes}
+ \summary{}
+ 
+
+
+\subsection*{1. Transformations du plan complexe}
+
+Une transformation du plan complexe $\mathcal{P}$ est une application bijective :
+\[
+f : \mathcal{P} \longrightarrow \mathcal{P}, \quad M \longmapsto M'
+\]
+On lui associe une unique application complexe bijective $\varphi : \mathbb{C} \to \mathbb{C}$, telle que $z' = \varphi(z)$.
+
+L’expression $z' = \varphi(z)$ est appelée \textbf{écriture complexe} de la transformation.
+
+\subsection*{2. Écriture complexe des transformations usuelles}
+
+\begin{itemize}
+  \item \textbf{Translation de vecteur $\vec{u}$ d'affixe $a$} : 
+  \[
+  z' = z + a
+  \]
+  
+  \item \textbf{Homothétie de centre $\Omega(\omega)$ et de rapport $k \in \mathbb{R}$} :
+  \[
+  z' - \omega = k(z - \omega) \quad \text{ou} \quad z' = kz + \omega(1 - k)
+  \]
+  
+  \item \textbf{Rotation de centre $\Omega(\omega)$ et d’angle $\theta$} :
+  \[
+  z' - \omega = e^{i\theta}(z - \omega) \quad \text{ou} \quad z' = e^{i\theta}z + \omega(1 - e^{i\theta})
+  \]
+\end{itemize}
+
+\subsection*{3. Similitudes directes}
+
+\begin{definition}
+Une \textbf{similitude directe} est une transformation du plan qui conserve les angles orientés et multiplie les distances par un réel $k > 0$, appelé \textbf{rapport}.
+\end{definition}
+
+Les éléments caractéristiques d’une similitude directe sont :
+\begin{itemize}
+  \item le \textbf{centre} $\Omega$ (point invariant),
+  \item le \textbf{rapport} $k > 0$,
+  \item l’\textbf{angle} $\theta$.
+\end{itemize}
+
+Elle est notée : $S(\Omega,\;k,\;\theta)$
+
+\subsection*{4. Propriétés géométriques d'une similitude directe}
+
+\begin{itemize}
+  \item Le centre est le seul point invariant (sauf pour les translations).
+  \item Une similitude directe :
+    \begin{itemize}
+      \item multiplie les longueurs par $k$ ;
+      \item multiplie les aires par $k^2$ ;
+      \item conserve les alignements, parallélismes, orthogonalités, barycentres, contacts et angles orientés.
+    \end{itemize}
+  \item L'image d'une droite est une droite ; l'image d’un cercle est un cercle.
+  \item La réciproque de $S(\Omega,\;k,\;\theta)$ est $S^{-1}(\Omega,\;\tfrac{1}{k},\;-\theta)$.
+  \item La composée de deux similitudes directes de même centre est une similitude directe de même centre :
+  \[
+  S(\Omega,\;k,\;\theta)\circ S(\Omega,\;k',\;\theta') = S(\Omega,\;kk',\;\theta+\theta')
+  \]
+\end{itemize}
+
+\subsection*{5. Écriture complexe d'une similitude directe}
+
+Toute similitude directe de centre $\Omega$ d'affixe $\omega$, de rapport $k > 0$ et d'angle $\theta$ admet l’écriture complexe :
+\[
+z' - \omega = k e^{i\theta}(z - \omega) \quad \text{ou} \quad z' = k e^{i\theta}z + \omega(1 - k e^{i\theta})
+\]
+
+\begin{corollary}
+Toute similitude directe a une écriture complexe de la forme :
+\[
+z' = az + b \quad \text{où } a \in \mathbb{C}^*,\; b \in \mathbb{C}
+\]
+avec $k = |a|$ et $\theta = \arg(a)$.
+\end{corollary}
+
+\subsection*{6. Détermination de la nature d’une transformation}
+
+Soit $f(z) = az + b$ avec $a \neq 0$ :
+\begin{itemize}
+  \item si $a = 1$ : $f$ est une \textbf{translation} d’affixe $b$ ;
+  \item si $|a| = 1$ et $a \neq 1$ : $f$ est une \textbf{rotation} ;
+  \item si $a \in \mathbb{R} \setminus \{0,1\}$ : $f$ est une \textbf{homothétie} ;
+  \item si $a \notin \mathbb{R}$ et $|a| \ne 1$ : $f$ est une \textbf{similitude directe} non isométrique.
+\end{itemize}
+
+Le point invariant $\omega$ est donné par :
+\[
+\omega = \frac{b}{1 - a}
+\]
+
+\subsection*{7. Tableau récapitulatif}
+
+\[
+\begin{array}{|l|l|}
+\hline
+\textbf{Transformation} & \textbf{Écriture complexe} \\
+\hline
+\text{Translation de vecteur } \vec{u} & z' = z + b \quad (b = \text{affixe de } \vec{u}) \\
+\hline
+\text{Homothétie de centre } \Omega,\ \text{rapport } k & z' - \omega = k(z - \omega) \\
+\hline
+\text{Rotation de centre } \Omega,\ \text{angle } \theta & z' - \omega = e^{i\theta}(z - \omega) \\
+\hline
+\text{Similitude directe de centre } \Omega,\ k > 0,\ \theta\in\mathbb{R} & z' - \omega = ke^{i\theta}(z - \omega) \\
+\hline
+\end{array}
+\]
+
+
+\end{document}

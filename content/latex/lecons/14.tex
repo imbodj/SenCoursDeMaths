@@ -1,0 +1,1043 @@
+\input{../common}
+\everymath{\displaystyle}
+\begin{document}
+  %<*content>
+  \lesson{algebra}{14}{Nombres complexes}
+\textbf{Bref historique des nombres complexes}\\
+L’apparition des racines carrées de nombres négatifs remonte à Héron d’Alexandrie (env.~75--150~apr.~J.-C.), qui, en étudiant le volume d’un tronc de pyramide, rencontre l’expression $ \sqrt{81 - 144} $, représentant une quantité non réelle.
+
+Au \textsc{xvi}\textsuperscript{e} siècle, en Italie, les mathématiciens s’affrontent dans des concours autour de la résolution des équations du troisième degré. Tartaglia (1499--1557) découvre une méthode qu’il transmet à Cardano (1501--1576), lequel introduit des expressions du type $ a + \sqrt{-b} $, où $a \in \mathbb{R}$ et $b \in \mathbb{R}^+$. Cette seconde partie, ne pouvant être additionnée à la première, sera appelée \textit{partie imaginaire}.
+
+Descartes (1596--1650) popularise le terme \og imaginaire\fg{}, et Wallis (1616--1703) en propose une interprétation géométrique. Puis, Euler (1707--1783) introduit le symbole $ \text{i} = \sqrt{-1} $, appelé \textit{l’unité imaginaire}.
+
+\medskip
+
+Aujourd’hui, les nombres complexes sont essentiels en sciences, notamment pour modéliser le courant alternatif en électrotechnique, et en télécommunications (WiFi, GPS, téléphonie), où les signaux sont traités à l’aide de calculs sur les nombres complexes.
+
+\begin{lemma}
+\begin{enumerate}
+        \item L'ensemble de nombres le plus simple est celui de nombres entiers naturels, noté $\mathbb{N}$ et qui contient les nombres que vous connaissez depuis longtemps : $0$ ; 1 ; 2 ; 3...
+        \begin{enumerate}
+            \item Quel est le nombre entier naturel qui ajouté à 7 donne 12 ?
+            \item Quel est le nombre entier naturel qui ajouté à 12 donne 7 ?
+        \end{enumerate}
+        \item L'exemple précédent montre que l'ensemble $\mathbb{N}$ est << insuffisant>>  car certaines équations simples n'y trouvent pas de solution. On peut alors utiliser l'ensemble des entiers relatifs, noté $\mathbb{Z}$, et qui contient $\mathbb{N}$ et les opposés des entiers naturels (par exemple : $-3~;~ -2$).
+        \begin{enumerate}
+            \item  Résoudre dans $\mathbb{N}$ puis dans $\mathbb{Z}$ l'équation : $2x+8=0$.
+            \item  Même question avec l'équation : $2x+7=0$.
+        \end{enumerate}
+        \item De nouveau l'ensemble $\mathbb{Z}$ est en quelque sorte insuffisant pour exprimer les solutions de certaines équations.
+        \begin{enumerate}
+            \item De quel autre ensemble de nombres a-t-on au minimum besoin pour que l'équation du $2x+7=0$ ait une solution ?
+            \item Dans ce nouvel ensemble quelles sont les solutions de l'équation : $9x^2=16$ ?
+            %\item Dans quel autre nouvel ensemble faut-il se placer pour que l'équation ait-des solutions ?
+            \item Décrire l'ensemble de nombres dont on a besoin au minimum pour que l'équation précédente ait une solution. On notera $\mathbb{Q}$ cet ensemble.
+        \end{enumerate}
+        \item Modifier l'équation précédente pour qu'elle n'admette pas de solution dans l'ensemble des rationnels. Dans quel ensemble faut-il travailler pour pouvoir dire qu'elle a deux solutions ?
+        \item Que pouvez-vous dire de l'équation  $x^2+1=0$ en terme de solutions dans les ensembles de nombres précédents ?
+        \item Dresser un schéma qui montre les inclusions successives des
+ensembles de nombres en donnant à chaque fois une équation qui n'a pas de solution dans
+l'ensemble, mais en a une dans le suivant.
+\end{enumerate}
+\end{lemma}
+\begin{lemma}
+On considère l'équation du second degré suivant : $\; x^4+4=0 $.
+\begin{enumerate}
+\item Peut-on trouver  des nombres réels solutions de l'équation ? Expliquer pourquoi.
+
+\medskip
+
+Les mathématiciens définissent  le nombre imaginaire i tel que  $ \;\i^2=-1 $ , et que donc $ \i=\sqrt{-1} $.
+
+\item Peut-on utiliser ce fait pour résoudre l'équation, en exprimer la réponse en fonction de i ?
+\item Utiliser la forme canonique pour résoudre l'équation  $\; x^2-2x+5=0 $. Donner les racines en fonctions de i.
+\end{enumerate}
+\end{lemma}
+ \subsection{Forme algébrique d'un nombre complexe}
+ \begin{definition}
+Un nombre complexe $ z $ est un nombre qui peut s'écrire  sous la forme $ z=a+\i b $  où $a $ et $ b$  sont des réels et $ \i $ un nombre imaginaire tel que $ \i^2=-1 $.
+ 
+ \end{definition}
+
+\medskip
+\textbf{Vocabulaire}
+
+\medskip
+
+$ a $ est appelé \textbf{partie réelle} du nombre complexe $ z $. On note $ a = Re(z)$. 
+\medskip
+
+$ b $  est appelé \textbf{partie imaginaire} du nombre complexe $ z$ . On note $ b = Im(z)$.
+
+\medskip
+L'écriture $ a+ \i b$  est appelée  la \textbf{forme algébrique}  (ou cartésienne) du nombre complexe $ z $.
+
+\medskip
+\begin{remark}
+ Les parties réelle et imaginaire d'un nombre complexe sont des nombres réels.
+ \end{remark}
+ \medskip
+ 
+ Un nombre complexe de la forme \textbf{ib} est appelé un \textbf{imaginaire pur}.
+ 
+ On note  $ \i\mathbb{R} $ l'ensemble des imaginaires purs.
+\begin{example}
+\begin{itemize}
+\item $ z= 3 + 2\i$ est un nombre complexe de partie réelle $Re(z) = 3$ et de partie imaginaire $Im(z) = 2$.
+\item  $z= -\frac{\sqrt{3}}{2} - 6\i$ est un nombre complexe de partie réelle $Re(z) = -\frac{\sqrt{3}}{2}$ et de partie imaginaire $Im(z) =-6$.
+\item  $z= 4\i$ est un nombre complexe de partie réelle $Re(z) = 0$ et de partie imaginaire $Im(z) = 4$.
+\item $z = −5$ est un nombre complexe de partie réelle $Re(z) = −5$ et de partie imaginaire $Im(z) = 0$.
+\end{itemize}
+\end{example}
+\medskip
+
+\begin{remark}
+\begin{itemize}
+\item L'ensemble $ \mathbb{R} $ est inclus dans $ \mathbb{C} $ car tout nombre réel  est un nombre complexe de partie imaginaire nulle.
+\[\text{On a les inclusions suivantes \quad }\mathbb{N}\subset \mathbb{Z}\subset\mathbb{D}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}\]
+\item Un nombre complexe est réel si et seulement si sa partie imaginaire est nulle.
+\item Un nombre complexe est imaginaire pur si et seulement si sa partie réelle est nulle.
+\end{itemize}
+\end{remark}
+\medskip
+
+\begin{exercice}
+\begin{enumerate}
+\item  Pour quelles valeurs du réel $ x $, le nombre complexe :\; $ z=x(-x+2\mathrm{i})+\mathrm{i}(x-3\i) $  est-il un imaginaire pur ?
+\item  Pour quelles valeurs du réel $ x $, le nombre complexe $ z=(x-\mathrm{i})\Bigl[x+4-\mathrm{i}(x-6)\Bigr] $ est-il un réel ?
+\end{enumerate}
+\end{exercice}
+\subsection*{Somme, produit et quotient de deux nombres complexes}
+L'addition $ + $ et la multiplication $ \times $ dans $ \mathbb{C} $ ont les mêmes
+propriétés que les opérations analogues dans $ \mathbb{R} $.
+
+\medskip
+
+Soient $z =a+\i b $ et $z' =a'+\i b' $ deux nombres complexes.
+
+
+\medskip
+\textbf{Somme}
+
+
+\medskip
+$ z+z'  =(a+\i b)+(a'+\i b')=(a+a')+\i (b+b')$
+
+\medskip
+
+
+\textbf{Produit}
+
+\medskip
+$ z\times z'  =(a+\i b)\times(a'+\i b')=(aa'-bb')+\i (ab'+a'b)$
+
+\medskip
+
+
+\textbf{Quotient}
+
+\medskip
+
+Si $ z\neq 0 $
+
+
+\medskip
+$ \dfrac{1}{z}  =\dfrac{1}{a+\i b}=\dfrac{a-\i b}{(a+\i b)(a-\i b)}=\dfrac{a-\i b}{a^2+ b^2}=\dfrac{a}{a^2+ b^2} -\i\dfrac{ b}{a^2+ b^2}$
+
+\bigskip
+$ \dfrac{z'}{z}  =\dfrac{a'+\i b'}{a+\i b}=\dfrac{(a'+\i b')(a-\i b)}{(a+\i b)(a-\i b)}=\dfrac{(a'+\i b')(a-\i b)}{a^2+ b^2}$
+
+\medskip
+
+\begin{remark}
+Pour mettre le quotient sous forme algébrique, on \textit{rend réel} le dénominateur  $ a+\i b $ en multipliant le numérateur et le dénominateur par $  a-\i b$.
+\end{remark}
+
+\bigskip
+\textbf{Les puissances de i}
+
+\medskip
+
+Soit $ n $ et $ m $ deux entiers naturels non nuls.
+
+
+\medskip
+
+On a: $ \i^0=1,\;\; \i^1=\i ,\;\; \i^2=-1 ,\;\; \i^3=-\i ,\;\; \i^4=1\; $ et plus généralement :
+\[\i^{4n}=\paren{\i^4}^n=1 \quad \text{et}\quad \i^{m}= \i^{4n+r}=\paren{\i^4}^n \times\i^r=i^r\quad \text{où}\; r \; \text{est le reste de la division de \textit{m} par 4}.  \]
+\begin{example}
+$ \i^{2023}=  \i^{4\times 505+3}=\i^3=-\i$
+\end{example}
+\medskip
+
+\begin{exercice}
+\begin{enumerate}
+\item Mettre sous forme algébrique  les nombres complexes suivants :
+
+\medskip 
+
+$ a=(3 + 2\i) + (5 - 4\i) $,\;\; $ b=(3 + 2\i) - (5 - 4\i) $,\;\; $ c=(2 - 3\i)(1 - \i) $,\;\; $ d=(3 - 2\i)^2$,\;\; $ e=(1 + \i)^3$. 
+
+\item Mettre sous forme algébrique  les quotients de nombres complexes suivants :
+
+\medskip 
+
+$ x=\dfrac{1}{4+3\i} $,\;\; $ y=\dfrac{\i-4}{1-2\i} $,\;\; $ z=\dfrac{1+\i}{5\i} +\dfrac{2\i}{2+\i}$.
+\end{enumerate}
+
+\end{exercice}
+\begin{remark}
+ La relation d'ordre n'existe pas dans $ \mathbb{C} $, en d'autres termes, on ne peut pas comparer deux nombres complexes par les symboles $ <$ et $ >$. Par contre la comparaison peut se faire par l'égalité  $ =$ ou  la différence $ \neq$.
+ \end{remark}
+\subsection*{Égalité de deux nombres complexes}
+\begin{enumerate}
+\item[$  \bullet$] Deux nombres complexes sont égaux si et seulement si ils ont même partie
+réelle et même partie imaginaire.
+\[z=z' \Longleftrightarrow Re(z)=Re(z')\quad \text{et}\quad Im(z)=Im(z')\]
+\item[$  \bullet$] En particulier $ z=0 \Longleftrightarrow Re(z)=0\quad \text{et}\quad Im(z)=0$
+\end{enumerate}
+
+\subsection*{Conjugué d'un nombre complexe}
+\begin{definition}
+Soit $ z $ un nombre complexe de forme algébrique  $ a+ \i b$.
+
+\medskip
+
+On appelle conjugué de $ z $ et on note $ \overline{z} $ le nombre complexe $ \overline{z} =a- \i b$.
+
+\medskip
+
+Ainsi :  $ Re(z)=Re(\overline{z}) $ et $ Im(\overline{z})=-Im(z) $
+
+\end{definition}
+\begin{example}
+ $ \overline{-2+5\i} =-2-5\i,
+\qquad  \overline{4\i} =-4\i,\qquad 
+ \overline{9} =9$
+\end{example}
+\medskip
+
+\begin{corollary}
+\begin{itemize}
+\item[\bullet]
+Soit $ z $ un nombre complexe de forme algébrique  $ a+ \i b$ et $ \overline{z} $ son conjugué. Alors $ \overline{z} z=a^2+b^2 $.
+
+
+\medskip
+
+Ainsi $  \overline{z} z $  est un réel strictement positif ou nul si $ z=0 $.
+\medskip
+
+\textbf{Démonstration}
+
+\medskip
+
+$ \overline{z} z= (a- \i b)(a+ \i b) =a^2+b^2 $
+
+
+\medskip
+\item[$  \bullet$] La notion de conjugué permet de caractériser les  nombres réels et les nombres imaginaires purs parmi les nombres complexes.
+
+\medskip
+\hspace*{2cm} $ z\in\mathbb{R} \Longleftrightarrow \overline{z} =z $
+\quad et \quad  $ z\in\i\mathbb{R} \Longleftrightarrow \overline{z} =-z $
+
+\end{itemize}
+\end{corollary}
+\textbf{Démonstration}
+
+\medskip
+
+On note $ a+ \i b$ la forme algébrique de $ z $.
+
+
+\medskip
+ $ \overline{z} =z \Longleftrightarrow a- \i b =a+ \i b \Longleftrightarrow -2\i b=0 \Longleftrightarrow b=0 \Longleftrightarrow z=a \Longleftrightarrow z\in\mathbb{R} $
+
+
+\medskip
+ $ \overline{z} =-z \Longleftrightarrow a- \i b =-a- \i b \Longleftrightarrow 2a=0 \Longleftrightarrow a=0 \Longleftrightarrow z=\i b \Longleftrightarrow z\in\i\mathbb{R} $
+
+
+\medskip
+
+\begin{remark}
+\begin{itemize}
+\item $ \overline{\overline{z}}=z $
+\item $ \overline{z} +z=2 Re(z)$
+\item $ z-\overline{z} =2 \i Im(z)$
+\end{itemize}
+
+\end{remark}
+\subsubsection*{Propriétés du conjugué d'un nombre complexe}
+Pour tous nombres complexes $z $ et $z' $ :
+
+\medskip
+
+\begin{itemize}
+\item[$  \bullet$]  $ \overline{z+z'} =\overline{z}+\overline{z'}$
+\item[$  \bullet$]    $ \overline{z z'} =\overline{z} \overline{z'}$
+
+\medskip
+
+\item[$  \bullet$]  De plus si $ z'\neq 0 $, \quad $\overline{\paren{ \dfrac{1}{z'} }}= \dfrac{1}{\overline{z'}}$
+\item[$  \bullet$]   $\overline{\paren{ \dfrac{z}{z'} }}= \dfrac{\overline{z}}{\overline{z'}}$
+ \item[$  \bullet$] Pour tout entier naturel $ n $, \quad $ \overline{z^n} =\overline{z}^n$
+\end{itemize}
+\medskip
+
+\begin{exercice}
+\begin{enumerate}
+\item Déterminer le conjugué des nombres complexes $ z_1= (3-5\i)(1+\i) $, $ z_2= \dfrac{2+2\i}{3-\i } $ et   $z_3=\paren{4+9\i}^3 $.
+\item Déterminer les nombres complexes $ z $ tels que\; $ Z=\dfrac{1-\i z}{1+\i z} $  soit réel.
+\end{enumerate}
+\end{exercice}
+\subsection{ Interprétation géométrique}
+\begin{lemma}
+Dans un repère orthonormé   $ \paren{O,\; I, \; J} $ du plan, on considère les points : 
+
+$ A(1, 3) $,\; $ B(0, -2) $,\; $ E(-4, 3) $.
+\begin{enumerate}
+\item Placer ces points dans le repère.
+\item Calculer les coordonnées du vecteur $ \overrightarrow{AE} $
+\item Calculer les coordonnées du milieu $ C $ du segment  $ [BE] $.
+\item Calculer la distance $ OE $.
+\item  Déterminer les coordonnées du point $ F $  tel que le quadrilatère  $ ABEF $ soit un parallélogramme.
+\item Déterminer les coordonnées du point $ E' $  symétrique du point $ E $ par rapport à l'origine $ O. $
+\item Déterminer les coordonnées du point $ A' $  symétrique du point $ A $ par rapport à l'axe $ (OI). $
+\item Les droites  $ (BI)$ et $(EJ) $ sont-elle perpendiculaires ?
+\end{enumerate}
+\end{lemma}
+\subsection*{Le plan complexe}
+Dans le plan muni d'un repère orthonormé   $ \paren{O,\; I, \; J} $, on associe un unique point  du plan à chaque nombres complexe et réciproquement.
+
+\medskip
+
+
+\textbf{Remarque}:\quad  En posant  $  \overrightarrow{u}= \overrightarrow{OI}$  et $  \overrightarrow{v}= \overrightarrow{OJ}$  le repère se note aussi  $ \paren{O,\; \overrightarrow{u}, \; \overrightarrow{v}} $.
+
+\medskip
+ Ainsi:
+\begin{itemize}
+\item à $ z=x+\i y $  avec $x $ et $ y$ des réels, on associe le point $ M $  de coordonnées $ \paren{ x, y} $; on dit que \textbf{$  M$ est l'image de $ z $} et on note $ M(z) $.
+\item à $ M(x,\; y )$, on associe le nombre complexe $ z_M=x+\i y$; on dit que \textbf{$z_M$ est l'affixe  de $ M $}, le vecteur $ \overrightarrow{OM} $ ayant les mêmes coordonnées que le point $ M $, on dit aussi  que  $ x+\i y$ est \textbf{l'affixe du vecteur  $ \overrightarrow{OM} $}.
+\item l'axe des abscisses $ \paren{ O; \overrightarrow{u} }$  est appelé \textbf{ axe réel}, celui des ordonnées $ \paren{ O; \overrightarrow{v} }$ est appelé \textbf{axe imaginaire}.
+\item Le plan où les points sont repérés par leurs affixes est appelé \textbf{plan complexe.}
+\end{itemize}
+
+
+\textbf{Exemples}:\\  Les points $ O$, $ I $  et $J $ ont pour affixes respectives $0 $, $  1$  et $ \i$.
+
+\medskip
+
+$ \overrightarrow{IJ} $ a pour coordonnées $ \begin{pmatrix}
+-1\\ 1
+\end{pmatrix} $  donc le vecteur $ \overrightarrow{IJ} $ a pour affixe $ -1+\i $ notée $ z_{\overrightarrow{IJ} } $.
+
+\medskip
+
+\begin{remark}
+\begin{itemize}
+\item[$  \bullet$] Les point d'affixes $z $ et $\overline{z} $ sont symétriques par rapport à l'axe réel.
+\item[$  \bullet$] Les point d'affixes $z $ et $-z $ sont symétriques par rapport à l'origine.
+\end{itemize}
+\end{remark} 
+\begin{property}
+Pour tous points $ A$ et $ B$  du plan complexe,
+\begin{itemize}
+\item  l'affixe du vecteur $ \overrightarrow{AB} $ \;  est  \; $ z_{\overrightarrow{AB}}=z_A-z_B $.
+\item  le milieu $ I $ du segment $ [AB] $ a pour affixe $ z_I=\dfrac{z_A+z_B }{2} $.
+\item le barycentre  $ G $ de $ \paren{A,\; a} $ et $ \paren{B,\; B} $ a pour affixe $ z_G=\dfrac{a z_A+b z_B }{a+b} $.
+\end{itemize}
+\end{property}
+
+\medskip
+\textbf{Condition d'alignement de trois points}
+
+\medskip
+
+Soit $ A$, $ B $   et $C $  trois points distincts et \textbf{alignés} du  du plan complexe. 
+
+On a par exemple $\overrightarrow{AC} $ et $ \overrightarrow{AB}$  colinéaires et il existe un réel $ k $ tel que $\overrightarrow{AC}=k\overrightarrow{AB}$.
+
+\medskip
+
+Ainsi  : $ z_C-z_A= k(z_B-z_A) \Longleftrightarrow \dfrac{ z_C-z_A}{z_B-z_A}=k\in\mathbb{R}$.
+
+\textbf{À retenir}\\
+$ A$, $ B $   et $C $  sont trois points distincts et alignés  si et seulement si  $ \dfrac{ z_C-z_A}{z_B-z_A }$ est un réel.
+
+
+\begin{exercice}
+Dans le plan complexe, on considère les  points $ A(2-3\i) $ , \; $ B(4\i) $ et $ C(1-\i) $.
+\begin{enumerate}
+\item Calculer l'affixe du milieu $ I $ de $ [AB] $ et celle du point $ D $ tel que   $ ABCD $ soit un parallélogramme.
+\item Calculer l'affixe de $ G $ barycentre de  $ \paren{A,\; 2} $ ;  $ \paren{B,\; -1} $  et $ \paren{C,\; -2} $ .
+\item Soit $ A'$ le symétrique de  $ A $ par rapport à l'axe réel. Montrer que $ A'$, $  D$ et  $  G $ sont alignés.
+\end{enumerate}
+\end{exercice}
+\subsection{ Forme trigonométrique d'un  nombre complexe}
+\begin{lemma}
+Le plan orienté est muni d'un repère orthonormé   $ \paren{O,\; I, \; J} $; \; $\overrightarrow{u} $ et $ \overrightarrow{v}$ deux vecteurs non nuls.
+
+\medskip
+
+\textbf{Vrai ou faux}\; : Préciser si les affirmations suivantes sont vraies ou fausses.
+\begin{enumerate}
+        \item On dit que le repère  $ \paren{O,\; I, \; J} $ \; est direct  lorsque  $ \paren{ \overrightarrow{OI},\;\overrightarrow{OJ} }=\dfrac{\pi}{2} $\quad$ [2\pi] $.
+        \item Si le point $ M $, distinct de $ O $ appartient à l'axe des abscisses alors  $ \paren{ \overrightarrow{OI},\;\overrightarrow{OM} }=0 $\quad$ [2\pi] $.
+        \item L'ensemble des points tels que  $ \paren{ \overrightarrow{OI},\;\overrightarrow{OM} }=\dfrac{\pi}{2} $\quad$ [2\pi] $ est l'axe des ordonnées privé de l'origine.
+        \item Si  $ \paren{ \overrightarrow{OI},\;\overrightarrow{u} }= \paren{ \overrightarrow{OI},\;\overrightarrow{v} }$\quad $ [2\pi] $ alors les vecteurs $ \overrightarrow{u}$ et $\overrightarrow{v} $ sont colinéaires.
+        \item Si les vecteurs $ \overrightarrow{t}$ et $\overrightarrow{w} $ sont colinéaires alors    $ \paren{ \overrightarrow{OI},\;\overrightarrow{t} }= \paren{ \overrightarrow{OI},\;\overrightarrow{w} }\quad  [2\pi] $.
+        \item Si $ M $ appartient au cercle de centre $ O $ et de rayon 1 alors ses coordonnées sont de la forme $ \paren{\cos \alpha ,\; \sin \alpha} $ où $ \alpha $ est une mesure en radian de l'angle $ \paren{ \overrightarrow{OI},\;\overrightarrow{OM} } $.
+        \end{enumerate}
+        \end{lemma}
+        \subsection*{ Module et argument   d'un  nombre complexe}
+        \begin{definition}
+        Le plan complexe est muni d'un repère orthonormé  direct $ \paren{O,\; I, \; J} $. 
+        \begin{description}
+        \item Soit $ z $ un nombre complexe et  $ M $  son image dans le plan complexe.
+        Le \textbf{module de $ z $} , noté $ \abs{z} $ est la distance $ OM $:\;  $ \abs{z}=OM $.
+        \item Si $ z $  est non nul, on appelle \textbf{argument} de $ z $, noté \textbf{arg}$ (z) $, toute mesure en radians de l'angle orienté $ \paren{ \overrightarrow{OI},\;\overrightarrow{OM} } $: \\  $ \text{arg}(z)= \paren{ \overrightarrow{OI},\;\overrightarrow{OM} }$\quad $ [2\pi] $.
+        \end{description}
+        \end{definition}
+       
+       \begin{example}
+       $  \abs{\i}=1 $,  $ \;\text{arg}(\i) =\frac{\pi}{2}$, $ \abs{-5}=5 $,  $ \;\text{arg}(-5) =\pi$ $\;\; [2\pi] $, $\;  \abs{3}=3$, $ \;\text{arg}(3) =0\;  [2\pi] $ 
+, $\;  \abs{-2\i}=2 $,  $\; \text{arg}(-2\i) =\frac{3\pi}{2}$\: $[2\pi] $.
+\end{example}
+
+\begin{corollary}
+     \begin{itemize}
+\item $ z $  est réel si et seulement si  $ z=0 $ ou $ \text{arg}(z) =0$\: $[\pi] $.
+\item $ z $  est imaginaire pur si et seulement si $ z=0 $  $ \text{arg}(z) =\frac{\pi}{2}$\: $[\pi] $.
+\end{itemize}
+  \end{corollary}
+\begin{remark}
+\begin{itemize}
+\item Si $ z=x+\i y $  avec $x $ et $y $ réels alors $ \abs{z}=\sqrt{x^2+y^2} $
+\item Si les points $A $ et $ B$ ont pour affixe respectives $ x_A$ et $y_B $ alors $ AB=\abs{x_B - x_A} $.
+\end{itemize}
+\end{remark}
+\subsubsection*{Propriétés du module d'un nombre complexe}
+Pour tous nombres complexes $z $ et $z' $ :
+
+\medskip
+
+\begin{itemize}
+\item[$  \bullet$]  $ \abs{zz'} =\abs{z}\abs{z'}
+\hspace*{2cm}   \bullet  \qquad    \abs{z} =\abs{-z} =\abs{\overline{z}} \hspace*{2cm}   \bullet  \qquad    z\overline{z}=x^2+y^2=\abs{z}^2$
+
+
+\medskip
+
+\item[$  \bullet$]  De plus si $ z'\neq 0,  \quad   \abs{ \dfrac{z}{z'} }= \dfrac{\abs{z}}{\abs{z'}}$
+
+\medskip
+ \item[$  \bullet$] Pour tout entier naturel $ n, \quad  \abs{z^n} =\abs{z}^n$
+\end{itemize}
+
+
+
+\subsubsection*{Propriétés de l'argument d'un nombre complexe}
+Pour tous nombres complexes $z $ et $z' $ non nuls :
+
+\medskip
+
+\begin{itemize}
+\item[$  \bullet$]  $ \text{arg}(zz') =\text{arg}(z) +\text{arg}(z') \; [2\pi]$
+ \item[$  \bullet$]   De plus si $ z'\neq 0,  \quad   \text{arg}\paren{\dfrac{1}{z'}}=-\text{arg}(z')\; [2\pi] \hspace*{2cm}   \bullet  \;  \text{arg}\paren{\dfrac{z}{z'}}=\text{arg}(z)- \text{arg}(z') \; [2\pi]$ 
+
+
+\medskip
+
+\item[$  \bullet$]   $ \text{arg}(\overline{z})=-\text{arg}(z) \; [2\pi]\hspace*{2cm}   \bullet \;  \text{arg}(-z)=\pi +\text{arg}(z) \; [2\pi]$
+
+\medskip
+ \item[$  \bullet$] Pour tout entier naturel $ n, \quad  \text{arg}(z^n) =n \; \text{arg}(z) \; [2\pi]$
+\end{itemize}
+
+\subsubsection*{Interprétation géométrique }
+Soit deux points distincts  $A $ et $ B$ d'affixes respectives $ x_A$ et $y_B $ alors $ \text{arg}\paren{x_B - x_A} =\paren{ \overrightarrow{OI},\;\overrightarrow{AB} }$\; $ [2\pi]$.
+
+Soit trois points distincts  $A $, $ B$ et $ C$ d'affixes respectives $ x_A$ , $y_B $  et $y_C $ alors:
+
+\medskip
+ $ \text{arg}\paren{\dfrac{x_C - x_A}{x_B - x_A}} =\paren{ \overrightarrow{AB},\;\overrightarrow{AC} } \; [2\pi]$.
+ 
+ \bigskip
+ 
+ \textbf{Démonstration}
+ \begin{align*}
+  \text{arg}\paren{\dfrac{x_C - x_A}{x_B - x_A}}= \text{arg}\paren{x_C - x_A}- \text{arg}\paren{x_B - x_A}\; [2\pi]& \\=\paren{ \overrightarrow{OI},\;\overrightarrow{AC} }-\paren{ \overrightarrow{OI},\;\overrightarrow{AB} }\; [2\pi]&\\=\paren{ \overrightarrow{AB},\;\overrightarrow{AC} }  \; [2\pi]
+  \end{align*}
+  \begin{corollary}
+  Soit les points distincts $M $, $ A $  et $ B$ d'affixes respectives $ z$ , $z_A $  et $z_B $ alors:
+  $\;\; \text{arg}\paren{\dfrac{z - z_B}{z - z_A}} =\paren{ \overrightarrow{MA},\;\overrightarrow{MB} } \; [2\pi]$.
+  
+ \end{corollary}
+  \subsubsection*{Condition d'orthogonalité }
+  
+  Les droites $(AB) $ et $(CD) $ sont perpendiculaires  $ \Longleftrightarrow  \text{arg}\paren{\dfrac{z_D - z_C}{z_B - z_A}} =\dfrac{\pi}{2} \; [\pi] \Longleftrightarrow \dfrac{z_D - z_C}{z_B - z_A}\in\i\mathbb{R}$. 
+  
+  \medskip
+  
+  \textbf{Conséquence 1: cas du triangle rectangle }
+  
+  \medskip
+  
+  $ ABC $ est un triangle rectangle en $ A $ si et seulement si   $ \dfrac{z_C - z_A}{z_B - z_A} \in\i\mathbb{R} $.
+  \medskip
+  
+  \textbf{Conséquence 2: cas du triangle rectangle  isocèle}
+  
+  \medskip
+  
+   $ ABC $ est un triangle rectangle en $ A $ si et seulement si   $ \dfrac{z_C - z_A}{z_B - z_A} =\i $  ou $ -\i $.
+   
+   
+ \bigskip
+ 
+ \textbf{Démonstration}
+ 
+  \medskip
+  
+ D'une part  $\abs{ \dfrac{z_C - z_A}{z_B - z_A} }=\abs{\pm \i} =1 $  càd : $ AB=AC $
+  \;  d'autre part $ \text{arg}\paren{\dfrac{z_C - z_A}{z_B - z_A}} = \text{arg}(\i)=\dfrac{\pi}{2}=\paren{ \overrightarrow{AB},\;\overrightarrow{AC} } $
+  
+ 
+  \begin{definition}[Forme trigonométrique]
+  Soit $ z $ un nombre complexe non nul; on pose :
+  \medskip
+  
+  $ x=Re(z) $,\quad $ y=Im(z) $,\quad $ r=|z| $,\quad $ \theta=\text{arg}(z)\;[2\pi] $
+  
+  \medskip
+  
+  On a alors :\;  $ x=r \cos \theta $\quad et \quad $ y= r\sin \theta $.
+ 
+  
+  On obtient l'écriture   $ z= r\paren{\cos \theta +\i \sin \theta}$ qui est appelée \textbf{forme trigonométrique} du nombre complexe $ z $.
+   \end{definition}
+  \medskip
+  
+  \textbf{Passage d'une forme à une autre }
+  
+  
+  \medskip
+  
+  Si le nombre complexe $ z $ s'écrit   $ x+\i y $ sous  forme algébrique  et $ r\paren{\cos \theta +\i \sin \theta}$   sous forme trigonométrique alors :
+  
+  
+   $ r=\sqrt{x^2+y^2} 
+  \hspace*{1cm}  \text{et}  \hspace*{1cm}   \left\{\begin{array}{l c l}
+\cos \theta & = \dfrac{x}{r} \\ 	 
+\sin \theta & = \dfrac{y}{r}
+\end{array}\right. $
+ 
+  
+  
+  \begin{example}
+  
+   Déterminons la forme trigonométrique  de $ z=1+\i $.
+  
+  \medskip
+  $ r=\sqrt{1^2+1^2}=\sqrt{2} $  \hspace*{0.5cm}  et  \hspace*{0.5cm} $  \left\{\begin{array}{l c l}
+\cos \theta & = \dfrac{\sqrt{2}}{2} \\ 	 
+\sin \theta & = \dfrac{\sqrt{2}}{2}
+\end{array}\right. $  on trouve $ \theta=\dfrac{\pi}{4} $ \; et\; $ z=\sqrt{2}\paren{\cos \dfrac{\pi}{4} +\i \sin \dfrac{\pi}{4}}$
+\end{example}
+
+\medskip
+
+
+  \begin{example} Déterminons la forme trigonométrique  de $ z=\sqrt{6}-\i\sqrt{2} $.
+  
+  \medskip
+  $ r=\sqrt{\paren{\sqrt{6}}^2+\paren{-\sqrt{2}}^2}=2\sqrt{2}   \hspace*{0.5cm} \text{ et}  \hspace*{0.5cm}   \left\{\begin{array}{l c l}
+\cos \theta & = \dfrac{\sqrt{3}}{2} \\	 
+\sin \theta & =- \dfrac{1}{2}
+\end{array}\right. $  on trouve $ \theta=-\dfrac{\pi}{6} $  et $ z=2\sqrt{2}\paren{\cos \paren{-\dfrac{\pi}{6}} +\i \sin \paren{-\dfrac{\pi}{6}}}$
+   \end{example}
+   \begin{example}
+  Soit  $ z=2\paren{\cos\dfrac{\pi}{3} +\i \sin \dfrac{\pi}{3}}$.
+  
+   Déterminons la forme algébrique  de  $ \dfrac{1}{z} $.
+  
+  \medskip
+  
+  \textbf{Première méthode}
+  
+   \medskip
+  $ \dfrac{1}{z} =\dfrac{1}{2}=\paren{\cos \paren{-\dfrac{\pi}{3}} +\i \sin \paren{-\dfrac{\pi}{3}}}=\dfrac{1}{2}\paren{\dfrac{1}{2}-\i\dfrac{\sqrt{3}}{2}}=\dfrac{1}{4}-\i\dfrac{\sqrt{3}}{4}$
+  
+  \medskip
+  
+  \textbf{Deuxième méthode}
+  
+   \medskip
+  $ 2\paren{\cos\frac{\pi}{3} +\i \sin \frac{\pi}{3}}=2\paren{\frac{1}{2}+\i\frac{\sqrt{3}}{2}}=1+\i\sqrt{3}$
+  
+  
+   \medskip
+   $ \Rightarrow\dfrac{1}{1+\i\sqrt{3}}\times\frac{1-\i\sqrt{3}}{1-\i\sqrt{3}} =\dfrac{1-\i\sqrt{3}}{4}=\dfrac{1}{4}-\i\dfrac{\sqrt{3}}{4}$
+    \end{example}
+\begin{exercice}
+\begin{enumerate}
+\item Mettre sous forme trigonométrique les nombres complexes suivants:
+
+
+\medskip
+
+\textbf{a)}\;  $ -2+2\i \hspace*{1cm}$ \textbf{b)}  $\; \dfrac{3}{1+\i\sqrt{3}}  \hspace*{1cm}$ \textbf{c)}  $\; \dfrac{4-4\i}{-1+\i\sqrt{3}} $.
+\item  On considère les deux nombres complexes \; $ z_1=6\paren{\cos\dfrac{3\pi}{4} +\i \sin \dfrac{3\pi}{4}} $ et $ z_2=2\paren{\cos\dfrac{2\pi}{3} +\i \sin \dfrac{2\pi}{3}} $.
+
+\bigskip
+
+Déterminer   \textbf{a)}  $\; z_1\times z_2 \hspace*{1cm}$ \textbf{b)}  $\; \dfrac{z_1}{z_2} \hspace*{1cm}$  \textbf{c)}  $\; \dfrac{\overline{z_2}}{-z_1} $.
+\end{enumerate}
+\end{exercice}
+ \subsection*{Notation exponentielle de la  forme trigonométrique} 
+ Le mathématicien Léonhard Euler (1707-1783) utilisa la notation $ \eexp{\i \theta } $ pour désigner le nombre complexe $ \cos \theta +\i \sin \theta $ de module 1 et d'argument $ \theta $.
+ \[\text{Ainsi}:\; \cos \theta +\i \sin \theta= \eexp{\i \theta }  \]
+ 
+ On a alors \; $ \left|\eexp{\i \theta }\right| =1$ pour tout réel $ \theta $.
+ 
+ \medskip
+ \begin{definition}
+ Un nombre complexe $ z $ de module $ r $ et d'argument $ \theta $
+s'écrit : $z=r \eexp{\i \theta }$ . Cette écriture est appelée  \textbf{notation exponentielle} de $ z $.
+\end{definition}
+ \medskip
+
+\begin{example}
+ $  \eexp{\i \dfrac{\pi}{2} }=\i ,\quad     \eexp{\i \pi }=-1 ,\quad    \eexp{\i 0 }=1 ,\quad    \eexp{-\i \frac{\pi}{2} }=-\i ,  \quad    2\eexp{\i \frac{\pi}{4} }=\sqrt{2}+ \i\sqrt{2}, \quad    \eexp{2k\i\pi}=1\quad   \forall k\in\mathbb{Z}$.
+ \end{example}
+ 
+ \begin{property}
+ Soit $ z_1= r_1\eexp{\i\theta_1} $ \; et \; $ z_2= r_2\eexp{\i\theta_2} $
+ 
+ \begin{itemize}
+ \item[$  \bullet$]  $ \overline{z_1}= r_1\eexp{-\i\theta_1}   \hspace*{1cm}  \bullet\; \;z_1 z_2 =r_1r_2\eexp{\i(\theta_1+\theta_2)}  \hspace*{1cm}  \bullet\; \; \dfrac{z_1}{z_2} =\dfrac{r_1}{r_2}\eexp{\i(\theta_1-\theta_2)}$ 
+ 
+ \medskip
+ \item $ z_1= z_2 \Longleftrightarrow r_1= r_2 \qquad\text{et}\qquad \theta_1= \theta_2 +2k\pi\qquad   k\in\mathbb{Z}$
+ \end{itemize}
+  \end{property}
+ \begin{example}
+ Soit à calculer  $\; \paren{1+\i}^{14} $. Nous avons sous forme exponentielle   
+ $ 1+\i =\sqrt{2}\eexp{\i\frac{\pi}{4}}$.
+ 
+ 
+ \medskip
+ 
+Donc  $ \paren{1+\i}^{14}=\paren{ \sqrt{2}}^{14}\eexp{\i\frac{14\pi}{4}}=2^7\eexp{\frac{7\pi}{2}\i}=128\paren{\cos \dfrac{7\pi}{2} +\i \sin \dfrac{7\pi}{2}}=128\i$
+ \end{example}
+ \begin{exercice}
+ On considère les deux nombres complexes \; $ z=\sqrt{3} +\i $\; et\; $ z'=-1+\i $
+ 
+ \begin{itemize}
+ \item[\textbf{a)}] Donner l'écriture exponentielle des nombres complexes $ z $, $ z' $, $ zz' $, $ \frac{z}{z'} $, $ z^5 $.
+ \item[\textbf{b)}] Déterminer l'écriture algébrique  de\;  $ \dfrac{z'^{14}}{\overline{z}^8} $
+ \end{itemize}
+  \end{exercice}
+ \bigskip
+ 
+ \textbf{Le triangle équilatéral}
+
+ $ ABC $ est un triangle équilatéral si et seulement si \; $ \dfrac{z_C-z_A}{z_B-z_A} =\eexp{\pm\i\frac{\pi}{3}}$.
+ 
+ 
+ \medskip
+ 
+ En effet $ \abs{\dfrac{z_C-z_A}{z_B-z_A} }=\abs{\eexp{\pm\i\dfrac{\pi}{3}}}=1 $
+ \qquad  $\text{arg}\paren{\dfrac{z_C-z_A}{z_B-z_A}} =\text{arg}\paren{\eexp{\pm\i\dfrac{\pi}{3}}}=\pm \dfrac{\pi}{3}$.
+ 
+ 
+ \medskip
+ 
+ Ainsi $ AB=AC $  et $ \widehat{BAC}=\dfrac{\pi}{3} $
+\subsection*{ Formules de Moivre et d'Euler}
+\begin{lemma}
+Soit $ z=\cos \theta +\i \sin \theta $
+\begin{enumerate}
+\item Utiliser la formule de multiplication deux nombres complexes écrits en notation exponentielle pour calculer $ z^2 $, $ z^3 $, $ z^4 $ et  $ z^5 $.
+\item Donner une formule générale de $ z^n $ pour $ n\in\mathbb{N} $.
+\item Que devient la  formule   pour $ n\in\mathbb{Z} $? 
+\end{enumerate}
+\end{lemma}
+
+\begin{lemma}
+
+Soit $ z=\cos \theta +\i \sin \theta $
+\begin{enumerate}
+\item Utiliser la formule trouvées à l'
+\textbf{Activité 37}  pour calculer  les sommes suivantes :
+
+\medskip
+
+$ z+ \dfrac{1}{z}, \;\;  z^2 + \dfrac{1}{z^2}$, $ \;z^3+ \dfrac{1}{z^3} \; $  et   $ \; z^4 + \dfrac{1}{z^4}$ en simplifiant le résultat.
+\item Quelle est la  formule générale de $ z^n + \dfrac{1}{z^n} $ pour $ n\in\mathbb{Z} $.
+
+\end{enumerate}
+\end{lemma}
+\begin{property}{(Formule de Moivre)} 
+Pour tout réel $ \theta $   pour tout entier relatif $ n $:
+\[\paren{\cos \theta +\i \sin \theta}^n=\cos n\theta +\i \sin n\theta\]
+\end{property}
+\begin{corollary}
+ $ \bullet\; \;\paren{\eexp{\i\theta}}^n =\eexp{n\i\theta}\quad$  et   $\quad \bullet\; \; \paren{r\eexp{\i\theta}}^n =r^n\eexp{n\i\theta}\quad $ pour tout réel $ \theta $  et pour tout entier relatif $ n $:
+  \end{corollary}
+\begin{example}
+Soit à exprimer $ \cos 3\theta $   et $ \sin 3\theta $  en fonction de $ \cos \theta $  et $ \cos \theta $.
+
+\medskip
+En développant de deux manières  $ \paren{\cos \theta +\i\sin  \theta}^3 $
+
+\medskip
+On obtient  \;  $ \cos 3\theta +\i\sin 3 \theta=\paren{\cos \theta +\i\sin  \theta}^3$
+
+
+\medskip
+ $ = \cos^3\theta+ 3\i\cos^2\theta\sin\theta-3\cos\theta\sin^2\theta -\i \sin^3\theta $
+
+\medskip
+En identifiant les parties réelles et les parties imaginaires:
+
+
+\medskip
+$ \cos3\theta=\cos^3\theta-3\cos\theta\sin^2\theta  $\quad et \quad $ \sin 3 \theta=3\cos^2\theta\sin\theta-\sin^3\theta $.
+\end{example}
+\begin{property}{(Formules d'Euler)}
+Pour tout réel $ \theta $:
+\[\cos \theta = \dfrac{\eexp{\i\theta}+\eexp{-\i\theta}}{2}  \qquad \text{et}\qquad\sin\theta = \dfrac{\eexp{\i\theta}-\eexp{-\i\theta}}{2\i}\]
+\end{property}
+\textbf{Démonstration}
+
+\medskip
+
+$\eexp{\i\theta}=\cos \theta +\i\sin \theta  $\quad  et\quad
+ $\eexp{-\i\theta}=\cos(-\theta) +\i\sin(- \theta)=\cos \theta -\i\sin \theta $ 
+
+
+\medskip
+
+On en déduit que: \quad $ 2\cos \theta=\eexp{\i\theta}+\eexp{-\i\theta} $ \quad  et \quad $ 2\i\sin \theta=\eexp{\i\theta}-\eexp{-\i\theta} $
+\begin{example}
+Soit à \textbf{linéariser} $ \cos^3\theta $.
+\medskip
+
+$ \cos^3\theta =\paren{ \dfrac{\eexp{\i\theta}+\eexp{-\i\theta}}{2}}^3=\frac{1}{8}\paren{\eexp{\i\theta}+\eexp{-\i\theta} }^3=\frac{1}{8}\paren{\eexp{3\i\theta}+3\eexp{\i\theta}+3\eexp{-\i\theta} +\eexp{-3\i\theta}}$
+
+\medskip
+
+ $ =\frac{1}{8}\paren{\eexp{3\i\theta}+\eexp{-3\i\theta}+3\eexp{\i\theta}+3\eexp{-\i\theta}} $
+
+
+\medskip
+
+$ =\frac{1}{8}\paren{2\cos 3\theta+3\times 2\cos \theta} $
+
+ $ =\frac{1}{4}\paren{\cos 3\theta+3\cos \theta} $
+\end{example}
+
+\begin{corollary}
+ $ 2\cos n\theta=\eexp{n\i\theta}+\eexp{-n\i\theta} \quad $  et $\quad  2\i\sin n \theta=\eexp{n \i\theta}-\eexp{-n \i\theta} \; $  pour tout $ \; n\in\mathbb{Z} $.
+\end{corollary}
+
+\begin{exercice}
+\begin{enumerate}
+\item  Montrer que \; $ \paren{ 3\cos\dfrac{2\pi}{3} -3\i\sin\dfrac{\pi}{3} }^9=3^9. $
+\item  Soit $ z=\dfrac{1}{2} +\i\dfrac{\sqrt{3}}{2}$
+
+Déterminer les valeurs de l'entier relatif $ n $ pour lesquelles $ z^n $ est réel.
+\item 
+En utilisant les formules d'Euler, montrer que : $ \sin x\cos3 x=\dfrac{1}{2} \sin 4x -\dfrac{1}{2} \sin 2x$.
+\end{enumerate}
+\end{exercice}
+\subsection{ Racines n-ièmes d'un nombre complexe}
+\begin{lemma}
+On considère les équations \; $ z^2-1=0,\quad  z^3-1=0 ,\quad  z^4-1=0 $.
+\begin{enumerate}
+\item Factoriser les expressions puis déterminer toutes les solutions dans $ \mathbb{C} $.
+\item Mettre  toutes les solutions sous forme trigonométrique  puis les représenter dans le plan complexe.
+\item Quelles configurations les solutions de la deuxième et troisième forment-elles ?
+\item Peut-on prévoir la configuration formée par les solutions de l'équation   \; $ z^5-1=0 $ ?
+\item Quelle est la  configuration formée dans le plan complexe par les solutions de l'équation   \; $ z^n-1=0 $, \quad $ n\geq 3 $ ?
+\item  Utiliser la représentation géométrique des solutions  pour prédire la forme trigonométrique des solutions de l'équation    $ \;z^n-1=0 , \quad  n\geq 3 $.
+\end{enumerate}
+\end{lemma}
+
+
+\begin{theorem}[Racines n-ièmes de l'unité]
+Pour tout entier naturel  non nul $ n $ l'équation  $ z^n=1 \;$ admet  $\;  n $ racines   distinctes  définies par
+\\$\quad  z_k=\eexp{\i\frac{2k\pi}{n} }\quad k=0, \; 1, \; 2 ,\; \cdots, \;n-1$
+
+\medskip
+
+Les solutions (ou racines) de l'équation $ z^n=1 $ sont appelées  \textbf{racines n-ièmes de l'unité.}
+
+\end{theorem}
+
+\begin{remark}
+Le plan complexe étant muni d'un repère orthonormé direct $\; \ouv,\; $. Lorsque $ n\geq 3 $, les
+points-images des racines n-ièmes de l'unité sont les sommets d'un polygone régulier inscrit dans
+le cercle trigonométrique.
+\end{remark}
+\begin{exercice}
+Déterminer les racines sixièmes de l'unité.
+\end{exercice} 
+\begin{theorem}{(Admis)}
+Étant donné un nombre complexe non nul $ a $, il existe $ n $ nombres complexes distincts  $ z $ tels que \; $ z^n=a $. Ces nombres sont appelés les \textbf{racines n-ièmes} de $ a $. Ils sont donnés par :
+\[ z_k=\abs{a}^{\frac{1}{n}}\eexp{\i\paren{\dfrac{\text{arg}(a)}{n}+\dfrac{2k\pi}{n}} }\qquad k=0, \; 1, \; 2 ,\; \cdots, \;n-1\]
+\end{theorem}
+\begin{property}
+Dans le plan complexe muni du repère orthonormé $ \ouv $ , les images des racines
+n-ièmes d'un nombre complexe non nul $ a $ forment un polygone régulier à $ n $ côtés inscrit dans un cercle de centre O et de rayon $ \abs{a}^{\frac{1}{n}} $.
+\end{property}
+
+\subsection{Résolution d'équations du second degré}
+
+\textbf{Résolution d'équations du second degré à coefficients réels}
+\begin{theorem}
+Soit l'équation  du second degré  (E) d'inconnue $ z $ : $ \; a z^2+b z+c=0 \;$ telle que $\; a\in\mathbb{R}^{\ast} $, $\; b\in\mathbb{R} \;$ et $\; \in\mathbb{R} $.
+
+\medskip
+
+
+On pose $ \Delta  =b^2- 4ac \;$ donc $\; \Delta $ est un réel.
+\begin{itemize}
+\item  Si  $ \;\Delta > 0 \;$ alors (E) a deux racines réelles distinctes: $ \;z_1=\dfrac{-b+\sqrt{\Delta}}{2a} $ et $\; z_2=\dfrac{-b-\sqrt{\Delta}}{2a} $
+\item  Si  $ \;\Delta = 0 \;$ alors (E) a une  racine réelle double: $\; z_0=\dfrac{-b}{2a} $.
+\item  Si  $\; \Delta < 0 \;$ alors (E) a deux racines complexes conjuguées : $\; z_1=\dfrac{-b+\i\sqrt{-\Delta}}{2a} \;$ et $ \; z_2=\dfrac{-b-\i\sqrt{-\Delta}}{2a} $
+\end{itemize} 
+\end{theorem}
+\begin{example}
+  Résoudre dans  $\; \mathbb{C} \;$  l'équation  $ \; 3z^2-z+5=0 $.
+
+\medskip
+
+  \hspace*{5cm} $\; \Delta = 1-60=-59 $
+
+\medskip
+
+   $ z_1= \frac{1+\i\sqrt{59}}{6}\; $ et $ \;z_2= \frac{1-\i\sqrt{59}}{6} $
+   \end{example}
+   \textbf{ Racines carrées d'un nombre complexe}
+   \begin{definition}
+   Soit un nombre complexe $ \;\Delta= a+\i b $.
+   
+   \medskip
+   
+   Un nombre complexe $\; z \;$ est une racine carrée de $ \Delta \;$ si : $\; z^2=\Delta $.
+   
+   \medskip
+   
+   Déterminer les racines carrées de $\; \Delta \;$ revient à résoudre dans $\; \mathbb{C} \;$ l'équation  : $\; z^2=\Delta $.
+    \end{definition}
+   \begin{property}
+    Un nombre complexe a deux racines carrées opposées.
+    \end{property}
+    
+   \medskip
+   \textbf{Résolution algébrique de l'équation } $\; z^2=\Delta $
+   
+   \medskip
+   
+   Posons $ z=x+\i y ,\;$   $ x\;$ et $\; y$ des réels.
+   
+   \medskip
+   On a : $ \; z^2= \Delta \Longleftrightarrow (x+\i y)^2=a+\i b $
+   
+   \medskip
+   \hspace*{2cm} $ \Longleftrightarrow \; x^2 -y^2 +2\i x y =a+\i b$
+   
+   \medskip
+   
+  \hspace*{2cm}  $ \Longleftrightarrow  $ 
+ $\left\{\begin{array}{l c}
+ x^2 -y^2 & =a\\ 	 
+ 2xy& = b
+\end{array}\right.$ 
+
+\medskip
+
+De plus $\; \abs{z^2} =\abs{\Delta}\Longleftrightarrow   x^2 +y^2=\sqrt{a^2+b^2}$.
+
+\medskip
+
+\textbf{Méthode générale  pour chercher les racines carrées d'un nombre 
+complexe  $\; a+\i b \;$ sous forme algébrique :} 
+
+
+\medskip
+Soit $ \;z = x +\i y\; $ une telle racine carrée. Alors $\; x \;$ et $\; y\; $ sont solutions du système suivant :
+
+   \medskip
+   
+  \hspace*{2cm}  $ \Longleftrightarrow  $ 
+ $\left\{\begin{array}{l l}
+ x^2 +y^2&=\sqrt{a^2+b^2}\qquad (1)\\
+ x^2 -y^2 & =a\qquad \qquad (2)\\ 	 
+ 2xy& = b  \qquad \qquad (3)
+\end{array}\right.$ 
+
+\medskip
+
+\begin{remark}
+\begin{itemize}
+\item On commence par résoudre le système formé par les deux équations (1) et (2) qui a a priori quatre
+couples $(x , y )$ solutions. Et compte tenu de l'équation (3), on ne retient que les deux couples $(x , y )$
+tels que le signe de $xy$ soit celui de $ b $ .
+\item On se gardera d'appliquer cette méthode dans le cas où $ \Delta $ est un nombre réel. Les racines carrées de
+$ \Delta $ sont alors évidentes, égales à   $ \pm \Delta $ si $ \Delta $ est positif et à  $ \pm\i\sqrt{\Delta} $ si  $ \Delta $ est négatif.
+\end{itemize}
+\end{remark}
+\begin{example}
+Déterminons les racines carrées du nombre complexe  $\; 3-4\i $.
+
+Soit $\; x+\i y \;$ une telle racine racine carrée.
+
+ \medskip
+   
+  \hspace*{2cm}  $ \Longleftrightarrow  $ 
+ $\left\{\begin{array}{l l}
+ x^2 +y^2&=5\qquad (1)\\
+ x^2 -y^2 & =3 \qquad \qquad (2)\\ 	 
+ 2xy& = -4  \qquad \qquad (3)
+\end{array}\right.$ 
+
+\medskip
+(1) + (2) permet d'obtenir $ x^2=4\Longleftrightarrow x=2 \; \text{ou}\; x=-2 $
+
+\medskip
+(1) - (2) permet d'obtenir $ y^2=1\Longleftrightarrow x=1 \; \text{ou}\; x=-1 $
+
+\medskip
+
+D'après (3)  les racines carrées de   $ 3-4\i $ sont :\;\; $2-\i $ et $-2+\i $.
+\end{example}
+
+\textbf{Résolution d'équations du second degré à coefficients complexes}
+\begin{property}
+Soit l'équation  du second degré  (E) d'inconnue $ z $ :\; $ a z^2+b z+c=0 $\; telle que $ a\in\mathbb{C}^{\ast} $,\; $ b\in\mathbb{C} $ et $ \in\mathbb{C} $.
+
+\medskip
+
+
+On pose $ \;\Delta  =b^2- 4ac \;$ et soient $\; x+\i y \;$ et $\; -x-\i y \;$ ses deux racines carrées opposées.
+
+\medskip
+
+ Alors les solutions de (E) sont:
+  
+  $$  z_1=\dfrac{-b+ x+\i y}{2a} \;\; \text{et} \;\; z_2=\dfrac{-b-x-\i y}{2a} $$ 
+\end{property}
+
+ 
+\begin{example}
+  Résoudre dans $  \;\mathbb{C}  \;$  l'équation  $ \; z^2+(2+3\i)z-2+4\i=0 $.
+  
+  \medskip
+  
+On trouve    $ \; \Delta =3-4\i $
+  
+  \medskip
+
+
+Alors 
+  
+  $$  z_1=\dfrac{-(2+3\i)+ 2-\i}{2}=2\i \;\; \text{ et} \;\; z_2=\dfrac{-(2+3\i)-2+\i}{2} =-2-\i$$ 
+
+\end{example}
+
+\begin{exercice}
+  Résoudre dans  $ \;\mathbb{C}\; $  les équations:
+ 
+\begin{enumerate}
+\item  $ z^2+(\i-1)z-2(1+\i)=0 $
+\item  $ (2+\i)z^2-(5-\i)z+2-2\i=0 $
+\item  $ (1-\i)z^2+(3\i+2)z+1+4\i=0 $
+\item  $(z^2 +3z-2)^2 =-(2z^2 -3z+2)^2$
+\end{enumerate}
+\end{exercice}
+
+
+\subsubsection*{Un exemple  d'équation de degré supérieur ou égal à 3}
+
+\medskip
+ On considère dans  $ \;\mathbb{C} \;$  l'équation (E) d'inconnue $ z $ suivante :
+ 
+ \medskip
+ 
+ $ (E) :\qquad  z^3 - ( 1+2\i )z^2 +3( 1+ 3\i ) z-10(1+ \i)$
+ 
+ \medskip
+ 
+ \textbf{a)}\; Montrer que l'équation (E) admet une solution imaginaire et la déterminer.
+ 
+ \textbf{b)}\; Résoudre l'équation (E).
+ 
+ \textbf{Solution}
+ 
+ \medskip
+ 
+  \textbf{a)}\; Soit   $\; z_0 = \i y  \;$ une éventuelle solution imaginaire  pure de (E). On a alors :
+  
+  \medskip
+  
+  $ ( \i y )^3 + ( 1-4\i ) ( \i y )^2 -( 7+ 3\i ) ( \i y ) +6\i-2=0 $
+  
+  \medskip
+  
+  $z_0\; $ sera solution de (E) si et seulement si $\; -y^2+3 y-2+\i(- y^3 + 4 y^2-7 y+ 6)=0,\; $ soit
+  
+    $ \Longleftrightarrow  $ 
+ $\left\{\begin{array}{l c}
+ -y^2+3 y-2& =0\qquad (\ast) \\ 	 
+ - y^3 + 4 y^2-7 y+ 6& = 0\qquad (\ast\ast)
+\end{array}\right.$ 
+
+
+L'équation $ \;(\ast)\; $ admet deux solutions qui sont 1 et 2. On vérifie que seul le réel 2 est solution
+de l’équation $ \;(\ast\ast)\; $. Il en résulte que le réel 2 est l'unique solution du système précédent.
+
+\medskip
+On en déduit que  $\; z_0 = 2\i \;$ est l'unique solution imaginaire pure de (E).
+
+
+\medskip
+D'après le théorème précédent, il s'ensuit que :
+
+
+\medskip
+
+$ z^3 + ( 1-4\i )z^2 -( 7+ 3\i ) z+ 6\i-2=(z-2 \i)(z^2+ b z+ c) \;$  où $\; b\; $ et $\; c \;$ sont des nombres complexes.
+
+
+\medskip
+
+Un développement et une identification  terme à terme ( ou  la méthode Horner) nous donnent   $\; b = 1-2\i \;$ et $\; c = -3-\i$.
+
+
+\medskip
+L'équation (E) s'écrit alors $\; ( z-2\i ) ( z^2 + ( 1-2\i )-3-\i ) =0, \;$  ce qui équivaut à :
+
+\medskip
+$z = 2\i\; $ ou  $\; z^2 + ( 1-2\i )-3-\i=0$.
+
+
+\medskip
+On vérifie que les solutions de l'équation (E$_1$) : $\; z^2 + ( 1-2\i )z-3-\i=0\; $ sont :
+
+\medskip
+$z_1 = -2+\i\; $  et $\; z_2 = 1+\i$.
+
+\medskip
+
+L'ensemble des solutions de l'équation (E) est donc : $S = \bigl\{ 2\i, \; -2+\i,\;  1+\i \bigr\}$.
+
+
+ 
+  %</content>
+\end{document}

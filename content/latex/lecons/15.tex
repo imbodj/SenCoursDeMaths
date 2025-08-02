@@ -1,0 +1,473 @@
+\input{../common}
+\everymath{\displaystyle}
+\begin{document}
+  %<*content>
+  \lesson{algebra}{15}{Similitudes directes}
+\begin{definition}
+Une transformation du plan complexe $ \mathcal{P} $ est une application 
+ \[ \begin{array}{lrcl}
+  f : & \mathcal{P} &   \longrightarrow & \mathcal{P} \\ 
+  &  M & \longmapsto & M'
+  \end{array}\quad \text{qui est bijective}.\]
+\end{definition}
+\medskip
+
+A toute transformation $ f $ du plan complexe, on peut associer une unique application
+\[ \begin{array}{lrcl}
+  \varphi : & \mathbb{C}&   \longrightarrow & \mathbb{C}\\ 
+  &  z& \longmapsto & z'
+  \end{array}\] telle que si  $M'( z') = f(M( z ))$, alors \; $\varphi( z ) = z'$.
+\medskip
+
+$ \varphi $ , qui est également bijective, est appelée transformation complexe associée à $ f $ .
+
+ La formule   $z'=\varphi (z ) $ \, est appelée écriture ou expression complexe de la transformation $ f $.
+\medskip
+
+\begin{example}
+\begin{itemize}
+\item
+La translation, l'homothétie et la rotation sont des transformations du plan.
+\item La composée de deux transformations  du plan est une transformation du plan.
+\end{itemize}
+\end{example}
+Voici les écritures complexes de ces transformations du plan.
+\subsubsection*{Écriture complexe d'une translation}
+\begin{theorem}
+La translation de vecteur  $ \overrightarrow{u} $, d'affixe $ a $ ,
+transforme un point   $M( z ) $ en un point  $M'( z') $ tel que :  $z'=z +a  $.
+\end{theorem}
+
+\textbf{Démonstration}
+
+\medskip
+
+ Dire que $ M' $ est l'image de $ M $ par la translation de vecteur $ \overrightarrow{u} $  revient à dire
+que  $ \overrightarrow{M M'} = \overrightarrow{a}$, ce qui se traduit en termes d'affixes par  $z'-z =a  $ soit  $z'=z +a  $. 
+
+
+ \begin{remark}
+ \begin{itemize}
+ \item La translation réciproque a pour vecteur $ - \overrightarrow{u} $.
+ \item  Ajouter un nombre $ a $ revient géométriquement à translater d'un vecteur
+d'affixe $ a $.
+ \end{itemize}
+  \end{remark}
+ \subsubsection*{Écriture complexe d'une homothétie}
+\begin{theorem}
+ L'homothétie de centre $ \Omega  (\omega ) $ et de rapport $ k\in\mathbb{R} $ transforme un point  $ M( z )$  en un point $ M'( z ')$  tel que : $ z'-\omega =k(z-\omega) $.
+\end{theorem}
+
+\textbf{Démonstration}
+
+\medskip
+
+Dire que $ M' $ est l'image de $ M $ par l'homothétie de centre $ \Omega $ et de rapport $ k $, signifie par définition que : $\overrightarrow{ \Omega M'}= k  \overrightarrow{ \Omega M}$, ce qui se traduit en termes d'affixes par : $ z'-\omega =k (z-\omega) $ ou  $ z'=kz +\omega(1-k) $.
+
+\medskip
+\begin{example}
+Soit $ f $ la transformation du plan qui, à tout point $M(z)$ du plan associe le point  $M'(z')$ tel que : $ z'=-\frac{5}{2}z+2\i $.
+
+\medskip
+
+Montrons d'abord que $ f $ admet un unique point invariant.
+
+ Pour cela, résolvons l'équation $ f(\omega)=\omega $.
+
+$ f(\omega)=\omega \Longleftrightarrow -\frac{5}{2}\omega+2\i=\omega  \Longleftrightarrow \omega=\frac{4}{7} \i$.
+
+\medskip
+
+La transformation $ f $ admet donc un unique point invariant $ \Omega $ d'afﬁxe $ \omega= \frac{4}{7} \i$.
+
+ Pour déterminer la nature de $ f $ , exprimons  $ z'-\omega $ en fonction de $ z-\omega $. On a :
+$$  \left\{\begin{array}{l c l}
+z'&=-\frac{5}{2}z+2\i \\ 	 
+\omega &=-\frac{5}{2}\omega +2\i\\
+
+\end{array}\right.  $$
+D'où en soustrayant membre à membre :  $ z'-\omega =-\frac{5}{2}(z-\omega) $..
+
+On en déduit, grâce à son écriture complexe, que $ f $ est l'homothétie de centre $ \Omega $ et de rapport $ k=-\frac{5}{2} $. 
+\end{example}
+\medskip
+
+\begin{remark}
+\begin{itemize}
+\item Comme cas particulier d'une homothétie, on a la symétrie centrale, qui est 
+une homothétie de rapport $ -1 $.
+
+ L'écriture complexe de la symétrie s de centre $ \Omega $ d'affixe $ \omega $  est s$(z)= z'=-z+2 \omega $.
+ \item Lorsque O (origine du repère )est le centre de l'homothétie alors $ z'= k z $.
+\end{itemize}
+\end{remark}
+\subsubsection*{Écriture complexe d'une rotation}
+\begin{theorem}
+ La rotation de centre $ \Omega  (\omega ) $ et d'angle  $ \theta\in\mathbb{R} $ transforme un point  $ M( z )$  en un point $ M'(z ')$  tel que : $ z'-\omega =\eexp{\i \theta}(z-\omega) $ ou  $ z'=\eexp{\i \theta}z +\omega(1-\eexp{\i \theta}) $.
+ \end{theorem}
+ \medskip
+
+\textbf{Démonstration}
+
+\medskip
+Si $ M=\Omega $, la relation  $ z'-\omega =\eexp{\i \theta}(z-\omega) $  est triviale.
+
+ Si $ M \neq\Omega  $ , dire que $ M' $
+est l'image de $ M $ par la rotation de centre $ \Omega $ et d'angle $ \theta $ signifie  que : $$  \left\{\begin{array}{l c l}
+\Omega M'=\Omega M \\ 	 
+ \paren{\overrightarrow{\Omega M} \; ;\;  \overrightarrow{ \Omega M'}} =\theta \quad  [2\pi]\\
+
+\end{array}\right.  $$
+
+
+Ce qui se traduit en termes d'affixes par :$$  \left\{\begin{array}{l c l}
+\abs{z'-\omega}=\abs{z-\omega}\\ 	 
+\text{arg}\paren{\dfrac{z'-\omega}{z-\omega}} =\theta \quad  [2\pi]\\
+
+\end{array}\right.  $$
+On en déduit  que :  $ \dfrac{z'-\omega}{z-\omega}= \eexp{\i \theta} $ d'où  $ z'-\omega =\eexp{\i \theta}(z-\omega) $.
+
+\medskip
+\textbf{Cas particulier}
+
+\medskip
+
+Si  $ \Omega= $O, l'écriture complexe de la rotation devient : $ z'=\eexp{\i \theta}z  $.
+
+\medskip
+\begin{example}
+On donne deux points distincts $A(a)$ et $B(b)$. On construit le carré ABCD de sens
+direct. Quelle est l'affixe $ \omega $ du centre $ \Omega $ du carré ABCD ?
+
+
+Il suffit de remarquer que B est l'image de A par la rotation de centre $ \Omega $ et d'angle $ \frac{\pi}{2} $.
+
+ $ b-\omega =\eexp{\i \frac{\pi}{2}}(a-\omega)=\i (a-\omega)\Longleftrightarrow \omega(1-\i)=a\i-b\Longleftrightarrow \omega=\dfrac{a\i-b}{1-\i}$.
+ 
+\end{example}
+ \begin{exercice}
+ \begin{enumerate}
+ \item 
+ Le plan complexe est muni d'un repère orthonormé direct $ \ouv $.
+ \medskip
+ 
+ Soit $A$, $B$ et $C$ les points d'affixes respectives $z_A = 4$,  $z_B = 1 + 3\i$ et $z_C = 1 -\i $.
+
+ \begin{enumerate}
+ \item   
+ Déterminer l'écriture complexe de la translation   de vecteur $ \overrightarrow{AB}$ puis trouver l'image $ C' $ du  point  $ C $.
+ \item Déterminer l'écriture complexe de la rotation   de centre $ O $  et d'angle $ \frac{\pi}{3} $  puis trouver l'image $ A' $ de  $ A $.
+ \item Déterminer le rapport de l'homothétie de centre $ \Omega (1) $   qui transforme  $ B$     en $C $.
+  \item Déterminer le centre de la rotation d'angle $ \frac{\pi}{4} $ qui transforme  $ B$     en $C $.
+ \end{enumerate}
+ \item  Déterminer la nature et  les éléments caractéristiques des transformations suivantes :
+ 
+ \textbf{a)}  $ \;T_1\;: \:z'=\paren{-\tfrac{1}{2} +\i \tfrac{\sqrt{3}}{2}}z +2\i(1-\eexp{\i\frac{2\pi}{3}}) \hspace*{0.5cm}$  \textbf{b)} $\; T_2\;: \:z'= -\sqrt{3}z +(4+\i)(1+\sqrt{3})$
+ \end{enumerate}
+ \end{exercice}
+ 
+ \subsection{Similitudes directes}
+ \begin{definition}[Rappel]
+
+ On appelle  similitude plane directe, toute transformation du plan  $ \mathcal{P} $ dans lui-même qui multiplie les distances  par un nombre réel $ k>0 $, appelé \textit{rapport} et qui conserve les mesures d'angles.
+ \end{definition}
+ \medskip
+ 
+ Les éléments caractéristiques d'une similitude directe sont:
+ \begin{description}
+ \item le rapport,
+ \item le centre,
+ \item l'angle.
+ \end{description}
+ \begin{example}
+\begin{itemize}
+\item Une translation de vecteur non nul est une similitude directe de rapport $ k=1 $ et d'angle $ \theta=0 $.
+\item Une homothétie  de centre $ \Omega $  et de rapport $ k $ est une similitude directe de centre $ \Omega $ , de rapport $ |k| $ et d'angle $ \theta=0 $ si $ k>0 $ ou $ \theta=\pi $ si $ k<0 $.
+\item Une rotation de centre $ \Omega $  et d'angle  $ \theta $ est une similitude directe de rapport $ k=1 $, de centre $ \Omega $  et d'angle  $ \theta $.
+\end{itemize}
+Toute similitude  directe S de centre $ \Omega $, de rapport  $ k $ et d'angle $ \theta $ est notée par S($ \Omega $, $ k $, $ \theta $).
+
+ $ \Omega $, $ k $ et $ \theta $  sont les éléments caractéristiques de la similitude directe.
+ \end{example}
+
+
+\bigskip
+ \textbf{Propriétés  géométriques d'une similitude directe}
+ 
+ \medskip
+ 
+ Soit $ S $ la similitude directe   de centre $ \Omega $, de rapport  $ k $ et d'angle $ \theta $ qui transforme le point $ M(z) $ en $ M'(z') $. 
+ $$ S(M)=M'\Longleftrightarrow \left\{\begin{array}{l c l}
+\Omega M'=k \,\Omega M\\ 	 
+\paren{\overrightarrow{\Omega M}\; ,\;  \overrightarrow{\Omega M'}} =\theta \quad  [2\pi]\\
+
+\end{array}\right.  $$
+\begin{remark}
+\begin{itemize}
+\item Le centre de la similitude est le seul \textit{point invariant}.
+\item Une similitude directe qui n'admet pas de point invariant est une translation.
+\end{itemize}
+\end{remark}
+ \begin{property}
+ \begin{itemize}
+ \item Une similitude directe multiplie:
+ \begin{itemize}
+ \item[$-$] les distances par $ k $,
+  \item[$-$] les aires par $ k^2 $.
+ \end{itemize}
+ \item Une similitude directe conserve:
+ \begin{itemize}
+  \item[$-$] l'alignement des points,
+ \item[$-$] le parallélisme,
+  \item[$-$] l'orthogonalité,
+   \item[$-$] le contact.
+    \item[$-$] le barycentre
+     \item[$-$] les angles orientés.
+ \end{itemize}
+ \item Par une  similitude directe S l'image d'une droite $ \Delta $ passant les points A et B est une droite $ \Delta' $ passant par les images A' et B' de  A et B par S.
+ \item Par une  similitude directe S l'image d'un cercle $ \mathcal{C} $ de centre $ I $ et de rayon $ r $ est un cercle $ \mathcal{C}' $ de centre $ I' $ image de $ I $ par S et de rayon $ k r $ .
+ \item La réciproque d'une similitude directe  $S( \Omega $, $ k $, $ \theta $) est une   similitude directe $S^{-1}$ $\paren{ \Omega , \; \frac{1}{k}, \; -\theta }$.
+ \item La composée de deux similitudes directes  de même centre , est une similitude directe  de même centre, de rapport le produit des rapports et d'angle, la somme des angles.
+ \medskip
+ 
+\hspace*{4cm} S($ \Omega $, $ k $, $ \theta $)$ \circ $S'($ \Omega' $, $ k' $, $ \theta' $)$ = $S($ \Omega $, $ k +k'$, $ \theta +\theta' $)
+ \end{itemize}
+\end{property}
+ 
+ \begin{remark}
+ Soit la similitude directe $S( \Omega $, $ k $, $ \theta $). Alors :
+ 
+ \medskip
+ 
+ $ \underbrace{ S \circ S\circ S\circ \cdots S\circ S \circ S}_{n \text{\; fois}}= S( \Omega , \; k^n , \; n\:\theta )$
+\end{remark}
+\subsection*{ Expression complexe d'une similitude directe}
+ \begin{lemma}
+Le plan complexe $ \mathcal{P} $ est muni du repère orthonormé (O;\; I ,\; J).
+
+\medskip
+On considère l'application $ f $ du plan complexe $ \mathcal{P} $  dans lui-même qui à tout point $ M $ d'affixe $ z $ associe le point $ M' $ d'affixe $ z'=(1+\i) z+2-3\i $. 
+\begin{enumerate}
+        \item Déterminer l'image $ A' $ du point $ A$ d'affixe $ 2+\i $.
+        \item Quelle est l'affixe de l'image  du point O ? du point I ? du point J?
+        \item  Déterminer l'affixe de l'antécédent du point $ B'(-2\i) $ .
+        \item Quelle est l'affixe de l'antécédent  du point O ?
+        \item Déterminer le point $ \Omega $ dont l'affixe $ \omega $ vérifie $ f(\omega)=\omega $.
+        \item Exprimer $ z $ en fonction de $ z' $ sous la forme $ z=az'+b $ où $ a$ et $ b$ sont des nombres complexes écrits sous forme algébrique.
+\end{enumerate}
+ \end{lemma}
+
+
+ \begin{lemma}
+
+On considère l'application $ f $ du plan complexe $ \mathcal{P} $  dans lui-même qui à tout point $ M $ d'affixe $ z $ associe  son image $ M' $ d'affixe $ z' $ telle que $ z'=a z+b$  où $ a$ et $ b$ sont des nombres complexes non nuls. 
+
+\medskip
+On donne les points $ A(1) $, $ B(\i)$,  $ A'(1+2\i)$ et  $ B'(-1+6\i)$
+\begin{enumerate}
+\item Déterminer $ a$ et $ b$ sachant que $ f(A)=A' $  et $ f(B)=B' $.
+\item Déterminer $ \omega $ tel que $ f(\omega)=\omega $.
+\item Exprimer  $ z'-\omega $ en fonction de $ z-\omega $.
+\item En posant  $ z'=x'+\i y' $ et $ z=x+\i y$ exprimer $ x' $ et $ y' $ en fonction de $ x$ et $ y$.
+\end{enumerate}
+ \end{lemma}
+\begin{theorem}[Écriture complexe]
+La similitude directe  $ S $ de centre $ \Omega $  d'affixe $ \omega $, de rapport $ k $ et d'angle $ \theta $  transforme un point  $ M( z )$  en un point $ M'(z ')$  tel que : $ z'-\omega =k\eexp{\i \theta}(z-\omega) $ ou  $ z'=k\eexp{\i \theta}z +\omega(1-k\eexp{\i \theta}) $.
+ 
+\end{theorem}
+
+\textbf{Démonstration}
+
+\medskip
+ $ S(M)=M'\Longleftrightarrow \left\{\begin{array}{l c l}
+\Omega M'=k \,\Omega M\\	 
+\paren{\overrightarrow{\Omega M}\; ,\;  \overrightarrow{\Omega M'}} =\theta \quad  [2\pi]
+\end{array}\right.  \Longleftrightarrow   \left\{\begin{array}{l c l}
+\dfrac{\Omega M'}{\Omega M}=k \\ 	 
+\paren{\overrightarrow{\Omega M}\; ,\;  \overrightarrow{\Omega M'}} =\theta \quad  [2\pi]
+\end{array}\right. \Longleftrightarrow  \left\{\begin{array}{l c l}
+\abs{\dfrac{z'-\omega}{z-\omega}}=k \\ 	 
+\text{arg}\paren{\frac{z'-\omega}{z-\omega}} =\theta \quad  [2\pi]
+\end{array}\right. $
+
+\medskip
+$ \Longleftrightarrow \dfrac{z'-\omega}{z-\omega}=k\eexp{\i \theta}\Longleftrightarrow   z'-\omega =k\eexp{\i \theta}(z-\omega)$   ou  $ z'=k\eexp{\i \theta}z +\omega(1-k\eexp{\i \theta}) $.
+
+ \begin{corollary}
+Toute similitude directe a une écriture complexe de la forme :\; $ z'=az+b $\; où $ a\in\mathbb{C}^{\star} $, $ b\in\mathbb{C} $  et $ z' $ l'affixe de l'image du point d'affixe $ z $.
+ \end{corollary}
+ 
+\medskip
+
+\textbf{Réciproque}
+
+\medskip
+
+Toute transformation $f$ admettant une écriture de la forme : $z' = a z + b $  avec  $ a\neq 0 $ 
+est une similitude directe de rapport  $ k = |a| $  et d'angle  $ \theta= \text{arg}\; a $.
+
+ \medskip
+
+\textbf{Démonstration}
+
+\medskip
+Soient $ M $ et $ N $ points quelconques du plan d'images respectives $ M' $ et $ N' $ par $f$.
+
+\medskip
+$  \left\{\begin{array}{l c l}
+z_{N'}&=a z_{N}+b \\ 	 
+z_{M'} &= a z_{M}+b\\
+
+\end{array}\right.  $ alors $ z_{N'}-z_{M'}=a ( z_{N}-z_{M}) $ d'où $\abs{ z_{N'}-z_{M'}}=|a| \abs{ z_{N}-z_{M} }$.
+\medskip
+
+ D'où $ M'N'=|a|\times MN $
+ 
+ \medskip
+ 
+ Et  $a \neq 0 $, donc f est une similitude de rapport $ |a| $.
+ 
+ \medskip
+ 
+ De plus, comme $a \neq 0 $, son argument existe et $\text{arg}\; (z_N' - z_M') = \text{arg}\; a + \text{arg}\;(z_N -z_M)$
+
+\medskip
+
+Donc : $ \paren{\overrightarrow{u}, \overrightarrow{M'N'}} =\text{arg}\; a+\paren{\overrightarrow{u}, \overrightarrow{MN}}$.
+
+
+\medskip
+
+D’où : $ \paren{\overrightarrow{MN}, \overrightarrow{M'N'}} =\text{arg}\; a$
+
+\medskip
+
+$f$ est une similitude et l'angle entre un vecteur et son image est constant donc :
+
+\medskip
+
+$f$ est donc  une similitude directe et son angle vaut cette constante : $ \text{arg}\; a $.
+
+\begin{theorem}
+ Soient A, B, A' et B' quatre points donnés du plan tels que A $ \neq $ B et A' $ \neq $ B'.
+ 
+Alors, il existe une unique similitude directe $ s $ telle que : $ s $(A) = A' et $ s $(B) = B'.
+\end{theorem}
+ 
+
+ 
+
+\textbf{Démonstration}
+
+\medskip
+
+Si une telle similitude $ s $ existe alors il existe  deux nombres complexes $ a $ et $ b $ , avec  $ a\neq $ 0 tels que:
+
+$z_{A'} = az_A + b$ \;  et \; $z_{B'} = az_B + b$
+
+
+alors : $z_{B'} - z_{A'} = a (z_B - z_A)$  soit  $a=\dfrac{z_{B'}-z_{A'}}{z_B-z_A}   $ et on a : $   b = z_{A'} - az_A$
+
+Si $ s $ existe, le couple $( a , b )$ est unique et $ s $ est donc elle aussi unique.
+
+Soit $s$  la similitude directe dont l'écriture complexe est $ z'=a z +b\; $ où  $ \; a=\dfrac{z_{B'}-z_{A'}}{z_B-z_A}\; $ et  $ \; b = z_{A'}-az_A $.
+
+\medskip
+
+$B$ étant différent de $A$, donc $a$ est défini.
+
+$z_{A'} = az_A + b\;$   et  $\; z_{B'} - z_{A'} = az_B - az_A$
+
+Donc $z_{B'} = az_B - az_A+ z_{A'} = az_B + b$
+
+De plus, comme  $B’ \neq A’$, donc  $ a $ est non nul et $ s $ est donc définie.
+
+D’où : $s(A) = A'$ et $s(B) = B'$.
+
+\medskip
+Une similitude directe transformant A en A' et B en B' existe donc et est unique.
+\medskip
+
+\textbf{ Expression analytique d'une similitude directe}
+
+\medskip
+
+À partir de l'écriture complexe d'une similitude s directe, on peut en déduire l'écriture analytique.  Pour cela on remplace $ z $ par $ x+\i y $ et $ z' $ par $ x'+\i y' $ dans $ z'=a z+b $. Puis on exprime $ x' $ et $ y' $ en fonction de $ x $ et $ y $.
+
+\begin{example}
+Soit s : $ z'=(1-\i )z+1+5\i $
+
+$ x'+\i y'=(1-\i )(x+\i y)+ 1+5\i \Longleftrightarrow x'+\i y'=x+ y +1 + \i(-x+y +5) \Leftrightarrow $ $\left\{\begin{array}{l c l}
+x'&=x+y+1      \\ 	 
+ y'&=-x+y+5
+\end{array}\right. $ 
+\end{example}
+
+
+\bigskip
+
+ \textbf{ Utilisation des nombres complexes pour
+déterminer la nature d'une transformation
+géométrique}
+ 
+ \begin{theorem}
+Soit  une similitude directe s d'écriture   complexe : $z' = a z + b$ avec  $a \neq 0$.
+
+\begin{itemize}
+\item   si $a = 1$ : s est la translation de vecteur  d'affixe $ b $. 
+\item si $ a\neq 1 $ : alors s admet un unique point invariant  d'affixe : $ \omega=\dfrac{b}{1-a} $  et s est la composée :
+\begin{itemize}
+\item de l'homothétie de centre  $ \Omega(\omega) $ et de rapport $ |a| $ (rapport de s) et
+\item de la rotation de centre  $ \Omega(\omega) $ et d'angle : \, $ \text{arg} a $ (angle de s)
+
+ $\Omega $ est appelé le centre de la similitude directe s.
+ 
+ Et une écriture complexe de s est alors $ z'-\omega =|a|e^{\i \text{arg} a}(z-\omega) $.
+\end{itemize}
+\item  si $ |a|=1 $ et $ a\neq 1 $ alors  s est une  rotation de centre d'affixe  $ \omega=\dfrac{b}{1-a} $ et d'angle   \, $ \text{arg} a $.
+\item  si $ a\in\mathbb{R} \setminus \accol{0\, , \,1}$ alors s une homothétie de centre d'affixe  $ \omega=\dfrac{b}{1-a} $ et de rapport $ a $.
+\end{itemize}
+ \end{theorem}
+\subsubsection*{Récapitulatif des écritures complexes}
+
+$$
+\begin{array}{|l|l|}
+\hline
+\textbf{Transformation} & \textbf{Écriture complexe} \\
+\hline
+\text{Translation de vecteur } \vec{u} & z' = z + b \quad (b = \text{affixe de } \vec{u}) \\
+\hline
+\text{Homothétie de centre } \Omega,\ \text{rapport } k & z' - \omega = k(z - \omega) \quad (\omega = \text{affixe de } \Omega) \\
+\hline
+\text{Rotation de centre } \Omega,\ \text{angle } \theta & z' - \omega = e^{i\theta}(z - \omega) \quad (\omega = \text{affixe de } \Omega) \\
+\hline
+\text{Similitude directe de centre } \Omega,\ k > 0,\ \theta\in\mathbb{R} & z' - \omega = ke^{i\theta}(z - \omega) \quad (\omega = \text{affixe de } \Omega) \\
+\hline
+\end{array}
+$$
+\begin{exercice}
+\begin{enumerate}
+\item Identifier la transformation définie par l'écriture complexe donnée et préciser ses éléments
+caractéristiques
+
+\medskip
+
+\textbf{a)} $\; z'=z-\i\sqrt{3} $ \\
+\textbf{b)} $\; z'=\tfrac{\sqrt{2}}{2}(1-\i)z-\i $\\ \textbf{c)} $\; z'=4 z- 2\i $ \\ 
+\textbf{d)} $ \; z'=-\i z+1+\i $
+\item Donner l'écriture complexe des similitudes directes ci-dessous de centre $ \Omega $ d'affixe $ \omega $ , de rapport $ k $ et
+d'angle $ \theta $.
+
+\medskip
+
+\textbf{a)} $\; \omega=2+\i,\; $ $\; k= 2$,  $\; \theta= \frac{\pi}{2}$\\
+\textbf{b)}  $ \;\omega=-\i $,\ $ \;k= \dfrac{1}{2}$,  $\; \theta= \dfrac{\pi}{2}$ \\
+\textbf{c)}  $\; \omega= 1+2\i $,  $ \;k= 3$,   $\; \theta= \dfrac{\pi}{2}$  
+
+\textbf{d)}  $\; \omega=0$,  $\; k= \sqrt{3}$, $\;\; \theta= \dfrac{3\pi}{4}$ \\
+\textbf{d)}  $ \;\omega= 1+\i $ ,  $ \;k= 2$,  $\; \theta=\pi$  \\
+\textbf{e)}  $\; \omega= -1 $ ,  $ \;k= 7$,  $\; \theta= 0$  
+\end{enumerate}
+ \end{exercice}
+  %</content>
+\end{document}

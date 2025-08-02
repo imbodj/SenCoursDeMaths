@@ -46,20 +46,20 @@ On a: $\; \displaystyle \lim_{x \to +\infty} \frac{x+1}{x^{2}-2} = 0 $ et $ \dis
 Soient $f $, $g$ et $h$ trois fonctions et $ l\in\Rr$ et  $ a= +\infty $ ou $ a=-\infty $ ou $ a\in\Rr $.
 
 
-%\renewcommand{\arraystretch}{2.3}
-\begin{tabularx}{\textwidth}{|X|X|X|}
+
+$\begin{array}{|c|c|c|}
 \hline
-\textbf{ Hypothèse 1}  & \textbf{Hypothèse 2} & \textbf{ Conclusion }\\
+\text{Hypothèse 1}  & \text{Hypothèse 2} & \text{Conclusion}\\
 \hline
-$ f\leq g $  & $ \displaystyle \lim_{x \to a}f(x)=+\infty $ & $\displaystyle \lim_{x \to a}g(x)=+\infty $ \\
+ f\leq g   &  \displaystyle \lim_{x \to a}f(x)=+\infty  & \displaystyle \lim_{x \to a}g(x)=+\infty  \\
  \hline
- $ f\leq g $  & $\displaystyle \lim_{x \to a}g(x)=-\infty $ & $ \displaystyle \lim_{x \to a}f(x)=-\infty $    \\
+  f\leq g   & \displaystyle \lim_{x \to a}g(x)=-\infty  &  \displaystyle \lim_{x \to a}f(x)=-\infty     \\
 \hline
-$ \abs{f(x)-l }\leq g(x) $ & $\displaystyle \lim_{x \to a}g(x)=0$ & $ \displaystyle \lim_{x \to a}f(x)=l  $ \\
+ \abs{f(x)-l }\leq g(x)  & \displaystyle \lim_{x \to a}g(x)=0 &  \displaystyle \lim_{x \to a}f(x)=l   \\
 \hline
-$ g \leq f \leq h $ & $ \displaystyle \lim_{x \to a}g(x)=l $ et $ \displaystyle \lim_{x \to a}h(x)=l $ & $ \displaystyle \lim_{x \to a}f(x)=l $    \\
+ g \leq f \leq h  &  \displaystyle \lim_{x \to a}g(x)=l \;\text{et} \; \displaystyle \lim_{x \to a}h(x)=l  &  \displaystyle \lim_{x \to a}f(x)=l     \\
 \hline
-\end{tabularx}
+\end{array}$
 \end{theorem}
 
 \begin{remark}
@@ -106,9 +106,9 @@ Elle traduit, graphiquement, le fait que la fonction $f$ admet une limite infini
 
 
 \begin{definition}
-Si $\quad \displaystyle\lim_{x \to a^{+}}f(x)=\infty$  ou 
+Si $\; \displaystyle\lim_{x \to a^{+}}f(x)=\infty$  ou 
 $\displaystyle\lim_{x \to a^{-}}f(x)=\infty $  ou 
-$\displaystyle\lim_{x \to a}f(x)=\infty $ alors  la droite  d'équation $\; x=a$ est une asymptote verticale à la courbe $\mathcal{C} $.
+$\displaystyle\lim_{x \to a}f(x)=\infty $ alors  la droite  d'équation (D) $\; x=a$ est une asymptote verticale à la courbe $\mathcal{C} $.
 \end{definition}
 
 
@@ -126,10 +126,10 @@ $\displaystyle\lim_{x \to a}f(x)=\infty $ alors  la droite  d'équation $\; x=a$
 }
 
 \draw[thick,blue!50!black] plot[domain=0.26:2,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
-\draw[red] (0.25,3) -- (0.25,-3) node[above right] {D};
+\draw[red] (0.25,3) -- (0.25,-3) node[above right] {(D)};
 \end{tikzpicture}
 
-\fbox{$\displaystyle \lim_{ x \to a^{+}}f(x)=\pinf $}
+$\displaystyle \lim_{ x \to a^{+}}f(x)=\pinf $
 
 
 \begin{tikzpicture}[>=stealth',scale=0.5]
@@ -146,10 +146,10 @@ $\displaystyle\lim_{x \to a}f(x)=\infty $ alors  la droite  d'équation $\; x=a$
 }
 \draw[thick,blue!50!black] plot[domain=-3:0.24,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
 
-\draw[red] (0.25,3) -- (0.25,-3) node[above right] {D};
+\draw[red] (0.25,3) -- (0.25,-3) node[above right] {(D)};
 \end{tikzpicture}
 
-\fbox{$ \lim_{ x \to a^{-}}f(x)=\minf $}
+$ \lim_{ x \to a^{-}}f(x)=\minf $
 
 
 
@@ -160,7 +160,7 @@ Elle traduit, graphiquement, le fait que la fonction $f$ admet une limite finie 
 
 
 \begin{definition}
-Si $si\;\displaystyle \lim_{x \to \infty}f(x)=b \;$ (réel) alors  la droite  $\quad y = b \;$  est une  asymptote horizontale à  la courbe $\mathcal{C} $   en $\infty$.
+Si $\;\displaystyle \lim_{x \to \infty}f(x)=b \;$ (réel) alors  la droite  $\quad y = b \;$  est une  asymptote horizontale à  la courbe $\mathcal{C} $   en $\infty$.
 \end{definition}
 
 \begin{tikzpicture}[>=stealth', scale=0.5]
@@ -323,7 +323,7 @@ On appelle \textbf{prolongement par continuité } de $ f $ en $ a $, la fonction
 \textbf{NB:} La fonction $ g $ est définie et continue en $ a $.
 \end{definition}
 \begin{example}
-Montrons que la fonction $ f: x \mapsto \frac{x^{2}-x-2}{x-2} $   est prolongeable par continuité en 2 et trouvons son prolongement par continuité.
+Montrons que la fonction $ f: x \mapsto \dfrac{x^{2}-x-2}{x-2} $   est prolongeable par continuité en 2 et trouvons son prolongement par continuité.
 \end{example}
 
 \textsl{Réponse:}\\
@@ -335,7 +335,7 @@ Son prolongement par continuité en $ 2$ est la fonction $ g $ définie par :
 \subsubsection*{Dérivabilité en un réel}
 \begin{definition}
 Soit $ f $ une fonction définie sur un intervalle $ I$ et $a\in I $.\\
-$ f $ est dérivable en $ a $ s'il existe un nombre réel $ l $ tel que $ \displaystyle\ lim_{x \to a} \dfrac{f(x)-f(a)}{x-a}=l $ \\
+$ f $ est dérivable en $ a $ s'il existe un nombre réel $ l $ tel que $ \displaystyle\lim_{x \to a} \dfrac{f(x)-f(a)}{x-a}=l $ \\
 $ l $ est le  \textbf{nombre dérivé} de $ f $ en $ a. $ On le note $f^{'}(a)$.
 \end{definition}
 
@@ -352,10 +352,13 @@ On avait trouvé que $D_{f}=\intfo{0}{\pinf}  $ \\
 $\displaystyle \lim_{x \to 1 } \dfrac{f(x)-f(1)}{x-1}=\displaystyle \lim_{x \to 1 }\dfrac{\dfrac{\sqrt{x}-1}{x-1}-\frac{1}{2}}{x-1}= \lim_{x \to 1 }\dfrac{2\sqrt{x}-(x+1)}{2(x-1)^{2}}=\lim_{x \to 1 } \dfrac{-x^{2}+2x-1}{2(x-1)^{2}(2\sqrt{x}+x+1)}=\displaystyle \lim_{x \to 1 }\dfrac{-1}{2(2\sqrt{x}+x+1}=-\dfrac{1}{8}$  \\ Donc $ f $ est dérivable en $ 1 $ et de nombre dérivé $ f'(1)= -\dfrac{1}{8}$.
 \subsubsection*{Propriété}
 \begin{property}
-Si $ f $ est dérivable en a, alors $ f $ est continue en a.\\
-\textbf{Attention}: La réciproque de cette propriété est fausse.\\
-La fonction $ x\mapsto \abs{x} $ est continue en 0 mais elle n'est pas dérivable en $ 0 $.
-\end{property}
+Si $ f $ est dérivable en a, alors $ f $ est continue en a
+\end{property}.
+\begin{cexample} 
+La réciproque de cette propriété est fausse.\\
+La fonction $ x\mapsto \abs{x} $ est continue en $ 0 $ mais elle n'est pas dérivable en $ 0 $.
+\end{cexample}
+
   \subsubsection*{Propriété : Dérivabilité à droite - dérivabilité à gauche}
   \begin{property}
 $ f $ est dérivable en $ a $ si et seulement, si :\[  \displaystyle\lim_{x \to a^{+}} \dfrac{f(x)-f(a)}{x-a}=\displaystyle\lim_{x \to a^{-}} \dfrac{f(x)-f(a)}{x-a}=l \quad \text{réel}\]
@@ -367,6 +370,7 @@ Les notations \;   $f^{'}_{d}(a)$ et $f^{'}_{g}(a)$ s'utilisent que lorsque la l
 \end{notation}
 \subsubsection*{Cas de non dérivabilité}
 $ \centerdot $ Si $\displaystyle \lim_{x \to a } \frac{f(x)-f(a)}{x-a}=\pinf$ ou $\minf $ alors $ f $ n'est pas dérivable en $ a $.\\
+
 $ \centerdot $ Si $ f^{'}_{d}(a) \neq f^{'}_{g}(a) $ alors $ f $ n'est pas dérivable en $ a $.
 \subsubsection*{Interprétation graphique de la dérivabilité}
 \begin{enumerate}
@@ -374,24 +378,23 @@ $ \centerdot $ Si $ f^{'}_{d}(a) \neq f^{'}_{g}(a) $ alors $ f $ n'est pas déri
 $ y=f^{'}(a)(x-a)+ f(a) $.
 
 
-\textbf{NB}
-
+\begin{remark}
  $  f'(a)=0$  si et seulement si $ \mathcal{C} $ admet au point d'abscisse  $ a $ une tangente horizontale d'équation $ y=f(a). $ \\ Dans ce cas, le point $A(a,f(a))$  est  soit un \textbf{extremum} ( maximum ou minimum) soit un \textbf{point d'inflexion}.
-
+\end{remark}
  \item Si $ f $ est dérivable  à droite et à gauche  de $ a $ telle que $ f^{'}_{d}(a)\neq f'_{g}(a) $ alors $ \mathcal{C} $ admet au  point $A(a,f(a))$ deux demi-tangentes de pentes respectives  $ f'_{d}(a)$ et $ f'_{g}(a) $: le point $A$ est un point \textbf{anguleux}.
- \item Détaillons les cas de l'infini.
+ \item Détaillons les cas d'une limite infinie.
 
 \medskip
 \begin{tabularx}{\textwidth}{|X|X|}
 \hline
-Si $\displaystyle \lim_{x \to a^+} \frac{f(x)-f(a)}{x-a} = +\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
+Si $ \bullet\; \displaystyle \lim_{x \to a^+} \frac{f(x)-f(a)}{x-a} = +\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
 &
-Si $\displaystyle \lim_{x \to a^-} \frac{f(x)-f(a)}{x-a} = +\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le bas. 
+Si $ \bullet\; \displaystyle \lim_{x \to a^-} \frac{f(x)-f(a)}{x-a} = +\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le bas. 
 \\
 \hline
-Si $\displaystyle \lim_{x \to a^+} \frac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le bas. 
+Si $\bullet\; \displaystyle \lim_{x \to a^+} \frac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le bas. 
 &
-Si $\displaystyle \lim_{x \to a^-} \frac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
+Si $\bullet\; \displaystyle \lim_{x \to a^-} \frac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
 \\
 \hline
 \end{tabularx}
@@ -411,27 +414,35 @@ Si $\displaystyle \lim_{x \to a^-} \frac{f(x)-f(a)}{x-a} = -\infty$, la courbe d
 \end{definition}
 
 Rappelons  ci-dessous les fonctions dérivées de certaines fonctions usuelles.
-\medskip
 
-\begin{tabularx}{\textwidth}{|X|X|X|}
+
+\medskip
+$
+\begin{array}{|l|l|l|}
 \hline
-\textbf{Fonction $f$ définie par:}  & \textbf{Dérivable sur} &\textbf{ Fonction dérivée $ f'(x) $ }  \\
+\text{\textbf{Fonction } } f  \text{\textbf{ définie par :}} & 
+\text{\textbf{Dérivable sur}} & 
+\text{\textbf{Fonction dérivée }}  f'(x)  \\
 \hline
-$ f(x)=k$, avec $k$ réel  & $\Rr$ & $ 0 $ \\
+f(x) = k,\ k \in \mathbb{R} & \mathbb{R} & 0 \\
 \hline
-$f(x)= x^{n} $  avec $n\in \Qq$ &  $\Rr$  & $ nx^{n-1} $   \\
+f(x) = x^n,\ n \in \mathbb{Q} & \mathbb{R} & nx^{n-1} \\
 \hline
-$f(x)= \frac{1}{x} $ &  $\Rrep$ ou $\Rrem$ & $ -\frac{1}{x^{2}} $\\
+f(x) = \dfrac{1}{x} & \mathbb{R}^* & -\dfrac{1}{x^2} \\
 \hline
-$f(x)= \sqrt{x} $ &  $\Rrep$ &  $ \frac{1}{2\sqrt{x}} $\\
+f(x) = \sqrt{x} & \mathbb{R}_+^* & \dfrac{1}{2\sqrt{x}} \\
 \hline
-$f(x)= \cos x $  &  $\Rr$  & $ -\sin x $ \\
+f(x) = \cos x & \mathbb{R} & -\sin x \\
 \hline
-$f(x)= \sin x $   &  $\Rr$  & $ \cos x $\\
+f(x) = \sin x & \mathbb{R} & \cos x \\
 \hline
-$f(x)= \tan x $  &  $\intoo{(2k-1)\frac{\pi}{2}}{(2k+1)\frac{\pi}{2}}$, $ k\in\Zz $.  & $\small  1+\tan^{2}x $ ou $\frac{1}{\cos^{2} x} $ \\
+f(x) = \tan x & 
+\small \left] (2k{-}1)\frac{\pi}{2}, (2k{+}1)\frac{\pi}{2} \right[,\ k \in \mathbb{Z}  & 
+1 + \tan^2 x\ \text{ou}\ \dfrac{1}{\cos^2 x} \\
 \hline
-\end{tabularx}
+\end{array}
+$
+
 
 
 
@@ -440,7 +451,7 @@ Soient $f $ et  $ g$ deux fonctions continues (resp. dérivables) sur un interva
 
 \begin{itemize}
 \item les fonctions $ f+g $ et $ fg $ sont continues ( resp. dérivables ) sur   $ I. $
-\item  Si de plus $ g\neq0 $ sur  $ I $ alors les fonctions $\frac{1}{g} $ et  $\frac{f}{g} $ sont continues (resp. dérivables) sur $ I. $
+\item  Si de plus $ g\neq0 $ sur  $ I $ alors les fonctions $\dfrac{1}{g} $ et  $\dfrac{f}{g} $ sont continues (resp. dérivables) sur $ I. $
 \end{itemize}
 \end{property}
 
@@ -460,21 +471,22 @@ Si $ f $ est une fonction \emph{continue} sur  un intervalle $ I $ alors $ f(I) 
 \textbf{Cas particuliers}\\
 Le tableau suivant donne les images de quelques intervalles simples par une fonction \textbf{continue et strictement monotone }.  $ a$ et $b $ peuvent être éventuellement $\pinf $ ou $\minf .$ 
 
-\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{1cm}|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
-\cline{1-3}
-\multicolumn{1}{|c|}{} & \multicolumn{2}{c|}{$ f(I) $} \\
-\cline{2-3}
-\multicolumn{1}{|c|}{$I$ intervalle} & $f$ continue et strictement croissante sur $ I $ &  $ f $ continue et strictement décroissante sur $ I $ \\
+$$
+\begin{array}{|c|c|c|}
 \hline
- $\intff{a}{b}$ & $\intff{f(a)}{f(b)}$ & $\intff{f(b)}{f(a)}$ \\
+& \text{\(f(I)\)} & \text{\(f(I)\)} \\
+& \text{si \(f\) continue et strictement croissante} & \text{si \(f\) continue et strictement décroissante} \\
 \hline
-$ \intfo{a}{b}$ & $\small \intfo{f(a)}{ \lim_{x \to b^{-}}f(x)}$ & $\small\intof{\lim_{x \to b^{-}}f(x) }{f(a)}$ \\
+\text{\(I = [a,b]\)} & [f(a), f(b)] & [f(b), f(a)] \\
 \hline
-$ \intof{a}{b}$ & $\small\intof{\lim_{x \to a^{+}}f(x)}{f(b)}$ & $\small\intfo{f(b)}{\lim_{x \to a^{+}}f(x)}$ \\
+\text{\(I = [a,b[\)} & \left[ f(a), \lim\limits_{x \to b^-} f(x) \right[ & \left] \lim\limits_{x \to b^-} f(x), f(a) \right] \\
 \hline
-$ \intoo{a}{b}$ & $\small\intoo{\lim_{x \to a^{+}}f(x)}{\lim_{x \to b^{-}}f(x)}$ & $\small\intoo{\lim_{x \to b^{-}}f(x)}{\lim_{x \to a^{+}}f(x)}$ \\
+\text{\(I = ]a,b]\)} & \left] \lim\limits_{x \to a^+} f(x), f(b) \right] & \left[ f(b), \lim\limits_{x \to a^+} f(x) \right[ \\
 \hline
-\end{tabularx}
+\text{\(I = ]a,b[\)} & \left] \lim\limits_{x \to a^+} f(x), \lim\limits_{x \to b^-} f(x) \right[ & \left] \lim\limits_{x \to b^-} f(x), \lim\limits_{x \to a^+} f(x) \right[ \\
+\hline
+\end{array}
+$$
 
 \subsubsection*{Continuité et dérivabilité de la composée de deux fonctions}
 \begin{property}
@@ -483,14 +495,14 @@ $ \centerdot $ Si $ f $ est dérivable sur l'intervalle $ I $ et $ g $ dérivabl
 \[\paren{g\circ f(x)}'= f'(x)\times g'[f(x)] \]
 \end{property}
 \begin{example} 
-Soit $h(x)= \cos \dfrac{1}{x}$. Calculons  $h'(x) $.
+Soit $h(x)= \cos \paren{\dfrac{1}{x}}.\quad$ Calculons  $h'(x) $.
 
-On a   $D_{h}= \intoo{\minf}{0}\cup \intoo{0}{\pinf} $
+On a   $\;\; D_{h}= \intoo{\minf}{0}\cup \intoo{0}{\pinf} $
 
-\textbf{\color{red}{Attention}}:  Avant de dériver une fonction, il est recommandé de justifier sa dérivabilité même si la question ne le précise pas.\\
+\textbf{Attention :}  Avant de dériver une fonction, il est recommandé de justifier sa dérivabilité même si la question ne le précise pas.\\
 La fonction rationnelle $ x\mapsto \dfrac{1}{x} $ est  définie sur $ \Rre $ donc dérivable sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf}. $\\
 La fonction $ x\mapsto \cos x $ est dérivable sur $ \Rr $; en particulier sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf} $\\ D' où par  composée $ h $ est dérivable  sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf} $.\\
-Pour tout   $ x\neq 0 $  \quad :    $h'(x)=\dfrac{1}{x^{2}}\sin \dfrac{1}{x} $ 
+Pour tout   $ x\neq 0 $  \quad :    $h'(x)=\dfrac{1}{x^{2}}\sin\paren{\dfrac{1}{x}} $ 
 
 \end{example}
 \begin{corollary}
@@ -502,27 +514,29 @@ $ \centerdot $ Si $ f $ est \textbf{ dérivable et strictement positive } sur $ 
 
 \subsubsection*{Formules de dérivations}
 Soient $u $ et $v $ deux fonctions dérivables, $ r\in\Zze $ et $ k\in\Rr $\\
+
 $\begin{array}{|c|c|c|c|c|c|c|c|}
 \hline 
-\textbf{Fonction} & ku & u+v & uv & \frac{u}{v} & \frac{1}{v} & \sqrt{u} & u^{r} \\     
+\textbf{Fonction} & ku & u+v & uv & \dfrac{u}{v} & \dfrac{1}{v} & \sqrt{u} & u^{r} \\     
 \hline 
-\textbf{Dérivée} & ku' & u'+v' & u'v+ v'u & \frac{u'v- v'u}{v^{2}} & -\frac{v'}{v^{2}} & \frac{u'}{2\sqrt{u}} & ru'u^{r-1} \\    
+\textbf{Dérivée} & ku' & u'+v' & u'v+ v'u & \dfrac{u'v- v'u}{v^{2}} & -\dfrac{v'}{v^{2}} & \dfrac{u'}{2\sqrt{u}} & ru'u^{r-1} \\    
 \hline
 \end{array}$
 
 \bigskip
-\begin{tabularx}{\textwidth}{|X|X|X|X|}
+
+$\begin{array}{|c|c|c|c|}
 \hline
-  $ v\circ u $ & $ \sin u $ & $ \cos u $ & $ \tan u $\\
+   v\circ u  &  \sin u  &  \cos u  & \tan u \\
 \hline
-$ u'\times (v'\circ u) $  & $ u'\cos u $ & $-u'\sin u$ & $ \frac{u'}{\cos^{2}u}$  \\     
+ u'\times (v'\circ u)   &  u'\cos u  & -u'\sin u &  \dfrac{u'}{\cos^{2}u}\\     
  \hline
-\end{tabularx}
+\end{array}$
 
 
 
 \begin{exercice}
-Soit $ f (x)=\frac{(x+1)\sqrt{x-2}}{x-1}.$
+Soit $ f (x)=\dfrac{(x+1)\sqrt{x-2}}{x-1}.$
  \begin{enumerate}
 \item Etudier la continuité  de $ f $ sur son $D_{f}$.
 \item Etudier  la dérivabilité de $ f $ sur son $D_{f}$.
@@ -539,7 +553,7 @@ Soit $ f (x)=\frac{(x+1)\sqrt{x-2}}{x-1}.$
 \textbf{ 2\iere{} méthode } \\  La fonction $ x \mapsto x+1 $ est  dérivable sur $\intfo{2}{\pinf} $ \\ La fonction $ x \mapsto x-1 $ est  dérivable et non nulle  sur sur $\intoo{2}{\pinf} $   \\ La fonction $ x \mapsto x-2$ est  dérivable et strictement positive sur $\intoo{2}{\pinf}$ donc la fonction $ x \mapsto \sqrt{x-2} $ est   dérivable sur $\intoo{2}{\pinf}$ par composée.\\ On en déduit que $ f $ est dérivable  sur $\intoo{2}{\pinf}$ comme produit, quotient et composée de  fonctions dérivables. 
 
  \item $ \forall x > 2  $, $ f'(x)= \frac{-2}{(x-1)^{2}}\times \sqrt{x-2}+ \frac{1}{2\sqrt{x-2}}\times \dfrac{x+1}{x-1} $\\
-Soit  $ f'(x)=\frac{x^{2}-4x+7}{2(x-1)^{2}\sqrt{x-2}} $
+Soit  $ f'(x)=\dfrac{x^{2}-4x+7}{2(x-1)^{2}\sqrt{x-2}} $
 \end{enumerate}
 \end{proof}
 \subsubsection*{Dérivée et sens de variations}
@@ -634,15 +648,15 @@ Une petite variation $ \Delta x $ de la variable $ x $ provoque une petite varia
  Pour la fonction $ y=2x^2-x $ avec $x=1 $  et $\Delta x= 0,01 $ \\ Vérifier que la différentielle $dy=0,03  $ et l'accroissement $ \Delta y= 0,0302 $
 \end{example}
 \subsubsection*{Position d'une courbe par rapport à sa tangente}
-  Nous admettons le résultat suivant:\\ Si $ f $ est une fonction deux fois dérivable sur $ I $ et si $ f'' $ est négative sur $ I, $ alors la courbe $\mathcal{C} $ de $ f$ est en dessous de toutes ses tangentes. On dit  que  $\mathcal{C} $ est \textbf{\color{magenta} concave.}\\
-   Si $ f $ est une fonction deux fois dérivable sur $ I $ et si $ f'' $ est positive sur $ I, $ alors la courbe $\mathcal{C} $ de $ f$ est en dessus de toutes ses tangentes. On dit  que  $\mathcal{C} $ est \textbf{\color{magenta} convexe.}
+  Nous admettons le résultat suivant:\\ Si $ f $ est une fonction deux fois dérivable sur $ I $ et si $ f'' $ est négative sur $ I, $ alors la courbe $\mathcal{C} $ de $ f$ est en dessous de toutes ses tangentes. On dit  que  $\mathcal{C} $ est \textbf{ concave.}\\
+   Si $ f $ est une fonction deux fois dérivable sur $ I $ et si $ f'' $ est positive sur $ I, $ alors la courbe $\mathcal{C} $ de $ f$ est en dessus de toutes ses tangentes. On dit  que  $\mathcal{C} $ est \textbf{ convexe.}
   \subsubsection*{Point d'inflexion}
   \begin{definition}
   On dit que la courbe de $ f $ admet un point d'inflexion d'abscisse $ x_{0} $ si la courbe y traverse sa tangente.
   \end{definition}
 
    \begin{theorem}
-   Si $ f $ est deux fois dérivable sur  un intervalle ouvert $ I $ contenant $ x_0 $  et si $ f'' $  \emph{ s'annule en changeant de signe  en $ x_0 $} alors le point de la courbe d'abscisse $ x_0 $  est un \textbf{\color{magenta} un point  d'inflexion}.
+   Si $ f $ est deux fois dérivable sur  un intervalle ouvert $ I $ contenant $ x_0 $  et si $ f'' $  \emph{ s'annule en changeant de signe  en $ x_0 $} alors le point de la courbe d'abscisse $ x_0 $  est un \textbf{ un point  d'inflexion}.
    \end{theorem}
    
    \begin{example}
@@ -725,28 +739,28 @@ Calculons de proche en proche les images par $ f $  des nombres décimaux d'ordr
 
 
 \renewcommand{\arraystretch}{1}
-\begin{tabular}{|*{10}{c|}}
+$\begin{array}{|c|c|c|c|c|c|c|c|c|c|}
 \hline 
 x &-0,9  &-0,8 & -0,7 &- 0,6 & -0,5 & -0,4 &-0,3 &-0,2& -0,1  \\
 \hline
-f(x) &-  & -  & \textbf{\color{red} -} & \textbf{\color{red} +}  & \color{green} &  &  &  &  \\
+f(x) &-  & -  &  - &  +  &  &  &  &  &  \\
 \hline
-\end{tabular}
+\end{array}$
 
 \vspace{0.5cm}   On obtient $-0,7<\alpha< - 0,6  $
 
 
-$ \color{red}\centerdot $ Recherchons ensuite  un encadrement de $ \alpha $ par deux décimaux consécutifs d'ordre $ 2. $\\
+$ \centerdot $ Recherchons ensuite  un encadrement de $ \alpha $ par deux décimaux consécutifs d'ordre $ 2. $\\
 Calculons de proche en proche les images par $ f $  des nombres décimaux d'ordre $ 2 $ de l'intervalle $ \intoo{-0,7}{-0,6} $ jusqu'à ce qu'on observe un changement de signe.
 
 \begin{center}
-\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|X|X|X|}
+$\begin{array}{|c|c|c|c|c|c|c|c|c|c|}
 \hline 
 x &-0,69  &-0,68 & -0,67 &- 0,66 & -0,65 & -0,64 &-0,63 &-0,62& -0,61  \\
 \hline
-f(x) &\textbf{\color{red} -} & \textbf{\color{red} +}  &  &   & \color{green} &  &  &  &  \\
+f(x) & - &  +  &  &   &  &  &  &  &  \\
 \hline
-\end{tabularx}
+\end{array}$
 
 \vspace{0.5cm}   On obtient $-0,69<\alpha< - 0,68  $
 
@@ -763,7 +777,7 @@ Pour montrer que l'équation $ f(x)=x $ admet une  unique  solution dans l'inter
 \end{remark}
 
 \begin{example}
-Montrons  que l'équation $ \cos x= x $ admet une unique solution $ \alpha$ telle que \\   $ \frac{\pi}{6} \leq \alpha \leq\frac{\pi}{4}.$ \\
+Montrons  que l'équation $ \cos x= x $ admet une unique solution $ \alpha$ telle que    $\; \frac{\pi}{6} \leq \alpha \leq\frac{\pi}{4}.$ \\
 \emph{Réponse}\\
 Remarquons que  $ \cos x= x  \Leftrightarrow \cos x- x=0$\\
 Posons la fonction $ f(x)= \cos x- x$ pour $ x\in \intff{\frac{\pi}{6}}{\frac{\pi}{4}} $.\\
@@ -776,7 +790,7 @@ d'où l'équation $ f(x)=0 $ admet une  unique  solution $ \alpha \in \intff{\fr
 
 \end{example}
 
-\subsubsection*{Fonction réciproque d'une fonction continue et strictement monotone} 
+\subsection{Fonction réciproque d'une fonction continue et strictement monotone} 
 
 \begin{theorem}[Théorème de la bijection ]
 Soit $ f $ une fonction continue et strictement monotone  sur  l'intervalle $I$; alors $ f $ réalise une bijection de $ I $ vers l'intervalle $ f(I)$.\\
@@ -786,13 +800,14 @@ Les courbes représentatives de $f $  et $f^{-1} $, dans un repère orthonormé 
 
 
 
-$ \centerdot $ Si de plus $ f $ est dérivable sur $ I $ et \textbf{\color{magenta} $ f'$ ne s'annule pas} sur  $ I $ alors $ f^{-1} $ dérivable sur $ f(I) $ et
+$ \centerdot $ Si de plus $ f $ est dérivable sur $ I $ et  $ f'$ ne s'annule pas sur  $ I $ alors $ f^{-1} $ dérivable sur $ f(I) $ et
  \[ (f^{-1})'(y)=\frac{1}{f'(f^{-1}(y))}\quad \forall y\in f(I)\]
 \begin{remark}
 Posons $ f(a)=b $ \\
-Si $ f $ est dérivable en $ a $ et $ f'(a)\neq 0 $ alors $ f^{-1} $ est dérivable en $ b $ et $(f^{-1})'(b)=\frac{1}{f'(a)}.  $\\
+Si $ f $ est dérivable en $ a $ et $ f'(a)\neq 0 $ alors $ f^{-1} $ est dérivable en $ b $ et $(f^{-1})'(b)=\dfrac{1}{f'(a)}.  $\\
+
 \textbf{\color{red}Attention}\\
-Si $ f $ est dérivable en $ a $ et \colorbox{magenta!20!} {$ f'(a)= 0 $ ou n'existe pas} alors $ f^{-1} $ n'est pas  dérivable en $ b. $
+Si $ f $ est dérivable en $ a $ et  $ f'(a)= 0 $ ou n'existe pas alors $ f^{-1} $ n'est pas  dérivable en $ b. $
 \end{remark}
 
 \begin{exercice}
@@ -830,7 +845,7 @@ $$
 \item $ g $ est continue et strictement croissante  sur  $ \intfo{-\frac{1}{2}}{\pinf} $ donc réalise une bijection $ \intfo{-\frac{1}{2}}{\pinf} $ de vers  $g( \intfo{-\frac{1}{2}}{\pinf})$ \\Or  $g( \intfo{-\frac{1}{2}}{\pinf})=\intfo{g(-\frac{1}{2})}{\displaystyle\lim_{x \to \pinf}g(x)}=\intfo{1}{\pinf} $ \\ D'où \underline{$J= \intfo{1}{\pinf} $ }.
 \item Pour répondre à cette question, il  faut calculer  l' antécédent de $ 2 $ par $ g. $\\ $ g(x)=2\Leftrightarrow 4x^{2}+4x+2=2\Leftrightarrow 4x^{2}+4x=0\Leftrightarrow x= 0 \ ou\  x= -1$\\ Le seul antécédent dans $ \intfo{-\frac{1}{2}}{\pinf} $ est  0.\\
 Or $ g $ est dérivable en 0 et $ g'(0)=f'(0)=4 \neq 0 $ donc  $ g^{-1} $  est dérivable en 2.\\
-On a $(g^{-1})'(2)=\frac{1}{g'(0)}=\frac{1}{4}.  $
+On a $(g^{-1})'(2)=\dfrac{1}{g'(0)}=\frac{1}{4}.  $
 \end{enumerate}
 
 \end{enumerate}

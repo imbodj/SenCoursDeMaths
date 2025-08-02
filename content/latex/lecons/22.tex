@@ -83,7 +83,7 @@ intervalle f(I).
 \medskip
 
 Soit $ n\in\Nne $
-\begin{center}
+
 
 \begin{itemize}
  \item[$  \bullet$] $ \displaystyle\lim_{x \to \pinf}x^{n}= \pinf$ 
@@ -96,7 +96,7 @@ Soit $ n\in\Nne $
  \end{itemize}
 
 
-\end{center}
+
 
 
 \subsection{  Opérations sur les limites}
@@ -203,17 +203,17 @@ $ 0 $& $ 0 $& FI\\
 \begin{property}
 Soit $a $, $ b $ et  $ c$ trois réels  ou $ +\infty $  ou $ \minf $.  Soit   $f$  et $g$ deux fonctions numériques.
  
-Si \; $ \lim_{x \to a} f(x)=b $ \;  et  \;  $ \lim_{x \to b}g(x)=c  $ \; alors\;  $\lim_{x \to a} g\circ f(x)=c $
+Si \; $ \displaystyle\lim_{x \to a} f(x)=b $ \;  et  \;  $ \lim_{x \to b}g(x)=c  $ \; alors\;  $\displaystyle\lim_{x \to a} g\circ f(x)=c $
 \end{property}
 
 
 \begin{example}
- Calculons \quad  $  \lim_{x \to 0} \sqrt{x^{3}-2x+4} $ \; et \; $\lim_{x \to -\infty}\sqrt{x^{2}+3}  $
+ Calculons \quad  $ \displaystyle \lim_{x \to 0} \sqrt{x^{3}-2x+4} $ \; et \; $\displaystyle\lim_{x \to -\infty}\sqrt{x^{2}+3}  $
 
 $ \bullet $  \;  Posons  $ f(x)=x^{3}-2x+4 $ \; et \; $ g(x)=\sqrt{x} $.  \; On a\;  $ g \circ f(x)=  \sqrt{x^{3}-2x+4}  $
 
-Or  $  \lim_{x \to 0}f(x)= \lim_{x \to 0} x^{3}-2x+4=4 $ \;  et \; $\lim_{x \to 4}g(x)=  \lim_{x \to 4} \sqrt{x}=2 $\; donc\; $  \lim_{x \to 0} \sqrt{x^{3}-2x+4}=2 $.\\
-$ \bullet $   $ \lim_{x \to -\infty}x^{2}+3  = \pinf $ ~et~ $  \lim_{x \to \pinf} \sqrt{x} = \pinf $~ donc  par composée ~$ \lim_{x \to +\infty}\sqrt{x^{2}+3}=\pinf $
+Or  $ \displaystyle \lim_{x \to 0}f(x)= \displaystyle\lim_{x \to 0} x^{3}-2x+4=4 \;$   et $\;\displaystyle\lim_{x \to 4}g(x)= \displaystyle \lim_{x \to 4} \sqrt{x}=2 $\; donc\; $  \lim_{x \to 0} \sqrt{x^{3}-2x+4}=2 $.\\
+$ \bullet $   $ \lim_{x \to -\infty}x^{2}+3  = \pinf $ ~et~ $\displaystyle  \lim_{x \to \pinf} \sqrt{x} = \pinf $~ donc  par composée $\; \displaystyle\lim_{x \to +\infty}\sqrt{x^{2}+3}=\pinf $
 \end{example}
 
 \subsection{ Méthodes de calcul  de limites}
@@ -253,7 +253,7 @@ On a: \; $ \limi{x}{\pinf}{3x^{3}-2x^{2}+1}=\limi{x}{\pinf}{3x^{3}} =\pinf$
 \begin{example}
 
 
-On considère la fonction  $ f $ définie par:\; $ f(x)=\frac{3x^{3}+2x+1}{5x^{4}-4x^{3}+4} $. \;Déterminons sa limite en $ \pinf. $ 
+On considère la fonction  $ f $ définie par:\; $ f(x)=\dfrac{3x^{3}+2x+1}{5x^{4}-4x^{3}+4} $. \;Déterminons sa limite en $ \pinf. $ 
 \end{example}
 
 
@@ -273,7 +273,7 @@ dénominateur par $( x - a )$, on simplifie la fonction puis on calcule la limit
 \begin{example}
 
 
-Calculons $ \limi{x}{3}{\frac{x^{2}-9}{x-3}} $.\\ On a $ \limi{x}{3}{x^{2}-9}=0 $ et $ \limi{x}{3}{x-3}=0 $.\\Nous pouvons donc factoriser le numérateur et le dénominateur  chacun par $( x -3 )$.\\ On obtient  $ \frac{x^{2}-9}{x-3}=\frac{(x-3)(x+3)}{x-3}=x+3$ donc $ \limi{x}{3}{\frac{x^{2}-9}{x-3}}=\limi{x}{3}{x+3} =6$
+Calculons $ \limi{x}{3}{\frac{x^{2}-9}{x-3}} $.\\ On a $ \limi{x}{3}{x^{2}-9}=0 $ et $ \limi{x}{3}{x-3}=0 $.\\Nous pouvons donc factoriser le numérateur et le dénominateur  chacun par $( x -3 )$.\\ On obtient  $ \dfrac{x^{2}-9}{x-3}=\dfrac{(x-3)(x+3)}{x-3}=x+3$ donc $ \limi{x}{3}{\dfrac{x^{2}-9}{x-3}}=\limi{x}{3}{x+3} =6$
 \end{example}
 
 
@@ -287,9 +287,9 @@ $( x - a )$ mais cette fois ci en utilisant la ou les expressions conjuguées du
 numérateur et du dénominateur. 
 \begin{example}
 
-Calculons la limite en $ 1 $ de la fonction $ f $ définie par:  \;$ f(x)=\frac{\sqrt{x}-1}{x-1} $\\
- On a $ \limi{x}{1}{\sqrt{x}-1}=0 $ et $ \limi{x}{1}{x-1}=0 $.\\Transformons l'écriture de  $ \frac{\sqrt{x}-1}{x-1} $ en utilisant l'expression conjuguée du
-numérateur, il vient :\\ $ \frac{\sqrt{x}-1}{x-1}= \frac{\paren{\sqrt{x}-1}\paren{\sqrt{x}+1}}{(x-1)\paren{\sqrt{x}+1}} =\frac{x-1}{(x-1)\paren{\sqrt{x}+1}}=\frac{1}{\sqrt{x}+1}$.\\ $ \limi{x}{1}{\frac{\sqrt{x}-1}{x-1}}= \limi{x}{1}{\frac{1}{\sqrt{x}+1}}=\frac{1}{2}$.
+Calculons la limite en $ 1 $ de la fonction $ f $ définie par:  \;$ f(x)=\dfrac{\sqrt{x}-1}{x-1} $\\
+ On a $ \limi{x}{1}{\sqrt{x}-1}=0 $ et $ \limi{x}{1}{x-1}=0 $.\\Transformons l'écriture de  $ \dfrac{\sqrt{x}-1}{x-1} $ en utilisant l'expression conjuguée du
+numérateur, il vient :\\ $ \dfrac{\sqrt{x}-1}{x-1}= \dfrac{\paren{\sqrt{x}-1}\paren{\sqrt{x}+1}}{(x-1)\paren{\sqrt{x}+1}} =\dfrac{x-1}{(x-1)\paren{\sqrt{x}+1}}=\dfrac{1}{\sqrt{x}+1}$.\\ $ \limi{x}{1}{\dfrac{\sqrt{x}-1}{x-1}}= \limi{x}{1}{\dfrac{1}{\sqrt{x}+1}}=\dfrac{1}{2}$.
 \end{example}
 
  \underline{\textbf{Règle 3}}\\
@@ -298,7 +298,7 @@ Lorsque l'on cherche la limite d'une fonction $ f $ en un réel $ a $ qui annule
  le dénominateur,  on étudie le signe du dénominateur et l'on obtient une limite à droite et une limite à gauche en $ a $ de $ f $.
 \begin{example}
 
-Calculons la limite en $ 4 $ de la fonction $ f $ définie par:  \;$ f(x)=\frac{x^{2}-5x+6}{x-4} $\\
+Calculons la limite en $ 4 $ de la fonction $ f $ définie par:  \;$ f(x)=\dfrac{x^{2}-5x+6}{x-4} $\\
 On a $ \limi{x}{4}{x^{2}-5x+6} =2$ et $ \limi{x}{4}{x-4} =0$\\
 Etudions le signe du dénominateur \;(celui du numérateur étant connu ).
 

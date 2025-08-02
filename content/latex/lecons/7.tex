@@ -2,58 +2,66 @@
 \everymath{\displaystyle}
 \begin{document}
   %<*content>
-  \lesson{algebra}{6}{Fonctions puissances}
-
-
-
+  \lesson{algebra}{6}{Fonctions puissances d'exposant rationnel}
 \subsection{Définition  et propriétés}
 
 \begin{definition}
-Soit $\alpha $ un réel\\
-On appelle  fonction puissance d'exposant $\alpha $,  la fonction $ f_{\alpha} $ définie par  :
-\begin{center}
- $ \begin{array}{lrcl}
-     & \Rrep  &   \longrightarrow &  \Rrep \\ 
-  &  x & \longmapsto & x^{\alpha}=\eexp{\alpha \ln x}  \end{array} $ 
-\end{center}
+ $ r $ étant un nombre rationnel non nul, on appelle \emph{fonction puissance d'exposant r,} la fonction : 
+\[\begin{array}{lrcl}
+    &  \Rrp  & \longrightarrow & \Rrp \\ 
+  &  x & \longmapsto & x^{r}
+   \end{array}\]
 \end{definition}
-
+\begin{notation}
+$\hspace*{1cm} x^{r}=\eexp{r \ln x} $
+\end{notation}
 \begin{property}
-La fonction $ f_{\alpha} $  est dérivable sur $ \Rrep $ car composée de deux fonctions dérivables:  \\ $ x \longmapsto \alpha \ln x $\; et \; $ x\longmapsto \eexp{x} $.  On a :\; $ \forall  x >0,\quad f_{\alpha}^{\prime} (x) =\dfrac{\alpha}{x} \eexp{\alpha \ln x} =\dfrac{\alpha}{x}\times x^{\alpha}  =\alpha x^{\alpha-1}$.\\  Ainsi  la fonction \;$ x \longmapsto  x^{\alpha}  $\; est dérivable sur \;$ \intoo{0}{\pinf} $\;   et sa dérivée est la fonction\; $ x\longmapsto \alpha x^{\alpha -1} $. 
+\begin{enumerate}
+\item $ r$ et $r' $ étant des nombres rationnels non nuls, $x $ et $ y$ des réels strictement positifs.
+\begin{itemize}
+\item $ x^{r}\times y^{r}= (xy)^{r} $ 
+\item  $ (x^{r})^{r'}=x^{rr'} $
 
-\end{property}
-
-  \fbox{$\paren{x^{\alpha}}^{\prime}=\alpha x^{\alpha-1} $}
+\item $ \dfrac{x^{r}}{y^{r}}=(\dfrac{x}{y})^{r} $
+\item   $ x^{r}\times x^{r'}=x^{r+r'} $
+ \end{itemize}
+ \end{enumerate}
+ \end{property}
+ 
+\subsection{Dérivabilité}
+La fonction $ x\rightarrow x^{r} $  est dérivable sur $ \Rrep $ car composée des deux fonctions dérivables :  $ x \longmapsto r \ln x \;$ et  $\; x\longmapsto \eexp{x} $. \\ On a : $ \;\forall  x >0,\quad \paren{x^{r}}^{\prime} =\paren{\eexp{r \ln x}}^{\prime} =\dfrac{r}{x}\times \eexp{r \ln x} =\dfrac{r}{x}\times x^{r}  =r x^{r-1}$.\\  Ainsi  la fonction \;$ x \longmapsto  x^{r}  $\; est dérivable sur \;$ \intoo{0}{\pinf} $\;   et sa dérivée est la fonction\; $ x\longmapsto r x^{r -1} $. 
  \subsection{Fonction composée}
-
-Soit $\alpha $ un réel  et $u$  une fonction strictement positive sur un intervalle I. \\
-La fonction \; $ x\longmapsto \paren{u(x)}^{\alpha} $\; est la composée de la fonction $ x\longmapsto u(x) $  suivie de la fonction  \; $ x \longmapsto  x^{\alpha} $. De plus on a:\; $ \paren{u(x)}^{\alpha}=\eexp{\alpha\ln (u(x))} $\\
-On en déduit les propriétés suivantes.
-
-\begin{property}
-Soit $\alpha $ un réel et  $u$  une fonction  dérivable et strictement positive sur un intervalle I. \\La fonction \;$ u^{\alpha} $\; est dérivable sur I et on a:\; $\paren{ u^{\alpha}}^{\prime}=\alpha u^{\prime}u^{\alpha -1} $
-\end{property}
-\begin{example}
-La fonction \;$ x\longmapsto  \paren{\cos x}^{\sqrt{2}} $  est dérivable sur \;$ \intfo{0}{\frac{\pi}{2}} $\;   et sa dérivée est la \\ fonction \;$ x\longmapsto -\sqrt{2}\sin x \paren{\cos x}^{\sqrt{2}-1}$
-
-\end{example}
+Soit $r $ un rationnel  et $u$  une fonction strictement positive sur un intervalle I. \\
+La fonction \; $ x\longmapsto \paren{u(x)}^{r} $\; est la composée de la fonction $ x\longmapsto u(x) \;$  suivie de la fonction  \; $ x \longmapsto  x^{r} $.\\
+ De plus on a:\; $ \paren{u(x)}^{r}=\eexp{r\ln (u(x))} $\\
+On en déduit la propriété suivante.
 
 \begin{property}
-Soit $\alpha $ un réel  différent de \;$ -1 $\;   et  u  une fonction  dérivable et  strictement positive sur un intervalle I. \\La fonction \;                                       $ u^{\prime}u^{\alpha} $\;   admet pour primitive sur I la fonction \;  $ \dfrac{u^{\alpha +1}}{\alpha+1} $.
+Soit $r $ un rationnel et  $u$  une fonction  dérivable et strictement positive sur un intervalle I. \\La fonction \;$ u^{r} $\; est dérivable sur I et on a:\; $\paren{ u^{r}}^{\prime}=r u^{\prime}u^{r -1} $
 \end{property}
+ \begin{example}
+ $ f(x)= \sqrt[3]{2x+1} $\\
+ $ f(x) $  existe $ \Leftrightarrow 2x+1 \Leftrightarrow x \geq -\frac{1}{2} $ donc $ f $ est dérivable sur $ \intoo{-\frac{1}{2}}{\pinf} $\\
+  $ f(x)= \sqrt[3]{2x+1}=(2x+1)^{\frac{1}{3}}\Longrightarrow f'(x)=\frac{2}{3}(2x+1)^{-\frac{2}{3}}=\dfrac{2}{3\sqrt[3]{(2x+1)^2}} $
+ \end{example}
+
+\begin{corollary}
+Soit $r $ un rationnel  différent de \;$ -1 $\;   et  u  une fonction  dérivable et  strictement positive sur un intervalle I. \\La fonction  $ \;                                       u^{\prime}u^{r} $\;   admet pour primitives sur I les fonctions   $ \;                                      \dfrac{u^{r +1}}{r+1} +C$.
+
+\end{corollary}
 \begin{example}
-La fonction \;$ x\longmapsto 2x \paren{3-x^{2}}^{\pi} $   admet pour primitive sur $ \intoo{-\sqrt{3}}{\sqrt{3}} $\;    la fonction \\ $ x\longmapsto -\dfrac{\paren{3-x^{2}}^{\pi+1}}{\pi+1} $
+La fonction $ \; x\longmapsto 2x \paren{3-x^{2}}^{\frac{1}{4}} $   admet pour primitives sur $ \;\intoo{-\sqrt{3}}{\sqrt{3}} \;$ les fonctions  $ x\longmapsto -\dfrac{\paren{3-x^{2}}^{\frac{5}{4}}}{\frac{5}{4}} +C$
 \end{example}
 
 
 \subsection{Croissances comparées}
 \begin{property}
-Soit $\alpha $ un réel    strictement positif.  On a :  
+Soit $\alpha $ un rationnel    strictement positif.  On a :  
 \begin{itemize}
-\item  $ \displaystyle\lim_{x \to \pinf} \frac{\ln x}{x^{\alpha}}=0$ 
+\item  $ \displaystyle\lim_{x \to \pinf} \dfrac{\ln x}{x^{\alpha}}=0$ 
 
 %\vspace*{0.5cm}
-\item  $ \lim_{x \to 0^{+}} x^{\alpha}\ln x=0$
+\item  $\displaystyle \lim_{x \to 0^{+}} x^{\alpha}\ln x=0$
 
 %\vspace*{0.5cm}
  \item  $\displaystyle \lim_{x \to \pinf} \frac{\eexp{x}}{x^{\alpha}}=\pinf$
@@ -86,15 +94,14 @@ Lorsqu'on ne peut pas conclure directement, on peut conjecturer la limite d'une 
 \begin{example}
 
 \begin{itemize}
-\item $\displaystyle \lim_{x \to \pinf} \sqrt{x}-\ln x =\displaystyle\lim_{x \to \pinf}x^{\dfrac{1}{2}}\croch{1-\dfrac{\ln x}{x^{\dfrac{1}{2}}}}$,   or $\displaystyle \displaystyle\lim_{x \to \pinf}\paren{1-\dfrac{\ln x}{x^{\dfrac{1}{2}}}} =1-0=1 $     et $ \displaystyle\lim_{x \to \pinf}x^{\dfrac{1}{2}}=\pinf $     donc $\displaystyle\lim_{x \to \pinf} \sqrt{x}-\ln x=\pinf  $  
+\item $\displaystyle \lim_{x \to \pinf} \sqrt{x}-\ln x =\displaystyle\lim_{x \to \pinf}x^{\frac{1}{2}}\croch{1-\dfrac{\ln x}{x^{\frac{1}{2}}}}$,   or $\displaystyle \displaystyle\lim_{x \to \pinf}\paren{1-\dfrac{\ln x}{x^{\frac{1}{2}}}} =1-0=1 $     et $ \displaystyle\lim_{x \to \pinf}x^{\frac{1}{2}}=\pinf $     donc $\displaystyle\lim_{x \to \pinf} \sqrt{x}-\ln x=\pinf  $  
 \item $\displaystyle\lim_{x \to \pinf}\eexp{x} -\ln x =\displaystyle\lim_{x \to \pinf}\ln x\paren{\dfrac{\eexp{x}}{\ln x} -1}$     or $\displaystyle \lim_{x \to \pinf}\ln x=\pinf $    et $\displaystyle \lim_{x \to \pinf}\dfrac{\eexp{x}}{\ln x}= \displaystyle \lim_{x \to \pinf}\dfrac{\eexp{x}}{ x}\times\frac{x}{\ln x} =\pinf$ \\ Par suite $\displaystyle \lim_{x \to \pinf}\ln x\paren{\dfrac{\eexp{x}}{\ln x} -1}=\pinf $ 
-\item $\displaystyle \lim_{n \to \pinf} \sqrt[n]{n} $. \;    On a:\;$\sqrt[n]{n}=n^{\dfrac{1}{n}}  =\eexp{\dfrac{1}{n}\ln n} $.\;   Or $ \displaystyle\lim_{n \to \pinf}\dfrac{\ln n}{n} =0$\;     par  composée , $ \displaystyle \lim_{n \to \pinf} \eexp{\dfrac{1}{n}\ln n}=\eexp{0}=1$   il vient: $ \displaystyle\lim_{n \to \pinf} \sqrt[n]{n}=1 $  
-\item  $ \lim_{x \to \pinf} 2^{x}-x^{100} =\displaystyle\lim_{x \to \pinf}2^{x}\paren{1-\dfrac{x^{100}}{2^{x}}}$.
-Or $ \displaystyle\lim_{x \to \pinf} 2^{x}=\pinf $  \; et \; $\displaystyle \lim_{x \to \pinf}\paren{1-\dfrac{x^{100}}{2^{x}}} = 1$,\;    on obtient \; $ \displaystyle\lim_{x \to \pinf} 2^{x}-x^{100} =\pinf $
+\item $\displaystyle \lim_{n \to \pinf} \sqrt[n]{n} $. \;    On a:\;$\sqrt[n]{n}=n^{\frac{1}{n}}  =\eexp{\frac{1}{n}\ln n} $.\;   Or $ \displaystyle\lim_{n \to \pinf}\dfrac{\ln n}{n} =0$\;     par  composée , $ \displaystyle \lim_{n \to \pinf} \eexp{\frac{1}{n}\ln n}=\eexp{0}=1$   il vient: $ \displaystyle\lim_{n \to \pinf} \sqrt[n]{n}=1 $  
+%\item  $\displaystyle \lim_{x \to \pinf} 2^{x}-x^{100} =\displaystyle\lim_{x \to \pinf}2^{x}\paren{1-\dfrac{x^{100}}{2^{x}}}$.
+%Or $ \displaystyle\lim_{x \to \pinf} 2^{x}=\pinf $  \; et \; $\displaystyle \lim_{x \to \pinf}\paren{1-\dfrac{x^{100}}{2^{x}}} = 1$,\;    on obtient \; $ \displaystyle\lim_{x \to \pinf} 2^{x}-x^{100} =\pinf $
 
 \end{itemize}
 
 \end{example}
-
   %</content>
 \end{document}

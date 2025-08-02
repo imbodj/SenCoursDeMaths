@@ -2,9 +2,18 @@
 
 \begin{document}
   %<*content>
-  \sheet{analysis}{calcul-de-probabilités}{Calcul de probabilité}
- \summary{}
- 
+  \sheet{analysis}{calcul-de-probabilités}{Calcul de probabilité (TL)}
+ \summary{Aide-mémoire de probabilité}
+ \textbf{Vocabulaire}
+\begin{itemize}
+    \item \textbf{Expérience aléatoire} : expérience dont le résultat n’est pas prévisible.
+    \item \textbf{Issue} : un des résultats possibles de l'expérience.
+    \item \textbf{Univers} $\Omega$ : ensemble de toutes les issues possibles.
+    \item \textbf{Événement} : sous-ensemble de l’univers (peut être simple ou composé).
+    \item \textbf{Événement certain} : se réalise dans tous les cas, c’est $\Omega$.
+    \item \textbf{Événement impossible} : ne se réalise jamais, c’est $\varnothing$.
+    \item \textbf{Événements incompatibles} : ils ne peuvent pas se produire en même temps.
+\end{itemize}
  \begin{property}
  \begin{itemize}
  \item Soient $A $ et $ B$ deux événements : \[P\paren{A\cup B}=P(A)+P(B)-P(A\cap B)\]
@@ -16,10 +25,33 @@
   \end{definition}
 
   
+\textbf{Conseils pratiques}
+
+- Une probabilité est un nombre entre $ 0 $ et $ 1 $.\\
+- La somme des probabilités de toutes les issues = 1.\\
+- Bien identifier l’univers \( \Omega \) dès le départ.
+
+
   \begin{property}
-  Dans un cas d'équiprobabilité, la probabilité d'un événement $A$ est : $$ P(A)=\frac{\text{card}A }{\text{card}\Omega}$$
+  Dans un cas d'équiprobabilité, la probabilité d'un événement $A$ est : $$ P(A)=\dfrac{\text{card}A }{\text{card}\Omega}=\dfrac{\text{nombre d’issues favorables à } A}{\text{nombre total d’issues}}$$
   \end{property}
 
-  
+   \textbf{Tableau résumant les   différents tirages}\\
+ Tirage de $p$ éléments dans un ensemble à $n$ éléments.
+ 
+\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+\text{Type} & \text{Ordre ?} & \text{Distinction ?} & \text{Outil} & \text{Nb tirages} \\
+\hline
+\text{Avec remise}  &   \text{Oui}  & \text{Non} & p\text{-liste} &  n^{p}  \\
+\hline
+\text{Sans remise} & \text{Oui} & \text{Oui} & \text{Arrgt.} &  A_n^p \\
+\hline
+\text{Simultanés}  & \text{Non} & \text{Oui} & \text{Comb.} & C_n^p \\
+\hline
+\end{array}
+\]
+
   %</content>
 \end{document}

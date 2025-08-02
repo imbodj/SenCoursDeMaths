@@ -1,8 +1,6 @@
-# Bienvenue !
+# Bienvenue  à tous!
 
-
-Bonjour et bienvenue sur ce site où je mettrai  mes cours de mathématiques, ainsi que des exercices  et des fiches de révision, spécialement adaptés aux programmes du secondaire. 
-Vous y trouverez notamment :
+Ce site regroupe mes cours de mathématiques, accompagnés d'exercices et de fiches de révision, conçus pour les programmes du secondaire. Vous y trouverez notamment :
 
 * Une [liste de cours](/lecons/). Par manque de temps, j'ai fait l'impasse sur  certaines leçons.
 * Une selection d'[exercices](/developpements/) progressifs.

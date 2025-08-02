@@ -86,21 +86,22 @@ Si $ A=\accol{n\in E \diagup n\geq 4} $ alors  $ \overline{A}=\accol{n\in E \dia
  Soient $ A$ et $B $ deux parties  non disjointes de $ E $.\\
 On note $\overline{A} $ et  $\overline{B} $ respectivement les complémentaires de $ A$ et $B $.
 
-\begin{center}
-\renewcommand{\arraystretch}{1.5}
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+     & A & \overline{A} & \text{Totaux} \\
+\hline
+B & \text{card}(A \cap B) & \text{card}(\overline{A} \cap B) & \text{card}(B) \\
+\hline
+\overline{B} & \text{card}(A \cap \overline{B}) & \text{card}(\overline{A} \cap \overline{B}) & \text{card}(\overline{B}) \\
+\hline
+\text{Totaux} & \text{card}(A) & \text{card}(\overline{A}) & \text{card}(E) \\
+\hline
+\end{array}
+$$
 
-\begin{tabularx}{\textwidth}{|l|X|X|r|}
-\cline{2-4}
-\multicolumn{1}{c|}{} & A & $ \overline{A}$ & Totaux \\
-\hline
-B & card$( A\cap  B )$ & card$( \overline{A}  \cap B)$& card$ B $\\
-\hline
-$ \overline{B} $&  card$( A\cap \overline{B})$  & card$( \overline{A}\cap  \overline{B} )$  & card$\overline{B}$\\
-\hline 
-Totaux &card$ A$&card$\overline{A}$& card$ E $\\
-\hline
-\end{tabularx}
-\end{center}
+
+
 \begin{exercice}
 Dans un camp de vacances hébergeant 80 personnes. 50 font la natation, 33 pratiquent le tennis, 14 pratiquent les deux sports à la fois. Calculer:
 \begin{enumerate}
@@ -113,18 +114,21 @@ Dans un camp de vacances hébergeant 80 personnes. 50 font la natation, 33 prati
 \textbf{Réponse}\\
 $ N$ et $T $ sont respectivement ensembles de ceux qui font natation et tennis.
 
-\renewcommand{\arraystretch}{1.5}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
-\cline{2-4}
-\multicolumn{1}{c|}{} & N & $ \overline{N}$ & Totaux \\
+$$
+\begin{array}{|c|c|c|c|}
 \hline
-T & 14 & 19& 33\\
+      & N & \overline{N} & \text{Totaux} \\
 \hline
-$ \overline{T} $&  36 &  11 & 47 \\
-\hline 
-Totaux & 50&  30 &   80\\
+T     & 14 & 19 & 33 \\
 \hline
-\end{tabularx}
+\overline{T} & 36 & 11 & 47 \\
+\hline
+\text{Totaux} & 50 & 30 & 80 \\
+\hline
+\end{array}
+$$
+
+
 
 Une fois le tableau réussi, on obtient les réponses suivantes:
 \begin{enumerate}
@@ -451,20 +455,19 @@ Les $A_{n}^{p} $ et  $C_{n}^{p} $ sont des entiers naturels qu'on peut calculer 
 
  \textbf{Dans tous les cas devant un problème de dénombrement, on peut  utiliser le tableau suivant:}\\
  Tirage de $p$ éléments dans un ensemble à $n$ éléments.
- \begin{center}
- \setlength\arrayrulewidth{1.2pt}
- %\renewcommand{\arraystretch}{2}
- \begin{tabularx}{\textwidth}{|X|X|X|X|X|}
+$$
+\begin{array}{|c|c|c|c|c|}
 \hline
-Type & les p éléments sont ordonnés&  les p éléments sont distincts& outil&nombre de tirages\\
+\text{Type} & \text{Ordre} & \text{Distincts} & \text{Outil} & \text{Nb} \\
 \hline
-tirages successifs avec remise  &   oui  & non &p-liste & $ n^{p} $ \\
+\text{Avec remise} & \text{Oui} & \text{Non} & p\text{-liste} & n^p \\
 \hline
-tirages successifs sans remise  &  oui&   oui &  arrangement& $ A_{n^{p}} $\\
+\text{Sans remise} & \text{Oui} & \text{Oui} & A_n^p & A_n^p \\
 \hline
-tirages simultanés \par & non  & oui &combinaison& $C_{n}^{p}$\\
+\text{Simultanés} & \text{Non} & \text{Oui} & C_n^p & C_n^p \\
 \hline
-\end{tabularx}
-\end{center}
+\end{array}
+$$
+
   %</content>
 \end{document}

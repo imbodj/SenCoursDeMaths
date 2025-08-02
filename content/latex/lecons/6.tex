@@ -2,184 +2,204 @@
 \everymath{\displaystyle}
 \begin{document}
   %<*content>
-  \lesson{algebra}{6}{Fonction exponentielle (TS2)}
+  \lesson{algebra}{5}{Probabilités simples (TS2)}
 
- \subsection*{Introduction}
-La fonction   $ \begin{array}{lrcl}
-\ln : & \intoo{0}{\pinf} & \longrightarrow & \Rr \\ 
-      & x                & \longmapsto     & \ln x
-\end{array}$
-    est continue et strictement croissante.
-    
- Elle admet une    \textbf{ bijection  réciproque } de $\; \Rr  \;$ vers $\;\intoo{0}{\pinf} $.
 
-\subsection{Définition et propriétés}
+En 1654,  Blaise Pascal (1623 ; 1662) entretient avec Pierre de Fermat (1601 ; 1665) des correspondances sur le thème des jeux de hasard et d'espérance de gain qui les mènent à exposer une théorie nouvelle : les calculs de probabilités. Ils s’intéressent à la résolution de problèmes comme par exemple celui du Chevalier de Méré: « Comment expliquer le fait qu'il était  plus avantageux de parier sur l'apparition d'un 6 en lançant 4 fois le dé  que de parier sur l'apparition d'un double-six, quand on lance 24 fois deux dés >> .
+
+
+Aujourd'hui , le champ immense  de leurs applications à la totalité des sciences et des techniques donne raison aux physicien et mathématicien Maxwell: <<La vrai logique du monde est celle  du calcul des probabilités>>
+
+
+\subsection{Notion d'événement}
+\subsection*{Expérience aléatoire}
+Le calcul des probabilités s’appuie sur les expériences aléatoires.
+
+
+
 
 \begin{definition}
-On appelle fonction  exponentielle, la bijection réciproque de la fonction $ \ln $,    notée     exp  ou e.
+ Une expérience est dite aléatoire si :
+ \begin{itemize}
+ \item  on ne peut prédire le résultat avec certitude,
+ \item on peut décrire l’ensemble des résultats possibles.
+ \end{itemize}
+  \end{definition}
+\begin{example}
+\begin{itemize}
+\item Lancer d’une pièce de monnaie et s'intéresser à la face apparue. 
+\item Le jet d’un dé et regarder le  numéro apparu. 
+\item Le choix d’une ou de plusieurs boules d’une urne contenant des boules. 
+\end{itemize}
+\end{example}
+
+%--------------------------------------------------------------
+\subsection*{Evénement}
+
+\begin{definition}
+Tout résultat d’une expérience aléatoire est appelé une \textbf{ éventualité}. \\
+L’ensemble des éventualités est appelé \textbf{univers} ; il est noté en général $ \Omega $. \\
+Toute partie de $ \Omega $ est appelée \textbf{ événement}.\\
+Ainsi :\\
+$ \Omega $ est appelé l’\textbf{événement certain.}\\
+L’ensemble vide est appelé l’\textbf{événement impossible}.\\
+Un événement réduit à un singleton est appelé un \textbf{événement élémentaire}. Il est noté $ \accol{\omega} $  ou $ \omega $.
+
 \end{definition}
 
-\begin{notation}
-On a donc  $ \begin{array}{lrcl}
-\text{exp} : & \Rr & \longrightarrow & \intoo{0}{\pinf} \\
-             & x   & \longmapsto     & \text{exp}(x) = \eexp{x}
-\end{array} $
-\end{notation}
-\begin{corollary}
+\begin{example}
 \begin{itemize}
-\item $ \forall x \in \Rr,\; \; \eexp{x}> 0 $ 
+\item Dans le lancer du dé, l'univers des possibles est $ \Omega =\accol{1,2,3,4,5,6} $ 
+\item La partie $ A=\accol{2,4,6} $ est un événement de cette expérience aléatoire; on peut le décrire par: $ A :$  << un nombre pair sort lors du lancer >>
+\item  L'événement $ B: $  << le six apparaît >> est élémentaire; tandis que l'événement $ C: $  << un nombre       supérieur à 7 apparaît >> est impossible  et l'événement $ D: $  << un nombre inférieur ou égal à 7 apparaît >> est certain.
+\end{itemize}
+\end{example}
+\begin{remark}
+Nous dirons qu'un résultat $ \omega $  \textbf{réalise} l'événement $ A $ si  $ \omega\in A. $\\
+L'événement certain est toujours réalisé tandis que l'événement impossible n'est jamais réalisé.
+\end{remark}
+%--------------------------------------------------------------
+\subsection*{Evénements particuliers}
+On considère une expérience d’univers  $ \Omega $ et deux événements A et B liés à elle.
 
-\item $  \eexp{0}= 1   \; $ et $ \;    \eexp{1}= \mathrm{e} $
+\begin{definition}
+On appelle:
+\begin{itemize}
 
- \item $\forall x> 0,\; \; \eexp{\ln{x} }=x  $ 
- 
- \item $\forall y\in \Rr ,\; \; \ln {\eexp{y}}=y  $ 
-  
-  \item exp   est continue et dérivable sur  $\Rr$.
-  \item exp   est bijective et  strictement croissante  sur $\Rr$ 
-  
-  \item $ \eexp{a}=\eexp{b}\Longleftrightarrow a=b $
-  
-\item $ \eexp{a}> \eexp{b}\Longleftrightarrow a>b $
- 
+\item \textbf{ événement  << A ou B >>}, l’ensemble A  $ \cup $B.
+\item \textbf{ événement  << A et B >>} , l’ensemble A$ \cap $ B.
+\item \textbf{ événements incompatibles}, deux événements A et B tels que A $ \cap $B $ = \varnothing$.\\ En d'autres termes, il n'existe aucun résultat qui les réalise à la fois.
+\item \textbf{événement contraire } de l’événement A, le sous-ensemble complémentaire de A dans $ \Omega $. 
+Il est noté:  $ \overline{A} $.\\ En d'autres termes, si A est réalisé alors son contraire ne l'est pas et vice versa.
+\end{itemize}
+\end{definition}
+
+\begin{remark}
+ Si deux événements sont contraires alors ils sont incompatibles. Mais la réciproque est fausse. Les événements $ A=\accol{1,4} $  et $ B=\accol{5,6} $ sont incompatibles car $ A\cap B= \varnothing$  mais  ils ne sont pas contraires.
+ \end{remark}
+
+\subsection*{Exemples d'événements particuliers.}
+Dans le lancer du dé, considérons les deux événements suivants:
+\begin{description}
+\item $ A$ :  <<  obtenir un nombre pair>>
+\item $ B $  :   <<  obtenir un nombre supérieur ou égal à 3>>
+\end{description}
+On écrit alors $ A=\accol{2,4,6} $ et $ B=\accol{3,4,5,6} $
+\begin{itemize}
+\item $ A\cap B $ est l'événement:<<obtenir un nombre pair supérieur ou égal à 3>>  donc $ A\cap B=\accol{4,6} $.
+\item  $ A\cup B $ est l'événement:<<obtenir un nombre pair ou  un nombre  supérieur ou égal à 3>>  donc $ A\cup B=\accol{2,3,4,5,6} $.
 \end{itemize}
 
-\end{corollary}
 
 
-\begin{property}[fondamentale]
 
-$$ \forall a \in \Rr \; \text{et} \;  \forall b \in\Rr \quad \eexp{a+b}=\eexp{a}\times \eexp{b}  $$
+%------------------------------------------------------------------
+\subsection{Probabilité d’un événement}
+  ( Approche expérimentale de la probabilité)
+  \begin{lemma}
+On dispose d’une pièce de monnaie qu’on lance plusieurs fois. On recommence cette opération plusieurs fois , et à chaque fois on note le nombre de << Pile >> obtenu.
 
 
+
+
+$\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\text{ Nombre de  lancers} & 100 & 200 & 300 & 400 & 500 & 600 & 700 & 800 \\ \hline
+\text{Nombre de Pile} & &&&&&&& \\ \hline
+\text{Fréquence} & &&&&&&&\\ \hline
+\text{Fréquence cumulée} &&&&&&&& \\ \hline
+\end{array}$
+
+\begin{enumerate}
+\item Faire l'expérience suivant ce modèle  et remplir le tableau.
+\item Représenter dans un repère les points de coordonnées (x,y), où x est le nombre de lancers et y est la fréquence de Pile.\; (1cm  représente 100 sur l'axe des abscisses  et 1cm représente 0.1 sur l'axe des ordonnées)
+\item Tracer la droite d’équation $ y=\frac{1}{2} $.\; Quelle conjecture peux- tu faire sur la disposition des points par rapport à cette droite ? 
+ 
+\end{enumerate}
+\end{lemma}
+\subsection*{Définition et propriétés}
+L'activité suggère, qu'en effectuant un nombre encore plus grand de lancers, les fréquences se
+rapprocheraient de \;$\dfrac{1}{2} $ \; de façon encore plus évidente. On dit que \; $\dfrac{1}{2} $ \; est la probabilité de l'événement Pile. \\
+D'une manière générale  nous admettons le  résultat suivant: \textbf{les fréquences obtenues d’un événement A se rapprochent d’une valeur théorique lorsque le nombre d’expériences augmente (Loi des grands nombres). Cette valeur s’appelle la probabilité de l’événement A.}
+\begin{definition}
+Soit $ \mathcal{E} $ une expérience aléatoire d’univers $ \Omega $ fini,  et  $ \mathcal{P}(\Omega) $ l’ensemble des événements  de $ \Omega $.\\ On appelle probabilité sur $ \mathcal{P}(\Omega) $, toute application  $ P : \mathcal{P}(\Omega) \longrightarrow  \intff{0}{1} $ , telle que :
+\begin{enumerate}
+\item $  P(\Omega)=1 $,
+\item $ P(A\cup B)=P(A)+ P(B) $ , pour tout couple $(A, B)$  d’événements incompatibles.
+\end{enumerate}
+ 
+
+Si $ A\in  \mathcal{P}(\Omega) $  alors  $ P(A) $ s'appelle la probabilité de l'événement $ A. $
+\end{definition}
+\begin{remark}
+\begin{itemize}
+\item Pour tout événement  $ A $, $\quad 0\leq  P(A) \leq 1 $\; ( \textit{Une fréquence est toujours comprise entre \; $0 $ et $ 1.$})
+\item La somme des probabilités  des événements élémentaires $ \accol{\omega_{k}} $ de $ \Omega $  est égale à 1   ( somme  de fréquences): $ \omega _{1} +\omega _{2}+\cdots + \omega_{n} =1 $
+\end{itemize}
+\end{remark}
+\begin{property} 
+Soit une expérience d’univers $ \Omega $ . On considère  $A$ et $ B$ deux événements liés à cette expérience;
+\begin{itemize}
+\item $ P(\varnothing)=0 $
+\item $ P(\overline{A} )=1-P(A)$
+\item Lorsque l’événement  $A$ est inclus dans $B$ alors,  $P(A) \leq P(B)$.
+\item $ P(A\cup B)= P(A)+ p(B)- P(A \cap B) $
+\end{itemize}
 \end{property}
+\subsection*{Cas où les événements élémentaires sont équiprobables }
+\begin{definition}
+Lorsque les événements élémentaires ont la même probabilité , on dit qu’ils sont \textbf{ équiprobables}.
+\end{definition}
+\begin{property}
+Dans un cas d’équiprobabilité, la probabilité d’un événement quelconque  $A$ est donnée par:
 
+$$ P(A)=\dfrac{\text{card }A}{\text{card } \Omega}$$
+\end{property}
 \textbf{Démonstration}\\
-$ \ln \paren{\eexp{a+b}}  =a+b $  \\
-$  \ln \paren{\eexp{a} \times \eexp{b}}=\ln (\eexp{a})+ \ln {\eexp{b}} =a+b$ \\  D'où $ \eexp{a+b}=\eexp{a}\times \eexp{b}  $  
+Soit $ \Omega $ un univers  de cardinal $ n$
+et  $ A $ un événement de cardinal $ N. $\\
+On a $ P(A)= \displaystyle\sum_{k=1}^N P(\omega_{k})$. Or pour chaque $ k $,  $ P (\omega_{k})=\omega $  donc $ P(A)=N \omega $\\
+Par ailleurs $ \displaystyle \sum_{k=1}^n P(\omega_{k})=1  \Longleftrightarrow  \sum_{k=1}^n  \omega=1  \Longleftrightarrow n \omega =1 \Longleftrightarrow \omega =\frac{1}{n}$\\ On en déduit que $ P(A)=N\times   \frac{1}{n}= \dfrac{\text{card }A}{\text{card } \Omega}$
 
-\begin{corollary}
- \begin{itemize}
- \item $ \eexp{-a}=\dfrac{1}{\eexp{a}} $
-  \item $ \eexp{a-b}=\dfrac{\eexp{a}}{\eexp{b}} $
-  
-  \item $ \paren{\eexp{a}}^{r} = \eexp{ra} \; \forall r \in \Qq $
+\begin{exercice}
+On lance un dé cubique  \textbf{pipé} dont les faces sont numérotées de 1 à  6. \\  Ce dé est tel que les événements élémentaires $ \accol{1} $, $ \accol{2} $ et $ \accol{3} $ ont la même probabilité, cette probabilité étant le double de la probabilité de chacun des autres événements élémentaires.\\ Quelle est la probabilité P définie sur l'univers $ \Omega  $ de cette expérience aléatoire ? \\ Quelle est la probabilité  d'avoir un chiffre pair ?
+\end{exercice}
+\begin{proof}
+L'univers $ \Omega  $ de cette expérience aléatoire est défini par: $ \Omega =\accol{1; 2; 3; 4; 5; 6 }$\\Le dé n'étant pas parfaitement équilibré, les événements élémentaires ne sont pas équiprobables.\\Calculons les probabilités:
+\begin{itemize}
+\item  $ P( \accol{1})=P (\accol{2})=P (\accol{3})=2P( \accol{4})=2P( \accol{5})=2P (\accol{6}) $\\
+  Or $ P (\accol{1})+P (\accol{2})+P (\accol{3})+P (\accol{4})+P (\accol{5})+P( \accol{6})=1 $\\
+  D'où $ 9 P( \accol{6})=1 $ donc $P( \accol{4})=P (\accol{5})=P (\accol{6} ) 
+ =\tfrac{1}{9}$ et $P (\accol{1})=P (\accol{2})=P (\accol{3} ) 
+ =\frac{2}{9}$.
+ \item Désignons par A l'événement << le numéro de la face supérieure est un chiffre pair >>\\ A$ =\accol{2; 4; 6} $  et donc P(A)$ =P( \accol{2})+P (\accol{4})+P (\accol{6}) =\dfrac{2}{9}+\dfrac{1}{9}+\dfrac{1}{9}=\dfrac{4}{9}$
  \end{itemize}
-\end{corollary}
+ \end{proof}
+  
+ \begin{exercice}
+   Dans une urne se trouvent huit boules  indiscernables au toucher dont cinq rouges $ R_{1} $, $ R_{2} $, $ R_{3} $,  $ R_{4} $, $ R_{5} $  et trois noires $ N_{1} $, $ N_{2} $ $ N_{3} $ .
+On tire au hasard une boule de l’urne, on note sa couleur, on ne la remet pas dans l'urne puis on tire au hasard une deuxième boule, on note sa couleur. \\ Calculer  les  probabilités de chacun des  événements suivants :\\
+- A : << les deux boules tirées sont de la même couleur>>.\\ 
+- B: <<les deux boules tirées sont de couleur différente >> . 
+ \end{exercice}
+ \begin{proof}
+ L'expérience a lieu dans le cadre de l'équiprobabilité des événements élémentaires.\\ Une éventualité est un ensemble ordonné de deux boules prises dans l'ensemble des huit boules.\\
+ Désignons par $ \Omega $  l'univers des éventualités. On a card $\Omega=A_{8}^{2}=8\times 7=56$\\
 
+ $ \bullet $ Probabilité de A.\\
 
-\subsection{Étude et représentation graphique}
-
-\subsection*{Dérivée} 
-On sait que  $\; \forall x \in \Rr ,\;  \ln{\eexp{x}}=x $. \\
-Dérivons les 2 membres de cette égalité.  \\
-$ \paren{\ln^{\prime}{ \eexp{x}}}\times \text{exp}'(x)=1$ \\
-$ \dfrac{\text{exp}'(x)}{\eexp{x}}=1   \Longleftrightarrow  \text{exp}'(x)=\eexp{x}$ 
-
-\begin{property}
- La fonction exponentielle est dérivable sur $ \Rr $ et est égale à sa propre dérivée:
+ A est constitué des 2 arrangements de $ \accol{R_{1}; R_{2} ;R_{3} ;R_{4} } $ ou des 2 arrangements de $ \accol{N_{1}; N_{2} ;N_{3}} $\\
  
+ D'où cardA$ =A_{4}^{2}+A_{3}^{2} =26$\\
  
-  $ \paren{ \eexp{x}}^{\prime}=\eexp{x}\;\;  \quad \forall x \in \Rr $
-\end{property}
-\begin{corollary}
-Si $u$ est une fonction  dérivable sur un intervalle I alors la fonction $\; f: x \mapsto \eexp{u(x)} \;$  est dérivable sur I  et  $ f'(x)=\paren{\text{exp}^{\prime}(u(x))}\times u'(x) = \eexp{u(x)}\times u'(x)=\eexp{u(x)}\times u'(x)$ 
-
- \fbox{$ \paren{\eexp{u}}^{\prime}= u^{\prime} \eexp{u}$}
-\end{corollary}
-
- La fonction  $\;  u^{\prime}\eexp{u} \;$  a pour primitive  toute fonction du type  $\;  \eexp{u}+C \; $ $ (C\in\Rr) $.
+ donc P(A)$ =\frac{26}{56}=\frac{13}{28}$\\
  
-\subsection*{Limites} 
-Aux bornes de l'ensemble de définition de la fonction exp, on obtient les limites suivantes:
-\begin{property}
-\begin{itemize}
-\item  $\displaystyle \lim_{x \to \pinf}\eexp{x} =\pinf $ 
- \item $ \displaystyle\lim_{x \to \minf}\eexp{ x}=0 $
-\end{itemize}
-\end{property}
+  $ \bullet $ Probabilité de B.\\
 
-\textbf{Démonstration}
-\begin{itemize}
-\item  Soit $ \varphi $  la fonction définie par : $\; x\longmapsto \eexp{x}-x-1 $. \\
-$ \varphi $  est dérivable sur $ \intfo{0}{\pinf} \;$    et  $ \;\forall x> 0 \quad  \varphi^{\prime}(x)= \eexp{x}-1\geq 0$.  $ \;\varphi $  est donc croissante sur  $ \intfo{0}{\pinf} \;$    or  $ \;\varphi(0)=0. $  \\ Donc $ \forall x \geq 0,\; \varphi(x)\geq 0 \;$  càd  $ \eexp{x}\geq x+1 $.  Or $ \lim_{x \to \pinf}x+1=\pinf $  
-par comparaison  $ \displaystyle\lim_{x \to \pinf}\eexp{x} =\pinf $ \\
-\item Pour calculer $ \displaystyle\lim_{x \to \minf}\eexp{ x} $\;  posons\; $ y=-x $   \\
-On a alors \;$\displaystyle\lim_{x \to \minf}\eexp{ x} = \displaystyle\lim_{y \to \pinf}\eexp{-y}=\lim_{y \to \pinf}\dfrac{1}{\eexp{y}}=0 $
+L'événement B est le contraire de A.\\
 
-\end{itemize}
-\subsection*{ Tableau de variations}
-\begin{center}
-\begin{tikzpicture}
-\tkzTab[lgt=2]
-{
-	$x$ / 0.5 ,
-	$\paren{\eexp(x)}^{\prime}$ / 0.5,
-	$\eexp(x)$ /1
-}
-{ $\minf$ , $\pinf$ }
-{ , + , }
-{-/ $0$ , +/$\pinf$ }
-\end{tikzpicture}
-\end{center}
+Donc P(B)$ =1- $ P(A)$ =1-\frac{13}{28}=\frac{15}{28} $
 
-
-\subsection*{ Représentation graphique de la fonction exp}
-Les  courbes de la fonction   exp   et de la fonction $ \ln  $ sont symétriques  par  rapport à la première bissectrice du repère.
-  \begin{center}
-\begin{tikzpicture}[>=stealth', scale=0.5]
-\clip (-4,-3) rectangle (7,7);
-\draw[->,thick] (0,0) -- (1,0);
-\draw[->,thick] (0,0) -- (0,1);
-\draw[,thick] (-4,0) -- (7,0);
-\draw[thick] (0,-3) -- (0,7);
-\foreach\x in {1,2,}
-{
-\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
-}
-\foreach\y in {1}
-{
-\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
-}
-
-\draw[thick,black] plot[domain=0.1 :7,samples=100] (\x,{ln (\x)}) node[above left] {$\mathscr{C_{\ln}}$};
-\draw[thick,black] plot[domain=-3 :1.78,samples=100] (\x,{exp (\x)}) node[above left] {$\mathscr{C_{\exp}}$};
-\draw[thick,dashed] plot[domain=-3 :7,samples=100] (\x, \x);
-\draw[dashed,thick](2.7,0)--(2.7,1);
-\draw[dashed,thick](2.7,1)--(0,1);
-\node at(2.7,-0.4) {$\mathrm{e}$};
-\node at(-0.4, 2.7) {$\mathrm{e}$};
-\draw[dashed,thick](0,2.7)--(1,2.7);
-\draw[dashed,thick](1,2.7)--(1,0);
-
-\end{tikzpicture}
-\end{center}
-
-\subsection{ Quelques limites classiques}
-
-\begin{property}
-\begin{itemize}
-\item  $\displaystyle \lim_{x \to \pinf}\dfrac{\eexp{x}}{x}=\pinf $
-\item  $\displaystyle \lim_{x \to \minf} x\eexp{x}=0 $   
-\item  $\displaystyle \lim_{x \to 0} \dfrac{\eexp{x}-1}{x}=1 $
-\end{itemize}
-\end{property}
-
-
-\textbf{Démonstration}
-\begin{itemize}
-\item   Montrons que $ \displaystyle\lim_{x \to \pinf}\dfrac{\eexp{x}}{x}=\pinf $ \\  
- Pour $ x > 0 $,\; $ \ln  \paren{\dfrac{\eexp{x}}{x}}  =\ln \eexp{x}-\ln x  =x-\ln x  =x\paren{1-\frac{\ln x}{x}} $   d'où par produit  $\displaystyle \lim_{x \to \pinf}x\paren{1-\dfrac{\ln x}{x}}=\pinf $
- 
- \item   Montrons que\; $ \lim_{x \to \minf}x\eexp{x}=0 $ \\\ 
- En posant $ X=-x $ ,\;on obtient $\displaystyle \lim_{x \to \minf}x\eexp{x}=\lim_{X \to \pinf}-X\eexp{-X} = \displaystyle\lim_{X \to \pinf}\dfrac{-X}{\eexp{X}}=0$ 
- \item  Montrons que\; $ \displaystyle\lim_{x \to 0} \dfrac{\eexp{x}-1}{x}=1 $\\
-  Soit $ \varphi (x)=\eexp{x}$.\\
-  $\displaystyle \lim_{x \to 0}  \dfrac{\eexp{x}-1}{x} =\displaystyle\lim_{x \to 0}  \dfrac{\varphi(x)-\varphi(0)}{x-0} = \varphi'(0)=\eexp{0}=1$
-  \end{itemize}
-
-
-
-
+ \end{proof}
   %</content>
 \end{document}
