@@ -1,0 +1,27 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{fourier-otf}
+\usepackage{fontspec}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{3d}
+\usepackage{pgfplots}
+
+\tikzset{
+  every picture/.append style={scale=2, every node/.style={scale=2}}
+}
+
+
+
+\begin{document}
+  \begin{tikzpicture}[scale=0.8]
+\tkzTabInit[]
+{$x$ /1, $g'(x)$ /1,$g(x)$ /2}
+{$-\infty$ , $ 0 $, $1$ , $2$ , $+\infty$}
+\tkzTabLine{,+,z,-,d,-,z,+,}
+\tkzTabVar{-/$-\infty$,+/$1$,-D+/$-\infty$ / $+\infty$ ,-/$5$, +/$+\infty$}
+%\tkzTabVal{1}{2}{0.4}{}{}
+\end{tikzpicture}
+\end{document}

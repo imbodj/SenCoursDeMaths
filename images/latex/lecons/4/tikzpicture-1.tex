@@ -1,0 +1,30 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{fourier-otf}
+\usepackage{fontspec}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{3d}
+\usepackage{pgfplots}
+
+\tikzset{
+  every picture/.append style={scale=2, every node/.style={scale=2}}
+}
+
+
+
+\begin{document}
+  \begin{tikzpicture}
+\tkzTab[lgt=2]
+{
+	$x$ / 0.5 ,
+	$\ln^{\prime}(x)$ / 0.5,
+	$\ln(x)$ /1
+}
+{ $0$ , $\pinf$ }
+{ , + , }
+{-/ $\minf$ , +/$\pinf$ }
+\end{tikzpicture}
+\end{document}

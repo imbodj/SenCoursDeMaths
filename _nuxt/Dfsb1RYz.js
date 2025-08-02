@@ -1,0 +1,1 @@
+import{L as o}from"./DHCviVy_.js";import{d as n,h as s,o as r}from"./DdUWgKML.js";const p=n({__name:"LessonCard",props:{lesson:{}},setup(t){return(e,a)=>(r(),s(o,{"btn-check":"Consulter la leçon","link-prefix":"lecons",object:e.lesson},null,8,["object"]))}});export{p as _};
