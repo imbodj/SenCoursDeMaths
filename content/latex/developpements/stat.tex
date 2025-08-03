@@ -1,0 +1,164 @@
+\input{../common}
+
+\begin{document}
+	%<*content>
+	\development{analysis}{stat}{Statistique}
+
+ \summary{}
+ 
+	
+	\begin{exercice}	
+ Soit $(x_i , y_i)$  une série statistique double d'effectif total $ N $.
+
+\medskip
+
+$$
+\begin{array}{|c|c|c|c|c|}
+ \hline
+  x_i   & x_1 & x_2 &  \dots & x_N \\ 
+ \hline
+   y_j   & y_1 & y_2 & \dots & y_N \\ \hline
+\end{array}$$
+
+\medskip
+
+Reproduire et compléter chacune des formules ci-dessous :
+
+
+\begin{enumerate}
+\item  $ \overline{x}=\dfrac{\dots}{N}  \hspace*{0.5cm}   \overline{y}=\dfrac{\dots}{N} $.
+ \item   $ V(x)=\dfrac{\dots}{N}-\dots   \hspace*{0.5cm}   V(y)=\dfrac{\dots}{N}\dots-\dots $
+ 
+ \item   $ \text{cov}(x,y)=\dfrac{\dots}{N}- \dots \times \dots \hspace*{1cm}$. le coefficient de corrélation $ r= \dfrac{\dots}{\dots \times \dots}$.
+ \item  La droite de régression de  $ y $ en $ x $ notée D$_{ y/x }$  a pour équation $ \dots $
+
+\end{enumerate}
+\end{exercice}
+\begin{exercice}
+
+Répondre par vrai (V) ou faux (F) à chacune des affirmations ci-dessous.
+
+
+\begin{enumerate}
+\item Dans une série statistique double ($x$, $y$) le point moyen G a pour coordonnées $ ( \overline{x}\;;\; \overline{y}) $.
+\item Dans une série statistique double le coefficient de corrélation linéaire vérifie  $\; 0.87\leq |r|\leq 1 $. 
+\item La droite de régression  D$_{ y/x }$  passe par  le point moyen.
+\item Si un nuage de points semble être allongé alors, un ajustement linéaire est suggéré.
+\end{enumerate}
+\end{exercice}
+\begin{exercice}
+
+Le tableau ci-dessous donne le poids moyen (y) d'un enfant en fonction de son âge (x).
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+ \hline
+ x\; \text{(années)} &0&1&2&4&7&11&12\\ \hline
+ y \;\text{(kg) } &3,5&6,5&9,5&14&21&32,5&34\\\hline
+\end{array}
+$$
+\begin{enumerate}
+\item Représenter le nuage de points de cette série statistique dans le plan muni du repère orthogonal. 
+  
+Unité graphique : en abscisse 1cm pour 1 année et en ordonnée 1cm pour 2 kg. 
+\item Calculer:
+\begin{enumerate}
+\item les moyennes $ \overline{x} $ et $ \overline{y} $ puis placer le point moyen G.
+\item  les variances $ V(x) $  et $ V(y) $.
+\item  les écart-types $ \sigma(x) $   et $ \sigma(y) $.
+\end{enumerate}
+\item Calculer le coefficient de corrélation linéaire $ r $. Interpréter le résultat .
+\item Déterminer une équation  de la droite   de régression de $y$ en $x$.
+\item Si l'évolution se poursuit dans les mêmes conditions,
+\begin{enumerate}
+ \item déterminer l'âge  à partir duquel le poids est égal à 40 kg.
+\item   quel sera le poids de l'enfant au bout de 15 années ?
+\end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+ Le tableau suivant donne la production d'arachide d'une certaine région depuis l'année 2000.\\
+Les années ont été numérotées $ x_{i} $ et la production exprimée en centaine de tonnes,
+ est notée $y_{i}$.
+$$
+\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+\text{Années :}   & 2000 & 2001 & 2002 & 2003 & 2004 & 2005 \\
+\hline
+\text{ numéro de l'année} \;  x_{i}   & 1 & 2 & 3 & 4 & 5 & 6 \\
+\hline
+\text{Production} \; y_{i} & 5 & 9 & 7 & 10 & 12 & 10\\
+\hline
+\end{array}
+$$
+\begin{enumerate}
+\item Représenter le nuage de points associé à cette série statistique.
+\item Par la méthode des moindres carrés, donner une équation de la droite de\\
+ régression $y$ en  $x $ .Tracer cette droite sur le graphique de la question  précédente  et indiquer les coordonnées du point moyen $ G $.
+ \item En supposant que l'évolution est la même au cours des années suivantes quel tonnage pourrait-on prévoir en $ 2014 $ ?
+\end{enumerate}
+\end{exercice}
+\begin{exercice}
+On donne la série statistique double  : 
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+    x & 35 & 40 &  35 &  65 & 65 &  85 & 90 &  k    \\
+\hline
+  y  & 3 & 4 & 5 & 10 & 8 &  13 &  14 & 15  \\
+\hline
+\end{array}
+$$
+\begin{enumerate}
+\item Déterminer l'entier naturel $ k $  sachant que la droite de régression de $y$ par rapport à $x$ passe par le point moyen $ G $ d'abscisse 65 .
+\item Calculer le coefficient de corrélation linéaire entre les caractères $x$ et $y $.
+\item Déterminer une équation  de la droite  de régression de $y$ par rapport à $x$.
+\item Estimer $ x $ sachant que $  y= 20 $.
+ \end{enumerate}
+
+\end{exercice}
+\begin{exercice}
+Une entreprise sénégalaise effectue un don d'engrais (en milliers de kilogrammes) à la culture d'arachide dans cinq
+régions du pays. Son intention est de tester l'efficacité de son engrais par rapport à la production (en milliers de
+tonnes) obtenue. Le tableau ci-dessous représente la production d'arachide ($y_i $) en fonction de la quantité
+d'engrais ($x_i $) utilisée.
+$$
+ \begin{array}{|c|c|c|c|c|c|}
+ \hline
+ x_i  &6&8&9&10&12\\ \hline
+ y_i    &10&14&15&18&20\\\hline
+  \end{array}
+ $$
+ 
+ \medskip
+A l'aide des informations ci-dessus et des outils mathématiques au programme :
+
+\begin{enumerate}
+\item la production d'arachide obtenue est-elle fortement corrélée à la quantité d'engrais utilisée? Justifier la
+réponse.
+\item donner une estimation de la production si le don d'engrais s'élève à 20 (en milliers de kilogrammes).
+\end{enumerate}
+
+\end{exercice}
+
+\begin{exercice}
+Le tableau ci-dessous donne le nombre total d'adhérents au club de mathématiques pour les dix premiers mois de l'année 2025( de janvier à octobre).
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\text{ Mois de l'année 2025 }\;  (x)  &1 & 2 &  3 &  4 & 5 & 6 & 7 &  8&9&10    \\
+\hline
+\text{Nombre d'adhérents}\;   (y)  & 10 & 30 & 50 & 40 & 60 &  55 & 70 & 80 & 70&80 \\
+\hline
+\end{array}
+$$
+Une fondation veut octroyer une aide financière au club si le nombre d'adhérents dépasse 200 élèves. Les élèves veulent déterminer quand ils pourront recevoir ce don.
+Faisant partie de ce club, vous êtes sollicité par tes camarades pour  répondre à leur préoccupation.
+Exploitez le tableau ci-dessus pour répondre aux questions suivantes.
+
+\medskip
+ En supposant que les adhésions suivent cette évolution, déterminer   la période (mois et année) à laquelle le club pourrait recevoir ce don.
+  
+\end{exercice}
+	%</content>
+\end{document}

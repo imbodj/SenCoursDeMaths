@@ -2,7 +2,11 @@
 import type { Lesson } from '~/types'
 import LessonCard from '~/components/Cards/LessonCard.vue'
 
-const { data: lessons, status, error } = await useFetch<Lesson[]>('/_api/latex/lecons/')
+const { data: rawLessons, status, error } = await useFetch<Lesson[]>('/_api/latex/lecons/')
+
+const lessons = computed(() =>
+  rawLessons.value?.slice().sort((a, b) => Number(a.slug) - Number(b.slug)) ?? []
+)
 
 const route = useRoute()
 const path = removeTrailingSlashIfPossible(route.path)
