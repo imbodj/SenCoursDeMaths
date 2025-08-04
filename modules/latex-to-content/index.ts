@@ -465,9 +465,14 @@ class TikzPictureImageExtractor extends LatexImageExtractor {
     
     let result = content.replace('{graphicsPath}', '')
     
-    // Ajouter le package tkz-tab si nécessaire
-    if (isTkzTab) {
-      result = result.replace('\\usepackage{tikz}', '\\usepackage{tikz}\n\\usepackage{tkz-tab}')
+    // Ajouter le package tkz-tab si nécessaire et s'il n'est pas déjà présent
+    if (isTkzTab && !result.includes('\\usepackage{tkz-tab}')) {
+      // Insérer après \usepackage{tkz-euclide} si présent, sinon après \usepackage{tikz}
+      if (result.includes('\\usepackage{tkz-euclide}')) {
+        result = result.replace('\\usepackage{tkz-euclide}', '\\usepackage{tkz-euclide}\n\\usepackage{tkz-tab}')
+      } else {
+        result = result.replace('\\usepackage{tikz}', '\\usepackage{tikz}\n\\usepackage{tkz-tab}')
+      }
     }
     
     return result.replace('{extractedContent}', latexContent)
