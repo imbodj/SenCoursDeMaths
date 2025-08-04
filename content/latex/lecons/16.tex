@@ -1,0 +1,98 @@
+\input{../common}
+\everymath{\displaystyle}
+\begin{document}
+  %<*content>
+  \lesson{algebra}{16}{Primitives}
+
+
+\subsection{Définition et propriétés}
+
+\begin{definition}
+Soit $I$ un intervalle de $\mathbb{R}$ et $f$ une fonction définie sur $I$. Une primitive de $f$ sur $I$ est une fonction $F$ dérivable sur $I$ telle que pour tout $x \in I$, $F'(x) = f(x)$.
+\end{definition}
+
+\begin{example}
+Soit $f(x) = 2\cos x \sin x$ sur $\mathbb{R}$.
+
+Alors, les fonctions suivantes sont des primitives de $f$ sur $\mathbb{R}$ :
+\begin{itemize}
+  \item $F(x) = \dfrac{1}{2} \sin^2 x$
+  \item $F(x) = -\dfrac{1}{2} \cos^2 x$
+  \item $F(x) = -\dfrac{1}{2} \cos(2x)$
+  \item $F(x) = \dfrac{1}{2} \sin^2 x + 5$
+\end{itemize}
+\end{example}
+
+\begin{property}
+\begin{itemize}
+  \item[\textbf{P1 :}] Toute fonction continue sur un intervalle $I$ admet une primitive sur $I$.
+  \item[\textbf{P2 :}] Si $F$ est une primitive sur un intervalle $I$ d’une fonction $f$, alors pour tout réel $k$, $F + k$ est aussi une primitive de $f$ sur $I$.
+  \item[\textbf{P3 :}] Pour tout couple réel $(x_0, y_0)$, il existe une unique primitive $F$ de $f$ sur $I$ telle que $F(x_0) = y_0$.
+\end{itemize}
+\end{property}
+\medskip
+
+
+\begin{remark}
+ Deux primitives d’une même fonction sur un intervalle diffèrent d’une constante.
+\end{remark}
+\subsection{Détermination d’une primitive}
+
+\textbf{Primitives usuelles}
+
+\[
+\begin{array}{|c|c|c|l|}
+\hline
+\textbf{Fonction $f$} & \textbf{Primitive $F$} & \textbf{Intervalle $I$} & \textbf{Commentaire} \\
+\hline
+a & ax & \mathbb{R} & a \in \mathbb{R} \\\hline
+x^n & \dfrac{1}{n+1}x^{n+1} & \mathbb{R} & n \in \mathbb{N} \\\hline
+\dfrac{1}{x^2} & -\dfrac{1}{x} & \mathbb{R} \setminus \{0\} & \\\hline
+\dfrac{1}{x^n} & -\dfrac{1}{(n-1)x^{n-1}} & \mathbb{R} \setminus \{0\} & n \in \mathbb{N} \setminus \{0,1\} \\\hline
+\dfrac{1}{\sqrt{x}} & 2\sqrt{x} & ]0, +\infty[ & \\\hline
+\cos x & \sin x & \mathbb{R} & \\\hline
+\sin x & -\cos x & \mathbb{R} & \\\hline
+\end{array}
+\]
+
+\subsection*{Formes de primitives}
+
+\begin{property}
+Si $F$ et $G$ sont deux primitives respectives de $f$ et $g$ sur un intervalle $I$ :
+\begin{itemize}
+  \item $F + G$ est une primitive de $f + g$ sur $I$ ;
+  \item $\lambda F$ est une primitive de $\lambda f$ sur $I$, pour tout réel $\lambda$ ;
+  \item Si $f$ est dérivable sur $I$ et $g$ dérivable sur $f(I)$, alors une primitive de $(g' \circ f) \cdot f'$ est $g \circ f$.
+\end{itemize}
+\end{property}
+
+\begin{property}
+Soit $u$ une fonction dérivable sur un intervalle $I$ telle que $u'$ soit continue sur $I$ :
+
+\[
+\begin{array}{|c|c|l|}
+\hline
+\textbf{Fonction $f$} & \textbf{Primitive $F$} & \textbf{Commentaire} \\
+\hline
+u' u^n & \dfrac{1}{n+1} u^{n+1} & n \in \mathbb{N} \\\hline
+u'/u^n & -\dfrac{1}{n-1} u^{1-n} & n \in \mathbb{N}^*, n \neq 1 \\\hline
+\dfrac{u'}{\sqrt{u}} & 2\sqrt{u} & \\\hline
+\cos(ax) & \dfrac{1}{a} \sin(ax) & a \neq 0 \\\hline
+\sin(ax) & -\dfrac{1}{a} \cos(ax) & a \neq 0 \\\hline
+\sin^n x \cos x & \dfrac{1}{n+1} \sin^{n+1} x & n \in \mathbb{N} \\\hline
+\cos^n x \sin x & -\dfrac{1}{n+1} \cos^{n+1} x & n \in \mathbb{N} \\
+\hline
+\end{array}
+\]
+\end{property}
+
+\begin{example}
+\begin{itemize}
+  \item $f_1(x) = \sin^2 x + x^3$, une primitive : $F_1(x) = -\dfrac{1}{2} \cos^2 x + \dfrac{1}{4} x^4$
+  \item $f_2(x) = x(3x^2 - 1)^3$, une primitive : $F_2(x) = \dfrac{1}{24}(3x^2 - 1)^4$
+  \item $f_3(x) = \dfrac{x}{(x^2 + 1)^2}$, une primitive : $F_3(x) = -\dfrac{1}{x^2 + 1}$
+\end{itemize}
+\end{example}
+
+  %</content>
+\end{document}
