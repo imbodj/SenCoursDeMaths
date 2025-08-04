@@ -1,0 +1,67 @@
+\input{../common}
+\everymath{\displaystyle}
+\begin{document}
+  %<*content>
+  \sheet{algebra}{fonction-de-raccordement}{Fonction de raccordement}
+ \summary{Recherche d'un ensemble de définition d'une fonction de raccordement}
+
+
+   $ f_{1} $  et  $ f_{2} $ sont deux fonctions numériques d'ensembles de définition respectifs $ D_{1} $  et $ D_{2} $.
+
+Soit la  fonction $ f $ définie par :  
+ $f(x)=\begin{cases}
+f_{1}(x)\quad \text{si }\; x<a\\
+f_{2}(x)\quad \text{si }\; x\geq a
+\end{cases}$  $\quad  a$  réel.
+\medskip
+
+ $ f_{1} $ désigne la restriction de $ f $ à l'intervalle $ \intoo{\minf}{a} $ et $ f_{2} $ désigne la restriction de $ f $ à l'intervalle $ \intfo{a}{\pinf} $.  On a alors :
+ 
+ \medskip
+$ f(x) $ existe si et seulement si
+  $\quad \begin{cases}
+f_{1}(x)\; \text{existe  dans } \Rr\\
+x<a   
+\end{cases}$ 
+ou  $\quad \begin{cases}
+f_{2}(x)\: \text{existe  dans } \Rr\\
+ x\geq a
+\end{cases}$ 
+
+\medskip
+$ f(x) $ existe si et seulement si 
+  $\quad \begin{cases}
+x\in D_{1}\\
+x<a   
+\end{cases}$ 
+ou  $\quad \begin{cases}
+x\in D_{2}\\
+ x\geq a
+\end{cases}$ 
+\medskip
+
+$ f(x) $ existe si et seulement si  
+  $\quad x\in D_{1}\cap \intoo{\minf}{a}\quad$  
+ou  $\quad
+x\in D_{2}\cap\intfo{a}{\pinf} $ 
+\medskip
+
+On note $S_{1} $ l'ensemble des solutions du premier système  et  $S_{2} $ celui du second.
+
+Finalement l'ensemble de définition  de la fonction $ f $ est la \textbf{réunion}  $S_{1}   \cup S_{2} $.
+\[D_{f}=S_{1}   \cup S_{2}\]
+\begin{example}
+On considère la fonction $ f $ définie par :\;
+$ f (x)=\left\{\begin{array}{l} \sqrt{x +4}\quad \textrm{si} \quad x\geq 2 \\ x+3-\frac{2}{x-1}\quad \textrm{si}\quad x< 2  \end{array} \right.$
+
+ Déterminons  l'ensemble de définition de $f $.\\
+ 
+\textbf{Solution}\\
+$ f(x) $ existe si et seulement si  $ \begin{cases} x+4 \geq 0 \\ x\geq 2\end{cases}$  ou $ \begin{cases} x-1 \neq 0 \\ x< 2\end{cases}$\\
+ $ f(x) $ existe si et seulement si  $ \begin{cases} x \geq -4 \\ x\geq 2\end{cases}$  ou $ \begin{cases} x\neq -1 \\ x< 2\end{cases}$\\
+ $ f(x) $ existe si et seulement si   $ x \geq 2 $\quad  ou $ x\in \intoo{\minf}{-1}\cup \intoo{-1}{2} $ \\ donc $ f(x) $ existe si et seulement si  $ x\in\intoo{\minf}{-1}\cup \intoo{-1}{2} \cup\intfo{2}{\pinf}$ \\
+ D'où $ D_{f}=\intoo{\minf}{-1}\cup \intoo{-1}{\pinf}$
+ \end{example}
+
+ %</content>
+\end{document}

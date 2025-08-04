@@ -233,6 +233,7 @@ const processLatexFile = (
       },
     ),
     imageExtractors: [
+      // Un seul extracteur qui gère à la fois tikz et tkz-tab
       new TikzPictureImageExtractor(
         options,
         sourceDirectoryPath,
@@ -458,12 +459,18 @@ class TikzPictureImageExtractor extends LatexImageExtractor {
 
   override renderContent(extractedImageTexFilePath: string, latexContent: string): string {
     const content = fs.readFileSync(path.resolve(this.sourceDirectoryPath, this.options.tikzPictureTemplate), { encoding: 'utf8' })
-    return content
-      .replace('{graphicsPath}', '')
-      // .replace('{grahicsPath}', '\\graphicspath{' + includeGraphicsDirectories
-      //   .map(directory => `{${directory.replaceAll('\\', '\\\\')}}`)
-      //   .join('\n') + '}')
-      .replace('{extractedContent}', latexContent)
+    
+    // Détecter si c'est du tkz-tab et ajouter le package si nécessaire
+    const isTkzTab = /\\tkz(?:TabInit|TabLine|TabVar|TabVal|TabImp)/.test(latexContent)
+    
+    let result = content.replace('{graphicsPath}', '')
+    
+    // Ajouter le package tkz-tab si nécessaire
+    if (isTkzTab) {
+      result = result.replace('\\usepackage{tikz}', '\\usepackage{tikz}\n\\usepackage{tkz-tab}')
+    }
+    
+    return result.replace('{extractedContent}', latexContent)
   }
 }
 

@@ -1,0 +1,168 @@
+\input{../common}
+
+\begin{document}
+	%<*content>
+	\development{analysis}{proba-deux}{Probabilités (TS2)}
+
+ \summary{Exercices de probabilités avancés}
+ \begin{exercice}
+Soit $A $ et $B $ deux événements d'une expérience aléatoire tel que $ P(A)=\tfrac{1}{5} $ et $ P(A\cup B)=\tfrac{1}{2} $.
+\begin{enumerate}
+\item Si $A $ et $B $  sont incompatibles alors calculer $ P(B) $.
+\item Si $A $ et $B $  sont indépendants alors calculer $ P(B) $.
+\item Si $ A $ ne 
+peut être réalisé que si  $B$ est réalisé, alors calculer $ P(B) $.
+\end{enumerate}
+\end{exercice}
+\begin{exercice}
+Une urne contient 9 jetons indiscernables au
+toucher dont cinq rouges numérotés 1,1,1,3,3 et quatre
+noirs numérotés 2,2,3,3.
+Une épreuve consiste à tirer au hasard et simultanément deux jetons de l’urne.
+\begin{enumerate}
+\item Calculer la probabilité des événements suivants\\
+A :« Les jetons tirés sont de couleurs différentes.»\\
+B :« Les jetons tirés sont de couleurs différentes et
+de numéros différents.»\\
+C :« Les jetons tirés portent le même chiffre.»\\
+D :« Les jetons tirés sont rouges.»\\
+E :« Les jetons tirés portent le même chiffre sachant qu’ils sont rouges ».
+\item Soit X la variable aléatoire égale à la somme des
+chiffres marqués sur les 2 jetons tirés.\\
+\textbf{a)} Déterminer la loi de X et  calculer l’espérance mathématiques de X.\\
+\textbf{b)} Déterminer et représenter la fonction de répartition de X.
+
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+On dispose d'une U  contient 2 boules rouges, 2 boules jaunes  et 4 boules vertes.\\ Un jeu consiste  à tirer une boule dans U. \\
+$ \bullet $ Si elle est rouge, on la remet dans U et on ajoute une boule rouge dans U puis  le  joueur  tire  simultanément au hasard deux boules.\\
+$ \bullet $  Si elle n'est pas rouge, on ne la remet pas et  le joueur tirer successivement  au  hasard  sans remise  deux  boules de l'urne U.\\  Le joueur gagne s'il obtient deux boules rouges.
+
+On note G l'événement  obtenir deux boules rouges au deuxièmement tirage  et R l'événement obtenir une boule rouge au premier tirage?.
+\begin{enumerate}
+\item Calculer que $ P(G) $
+\item Un joueur  joue cinq fois de suite de  façon indépendante. Quelle est la probabilité qu'il gagne exactement 2 fois?
+
+\end{enumerate}
+
+\end{exercice}
+\begin{exercice}
+ À l'issue de l'examen du bac, les résultats des mentions des élèves d'une classe de terminale L sont donnés dans le tableau ci-dessous:
+ $$
+  \begin{array}{|c|c|c|c|c|}
+  \hline
+   \text{Résultats} & \text{Bien}& \text{ABien} & \text{Passable} &\text{Echec } \\
+  \hline
+  \text{Nombres}  & 5 & 10 & 15&10 \\
+  \hline
+ \end{array} 
+ $$
+ 
+ On choisit au hasard simultanément trois élèves de cette classe. Les élèves ont la même probabilité d'être choisi.  Calculer la probabilité de chacun des  évènements suivants:\medskip
+ 
+  A :  << les trois élèves ont réussi au bac >>\\
+  B: << les trois élèves ont la mention Bien ou ABien >>\\
+  C: << aucun des trois n'a réussi au bac >> \\
+   D: << au moins un élève a réussi avec la mention Bien  >>\\
+    E: << D sachant A >>
+\end{exercice}
+
+
+\begin{exercice}
+On dispose d'une urne J contenant des jetons indiscernables au toucher et de trois urnes B$ _1 $, B$ _2 $  et B$ _3 $ contenant des billes indiscernables au toucher.
+
+J contient dix jetons : quatre jetons rouges , des jetons verts et des jetons jaunes.
+
+B$ _1 $  contient 3 billes noires et 7 billes bleues.
+
+B$ _2 $  contient 4 billes noires et 6 billes bleues.
+
+B$ _3 $  contient 5 billes noires et 5 billes bleues.
+
+On réalise l'expérience suivante: on tire un jeton de J
+
+$ \bullet $ si le jeton est rouge, on tire une bille de  B$ _1 $ 
+
+$ \bullet $ si le jeton est verte, on tire une bille de  B$ _2 $
+
+$ \bullet $ si le jeton est jaune, on tire une bille de  B$ _3 $
+
+
+Soit les événements suivants: R: <<on tire un jeton rouge >>, V: <<on tire un jeton vert >>, J: <<on tire un jeton jaune >> et N: <<on tire une bille noire>>
+
+
+La probabilité  p(N)  de N est 0,37.
+\begin{enumerate}
+\item Calculer le nombre de jetons verts et le nombre  de jetons jaunes.
+\item Calculer p(J/N)
+\item On réalise cinq fois l'expérience.
+
+Soit X la variable aléatoire égale au nombre de fois qu'on a tiré un jeton jaune et une bille noire.
+
+\textbf{a)}  Donner la loi de X.
+
+\textbf{b)} Déterminer E(X).
+\end{enumerate}
+
+\end{exercice}
+\begin{exercice}
+Une association prévoit d'organiser une cérémonie dans la place publique
+le 5 Août 2024 mais il y a la menace de l'hivernage vu que le mois d'Août
+est très pluvieux.
+
+Pour s'assurer de la tenue de l'évènement, le bureau va demander les
+services d'un institut météorologique, ce dernier donne les informations
+suivantes :
+\begin{itemize}
+\item La probabilité qu'il pleuve le premier Août 2024 est de  $ \frac{1}{4} $
+\item S'il a plu un jour dans le mois la probabilité qu'il pleuve le jour suivant est $ \frac{1}{2} $
+\item S’il n'a pas plu un jour dans le mois la probabilité qu’il ne pleuve pas
+le jour suivant est $ \frac{1}{5} $.
+\end{itemize}
+Le bureau a décidé d'entamer les préparatifs de la cérémonie que si la
+probabilité qu'il pleuve le jour de la cérémonie est inférieure à 0,5 sinon il va
+changer la date.
+
+\noindent On note par $ A_n $ l'évènement << Il a plu le n-ieme du mois d'Août >>.
+
+\noindent Et  $ p_n $ la probabilité de l'évènement \; $ A_n $\, soit   $p_n=P(A_n)$.
+\begin{enumerate}
+\item Calculer $ p_2 $ .
+\item  Donner \; $ P \paren{A_{n+1} /A_{n}} $\;  et \; $ P \paren{A_{n+1} /\overline{A_{n}}} $.
+\item Montrer que \; $ p_{n+1}=-\frac{3}{10}p_n +\frac{4}{5}$
+\item Soit la suite $(U_  n)$ définie par  $U_n=p_n -\frac{8}{13}$.
+\begin{enumerate}
+\item Montrer que $(U_  n)$ est une suite géométrique dont précisera la raison et
+le premier terme.
+\item Exprimer $U_n$ en fonction de $n$ et en déduire $p_n$ en fonction de $n$.
+\end{enumerate}
+\item L’association va-t-elle entamer les préparatifs pour l’organisation de la
+cérémonie ? Justifier la réponse.
+\end{enumerate} 
+\end{exercice} 
+
+\begin{exercice}
+En début d’année scolaire 2025, un élève de terminale qui habite à trois kilomètres de son établissement décide d’acheter un scooter et un réveil pour ne pas arriver en retard en classe.\\
+On sait qu’il peut être victime de deux situations indépendantes, à chaque matin de classe :
+
+\begin{itemize}
+  \item $R$ : il n’entend pas son réveil sonner ;
+  \item $S$ : son scooter, mal entretenu, tombe en panne.
+\end{itemize}
+
+\begin{description}
+  \item Il a observé que chaque jour de classe, il y a 2 possibilités sur 10 que la situation $R$ se produise et 5 possibilités sur 100 que la situation $S$ se produise.
+
+Lorsqu’au moins une de ces situations se produit, l’élève arrive en retard au lycée, sinon il est à l’heure.
+
+\item Au cours d'une  semaine, cet élève se rend 5 fois de suite en classe. On admet que le fait qu’il soit en retard un jour de classe donné n’influe pas sur le fait qu’il le soit ou non les jours suivants.
+\item 
+Quelle est la chance qu’il soit à l’heure au moins quatre jours sur les cinq durant une semaine ?\\
+(Donner les résultats sous forme de fraction irréductible.)
+\end{description}
+\end{exercice}
+
+	%</content>
+\end{document}

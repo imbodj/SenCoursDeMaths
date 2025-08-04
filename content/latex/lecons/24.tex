@@ -2,362 +2,321 @@
 
 \begin{document}
   %<*content>
-  \lesson{analysis}{24}{Fonction  logarithme népérien (TL)}
+  \lesson{analysis}{24}{Étude de fonctions (TL)}
   
-  
-Avant l'invention des calculateurs (ordinateurs, calculatrices, ...) les mathématiciens ont cherché à simplifier les calculs à effectuer.
-
-\medskip
-1) Durant l'Antiquité (IIIème siècle avant J.C.), Archimède avait remarqué que pour multiplier certains nombres, il suffisait de savoir additionner! et qu'il était plus facile d'effectuer des additions plutôt que des multiplications! 
-
-\medskip
-
-2) John Napier (ou Neper), baron écossais (1550-1617), a repris et étendu l'idée d'Archimède et a mis au point une méthode générale qui permet d'effectuer
-
--des additions à la place de multiplications
-
--des soustractions à la place de divisions;
-
-ce sont les \textbf{logarithmes.}
-
-\medskip
-3) Modéliser la forme d'un cyclone, d'un coquillage  ou d'une fleur de tournesol, mais aussi représenter sur un même graphique  les distances des planètes en fonction de leurs périodes  de révolution , sont autant d'activités qui utilisent une même famille de fonctions: les logarithmes. 
- 
- \subsection{Définition et propriétés}
+ \subsection{Parité et éléments de symétrie}
+Soit  $ f $    une fonction  de $\Rr $ vers  $ \Rr$,  $\mathscr{D}_{f}$ est son ensemble de définition et $\mathscr{C}_{f}$ sa courbe représentative dans   un repère $ \oij. $
 \begin{definition}
- On appelle fonction logarithme népérien,  notée $ \ln$ ,\; la fonction  dérivable sur $ \intoo{0}{\pinf} $ qui a pour   fonction   dérivée \;$ x  \longmapsto \dfrac{1}{x} $ \; et  qui s'annule pour \; $ x=1 $.
+\begin{itemize}
+\item  $ f $   est \textbf{paire} si  et  seulement si pour tout $ x\in \mathscr{D}_{f}$, $ -x\in \mathscr{D}_{f}$ et $ f(-x)=f(x). $
+\item $ f $   est \textbf{impaire} si  et  seulement si pour tout $ x\in \mathscr{D}_{f}$, $ -x\in \mathscr{D}_{f}$ et $ f(-x)= -f(x). $
+\end{itemize}
+
+\end{definition}
+\begin{remark}
+Pour une fonction paire ou impaire, $  \mathscr{D}_{f}$  est symétrique par rapport à    $ 0. $
+\end{remark}
+
+\begin{example}
+\begin{itemize}
+\item[$  \bullet$]  La fonction $ x\longmapsto x(x^{2}-1) $  définie sur $ \Rr $  est   impaire.
+\item[$  \bullet$]  La fonction $ x\longmapsto \dfrac{-x^{2}}{x^{2}-1} $  définie sur $ \Rr\setminus \accol{-1, 1} $  est   paire.
+
+\item[$  \bullet$]  La fonction $ x\longmapsto \dfrac{x^{2}}{x-1} $  définie sur $ \Rr\setminus \accol{ 1} $   n'est  ni paire ni impaire.
+\end{itemize}
+\end{example}
+\begin{definition}
+\begin{itemize}
+\item  Le point I$ (a,b) $   est centre de symétrie de $  \mathscr{C}_{f}$ si  et  seulement si\\ pour tout $ x\in \mathscr{D}_{f}$, $ 2a-x\in \mathscr{D}_{f}$ et $ f(2a-x)+f(x)=2b. $
+\item La droite $ (D)\;: x=a $  est  axe de symétrie  de               $  \mathscr{C}_{f}$ si  et  seulement si\\ pour tout $ x\in \mathscr{D}_{f}$, $2a -x\in \mathscr{D}_{f}$ et $ f(2a-x)= f(x). $
+\end{itemize}
+
 \end{definition}
 
-\begin{example}[calcul à l'aide  de la calculatrice]
+\begin{remark}
 
-$$\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
- x & -3&  -1 &  0 &  0.2  &0.5 &  1 &  2  &  8  &  50  & 100 \\
-\hline
- \ln x   &  \times  &  \times  &  \times  &  - 1,609 &  - 0,693 & 0&  0,693 &2,079 &3,912 &4,605\\
-\hline
+$ \bullet $  Dans ce cas on peut restreindre l'étude de $ f $  à $ \mathscr{D}_{f}\cap \intfo{a}{\pinf} $.
 
-\end{array}$$
+$ \bullet $ Si $ f $  est paire (respectivement impaire), l' axe des ordonnées du repère est  axe de symétrie (respectivement l'origine du repère est centre de symétrie ) de $  \mathscr{C}_{f}$.
+\end{remark}
+\begin{example}
+
+ La  courbe  $  \mathscr{C}_{f}$ de la  fonction $ f : x\longmapsto x^{2}+x-1 $  définie sur $ \Rr $  admet comme axe de symétrie la droite d'équation $ x=-\frac{1}{2} $.
+ 
+ En effet pour tout $ x\in\Rr $, on a $ -1-x\in\Rr $  et $ f(-1-x)= (-1-x)^{2}+(-1-x)-1=f(x) $
 
 
 \end{example}
-\begin{corollary}
-\begin{enumerate}
-\item Le domaine de définition de la fonction $ \ln $  est  $ \intoo{0}{\pinf} $.
-\item La fonction $ \ln $  est  dérivable  sur  $ \intoo{0}{\pinf} $  et pour tout $ x> 0 $ on a \quad  \fbox{  $\ln'(x)=\dfrac{1}{x} $ }.
-\item \fbox{$\ln (1)= 0$ }.
-\item  La dérivée de la fonction $ \ln $ étant strictement positive  sur $ \intoo{0}{\pinf} $, donc la  fonction $ \ln $  est strictement croissante sur  $ \intoo{0}{\pinf} $.
-\end{enumerate}
-\end{corollary}
-\begin{property}
-\begin{align*}
-    \text{Pour tous} \;a > 0 \;  \text{et} \;b > 0 ,\quad & a< b \Longleftrightarrow \ln a < \ln b \\
-    & a> b \Longleftrightarrow \ln a  >\ln b  \\
-    & a= b \Longleftrightarrow \ln a  =\ln b
-    \end{align*} 
-   \end{property}
-  \begin{property}[Propriété fondamentale]
- $$\text{Pour tous}\quad  a> 0 \quad  \text{ et} \quad  b>0 ,\;\text{ on a }\quad  \ln(ab)=\ln a +\ln b $$
 
-   \end{property}
-\begin{corollary}[propriétés algébriques]
-Soient $ a > 0$  et  $ b > 0$.
-\begin{enumerate}
-\item[\textbullet] $  \ln \paren{\dfrac{1}{a}}= - \ln a$
-\item[\textbullet] $\ln \paren{\dfrac{a}{b} }= \ln a-  \ln b$
- \item[\textbullet] $  \ln \sqrt{a} = \frac{1}{2} \ln a$
- \item[\textbullet] $ \ln a^{n} = n\ln a \quad \text{pour tout} \;  n\in\Qq$
-\end{enumerate}
-\end{corollary}
-\subsection{ Étude de la fonction ln }
+\begin{example} 
 
- \begin{property}[Limites]
- $ \bullet \; \displaystyle\lim_{x \to \pinf}\ln x=\pinf  \hspace*{4cm}    \bullet  \; \displaystyle\lim_{x \to 0^{+}}\ln x=\minf $
-  \end{property}
-  
-
-\textbf{Tableau de variation }\\
-Des propriétés précédentes, on en déduit  le tableau de variation suivant.
-
-\begin{center}
-
-\begin{tikzpicture}
-\tkzTabInit[lgt=2, espcl=3]%
-{$x$ / 1 , $\ln'(x)$ / 1 , $\ln(x)$ / 2}%
-{$0$, $+\infty$}
-
-\tkzTabLine{ , + , }
-\tkzTabVar{-/$-\infty$, +/$+\infty$}
-\end{tikzpicture}
-
-\end{center}
-\begin{corollary}
-La fonction $ \ln  $  est continue et strictement croissante sur $ \intoo{0}{\pinf} $  cela entraîne que c'est une bijection de $ \intoo{0}{\pinf} $  vers $ \Rr $.
-
-Donc  pour tout  $  y \in \Rr $, \; il existe un unique $ x\in \intoo{0}{\pinf} $ tel que $ \ln x=y. $ 
-
- En particulier il existe un unique réel noté $ \mathrm{e} $ tel que: \quad \fbox { $\ln \mathrm{e}=1 $}.\\
-
-On démontre que $ \mathrm{e}\simeq 2,718 $,    il  est appelé la   {\bf  constante d' Euler}.\\
-
-On a alors  pour tout $  n \in \Qq, \; \ln \eexp{n}=n\ln \mathrm{e}=n $\\
-
-
-Ainsi:
-\medskip
-
-$\begin{array}{ |l|c|r|}
-\hline
- \ln x = n  \Longleftrightarrow x = \eexp{n} &
- \ln x  > n \Longleftrightarrow x   >\eexp{n} &
- \ln x  < n\Longleftrightarrow x <   \eexp{n} \\
-\hline
-\end{array}$
-
-\end{corollary}
-\subsection*{Représentation graphique de la fonction $ \ln $}
-
-On construit les tangentes  T$ _{1} $   et T$ _{2} $ à la courbe de $ \ln $   respectives  aux points  d'abscisses $ x=1$ et $x= \mathrm{e} $.
-
- T$ _{1} \;: y= \ln'(1)(x-1) +\ln1$ \; soit \; T$ _{1}:\;y=x-1 $ 
+ La  courbe  $  \mathscr{C}_{f}$ de la  fonction $ f :x\longmapsto \dfrac{4x+1}{x-1} $ \;  définie sur $ \Rr\setminus \accol{1} $  admet comme centre de symétrie le point  I $ (1,4) $.\\
  
-  T$ _{2} \;: y= \ln'(\mathrm{e})(x-\mathrm{e}) +\ln \mathrm{e}$ \; soit \; T$ _{2}:\;y=\tfrac{1}{\mathrm{e}}x $ 
- 
- 
-\begin{tikzpicture}[>=stealth', scale=0.5]
-\clip (-2,-3) rectangle (8,4);
-\draw[->,thick] (0,0) -- (1,0);
-\draw[->,thick] (0,0) -- (0,1);
-\draw[,thick] (-2,0) -- (8,0);
-\draw[thick] (0,-3) -- (0,4);
-\foreach\x in {1,2,}
+ En effet pour tout $ x\in\Rr\setminus \accol{1} $, on a $ 2-x\in\Rr\setminus \accol{1} $ \\ Et $ f(2-x)+f(x)= \dfrac{4(2-x)+1}{2-x-1}+\dfrac{4x+1}{x-1}=\dfrac{8-4x+1}{1-x}+\dfrac{4x+1}{x-1}=\dfrac{4x-9}{x-1}+\dfrac{4x+1}{x-1}=\dfrac{8(x-1)}{x-1}=8$
+\end{example}
+
+
+
+\subsection{Branches infinies  à une courbe}
+Nous distinguons deux sortes de branches infinies:\; les  \textbf{asymptotes}  et les \textbf{  branches paraboliques}.\\
+\textbf{Asymptote parallèle à l'axe des abscisses}
+\begin{definition}
+ Soit  $L$ un nombre réel.\\
+   $ \bullet $ La droite D  d'équation : $ y=L $   est une  asymptote   à la courbe  $ \mathscr{C}_{f}$  en $ \pinf $  si et seulement si
+$ \displaystyle\lim_{ x \to \pinf}f(x)=L$.    
+
+
+$ \bullet $  La droite  $D$  d'équation : $ y=L $   est une  asymptote    à la courbe  $ \mathscr{C}_{f}$  en $ \minf $   si et seulement si
+ $ \displaystyle\lim_{ x \to \minf}f(x)=L$. 
+  \end{definition}
+ \begin{center}
+ \begin{tikzpicture}[>=stealth', scale=0.5]
+\draw[->,thick] (-7,0) -- (7,0);
+\draw[->,thick] (0,-2) -- (0,3);
+\foreach\x in {}
 {
 \draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
 }
-\foreach\y in {1}
+\node (L) at (-0.1,2.4) {L};
+\foreach\y in {}
 {
 \draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
 }
+\draw[thick,blue!50!black] plot[domain=-7:7,samples=100] (\x,{(2*\x*\x+\x-1)/(\x*\x+\x+1)}) node[below ] {$\mathscr{C}$};
+\draw[very thick, red] (7,2) -- (-7,2) node[below right] {D};
+\node () at (-0.4, -0.4) {O};
+\end{tikzpicture}
+\end{center}
 
-\draw[thick,red] plot[domain=0.01 :7,samples=100] (\x,{ln (\x)}) node[below right] {$\mathscr{C}$};
-\draw[thick,green] plot[domain=-1 :6,samples=100] (\x,{\x-1}) node[below  left] {$T_{1}$};
-\draw[thick,green] plot[domain=-1 :6,samples=100] (\x,{0.4*\x}) node[below  left] {};
-\draw[dashed,thick](2.7,0)--(2.7,1);
-\draw[dashed,thick](2.7,1)--(0,1);
-\node at(2.7,-0.4) {$\mathrm{e}$};
-\node at(7,2.6) {$T_{2} $};
-\node at(4.5,3) {$T_{1} $};
+ 
+ \textbf{Asymptote parallèle à l'axe des ordonnées}
+\begin{definition}
+ La droite $D$  d'équation : $ x=a $   est une  asymptote   à la courbe  $ \mathscr{C}_{f}$  si et seulement si\\ 
+$ \displaystyle\lim_{ x \to a^{+}}f(x)=\pinf $\; ou \;$ \displaystyle\lim_{ x \to a^{+}}f(x)=\minf $
+\;ou \;$ \displaystyle\lim_{ x \to a^{-}}f(x)=\pinf $\; ou\; $ \displaystyle\lim_{ x \to a^{-}}f(x)=\minf $ 
+\end{definition}
+
+\begin{tikzpicture}[>=stealth', scale=0.5]
+\clip (-1,-5) rectangle (6,3);
+\draw[->,thick] (-1,0) -- (3,0);
+\draw[->,thick] (0,-3) -- (0,3);
+\foreach\x in {}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\foreach\y in {}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+\draw[thick,blue!50!black] plot[domain=0.26:2,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
+\draw[thick,red] (0.25,3) -- (0.25,-3) node[above right] {D};
+\node () at (0.4,-0.3) {$a$};
+\node () at (-0.4, -0.4) {O};
+\node () at (2, -3.6) {$ \displaystyle\lim_{ x \to a^{+}}f(x)=\pinf $};
 \end{tikzpicture}
 
-\fbox{$ \displaystyle\lim_{x \to 0^{+}}x\ln x=0 \hspace*{1cm} \lim_{x \to \pinf}\dfrac{\ln x}{x}=0 $}
 
-\subsection*{Equations, inéquations et systèmes}
-\textbf{Equations comportant ln}\\
-\textbf{methode}\\
-Pour résoudre une équation comportant des logarithmes,
-\begin{itemize}
-\item[$ \bullet$] on détermine le domaine D de résolution;
-\item[$ \bullet$] on transforme si possible l'équation sous la forme $ \ln A=\ln B $;
-\item[$ \bullet$] résout l'équation $ A=B $;
-\item[$ \bullet$]  puis on retient que les solutions appartenant à D.
-\end{itemize}
-\begin{example} Résoudre dans $ \Rr $ l'équation: $\quad \ln (2x-3)-\ln x=0 $
+\begin{tikzpicture}[>=stealth', scale=0.5]
+\clip (-1,-5) rectangle (6,4);
+\draw[->,thick] (-1,0) -- (3,0);
+\draw[->,thick] (0,-4) -- (0,2);
+\foreach\x in {}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\foreach\y in {}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+\draw[thick,blue!50!black] plot[domain=0.26:2,samples=100] (\x,{(-2*\x-1)/(4*\x-1)}) node[above left] {};
+\draw[thick,red] (0.25,2) -- (0.25,-4) node[above right] {D};
+\node () at (0.4,-0.3) {$a$};
+\node () at (-0.4, -0.4) {O};
+\node () at (2, 3) {$\displaystyle \lim_{ x \to a^{+}}f(x)=\minf $};
+\end{tikzpicture}
 
-L'équation est définie lorsque $2x-3>0$ et $ x>0$  c'est-à-dire $ x>\frac{3}{2}.\quad$ Ainsi D$ =\intoo{\frac{3}{2}}{\pinf} $.
+\begin{tikzpicture}[>=stealth', scale=0.5]
+\clip (-3,-5) rectangle (6,3);
+\draw[->,thick] (-3,0) -- (3,0);
+\draw[->,thick] (0,-3) -- (0,3);
+\foreach\x in {}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\foreach\y in {}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+\draw[thick,blue!50!black] plot[domain=-3:-0.25,samples=100] (\x,{(-2*\x+2.5)/(-4*\x-0.06)}) node[above left] {};
+\draw[very thick,red] (-0.25,4) -- (-0.25,-2) node[above left] {D};
+\node () at (-0.4,-0.3) {$  a$};
+\node () at (0, -3.5) {$ \displaystyle\lim_{ x \to a^{-}}f(x)=\pinf $};
+\end{tikzpicture}
 
-L'équation devient  $ \ln (2x-3)=\ln x$  ce qui équivaut à $ 2x-3=x $  soit $ x=3 $ qui est bien dans D. Donc S$ =\accol{3} $
+
+
+\begin{tikzpicture}[>=stealth',scale=0.5]
+\clip (-1,-5.5) rectangle (7,3);
+\draw[->,thick] (-3.5,0) -- (3,0);
+\draw[->,thick] (0,-3) -- (0,3);
+\foreach\x in {}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\foreach\y in {}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+\draw[thick,blue!50!black] plot[domain=-3.5:0.15,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
+\draw[very thick,red] (0.25,3) -- (0.25,-3) node[above right] {D};
+\node () at (0.4,-0.3) {$  a$};
+\node () at (-0.4, -0.4) {O};
+\node () at (2, -4.5) {\fbox{$ \displaystyle\lim_{ x \to a^{-}}f(x)=\minf $}};
+\end{tikzpicture}
+
+
+\textbf{Asymptote  oblique}
+\begin{definition}
+$ \bullet $  La droite $D$  d'équation : $ y=ax+b $   est  une   asymptote (oblique)    à  $ \mathscr{C}_{f}$   en $ \pinf $ si et seulement si
+   $ \displaystyle\lim_{ x \to \pinf}\paren{f(x)-(ax+b)}=0$. 
+  
+    $ \bullet $  La droite $D$  d'équation : $ y=ax+b $   est  une   asymptote  (oblique)   à  $ \mathscr{C}_{f}$   en $ \minf $ si et seulement si
+   $ \displaystyle\lim_{ x \to \minf}\paren{f(x)-(ax+b)}=0$ 
+   \end{definition}
+  \begin{center}
+\begin{tikzpicture}[>=stealth', scale=0.5]
+\clip (-7,-4) rectangle (7,6);
+\draw[->,thick] (-7,0) -- (7,0);
+\draw[->,thick] (0,-4) -- (0,5);
+\foreach\x in {}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\foreach\y in {}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+%\draw[thick,blue!50!black] plot[domain=-7:0.24,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
+\draw[thick,blue!50!black] plot[domain=-4:4,samples=100] (\x,{\x+0.3/(\x-1)}) node[above ] {$\mathscr{C}$};
+\draw[ thick, red] (4,4) -- (-3,-3) node[above left] {D};
+\end{tikzpicture}
+\end{center}  
+
+\begin{remark}
+  Si $ f $ s'écrit sous la forme $ f(x)= ax+b + g(x) $ et si $\displaystyle \lim_{x \to +\infty}g(x)=0 $  alors la droite $ y=ax+b $ est une asymptote à  $ \mathcal{C}_{f} $ en $ +\infty. $\\
+ 
+ Enoncé valable en $ \minf $.
+\end{remark}
+
+
+\begin{example}
+
+Déterminons une équation de l'asymptote oblique  à la courbe de la fonction $ f: x\longmapsto 3x-5+\dfrac{2}{x+1} $
+
+
+\medskip
+
+Puisque $ \displaystyle\lim_{x\to \pinf}\dfrac{2}{x+1}  =0 $ et $ \displaystyle\lim_{x\to \minf}\dfrac{2}{x+1}  =0 $ , on en déduit que la droite $ y= 3x-5$  est une asymptote oblique  à  $ \mathscr{C}_{f}$.  
 \end{example}
-\begin{example} Résoudre dans $ \Rr $ l'équation : $\; \ln (x+5)+\ln (x+3)=\ln15  $
-
-L'équation est définie lorsque $x+5>0$ et $ x+2>0$  c'est-à-dire $ x>-5 $  et $ x>-3 $.\\   Ainsi D$ =\intoo{-3}{\pinf} $.
-
-L'équation devient  $ \ln (x+5)(x+3)=\ln 15$ \\Ce qui équivaut à $ (x+5)(x+3)=15 $  soit $ x^{2}+8x+15=0 $  ou encore $ x^{2}+8x=0 $  soit $x=0 $ ou $x=-8\quad $
- Donc S$ =\accol{0} $
+\begin{example}
+ 
+  Déterminons une équation de l'asymptote oblique sachant que $ f(x)= \dfrac{2x^{2}+3x+1}{x-2}$.
 \end{example}
-
-\textbf{Equations du type $a\ln^{2} x+b\ln x+c=0$ }\\
-Poser $ \ln x=X $ puis résoudre l'équation E du second degré $ aX^{2}+bX+c=0 $ et enfin les équations $ \ln x=X_{1} $  et $ \ln x=X_{2} $  où $ X_{1}$ et $X_{2} $  sont les solutions de E.
-\begin{example} Résolvons dans $ \Rr $  l'équation  :\; $ \paren{\ln x}^{2} -6\ln x+5=0 $. 
-
-Pour $ x> 0 $, posons  $ \ln x=X $ ,\; l'équation  \; devient $ X^{2} -6X+5=0$ d'où $X=1 $ ou $X=5 $.
-
-Ainsi  $ \ln x=1 \Longleftrightarrow x=\eexp{}$  ou $ \ln x=5 \Longleftrightarrow x=\eexp{5}$\; d'où S$ =\accol{\eexp{},\eexp{5}} $
-\end{example}
-\textbf{Inéquation comportant ln}\\
-\textbf{methode}\\
-Pour résoudre une inéquation comportant des logarithmes,
-\begin{itemize}
-\item[$ \bullet$] on détermine le domaine D de résolution;
-\item[$ \bullet$] on transforme si possible l'inéquation sous la forme $ \ln A<\ln B $  ou $ \ln A\geq\ln B $;
-\item[$ \bullet$] résout l'inéquation $ A< B $  ou $ A\geq B $;
-\item[$ \bullet$]  puis on retient que les solutions appartenant à D.
-\end{itemize}
-
-\begin{example} Résoudre dans $ \Rr $ l'équation : $\; \ln (2x-3)-\ln x< 0 $.
-
-L'inéquation est définie lorsque $2x-3>0$ et $ x>0$  c'est-à-dire $ x>\frac{3}{2}.\quad $ Ainsi D$ =\intoo{\frac{3}{2}}{\pinf} $.
-
-L'inéquation devient  $ \ln (2x-3)<\ln x$  ce qui équivaut à $ 2x-3<x $  soit $ x<3 $ qui est bien dans D. Donc S$ =\intoo{\frac{3}{2}}{\pinf}\cap \intoo{\minf}{3}= \intoo{\frac{3}{2}}{3}$
-\end{example}
-\begin{example} Résoudre dans $ \Rr $ l'inéquation: $\; \ln (x+5)+\ln (x+3)\leq\ln 15  $
-
-
-L'inéquation est définie lorsque $x+5>0$ et $ x+2>0$  c'est-à-dire $ x>-5 $  et $ x>-3 $.\\  Ainsi D$ =\intoo{-3}{\pinf} $.
-
-L'inéquation devient  $ \ln (x+5)(x+3)\leq\ln 15$ \\Ce qui équivaut à $ (x+5)(x+3)\leq 15 $  soit $ x^{2}+8x+15\leq 0 $  ou encore $ x^{2}+8x\leq 0 $. 
-%\renewcommand{\arraystretch}{1}
- \[
-\begin{array}{|c|c|c|c|c|}
+Pour cela ,  effectuons la division euclidienne suivante. 
+\[
+\begin{array}{r|r}
+-2x^2 + 3x + 1 & 2x - 2 \\
+2x^2 - 4x      & 2x + 7 \\
 \hline
-x & \minf < x < -8 & x = -8 & -8 < x < 0 & x > 0 \\
+-7x + 1        &        \\
+7x - 14        &        \\
 \hline
-x^{2} + 8x & + & 0 & - & + \\
+15             &
+\end{array}
+\]
+
+ Ainsi  on a  $ f(x)= 2x+7+\dfrac{15}{x-2}$  et comme  $\displaystyle\lim_{x\to \pinf}\dfrac{15}{x-2}  =0 $ et $ \displaystyle\lim_{x\to \minf}\dfrac{15}{x-2}  =0 $ , on en déduit que la droite $\Delta:  y= 2x+7$  est une asymptote oblique  à  $ \mathscr{C}_{f}$.  
+
+\textbf{Position relative d'une courbe par rapport à une droite}
+
+Soit $\mathscr{C}_{f}$  la courbe d'équation  $ y=f(x) $  et  $\mathscr{D}$   la droite d'équation $ y=ax+b $.
+
+Pour déterminer la position relative de $\mathscr{C}_{f}$   par rapport à  $\mathscr{D}$  sur un intervalle I, on étudie le signe de $ g(x)=f(x)-(ax+b). $\\
+
+$ \bullet $  Si $ g(x)> 0 $ sur I alors $\mathscr{C}_{f}$  est au dessus de  $\mathscr{D}$  sur I .\\
+
+$ \bullet $  Si $ g(x)< 0 $ sur I alors $\mathscr{C}_{f}$  est au dessous de  $\mathscr{D}$  sur I
+
+\begin{example}
+
+
+ En reprenant l'exemple précèdent,    étudions la position relative de $ \Delta $ et $ \mathcal{C_{f}} $.\\
+Pour cela étudions le signe de $ f(x)-(2x+7) = \dfrac{15}{x-2} $. 
+\[
+\begin{array}{|c|ccccc|}
+\hline
+x & -\infty &        & 2      &        & +\infty \\
+\hline
+\text{signe de }\dfrac{15}{x-2} &        & -      &        & +      &        \\
 \hline
 \end{array}
 \]
 
+  Sur $ \intoo{\minf}{2} $  on  a  $\dfrac{15}{x-2} < 0  $ donc $ \mathcal{C_{f}} $ est au dessous de $ \Delta. $\\
   
- Donc S$ = \intoo{-3}{\pinf}\cap\intff{-8}{0}=\intof{-3}{0}$
-\end{example}
-\textbf{Systèmes d'équations comportant ln}
-\begin{example}
-Résolvons le système suivant.
-
-\medskip
-
-$  \left\{\begin{array}{l} 2\ln x+3\ln y=2 \\ 5\ln x-\ln y=22\end{array}\right.$
-
-Le système est défini pour $x>0 $ et $y>0 $.
-
-\medskip
-En posant $X=\ln x  $ et $Y=\ln y,\; $  le système devient:
-   $ \quad \left\{\begin{array}{l} 2X+3Y=2 \\ 5X-Y=22\end{array}\right.$
-
-\medskip
-
-En utilisant la méthode d'addition par exemple, on trouve $X=4 $ et $Y=-2 $.
-
-\medskip
-Puis $\ln x=4 \Longleftrightarrow  x=\eexp{4} $  et $\ln y=-2 \Longleftrightarrow  y=\eexp{-2} $ \\
-
-D'où S$ =\accol{\paren{\eexp{4},\eexp{-2}},\paren{\eexp{-2},\eexp{4}}} $
+   Sur $ \intoo{2}{\pinf} $   on a $\dfrac{15}{x-2} > 0  $ donc $ \mathcal{C_{f}} $ est au dessus de $ \Delta. $
 
 \end{example}
-\begin{example}
-Résolvons le système suivant.
 
-\medskip
+\textbf{Branches paraboliques}.
 
-$  \left\{\begin{array}{l} \ln x+\ln y=\ln 12  \\ \ln (x+y)=\ln 2+\ln 4 \end{array}\right.$
+\begin{property}
 
-Le système est défini pour $x>0 $ et $y>0 $.
+ \begin{itemize}
+\item Si $\displaystyle \lim_{x\to \pinf} f(x) =\infty $ et $\displaystyle \lim_{x\to \pinf}{\dfrac{f(x)}{x} }=\infty $ alors $\mathscr{C}_{f}$  admet une branche parabolique de direction l'axe des ordonnées.
+\item Si $\displaystyle \lim_{x\to \pinf} f(x) =\infty $ et $\displaystyle \lim_{x\to \pinf}{\dfrac{f(x)}{x} }=0 $ alors $\mathscr{C}_{f}$  admet une branche parabolique de direction l'axe des abscisses.
+\end{itemize}
+ 
 
-\medskip
-On peut réécrire le système  sous la forme:
-\medskip
-
-$  \left\{\begin{array}{l} \ln xy=\ln 12  \\ \ln (x+y)=\ln 8 \end{array}\right.$
-\quad soit   $  \left\{\begin{array}{l} xy=12 \\ x+y=8\end{array}\right.$
-
-\medskip
-
-Ainsi les réels $x $ et $y $ vérifient l'équation du second degré \; $ X^{2}-8X+12=0 $
-\bigskip
-
-
-On trouve $X_{1}=2  $  et $X_{2}=6$ \;d'où \;S$ =\accol{\paren{2,6},\paren{6,2}} $
-
-\end{example}
-\subsection{ Etude des fonctions faisant intervenir ln }
-Soit $ u $ une fonction définie sur un intervalle I.
-
-On considère la fonction $ f $ définie pour tout $ x\in I $ par : \; $ f(x)=\ln \paren{u(x)} $.\\\
-\textbf{Domaine de définition}\\
-$ f(x)  $ existe  si et seulement si $ u(x)>0 $
-\begin{example}
-
-$ f(x)=\ln \paren{x^{2}-1} $  existe  si et seulement si $ x^{2}-1>0 $ c'est-à-dire $ x<-1$ ou $ x>1 $
-
-
-\medskip
-$ Df=\intoo{\minf}{-1}\cup\intoo{1}{\pinf} $
-\end{example}
+\end{property}
 \begin{remark}
 
-$ \bullet $  Attention le domaine de définition de $ \ln u $  n'est pas  forcément celui de la fonction $ \ln x  $  de la définition initiale.
-
-$ \bullet $\; $ f(x)=\ln \abs{u(x)} $  existe  si et seulement si $ u(x)\neq 0 $
+La courbe d'une fonction polynôme admet à l'infini une branche parabolique dans la direction l'axe des ordonnées.
 \end{remark}
 
-\begin{example}
 
-$ f(x)=\ln \abs{\dfrac{x-3}{x-2}} $  existe  si et seulement si $ \dfrac{x-3}{x-2}\neq 0 $ si et seulement si $ x\neq3 $  et $ x\neq2 $ c'est-à-dire $ x\in\Rr\setminus \accol{2,3}.\quad  $ Ainsi 
-$ Df=\intoo{\minf}{2}\cup \intoo{2}{3}\cup\intoo{3}{\pinf}$
-\end{example}
 
-\begin{property}[Limites]
+\subsection{Représentation graphique d'une fonction}
+Pour représenter la  courbe d'une fonction, on peut procéder comme suit:
 \begin{itemize}
-\item[$ \bullet $]  Si $ u  $ tend vers \textbf{$ L $}  alors $ \ln u $  tend vers \textbf{$\ln L$}. 
-\item[$ \bullet $]  Si $ u  $ tend vers $ \pinf $  alors $ \ln u $  tend vers $ \pinf $.
-\item[$ \bullet $]  Si $ u  $ tend vers $ 0^{+} $  alors $ \ln u $  tend vers $ \minf $.
+\item[$  \blacktriangleright$] représenter les points particuliers de la courbe ( points figurants sur le tableau de variation, points d'intersection avec les axes $ \cdots $)
+\item[$  \blacktriangleright$]représenter les droites particulières de la courbe ( asymptotes , tangentes $ \cdots $)
+\item[$  \blacktriangleright$] tracer la courbe en s'appuyant  sur les variations de $ f $ sur chaque intervalle du tableau de variation.
+\end{itemize}
+\begin{remark}
+Si les points particuliers et les droites remarquables  ne sont sont pas suffisants pour tracer la courbe, on peut dresser un tableau de valeurs permettant de représenter quelques points de la courbe.
+\end{remark}
+\textbf{Intersection d'une courbe et d'une droite}\\
+\textbf{Méthode}
+\begin{itemize}
+\item[$  \blacktriangleright$]  Le point d'intersection de $ \mathcal{C}_{f} $  avec l'axe des ordonnées est le point ($ 0,f(0)) $  si $ 0\in \mathcal{D}_{f} $
+\item[$  \blacktriangleright$]  Pour déterminer les points d'intersection de  $ \mathcal{C}_{f} $  avec l'axe des  abscisses , on résout l'équation $ f(x)=0. $
+\item[$  \blacktriangleright$]   Pour déterminer les points d'intersection de  $ \mathcal{C}_{f} $  avec la droite d'équation $ y=ax+b $ , on résout l'équation $ f(x)=ax+b. $
+\end{itemize}
+
+
+\subsection{Résolution graphique de l'équation   f(x) = m }
+\textbf{Méthode}\\
+Le nombre de solutions de cette équation est égal au nombre de points d'intersection de la courbe de $ f $ avec la droite d'équation $ y=m$  parallèle à l'axe des abscisses  qu'on fera \textit{coulisser} du bas vers le haut pour déterminer le nombre de points d'intersection suivant les valeurs de $ m.$
+
+\subsection{Représentation  graphique de la fonction | f(x)|}
+\textbf{Méthode}\\
+Si $ g(x)=\abs{f(x)} $ alors 
+\begin{itemize}
+\item[$  \blacktriangleright$]  $ \mathcal{C}_{g} $  est confondue à $ \mathcal{C}_{f} $  si $ \mathcal{C}_{f} $  est sur ou au dessus de l'axe des abscisses.
+\item[$  \blacktriangleright$]  $ \mathcal{C}_{g} $  est le symétrique  de $ \mathcal{C}_{f} $ par rapport à l'axe des abscisses   si $ \mathcal{C}_{f} $  est sur ou au dessous de l'axe des abscisses.
 
 \end{itemize}
-\end{property}
 
-\begin{example}
-\begin{itemize}
-\item[$ \bullet $] $ \limi{x}{\pinf}{\frac{x+3}{x-8}}=\limi{x}{\pinf}{\frac{x}{x}}=1 $ donc $ \limi{x}{\pinf}{\ln\paren{\frac{x+3}{x-8}} }=\ln 1=0$
-
-
-\item[$ \bullet $] $ \limi{x}{\minf}{\dfrac{x+3}{x-8}}=\limi{x}{\minf}{\dfrac{x}{x}}=1 \;$ donc $ \;\limi{x}{\minf}{\ln\paren{\dfrac{x+3}{x-8}} }=\ln 1=0$
-
-
-
- \item[$ \bullet $]  $ \limi{x}{1^{+}}{x^{2}-1}=0^{+}\; $ donc $\; \limi{x}{1^{+}}{\ln\paren{x^{2}-1} }=\minf$
- 
-\item[$ \bullet $] $ \limi{x}{1^{-}}{x^{2}-1}=0^{+}\; $ donc $\; \limi{x}{1^{-}}{\ln\paren{x^{2}-1} }=\minf$
-\end{itemize}
-\end{example}
-
-\textbf{Dérivée}\\
-Nous admettons le théorème suivant.
-\begin{theorem}
-\begin{itemize}
-\item[$ \bullet \;$] Si  $\; u $  est  une fonction dérivable et strictement positive sur un intervalle I alors la fonction  $ \; \ln u $ est dérivable sur I et on a:  $ \paren{\ln u}^{\prime}=\dfrac{u^{\prime}}{u} $
-\item[$ \bullet $] Si  $ \; u $  est  une fonction dérivable et non nulle sur un intervalle I alors la fonction  $\;  \ln \abs{u} $ est dérivable sur I et on a:  $ \paren{\ln \abs{u}}^{\prime}=\dfrac{u^{\prime}}{u} $
-\end{itemize}
-\end{theorem}
-
-\begin{example}
-\begin{itemize}
-\item[$ \bullet \;$]  La fonction $ x\longmapsto 2x-1 $  est dérivable et strictement positive sur 
-$ \intoo{\dfrac{1}{2}}{\pinf} \; $ donc la fonction $\;  x\longmapsto \ln \paren{2x-1 }\; $ est dérivable sur $_; \intoo{\frac{1}{2}}{\pinf} \;$ et pour tout $\;  x> \frac{1}{2},\; $ on a: $\;   \ln^{\prime} \paren{2x-1 } =\dfrac{2}{2x-1} $.
-
-\item[$ \bullet \;$] Soit $ f $ la fonction  définie par $ f(x)= \ln \paren{{x^2} + 3x - 4 } $
-
-$\ln \paren{{x^2} + 3x - 4 }$ existe  si et seulement si
-    ${x^2} + 3x - 4 > 0$.
-
-    On recherche les racines de $u\left( x \right) = {x^2} + 3x - 4$.
-
-    $\Delta = {3^2} - 4 \times 1\left( { - 4} \right) = 25 =
-    {5^2}\; $. 
-  Le trin\^{o}me a deux racines~: 
-  $\;{x_1} = \dfrac{{ - 3 - 5}}{2} = - 4{\text{ et }}{x_2} = \dfrac{{
-        - 3 + 5}}{2} = 1$.
-        
-        $u\left( x \right)$ est du signe de $a = 1$, soit positif sauf
-    entre les racines.
-    
-    Donc $f$ est bien définie sur $\left] {-\infty\ ;\ - 4} \right[
-    \cup \left] {1\ ;\ + \infty } \right[$.
-    
-    $ u $   est dérivable ( car polynôme) et   strictement positive sur $\left] {-\infty\ ;\ - 4} \right[
-    \cup \left] {1\ ;\ + \infty } \right[$.
-    
-Donc    $ f^{\prime}(x)=\ln^{\prime} \paren{{x^2} + 3x - 4 } =\dfrac{2x+3}{{x^2} + 3x - 4}$
-
- \end{itemize}
-\end{example}
   %</content>
 \end{document}

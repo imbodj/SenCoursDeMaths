@@ -1,0 +1,164 @@
+\input{../common}
+
+\begin{document}
+	%<*content>
+	\development{algebra}{similitudes-directes}{Similitudes directes plan complexe}
+
+ \summary{}
+ 
+\begin{exercice}
+D\'eterminer en justifiant la nature des transformations du plan suivantes :
+\begin{enumerate}
+  \item $z' = z + 1 - 2\i$
+  \item $z' = \i z + 1$
+  \item $z' = -3z - 1 + \i$
+  \item $z' = (1 + \i)z - 1 + \i$
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+D\'eterminer l'\'ecriture complexe des transformations suivantes :
+\begin{enumerate}
+  \item Translation de vecteur $\vec{u}$ d'affixe $-2 + 3\i$.
+  \item Rotation de centre $A$ d'affixe $-\i$ et d'angle $\frac{3\pi}{4}$.
+  \item Homoth\'etie de centre $A$ d'affixe $-1 + \i$ et de rapport $\frac{1}{2}$.
+  \item Similitude directe de centre $A$ d'affixe $-2$, de rapport $2$ et d'angle $-\frac{2\pi}{3}$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Dans chacun des cas suivants, d\'eterminer l'\'ecriture complexe, puis la nature et les \'el\'ements caract\'eristiques des transformations $ s_2\circ s_1 $ et $ s_1\circ s_2 $.
+\begin{enumerate}
+  \item $s_1 : z' = 2\i z + 1 - 2\i \quad \text{et} \quad s_2 : z' = \frac{1}{2}\i z + 1 - \frac{1}{2}\i$
+  \item $s_1 : z' = (1 - \i)z + 1 + \i \quad \text{et} \quad s_2 : z' = -2z$
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit $f$ l'application du plan dans lui-m\^eme d'expression analytique : 
+\[\begin{cases} x' = x + y + 2 \\ y' = -x + y + 1 \end{cases}\]
+\begin{enumerate}
+  \item D\'eterminer l'\'ecriture complexe de $f$.
+  \item D\'eterminer la nature et les \'el\'ements caract\'eristiques de $f$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Dans le plan complexe, on consid\`ere les points $A$ et $C$ d'affixes respectives $1 + \i\sqrt{3}$ et $1 - \i\sqrt{3}$, et l'application $f$ définie par $z' = e^{2\i\frac{\pi}{3}}z$.
+\begin{enumerate}
+  \item D\'eterminer les images des points $A$ et $C$ par $f$.
+  \item En d\'eduire l'\'equation de l'image de la droite (AC).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit le plan muni d'un rep\`ere orthonorm\'e $(o, \vec{u}, \vec{v})$, $\Omega$ est le point de coordonn\'ees $(2,1)$, $S$ est la similitude de centre $\Omega$, de rapport $\sqrt{2}$ et d'angle $\frac{\pi}{4}$, $(D)$ est la droite $3x + 3y - 4 = 0$, $(C)$ le cercle de centre $O$ et de rayon 3.
+\begin{enumerate}
+  \item Soit $M(x,y)$ un point et $M'(x',y')$ son image par $S$. Exprimer $x'$ et $y'$ en fonction de $x$ et $y$.
+  \item En d\'eduire l'\'equation de $(D')$ image de $(D)$ par $S$.
+  \item En d\'eduire l'\'equation de $C'$ image de $C$ par $S$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit $S$ la similitude directe d'\'ecriture complexe : $z' = 3\i z - 9 - 3\i$. D\'eterminer l'image par $S$ :
+\begin{enumerate}
+  \item Du cercle de centre $K(1 - 3\i)$ et de rayon 1.
+  \item De la droite $(D)$ d'\'equation $x = 1$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Le plan complexe est rapport\'e \`a un rep\`ere orthonormal $(o, \vec{u}, \vec{v})$. On donne $Z_A = -1 - \i$, $Z_B = 2 - \i$, $Z_C = -1 + 2\i$. On consid\`ere la similitude $S$ de centre $B$ qui transforme $A$ en $C$.
+\begin{enumerate}
+  \item D\'eterminer le rapport et l'angle de la similitude $S$.
+  \item Donner l'\'ecriture complexe de $S$.
+  \item $\mathcal{C}$ est le cercle circonscrit au triangle $ABC$, d\'eterminer les caract\'eristiques de $\mathcal{C}'$ image par $S$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+On consid\`ere les points $Z_A = 2\i$, $Z_B = -\sqrt{3} + 2\i$, $Z_C = -2\sqrt{3} - \i$.
+\begin{enumerate}
+  \item Donner l'\'ecriture complexe de la similitude directe qui transforme $A$ en $B$ et $B$ en $C$.
+  \item D\'eterminer l'affixe du centre, le rapport et l'angle de cette similitude.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+A et B ont pour affixes $Z_A = 3\i$ et $Z_B = 4 + \i$. $r$ est la rotation de centre $A$ et d'angle $\frac{\pi}{2}$.
+\begin{enumerate}
+  \item Montrer que $z' = \i z + 3 + 3\i$.
+  \item Montrer que $Z_C = 2 + 7\i$ si $r(B) = C$.
+  \item Montrer que $ABC$ est rectangle isoc\`ele en $A$.
+  \item Soit $D$ le milieu de $[AC]$, $h(z) = \frac{1}{2}z + \frac{3}{2}\i$.
+    \begin{enumerate}
+      \item Montrer que $h(C) = D$.
+      \item Exprimer $z' - 3\i$ en fonction de $z - 3\i$ et en d\'eduire la nature de $h$.
+    \end{enumerate}
+  \item $S$ est la similitude de centre $A$, de rapport $\frac{1}{2}$ et d'angle $\frac{\pi}{2}$. Donner son \'ecriture complexe.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit $a = -1 - \i$ et $(z_n)$ la suite d\'efinie par :
+\[\begin{cases} z_0 = 0, \quad z_1 = \i \\ z_{n+1} = (1-a)z_n + az_{n-1} \end{cases}\]
+\begin{enumerate}
+  \item D\'eterminer $z_2$ et $z_3$.
+  \item Soit $u_n = z_{n+1} - z_n$
+    \begin{enumerate}
+      \item D\'eterminer $u_0$ et $u_1$.
+      \item Montrer que $(u_n)$ est g\'eom\'etrique de raison $-a$.
+      \item Exprimer $u_n$ en fonction de $n$ et $a$.
+    \end{enumerate}
+  \item Montrer que $S_n = z_n$ avec $S_n = u_0 + \cdots + u_{n-1}$, puis que $z_n = -1 + (1+\i)^n$.
+  \item
+    \begin{enumerate}
+      \item D\'eterminer le module et un argument de $a$.
+      \item Donner la forme alg\'ebrique de $z_{19}$.
+    \end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit $T(z) = (1+\i\sqrt{3})z + \sqrt{3}$.
+\begin{enumerate}
+  \item
+    \begin{enumerate}
+      \item Montrer que $T$ admet un point invariant $J$.
+      \item D\'eterminer la nature et les \'el\'ements caract\'eristiques de $T$.
+      \item Exprimer $\overrightarrow{JM'}$ en fonction de $\overrightarrow{JM}$ et donner l'angle $(\overrightarrow{JM}, \overrightarrow{JM'})$.
+    \end{enumerate}
+  \item Soit $I$ d'affixe $-1$.
+    \begin{enumerate}
+      \item D\'eterminer $I' = T(I)$.
+      \item D\'eterminer l'ensemble $\mathcal{D}$ des $z$ tels que $|z + 1| = |\i z + 1|$.
+      \item D\'eterminer $\mathcal{C}$ des $z$ tels que $|(1+\i)z -1+\i| = |1 - \i|$.
+      \item D\'eterminer $\mathcal{D}' = T(\mathcal{D})$, $\mathcal{C}' = T(\mathcal{C})$.
+    \end{enumerate}
+  \item Soit $S(z) = \frac{\i}{2}z - \i$.
+    \begin{enumerate}
+      \item D\'eterminer le rapport et l'angle de $T \circ S$.
+      \item En d\'eduire la nature de $T \circ S$.
+      \item Donner l'\'ecriture complexe de $T \circ S$.
+    \end{enumerate}
+  \item
+    \begin{enumerate}
+      \item Montrer que $T^3$ est une homoth\'etie.
+      \item D\'eterminer les $n \in \mathbb{N}$ pour lesquels $T^n$ est une homoth\'etie.
+    \end{enumerate}
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit $T(z) = a^2z + b$ et le point $I \paren{ 2\i}$.
+\begin{enumerate}
+  \item $T$ est une translation de vecteur $\vec{U}(0, 2)$.
+  \item $T$ est une homoth\'etie de rapport $-4$ et de centre $I$.
+  \item $T$ est une rotation de centre $I$ et d'angle $-\frac{\pi}{2}$.
+  \item $T$ est une similitude directe transformant $A(-1, 0)$ en $I$ et de centre $B(-1,1)$.
+\end{enumerate}
+\end{exercice}
+
+	%</content>
+\end{document}
