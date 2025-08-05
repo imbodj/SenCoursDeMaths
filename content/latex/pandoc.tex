@@ -2,7 +2,30 @@
 
 % Listes :
 
-\setlist[enumerate,1]{label=(\roman*)}
+% Listes :
+
+% Configuration des listes enumerate
+\setlist[enumerate,1]{label=(\roman*), leftmargin=*, itemsep=0.2em}
+\setlist[enumerate,2]{label=(\alph*), leftmargin=*, itemsep=0.1em}
+\setlist[enumerate,3]{label=\arabic*., leftmargin=*, itemsep=0.1em}
+\setlist[enumerate,4]{label=(\arabic*), leftmargin=*, itemsep=0.1em}
+
+% Configuration des listes itemize
+\setlist[itemize,1]{label=\textbullet, leftmargin=*, itemsep=0.2em}
+\setlist[itemize,2]{label=\textendash, leftmargin=*, itemsep=0.1em}
+\setlist[itemize,3]{label=\textasteriskcentered, leftmargin=*, itemsep=0.1em}
+\setlist[itemize,4]{label=\textperiodcentered, leftmargin=*, itemsep=0.1em}
+
+% Configuration des listes description
+\setlist[description]{leftmargin=\parindent, itemsep=0.2em, font=\bfseries}
+
+% Configuration globale pour toutes les listes
+\setlist{
+    topsep=0.3em,        % Espace avant la liste
+    partopsep=0.2em,     % Espace supplémentaire si la liste commence un nouveau paragraphe
+    parsep=0.1em,        % Espace entre les paragraphes dans un même item
+    listparindent=\parindent  % Indentation des paragraphes dans les items
+}
 
 
 % Commandes :

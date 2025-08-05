@@ -257,27 +257,35 @@
 \definecolor{proof}{HTML}{e1f5fe}
 \definecolor{exercice}{HTML}{e1f5fe}
 
+
+% Style de théorème personnalisé avec saut de ligne
+\newtheoremstyle{break}
+  {\topsep}{\topsep}%
+  {\itshape}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+
+\newtheoremstyle{breakplain}
+  {\topsep}{\topsep}%
+  {}{}%
+  {\bfseries}{}%
+  {\newline}{}%
+
 % Théorèmes :
 
-\theoremstyle{definition}
+\theoremstyle{breakplain}
 \newtheorem{theorem}{Théorème}
-
 \newtheorem{property}[theorem]{Propriété}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Activité d'introduction}
 \newtheorem{corollary}[theorem]{Conséquence}
-
 \newtheorem{definition}[theorem]{Définition}
 \newtheorem{notation}[theorem]{Notation}
-
 \newtheorem{example}[theorem]{Exemple}
 \newtheorem{cexample}[theorem]{Contre-exemple}
 \newtheorem{application}[theorem]{Application}
-
 \newtheorem{methode}[theorem]{Méthode}
 \newtheorem{exercice}[theorem]{Exercice}
-
-\theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remarque}
 
 

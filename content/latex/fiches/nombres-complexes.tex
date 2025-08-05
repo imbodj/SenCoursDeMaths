@@ -1,0 +1,283 @@
+
+ \input{../common}
+
+\begin{document}
+  %<*content>
+  \sheet{algebra}{nombres-complexes}{Nombres complexes}
+
+ \summary{}
+
+\subsection{Comment écrire un nombre complexe sous forme algébrique ?}
+
+\begin{methode}
+Pour obtenir la forme algébrique d'un nombre complexe, on développe en utilisant les propriétés de l'addition et de la multiplication et en tenant compte de ce que $\i^2 = -1$. Dans le cas d'un quotient, si le dénominateur est un nombre complexe, on multiplie numérateur et dénominateur par le conjugué du dénominateur pour rendre ce dernier réel.
+\end{methode}
+
+\begin{example}
+Soit $f$ l'application définie dans $\Cce$ par $f(z) = \dfrac{1}{z}$, donner la forme algébrique de $f(2+3\i)$.
+
+\begin{proof}
+$f(2+3\i) = \dfrac{1}{2+3\i} = \dfrac{1}{2+3\i} \cdot \dfrac{2-3\i}{2-3\i} = \dfrac{2-3\i}{4+9} = \dfrac{2-3\i}{13} = \dfrac{2}{13} - \dfrac{3}{13}\i$
+\end{proof}
+\end{example}
+
+\begin{remark}
+Remarques utiles :
+\begin{itemize}
+\item $\overline{z} = \overline{a+b\i} = a-b\i$
+\item $z \cdot \overline{z} = |z|^2 = a^2 + b^2$
+\end{itemize}
+\end{remark}
+
+\subsection{Comment résoudre une équation dans $\Cc$ ?}
+
+\begin{methode}
+\begin{itemize}
+\item Pour résoudre une équation du premier degré d'inconnue $z$, on isole $z$ et on donne sa forme algébrique.
+\item Pour résoudre une équation du premier degré d'inconnue $z$ dans laquelle figurent $\overline{z}$, on pose $z = x + y\i$ et on remplace dans l'équation donnée.
+\item Pour résoudre une équation du second degré d'inconnue $z$ à coefficients réels, on calcule le discriminant $\Delta$, suivant son signe on a alors des solutions réelles ou complexes conjuguées.
+\end{itemize}
+\end{methode}
+
+\begin{example}
+Résoudre dans $\Cc$ chacune des équations suivantes :
+\begin{enumerate}
+\item $2z + 3\i = 5 - z$
+\item $z + 2\overline{z} = 1 + 3\i$
+\item $z^2 - 2z + 5 = 0$
+\end{enumerate}
+
+\begin{proof}
+\begin{enumerate}
+\item $2z + 3\i = 5 - z \Rightarrow 3z = 5 - 3\i \Rightarrow z = \dfrac{5-3\i}{3} = \dfrac{5}{3} - \i$
+\item Posons $z = x + y\i$, alors $\overline{z} = x - y\i$.
+L'équation devient : $(x + y\i) + 2(x - y\i) = 1 + 3\i$
+$\Rightarrow 3x - y\i = 1 + 3\i$
+Par identification : $3x = 1$ et $-y = 3$, donc $x = \frac{1}{3}$ et $y = -3$.
+Ainsi $z = \frac{1}{3} - 3\i$
+\item $\Delta = 4 - 20 = -16 < 0$
+Les solutions sont : $z = \dfrac{2 \pm \sqrt{-16}}{2} = \dfrac{2 \pm 4\i}{2} = 1 \pm 2\i$
+\end{enumerate}
+\end{proof}
+\end{example}
+
+\subsection{Comment déterminer un ensemble de points à partir de la forme algébrique ?}
+
+\begin{methode}
+Il faut savoir << traduire l'énoncé >>, les remarques suivantes sont souvent utiles pour le faire :
+\begin{itemize}
+\item $z$ est un nombre réel signifie que $\text{Im}(z) = 0$ ou que $z = \overline{z}$ ou que l'image de $z$ est un point de l'axe réel
+\item $z$ est un nombre imaginaire pur signifie que $\text{Re}(z) = 0$ ou que $z = -\overline{z}$ ou que l'image de $z$ appartient à l'axe imaginaire
+\end{itemize}
+
+Il faut aussi savoir reconnaître les ensembles de points à partir de leur équation :
+\begin{itemize}
+\item $ax + by + c = 0$ pour une droite
+\item $(x-a)^2 + (y-b)^2 = R^2$ pour le cercle de centre le point $\Omega$ d'affixe $a+b\i$ et de rayon $R$
+\end{itemize}
+\end{methode}
+
+\begin{example}
+À tout nombre complexe $z$ différent de $\i$, on associe le nombre complexe $Z = \dfrac{z-\i}{z+\i}$. On pose $z = x + y\i$ où $x$ et $y$ sont deux réels.
+
+\begin{enumerate}
+\item Exprimer en fonction de $x$ et $y$ la partie réelle $X$ et la partie imaginaire $Y$ de $Z$.
+\item En déduire l'ensemble $\mathcal{E}$ des points $M$ du plan complexe, d'affixe $z$ tels que $Z$ est réel.
+\item En déduire l'ensemble $\mathcal{F}$ des points $M$ du plan complexe, d'affixe $z$ tels que $Z$ est imaginaire pur.
+\end{enumerate}
+
+\begin{proof}
+\begin{enumerate}
+\item $Z = \dfrac{x + y\i - \i}{x + y\i + \i} = \dfrac{x + (y-1)\i}{x + (y+1)\i}$
+
+En multipliant par le conjugué :
+$Z = \dfrac{[x + (y-1)\i][x - (y+1)\i]}{x^2 + (y+1)^2} = \dfrac{x^2 + (y-1)(y+1) + \i[x(y-1) - x(y+1)]}{x^2 + (y+1)^2}$
+
+$Z = \dfrac{x^2 + y^2 - 1 - 2x\i}{x^2 + (y+1)^2}$
+
+Donc $X = \dfrac{x^2 + y^2 - 1}{x^2 + (y+1)^2}$ et $Y = \dfrac{-2x}{x^2 + (y+1)^2}$
+
+\item $Z$ est réel $\Leftrightarrow Y = 0 \Leftrightarrow x = 0$
+Donc $\mathcal{E}$ est l'axe imaginaire privé du point d'affixe $\i$.
+
+\item $Z$ est imaginaire pur $\Leftrightarrow X = 0 \Leftrightarrow x^2 + y^2 - 1 = 0$
+Donc $\mathcal{F}$ est le cercle de centre $O$ et de rayon $1$ privé du point d'affixe $\i$.
+\end{enumerate}
+\end{proof}
+\end{example}
+
+\subsection{Comment utiliser les différentes formes d'un nombre complexe ?}
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+\textbf{Que faut-il faire ?} & \textbf{Quelle forme faut-il choisir ?} & \textbf{Utilité} \\
+\hline
+\begin{array}{c}
+\text{Vérifier que } a \text{ et } b \\
+\text{ sont réels}
+\end{array}
+&
+\begin{array}{c}
+\text{Forme algébrique } \\
+z = a + b\i
+\end{array}
+&
+\begin{array}{c}
+\text{Cette forme facilite les calculs} \\
+\text{de somme et de différence et} \\
+\text{permet de faire le lien entre les} \\
+\text{complexes et les coordonnées} \\
+\text{cartésiennes des points images}
+\end{array}
+\\
+\hline
+\begin{array}{c}
+\text{Vérifier que } r \text{ est} \\
+\text{un réel positif}
+\end{array}
+&
+\begin{array}{c}
+\text{Forme trigonométrique } \\
+z = r(\cos\theta + \i\sin\theta)
+\end{array}
+&
+\begin{array}{c}
+\text{Cette forme établit le lien} \\
+\text{entre les complexes et la géométrie,} \\
+\text{elle permet le calcul des distances} \\
+\text{et des angles}
+\end{array}
+\\
+\hline
+\begin{array}{c}
+\text{Vérifier que } r \text{ est positif}
+\end{array}
+&
+\begin{array}{c}
+\text{Forme exponentielle } \\
+z = re^{\i\theta}
+\end{array}
+&
+\begin{array}{c}
+\text{Cette forme facilite les calculs} \\
+\text{de produit, de quotient et de} \\
+\text{puissance de nombres complexes}
+\end{array}
+\\
+\hline
+\end{array}
+\]
+
+\medskip
+
+\textbf{Pour passer d'une forme à l'autre :}
+
+\begin{align}
+\text{Forme algébrique} &\leftrightarrow \text{Forme trigonométrique/exponentielle} \\
+x &= r\cos\theta \text{ et } y = r\sin\theta \\
+r &= \sqrt{x^2 + y^2}, \cos\theta = \frac{x}{r}, \sin\theta = \frac{y}{r}
+\end{align}
+
+\begin{example}
+Relier les nombres complexes proposés à leurs différentes formes :
+\bigskip
+
+$\begin{array}{|c|c|c|c|}
+\hline
+\textbf{Complexes} & \textbf{Forme algébrique} & \textbf{Forme trigonométrique} & \textbf{Forme exponentielle} \\
+\hline
+1 + \i & 1 + \i & \sqrt{2}\paren{\cos\frac{\pi}{4} + \i\sin\frac{\pi}{4}} & \sqrt{2}e^{\i\pi/4} \\
+\hline
+-2 + 2\i & -2 + 2\i & 2\sqrt{2}\paren{\cos\frac{3\pi}{4} + \i\sin\frac{3\pi}{4}} & 2\sqrt{2}e^{\i3\pi/4} \\
+\hline
+\end{array}$
+\end{example}
+
+\begin{remark}
+Cas particuliers à bien savoir :
+\begin{itemize}
+\item[$  \bullet$] $\i = e^{\i\pi/2}$
+\item[$  \bullet$] $-1 = e^{\i\pi}$
+\item[$  \bullet$] $-\i = e^{\i3\pi/2}$
+\item[$  \bullet$] $1 = e^{\i0}$
+\end{itemize}
+\end{remark}
+
+\subsection{Comment utiliser la forme trigonométrique des nombres complexes en géométrie ?}
+
+\begin{methode}
+Pour utiliser les nombres complexes en géométrie, il est utile de connaître leur forme trigonométrique, les règles de calcul sur celle-ci et l'interprétation géométrique des modules et arguments suivants :
+
+\begin{itemize}
+\item $|z_B - z_A| = AB$ (distance)
+\item $\arg\paren{\dfrac{z_C - z_A}{z_B - z_A}} = \paren{\overrightarrow{AB}, \overrightarrow{AC}}\;\; $ (angle orienté)
+\item $\left|\dfrac{z_C - z_A}{z_B - z_A}\right| = \dfrac{AC}{AB}\;\;$ (rapport de distances)
+\item $\arg\paren{\dfrac{z_C - z_A}{z_B - z_A}} \equiv 0 \pmod{2\pi}\;\;$ signifie que $A$, $B$ et $C$ sont alignés
+\end{itemize}
+
+Dans ce qui précède $A$, $B$ et $C$ sont trois points tels que $A \neq B$ et $A \neq C$.
+\end{methode}
+
+\begin{example}
+\begin{enumerate}
+\item Soit $z_A = 1$, $z_B = 1 + \i\sqrt{3}$, $z_C = -1 + \i\sqrt{3}$ les affixes respectives de trois points $A$, $B$ et $C$. Déterminer la forme exponentielle de $\dfrac{z_C - z_A}{z_B - z_A}$. En déduire la nature du triangle $ABC$.
+
+\item Déterminer l'ensemble des points $M$ d'affixe $z$ tels que $|z - \i| = 2$.
+
+\item Déterminer l'ensemble des points $M$ d'affixe $z$ tels que $|z - 1| = |z - \i|$.
+
+\item Déterminer l'ensemble des points $M$ d'affixe $z$ tels que $|z - 1| = |z + 1|$.
+\end{enumerate}
+
+\begin{proof}
+\begin{enumerate}
+\item $\dfrac{z_C - z_A}{z_B - z_A} = \dfrac{-1 + \i\sqrt{3} - 1}{\i\sqrt{3}} = \dfrac{-2 + \i\sqrt{3}}{\i\sqrt{3}} = \frac{(-2 + \i\sqrt{3})(-\i\sqrt{3})}{3} = \dfrac{2\i\sqrt{3} + 3}{3} = 1 + \dfrac{2\i\sqrt{3}}{3}$
+
+Le module est $\sqrt{1 + \frac{4 \cdot 3}{9}} = \sqrt{\frac{13}{9}} = \frac{\sqrt{13}}{3}$ et l'argument est $\tan^{-1}\paren{\frac{2\sqrt{3}}{3}}$.
+
+\item L'ensemble est le cercle de centre le point d'affixe $\i$ et de rayon $2$.
+
+\item $|z - 1| = |z - \i|$ signifie que $M$ est équidistant des points d'affixes $1$ et $\i$. C'est la médiatrice du segment joignant ces deux points.
+
+\item $|z - 1| = |z + 1|$ signifie que $M$ est équidistant des points d'affixes $1$ et $-1$. C'est l'axe imaginaire.
+\end{enumerate}
+\end{proof}
+\end{example}
+
+\subsection{Comment préciser la position relative de trois points ?}
+
+\begin{methode}
+Dans le plan complexe, $z_A$, $z_B$ et $z_C$ sont trois nombres complexes distincts, d'images respectives $A$, $B$ et $C$. On considère le nombre complexe $\frac{z_C - z_A}{z_B - z_A}$. On a :
+
+\begin{itemize}
+\item Si $\dfrac{z_C - z_A}{z_B - z_A} \in \Rr$, alors $A$, $B$ et $C$ sont alignés
+\item Si $\left|\dfrac{z_C - z_A}{z_B - z_A}\right| = 1$, alors $AC = AB$
+\item Si $\arg\paren{\dfrac{z_C - z_A}{z_B - z_A}} = \pm\frac{\pi}{2}$, alors le triangle $ABC$ est rectangle en $A$
+\item Si $\dfrac{z_C - z_A}{z_B - z_A} = \pm\i$, alors le triangle $ABC$ est rectangle et isocèle en $A$
+\end{itemize}
+\end{methode}
+
+\begin{example}
+Dans chacun des cas que peut-on dire des points $A$, $B$ et $C$ ?
+\begin{enumerate}
+\item $\dfrac{z_C - z_A}{z_B - z_A} = 2$
+\item $\dfrac{z_C - z_A}{z_B - z_A} = \i$
+\item $\dfrac{z_C - z_A}{z_B - z_A} = -\dfrac{\sqrt{2}}{2} + \dfrac{\sqrt{2}}{2}\i$
+\item $\dfrac{z_C - z_A}{z_B - z_A} = 1 + \i\sqrt{3}$
+\end{enumerate}
+
+\begin{proof}
+\begin{enumerate}
+\item Le rapport est réel positif, donc $A$, $B$ et $C$ sont alignés et $AC = 2AB$.
+\item $|\i| = 1$ et $\arg(\i) = \frac{\pi}{2}$, donc le triangle $ABC$ est rectangle et isocèle en $A$.
+\item Le module est $1$ et l'argument est $\frac{3\pi}{4}$, donc $AC = AB$ et $\paren{\overrightarrow{AB}, \overrightarrow{AC}} = \frac{3\pi}{4}$.
+\item Le module est $2$ et l'argument est $\frac{\pi}{3}$, donc $AC = 2AB$ et $\paren{\overrightarrow{AB}, \overrightarrow{AC}} = \frac{\pi}{3}$.
+\end{enumerate}
+\end{proof}
+\end{example}
+
+
+
+
+\end{document}
