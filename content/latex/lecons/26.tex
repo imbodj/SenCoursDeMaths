@@ -124,18 +124,15 @@ $ \bullet \;\displaystyle \lim_{x \to \pinf}\eexp{x} =\pinf \hspace*{2cm} \bulle
 
 \textbf{Tableau de variation}
 \begin{center}
-\begin{tikzpicture}
-\tkzTab[lgt=2]
-{
-	$x$ / 0.5 ,
-	$\exp^{\prime}(x)$ / 0.5,
-	$\exp(x)$ /1
-}
-{ $\minf$ , $\pinf$ }
-{ , + , }
-{-/ $0$ , +/$\pinf$ }
-\end{tikzpicture}
 
+\begin{tikzpicture}
+\tkzTabInit[lgt=2, espcl=3]%
+{$x$ / 1 , $\paren{\eexp{x}}^{\prime}$ / 1 , $\eexp{x}$ / 2}%
+{$\minf$, $\pinf$}
+
+\tkzTabLine{ , + , }
+\tkzTabVar{-/$O$, +/$+\infty$}
+\end{tikzpicture}
 
 \end{center}
 

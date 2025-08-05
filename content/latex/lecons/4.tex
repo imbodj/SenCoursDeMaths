@@ -115,17 +115,16 @@ Donc $ \displaystyle\lim_{x \to 0}\ln x=\displaystyle\lim_{X \to \pinf}\ln \dfra
 \subsection*{Tableau de variation }
 Des propriétés précédentes, on en déduit facilement le tableau de variation suivant.
 
+
 \begin{center}
+
 \begin{tikzpicture}
-\tkzTab[lgt=2]
-{
-	$x$ / 0.5 ,
-	$\ln^{\prime}(x)$ / 0.5,
-	$\ln(x)$ /1
-}
-{ $0$ , $\pinf$ }
-{ , + , }
-{-/ $\minf$ , +/$\pinf$ }
+\tkzTabInit[lgt=2, espcl=3]%
+{$x$ / 1 , $\ln'(x)$ / 1 , $\ln(x)$ / 2}%
+{$0$, $+\infty$}
+
+\tkzTabLine{ , + , }
+\tkzTabVar{-/$-\infty$, +/$+\infty$}
 \end{tikzpicture}
 
 \end{center}

@@ -20,7 +20,7 @@ Je me permets de glisser quelques liens vers des sites que j'utilise régulière
   des évaluations, ... Bref, à consulter régulièrement !
 * [sujetexam](https://sujetexa.com/). Un super site qui contient plein de cours, d'exercices, d'évaluations
   et d'outils en tout genre pour réussir les maths au lycée. 
-* [camerecole.org](https://www.camerecole.org/).  L'école dans votre téléhone.
+* [camerecole.org](https://www.camerecole.org/).  L'école dans votre téléphone.
 
 ## Licence
 

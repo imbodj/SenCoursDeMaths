@@ -17,8 +17,8 @@
 \begin{itemize}
 \item $ \displaystyle\lim_{x \to \pinf}x^{n}= \pinf$ 
 \item $\displaystyle\lim_{x \to \minf}x^{n}= \begin{cases}
-\pinf & \text{si n pair} \\
-\minf & \text{si  n impair}
+\pinf & \text{si $\; n\;$ pair} \\
+\minf & \text{si $\;n \;$ impair}
 \end{cases}$ 
 \item $\displaystyle \lim_{x \to \pinf}\sqrt{x}=\pinf$ 
 \item $\displaystyle \lim_{x \to \infty} \frac{1}{x^{n}}=0$ 
@@ -149,7 +149,7 @@ $\displaystyle \lim_{ x \to a^{+}}f(x)=\pinf $
 \draw[red] (0.25,3) -- (0.25,-3) node[above right] {(D)};
 \end{tikzpicture}
 
-$ \lim_{ x \to a^{-}}f(x)=\minf $
+$ \displaystyle\lim_{ x \to a^{-}}f(x)=\minf $
 
 
 
@@ -236,7 +236,7 @@ Lorsque  $\displaystyle \lim_{x \to \infty}f(x)=\infty  $, la courbe $ \mathcal{
 \item    Si $\displaystyle \lim_{x \to \infty}\frac{f(x)}{x}=0  $  alors la courbe $ \mathcal{C} $ présente une branche parabolique dans la direction  de  l'axe des abscisses.
 
 \item    Si $\displaystyle \lim_{x \to \infty}\frac{f(x)}{x}=\infty$  alors la courbe $ \mathcal{C} $ présente une branche parabolique dans la direction  de  l'axe des ordonnées.
-\item  Si  $\displaystyle\lim_{x \to \infty}\frac{f(x)}{x}=a  $  réel  non nul alors on calcule $\lim_{x \to \infty}(f(x)-ax )  $ 
+\item  Si  $\displaystyle\lim_{x \to \infty}\frac{f(x)}{x}=a  $  réel  non nul alors on calcule $\displaystyle\lim_{x \to \infty}(f(x)-ax )  $ 
 
  $ \bullet $ Si  $\displaystyle \lim_{x \to \infty}(f(x)-ax) = b \; $  (réel) alors la droite $(D)$ d'équation : $y = a x  + b $ est asymptote à la courbe $ \mathcal{C} $ .
 
@@ -249,8 +249,8 @@ On considère la fonction $ f $ définie par :
 $ f (x)=\left\{\begin{array}{l} \sqrt{x +4}\quad \text{si} \quad x\geq 2 \\ x+3-\dfrac{2}{x-1}\quad \text{si}\quad x< 2  \end{array} \right.$
 
 \begin{enumerate}
-\item Déterminer  les limites aux bornes de $ D_{f} $.
-\item Etudier la nature des branches infinies de la courbe $ \mathcal{C} $.
+\item Déterminer  les limites de $f$ aux bornes de $ D_{f} $.
+\item Etudier la nature des branches infinies de la courbe $ \mathcal{C} $ de $f$.
 \item Etudier la position relative de $ \mathcal{C} $ par rapport à son asymptote oblique.
 \end{enumerate}
 \end{exercice}
@@ -297,7 +297,7 @@ Une fonction $ f $ est continue en un réel $ a $ ssi $ a\in D_{f} $ et $\displa
 
 
 \begin{example}
-Soit $ f (x)=\left\{\begin{array}{l} \frac{\sqrt{x}-1}{x-1}\quad \textrm{si} \quad x\neq 1 \\ \frac{1}{2}\quad \quad\textrm{si}\quad x= 1  \end{array} \right.$
+Soit $ f (x)=\left\{\begin{array}{l} \dfrac{\sqrt{x}-1}{x-1}\quad \textrm{si} \quad x\neq 1 \\ \frac{1}{2}\quad \quad\textrm{si}\quad x= 1  \end{array} \right.$
 
 
 Etudions la continuité   de $ f $ en 1.\\
@@ -329,7 +329,7 @@ Montrons que la fonction $ f: x \mapsto \dfrac{x^{2}-x-2}{x-2} $   est prolongea
 \textsl{Réponse:}\\
 $ f(x) $ existe si et seulement, si $ x\neq 2 $.\\  $\displaystyle\lim_{x \to 2 }\frac{x^{2}-x-2}{x-2}=\displaystyle\lim_{x \to 2 }\frac{(x-2)(x+1)}{x-2}= \displaystyle\lim_{x \to 2 }(x+1)=3 $   finie donc $ f $ est prolongeable par continuité en $ 2. $\\
 Son prolongement par continuité en $ 2$ est la fonction $ g $ définie par : 
-\[ g (x)=\left\{\begin{array}{l} \frac{x^{2}-x-2}{x-2} \quad \textrm{si} \quad x\neq 2 \\ 3\quad \quad \qquad \quad  \textrm{si}\quad x= 2  \end{array} \right.\]
+\[ g (x)=\left\{\begin{array}{l} \dfrac{x^{2}-x-2}{x-2} \quad \textrm{si} \quad x\neq 2 \\ 3\quad \quad \qquad \quad  \textrm{si}\quad x= 2  \end{array} \right.\]
 
 \subsection{Dérivabilité}
 \subsubsection*{Dérivabilité en un réel}
@@ -344,7 +344,7 @@ On fait le changement de variable suivant $ h=x-a $ \\
 $ f $ est dérivable en $ a $ s'il existe un nombre réel $ l $ tel que $\displaystyle \lim_{h \to 0} \frac{f(a+h)-f(a)}{h}=l $ 
 
 \begin{example}
-Soit $ f (x)=\left\{\begin{array}{l} \frac{\sqrt{x}-1}{x-1}\quad \textrm{si} \quad x\neq 1 \\ \frac{1}{2}\quad \textrm{si}\quad x= 1  \end{array} \right.$\\
+Soit $ f (x)=\left\{\begin{array}{l} \dfrac{\sqrt{x}-1}{x-1}\quad \textrm{si} \quad x\neq 1 \\ \frac{1}{2}\quad \textrm{si}\quad x= 1  \end{array} \right.$\\
 Etudions  la dérivabilité  de $ f $ en 1.
 \end{example}
 \textsl{Réponse:}\\
@@ -375,7 +375,7 @@ $ \centerdot $ Si $ f^{'}_{d}(a) \neq f^{'}_{g}(a) $ alors $ f $ n'est pas déri
 \subsubsection*{Interprétation graphique de la dérivabilité}
 \begin{enumerate}
 \item Si $ f $ est dérivable en $ a $ alors sa courbe $ \mathcal{C} $ admet au point d'abscisse  $ a $  c-à-d le point $A(a,f(a))$ une \textbf{ tangente} de coefficient directeur ( ou pente) $  f^{'}(a)$ d'équation:  
-$ y=f^{'}(a)(x-a)+ f(a) $.
+$$ y=f^{'}(a)(x-a)+ f(a) $$
 
 
 \begin{remark}
@@ -387,14 +387,14 @@ $ y=f^{'}(a)(x-a)+ f(a) $.
 \medskip
 \begin{tabularx}{\textwidth}{|X|X|}
 \hline
-Si $ \bullet\; \displaystyle \lim_{x \to a^+} \frac{f(x)-f(a)}{x-a} = +\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
+Si $ \bullet\; \displaystyle \lim_{x \to a^+} \dfrac{f(x)-f(a)}{x-a} = +\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
 &
 Si $ \bullet\; \displaystyle \lim_{x \to a^-} \frac{f(x)-f(a)}{x-a} = +\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le bas. 
 \\
 \hline
-Si $\bullet\; \displaystyle \lim_{x \to a^+} \frac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le bas. 
+Si $\bullet\; \displaystyle \lim_{x \to a^+} \dfrac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le bas. 
 &
-Si $\bullet\; \displaystyle \lim_{x \to a^-} \frac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
+Si $\bullet\; \displaystyle \lim_{x \to a^-} \dfrac{f(x)-f(a)}{x-a} = -\infty$, la courbe de $f$ admet au point $A(a, f(a))$ une demi-tangente verticale dirigée vers le haut. 
 \\
 \hline
 \end{tabularx}
@@ -477,13 +477,13 @@ $$
 & \text{\(f(I)\)} & \text{\(f(I)\)} \\
 & \text{si \(f\) continue et strictement croissante} & \text{si \(f\) continue et strictement décroissante} \\
 \hline
-\text{\(I = [a,b]\)} & [f(a), f(b)] & [f(b), f(a)] \\
+I = [a,b] & [f(a), f(b)] & [f(b), f(a)] \\
 \hline
-\text{\(I = [a,b[\)} & \left[ f(a), \lim\limits_{x \to b^-} f(x) \right[ & \left] \lim\limits_{x \to b^-} f(x), f(a) \right] \\
+I = [a,b[ & \left[ f(a), \lim\limits_{x \to b^-} f(x) \right[ & \left] \lim\limits_{x \to b^-} f(x), f(a) \right] \\
 \hline
-\text{\(I = ]a,b]\)} & \left] \lim\limits_{x \to a^+} f(x), f(b) \right] & \left[ f(b), \lim\limits_{x \to a^+} f(x) \right[ \\
+I = ]a,b] & \left] \lim\limits_{x \to a^+} f(x), f(b) \right] & \left[ f(b), \lim\limits_{x \to a^+} f(x) \right[ \\
 \hline
-\text{\(I = ]a,b[\)} & \left] \lim\limits_{x \to a^+} f(x), \lim\limits_{x \to b^-} f(x) \right[ & \left] \lim\limits_{x \to b^-} f(x), \lim\limits_{x \to a^+} f(x) \right[ \\
+I = ]a,b[ & \left] \lim\limits_{x \to a^+} f(x), \lim\limits_{x \to b^-} f(x) \right[ & \left] \lim\limits_{x \to b^-} f(x), \lim\limits_{x \to a^+} f(x) \right[ \\
 \hline
 \end{array}
 $$
@@ -502,7 +502,7 @@ On a   $\;\; D_{h}= \intoo{\minf}{0}\cup \intoo{0}{\pinf} $
 \textbf{Attention :}  Avant de dériver une fonction, il est recommandé de justifier sa dérivabilité même si la question ne le précise pas.\\
 La fonction rationnelle $ x\mapsto \dfrac{1}{x} $ est  définie sur $ \Rre $ donc dérivable sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf}. $\\
 La fonction $ x\mapsto \cos x $ est dérivable sur $ \Rr $; en particulier sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf} $\\ D' où par  composée $ h $ est dérivable  sur chacun des intervalles $\intoo{\minf}{0} $ et $\intoo{0}{\pinf} $.\\
-Pour tout   $ x\neq 0 $  \quad :    $h'(x)=\dfrac{1}{x^{2}}\sin\paren{\dfrac{1}{x}} $ 
+Pour tout   $ x\neq 0 \quad$   :    $h'(x)=\dfrac{1}{x^{2}}\sin\paren{\dfrac{1}{x}} $ 
 
 \end{example}
 \begin{corollary}
@@ -512,7 +512,7 @@ $ \centerdot $ Si $ f $ est \textbf{ dérivable et strictement positive } sur $ 
 \end{corollary}
 
 
-\subsubsection*{Formules de dérivations}
+\subsubsection*{Formules de dérivation}
 Soient $u $ et $v $ deux fonctions dérivables, $ r\in\Zze $ et $ k\in\Rr $\\
 
 $\begin{array}{|c|c|c|c|c|c|c|c|}
@@ -571,52 +571,58 @@ Soit $ f $ une fonction dérivable sur un intervalle $ I. $
 
 \text{Les cas classiques:}
 
-$\begin{array}{c|ccccc}
-x &        &  &       &       \\
-\hline
-f'(x) & - & 0       & +     &       \\
-\hline
-f(x) & \searrow & \text{+min} & \nearrow & \\
-\end{array}
-$
+\begin{tikzpicture}
+\tkzTabInit[lgt=2, espcl=2.5]%
+{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
+{$\cdots$, $\alpha$, $\cdots$}
+
+\tkzTabLine{ , - , z , + , }
+\tkzTabVar{+/ , -/$f(\alpha)$/ , +/}
+\end{tikzpicture}
+
+
+
 
 Si  $f(x)$  admet un minimum positif  
 sur  I  alors  $f$  est positive sur  I.
 \bigskip
 
 
-$\begin{array}{c|ccccc}
-x &        &  &       &       \\
-\hline
-f'(x) & + & 0       & -     &       \\
-\hline
-f(x) & \nearrow & \text{max} & \searrow & \\
-\end{array}
-$
+\begin{tikzpicture}
+\tkzTabInit[lgt=2, espcl=2.5]%
+{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
+{$\cdots$, $\alpha$, $\cdots$}
+
+\tkzTabLine{ , + , z , - , }
+\tkzTabVar{-/ , +/$f(\alpha)$/ , -/}
+\end{tikzpicture}
+
+
 
 Si  $f(x)$ admet un maximum négatif 
 sur  I  alors $ f$  est  négative sur  I.
 
-$\begin{array}{c|ccccccc}
-x &        &        &        & \alpha &        &        &        \\
-\hline
-f'(x) &     &        & -      &        &   -     &        &        \\
-\hline
-f(x)  &     &        & \searrow & 0      & \searrow &        &        \\
-\end{array}
-$
+\begin{tikzpicture}
+\tkzTabInit[lgt=2, espcl=2.5]%
+{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
+{$\cdots$, $\alpha$, $\cdots$}
+
+\tkzTabLine{ , , , + , }
+\tkzTabVar{-/$0$ , +/$0$/}
+\end{tikzpicture}
+
 
 $f(x)$  est positif si $x \leq \alpha$. \\
 $f(x)$  est négatif si $x \geq \alpha$.
 
-$\begin{array}{c|ccccccc}
-x &        &        &        & \alpha &        &        &        \\
-\hline
-f'(x) &     &        & +      &        & +      &        &        \\
-\hline
-f(x)  &     &        & \nearrow & 0      & \nearrow &        &        \\
-\end{array}
-$
+\begin{tikzpicture}
+\tkzTabInit[lgt=2, espcl=2.5]%
+{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
+{$\cdots$, $\alpha$, $\cdots$}
+
+\tkzTabLine{ , , , - , }
+\tkzTabVar{+/ , -/$0$/ , -/}
+\end{tikzpicture}
 
 $f(x)$  est négatif si $x \leq \alpha$. \\
 $f(x)$  est positif si  $ x \geq\alpha$.
@@ -720,17 +726,15 @@ $ f'(x) = 3x^{2}+1 > 0$  $\forall x\in \Rr $ Donc $ f $ est strictement croissan
 $ \displaystyle\lim_{x \to \pinf}f(x)=\displaystyle \lim_{x \to \pinf}x^{3}+x+1=\displaystyle\lim_{x \to \pinf}x^{3}=\pinf$\\
 $\displaystyle \lim_{x \to \minf}f(x)=\displaystyle \lim_{x \to \minf}x^{3}+x+1=\displaystyle\lim_{x \to \minf}x^{3}=\minf$
 
-$$
-\begin{array}{|c|cccc}
-\hline
-x & -\infty & & +\infty & \\
-\hline
-f'(x) & & + & & \\
-\hline
-f(x) & -\infty & \nearrow & +\infty & \\
-\hline
-\end{array}
-$$
+\begin{tikzpicture}
+\tkzTabInit[lgt=2, espcl=2.5]%
+{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
+{$-\infty$, $+\infty$}
+
+\tkzTabLine{ , + , }
+\tkzTabVar{-/$-\infty$, +/$+\infty$}
+\end{tikzpicture}
+
 
 \item $ f $ est continue et strictement croissante sur $ \Rr$ à valeurs dans sur $ \Rr. $ Or $ 0\in \Rr $ donc d'après la conséquence  du T.V.I il existe un unique réel $ \alpha $ tel que $ f(\alpha)=0 $.\\ De plus $ f(-1)f(0)=-1\times 1 < 0$ donc $$  f(-1)<0<f(0) $$ $$ \Leftrightarrow f(-1)<f(\alpha)<f(0) $$ $$ \Leftrightarrow -1<\alpha< 0 \quad \textrm{car $ f $ est strictement croissante. }$$
 \item Encadrement de $ \alpha $ d'amplitude $ 0,01 $ par \textbf{la méthode du balayage }.\\
@@ -829,17 +833,16 @@ Soit $ f $ la fonction définie par $ f(x)=4x^{2}+4x+2  $.
 $ f'(x) = 8x+4$  $\forall x\in \Rr $\\
 $\displaystyle \lim_{x \to \pinf}f(x)= \displaystyle\lim_{x \to \pinf}4x^{2}+4x+2=\displaystyle\lim_{x \to \pinf}4x^{2}=\pinf$\\
 $\displaystyle \lim_{x \to \minf}f(x)=\displaystyle \lim_{x \to \minf}4x^{2}+4x+2=\displaystyle\lim_{x \to \minf}4x^{2}=\pinf$
-$$
-\begin{array}{|c|cccccc}
-\hline
-x & -\infty & & -\frac{1}{2} & & +\infty & \\
-\hline
-f'(x) & & - & 0 & + & & \\
-\hline
-f(x) & +\infty & \searrow & 1 & \nearrow & +\infty & \\
-\hline
-\end{array}
-$$
+
+\begin{tikzpicture}
+\tkzTabInit[lgt=2, espcl=2.5]%
+{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
+{$-\infty$, $-\dfrac{1}{2}$, $+\infty$}
+
+\tkzTabLine{ , - , z , + , }
+\tkzTabVar{+/ , -/$1$ , +/}
+\end{tikzpicture}
+
 \item 
 \begin{enumerate}
 \item $ g $ est continue et strictement croissante  sur  $ \intfo{-\frac{1}{2}}{\pinf} $ donc réalise une bijection $ \intfo{-\frac{1}{2}}{\pinf} $ de vers  $g( \intfo{-\frac{1}{2}}{\pinf})$ \\Or  $g( \intfo{-\frac{1}{2}}{\pinf})=\intfo{g(-\frac{1}{2})}{\displaystyle\lim_{x \to \pinf}g(x)}=\intfo{1}{\pinf} $ \\ D'où \underline{$J= \intfo{1}{\pinf} $ }.
