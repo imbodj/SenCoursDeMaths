@@ -461,8 +461,9 @@ class TikzPictureImageExtractor extends LatexImageExtractor {
     const content = fs.readFileSync(path.resolve(this.sourceDirectoryPath, this.options.tikzPictureTemplate), { encoding: 'utf8' })
     
     // Détecter si c'est du tkz-tab et ajouter le package si nécessaire
-   const isTkzTab = /\\tkz(?:Tab|EuclideInit|EuclideTabInit|TabInit|TabLine|TabVar|TabVal|TabImp|Tab(?:Arrow|Dots|Grad))/i.test(latexContent)
+    const isTkzTab = /\\tkz(?:TabInit|TabLine|TabVar|TabVal|TabImp)/.test(latexContent)
     
+ 
     let result = content.replace('{graphicsPath}', '')
     
     // Ajouter le package tkz-tab si nécessaire et s'il n'est pas déjà présent
