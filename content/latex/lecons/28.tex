@@ -1,0 +1,236 @@
+\input{../common}
+
+\begin{document}
+  %<*content>
+  \lesson{analysis}{28}{Probabilité}
+  
+
+ Prévoir et calculer  des résultats dus  aux hasard, tel est    le but et l'ambition du calcul  des probabilités.\\
+Les origines de ce calcul viennent du  17\up{ième} siècle, lorsque le chevalier   de Méré, passionné  de jeux , pariait qu'avec  un dé il  sortirait  au moins  un  <<six>>
+  en 4 coups.\\
+Quand  il prétendit sortir  au moins un << double six >>  en 24 coups, il perdit de l'argent et s'en ouvrit  à son ami Pascal.\\
+C'est  en cherchant une explication  à ce genre de problème que Pascal devient avec Fermat, le fondateur des probabilités.\\Mais c'est au début du 18\up{ième} siècle  que Bernoulli  écrit le premier véritable ouvrage de probabilités.\\ De Moivre  poursuit les études sur les permutations et combinaisons et résolut des problèmes  de dés et d'urnes.\\
+De nos jours, le calcul des probabilités est très utilisé dans divers domaines: sondages,   assurances, météorologie,, biologie, physique...\\L' objectif de ce  chapitre  est de rappeler le vocabulaire de la théorie  et donner  quelques exemples types Bac de calcul de probabilités. 
+
+
+\subsection{Vocabulaire de la probabilité}
+
+\subsection*{Expérience aléatoire}
+Le calcul des probabilités s'appuie sur les expériences aléatoires.
+
+
+\begin{definition}
+ Une expérience est dite aléatoire si :
+ \begin{itemize}
+ \item  on ne peut prédire le résultat avec certitude,
+ \item on peut décrire l'ensemble des résultats possibles.
+ \end{itemize}
+\end{definition}
+
+\begin{example}
+\begin{enumerate}
+\item Jeter un dé et regarder le  numéro apparu.
+\item Lancer d'une pièce de monnaie et s'intéresser à la face apparue. 
+ \item Le choix d'une ou de plusieurs boules d'une urne contenant  par exemple 12 boules. 
+\end{enumerate}
+\end{example}
+
+\subsection{Notion d'événement}
+\begin{definition}
+\begin{itemize}
+
+\item[$  \bullet$]
+Tout résultat d'une expérience aléatoire est appelé une \textbf{ éventualité}. 
+\item [$  \bullet$] L'ensemble des éventualités est appelé \textbf{univers des possibles} ou \textbf{univers}; il est noté en général $ \Omega $. 
+\item[$  \bullet$] Toute partie de $ \Omega $ est appelée \textbf{ événement}.
+\item[$  \bullet$] Un événement est dit \textbf{réalisé} si le résultat de l'expérience aléatoire appartient à cet événement.
+\item[$  \bullet$] Deux événements A et B  sont \textbf{  incompatibles},  si A $ \cap $B $ = \varnothing$.\\ En d'autres termes, il n'existe aucun résultat qui les réalise à la fois.
+\end{itemize}
+\end{definition}
+
+\begin{example}
+\begin{enumerate}
+\item Dans le jet du dé, l'univers des possibles est $ \Omega =\accol{1,2,3,4,5,6} $.\\ 
+Les éventualités sont  les six valeurs: $ 1,2,3,4,5,6 $.\\
+ La partie $ A=\accol{2,4,6} $ est un événement de cette expérience aléatoire; on peut la décrire par: $ A :$  <<  obtenir  un nombre pair  >>\\
+ Lors du jet du dé, s'il sort  le 2 alors l'événement <<  obtenir  un nombre pair>>  est réalisé.
+  \item Pour le lancer de la pièce de monnaie, l'univers des possibles est $ \Omega =\accol{P,F} $.
+  \item   Tirage d'une boule parmi 12 boules: $ \Omega$  est l'ensemble des 12 boules.
+\end{enumerate}
+\end{example}
+
+
+\bigskip
+
+\subsection*{Événements particuliers}
+\begin{definition}
+
+\begin{itemize}
+\item[$  \bullet$] $ \Omega $ est appelé l'\textbf{événement certain.}  Il  est toujours réalisé.
+\item[$  \bullet$]L'ensemble vide  $ \varnothing $ est appelé l'\textbf{événement impossible}.  Il   n'est jamais réalisé.
+\item[$  \bullet$] Un événement qui ne contient qu'un seul élément est appelé un \textbf{événement élémentaire}. 
+\item[$  \bullet$]L'\textbf{événement contraire } de l'événement A, est le complémentaire de A dans $ \Omega $. 
+Il est noté:  $ \overline{A} $.\\ En d'autres termes, si A est réalisé alors son contraire  $ \overline{A} $ ne l'est pas et vice versa.
+
+ $\color{blue}\blacktriangleright $ On considère une expérience d'univers  $ \Omega $ et deux événements A et B liés à elle.\\
+La réunion et l'intersection de  ces deux événements sont des événements.
+
+\item[$  \bullet$] L'\textbf{ événement  « A ou B »}, est l'ensemble A  $ \cup $B.\\
+A  $ \cup $B  est réalisé si l'un au moins des deux événements est réalisé.
+\item[$  \bullet$] L'\textbf{ événement  « A et B »,} est l'ensemble A$ \cap $ B.\\
+A  $ \cap $B  est réalisé si les   deux événements sont réalisés  simultanément.
+
+
+\end{itemize}
+
+\end{definition}
+
+\begin{remark}
+
+  Si deux événements sont contraires alors ils sont incompatibles. Mais la réciproque est fausse. Lors du jet du dé, les événements $ A=\accol{1,4} $  et $ B=\accol{5,6} $ sont incompatibles car $ A\cap $B $ = \varnothing$  mais  ils ne sont pas contraires.
+\end{remark}
+
+\subsubsection*{Exemples d'événements particuliers.}
+Dans le lancer du dé, considérons les deux événements suivants:
+\begin{description}
+\item $ A$ :  <<  obtenir un nombre pair>>
+\item $ B $  :   <<  obtenir un nombre supérieur ou égal à 3>>
+\end{description}
+On écrit alors $ A=\accol{2,4,6} $ et $ B=\accol{3,4,5,6} $
+\begin{itemize}
+\item $ A\cap B $ est l'événement:<<obtenir un nombre pair supérieur ou égal à 3>>  donc $ A\cap B=\accol{4,6} $.
+\item  $ A\cup B $ est l'événement:<<obtenir un nombre pair ou  un nombre  supérieur ou égal à 3>>  donc $ A\cup B=\accol{2,3,4,5,6} $.
+\item  L'événement $ C: $  << le six apparaît >> est élémentaire; tandis que l'événement $ D: $  << un nombre  supérieur à 7 apparaît >> est impossible  et l'événement $ E: $  << un nombre inférieur ou égal à 7 apparaît >> est certain.
+\item L'événement contraire de l'événement A est  $\overline{A}$ :<<  obtenir un nombre impair>>; il est composé des éventualités suivantes: 1, 3 et 5.\; Soit $\overline{A}=\accol{1,3,5}$. 
+\end{itemize}
+
+
+\begin{exercice}
+
+     Dans chacune de situations décrites ci-dessous, énoncer l'événement contraire de l'événement donné.
+     \begin{enumerate}
+\item Dans une classe, on choisit deux élèves au hasard. A : « Les deux élèves sont des filles ».
+\item Dans un groupe de sérères et de wolof, on discute avec une personne. B : « La personne est un homme wolof ».
+\item Au restaurant, Awa prend un plat et un dessert. C : « Awa prend une viande et une glace ».
+\item A une loterie, Adama achète 3 billets.
+D : « L'un des billets au moins est gagnant » , E : « Deux billets au maximum sont gagnants.
+ \end{enumerate}
+ \end{exercice}
+ 
+ 
+\subsection{Probabilité d'un événement}
+%---------------------------------------------------------------
+  \textbf{ Approche expérimentale de la probabilité}\\
+On dispose d'une pièce de monnaie équilibrée qu'on lance plusieurs fois  et à observer la fréquence d'apparition du côté pile. Si le jeu est répété un grand nombre de fois, on constate expérimentalement que cette fréquence est proche de $ \dfrac{1}{2} $. On convient de prendre  $ \dfrac{1}{2} $  comme probabilité de l'événement   : << obtenir pile>>. \\ Pour les mêmes raisons, on prend  $ \dfrac{1}{2} $  comme probabilité de l'événement   : << obtenir face>>. \\
+De même, si on lance un grand nombre de fois un dé à six faces parfaitement équilibré, la 
+fréquence d'apparition de chaque face est sensiblement égale à  $ \dfrac{1}{6} $.
+
+
+D'une manière générale  nous admettons le  résultat suivant: \textbf{les fréquences obtenues d'un événement E se rapprochent d'une valeur théorique lorsque le nombre d'expériences augmente. Cette valeur s'appelle la probabilité de l'événement E.}
+
+\begin{definition}
+Soit  une expérience aléatoire d'univers $ \Omega $.\\ A chaque événement A,  on fait correspondre  un  nombre  réel appelé  probabilité de A, noté P$ (A) $  et vérifiant:
+\begin{itemize}
+\item[$  \bullet$] $ 0\leq P(A)\leq1 $
+\item[$  \bullet$] $  P(\Omega)=1 $,
+\item[$  \bullet$] $ P(A\cup B)=P(A)+ P(B) $ , pour tout couple $(A, B)$  d'événements incompatibles.
+
+\end{itemize}
+ 
+
+Si $ A\in  \mathcal{P}(\Omega) $  alors  $ P(A) $ s'appelle la probabilité de l'événement $ A. $
+
+\end{definition}
+
+  
+  \bigskip
+  
+\begin{property}
+\begin{itemize}
+\item[$  \bullet$] $ P(\varnothing)=0 $
+\item[$  \bullet$] $ P(\overline{A} )=1-P(A)$
+\item[$  \bullet$] Si  $A$ et $ B$ sont des  événements quelconques, alors :\\
+$ P(A\cup B)=P(A)+ P(B)-P(A\cap B) $.
+\end{itemize}
+\end{property}
+
+\begin{remark}
+\begin{itemize}
+\item $  P(A) $  est égale à la somme des probabilités des événements élémentaires qui réalisent A.
+\item La somme des probabilités  des événements élémentaires  de $ \Omega $  est égale à 1   
+\end{itemize}
+\end{remark}
+
+  \begin{example}
+
+
+On lance un dé cubique  \textbf{pipé} dont les faces sont numérotées de 1 à  6. \\  Ce dé est tel que les événements élémentaires $ \accol{1} $, $ \accol{2} $ et $ \accol{3} $ ont la même probabilité égale à $ \dfrac{2}{9} $.\\ Tandis que les événements élémentaires $ \accol{4} $, $ \accol{5} $ et $ \accol{6} $  ont pour probabilité  $ \dfrac{1}{9} $ . \\ Quelle est la probabilité  d'avoir un chiffre pair ?
+\end{example}
+
+  
+ \begin{proof}
+L'univers $ \Omega  $ de cette expérience aléatoire est défini par: $ \Omega =\accol{1; 2; 3; 4; 5; 6 }$\\Le dé n'étant pas parfaitement équilibré, les événements élémentaires ne sont pas équiprobables. On a: \\
+$ \bullet $ $ P( \accol{1})=P (\accol{2})=P (\accol{3})= \dfrac{2}{9}$\\
+ 
+Et 
+  $P( \accol{4})= P( \accol{5})=  P( \accol{6})=\dfrac{1}{9} $   \\
+  
+ $ \bullet $ Désignons par A l'événement << le numéro de la face supérieure est un chiffre pair >>  \\ A  est réalisé par l'un des résultats $ 2; \; 4\;  \text{ou}\;  6 $   donc A$ =\accol{2, \; 4,\; 6} $  \\
+ 
+  Ainsi  P(A)$ =P( \accol{2})+P (\accol{4})+P (\accol{6}) =\dfrac{2}{9}+\dfrac{1}{9}+\dfrac{1}{9}=\dfrac{4}{9}$.
+\end{proof}
+\subsection*{Cas où les événements élémentaires sont équiprobables}
+
+\begin{definition}
+Lorsque les événements élémentaires ont la même probabilité, on dit qu'ils sont \textbf{ équiprobables}.
+\end{definition}
+\begin{property}
+Dans un cas d'équiprobabilité, la probabilité d'un événement quelconque  $A$ est donnée par:
+\begin{center}
+\fbox{$ P(A)=\dfrac{\text{card }A}{\text{card } \Omega}$}
+\end{center}
+
+\end{property}
+ 
+ \begin{exercice}
+ Dans une urne se trouvent huit boules  indiscernables au toucher dont cinq rouges $ R_{1} $, $ R_{2} $, $ R_{3} $,  $ R_{4} $, $ R_{5} $  et trois noires $ N_{1} $, $ N_{2} $ $ N_{3} $ .
+On tire au hasard une boule de l'urne, on note sa couleur, on ne la remet pas dans l'urne puis on tire au hasard une deuxième boule, on note sa couleur. \\ Calculer  les  probabilités de chacun des  événements suivants :\\
+$ - $ A : << les deux boules tirées sont de la même couleur>>.\\ 
+$ - $ B: <<les deux boules tirées sont de couleur différente >> . 
+
+
+\end{exercice}
+  
+  \bigskip
+  \begin{proof}
+    L'expérience a lieu dans le cadre de l'équiprobabilité des événements élémentaires.  Car les boules sont indiscernables au toucher et on les tire au hasard.\\ Une éventualité est un ensemble ordonné de deux boules prises dans l'ensemble des huit boules.\\
+ Désignons par $ \Omega $  l'univers des éventualités.  C'est-à-dire le nombre de tirages possibles (cf :\textit{Cours Dénombrement})\\
+ 
+  On a card $\Omega=A_{8}^{2}=8\times 7=56$\\
+
+ $ \bullet $ Probabilité de A.\\
+
+ A est constitué des 2- arrangements de $ \accol{R_{1}; R_{2} ;R_{3} ;R_{4} } $ ou des 2- arrangements de $ \accol{N_{1}; N_{2} ;N_{3}} $\\
+ 
+ D'où cardA$ =A_{4}^{2}+A_{3}^{2} =26$\\
+ 
+ donc P(A)$ =\dfrac{26}{56}=\dfrac{13}{28}$\\
+ 
+  $ \bullet $ Probabilité de B.\\
+
+L'événement B est le contraire de A.\\
+
+Donc P(B)$ =1- $ P(A)$ =1-\dfrac{13}{28}=\dfrac{15}{28} $
+ \end{proof}
+ 
+
+\begin{exercice}
+   Un sac contient quatre jetons verts  numérotés de 1 à 4 et trois jetons rouges numérotés de 5 à 7.\\ On suppose que la probabilité de tirer un jeton vert est $ 0.175 $ et celle de  tirer  un jeton rouge  est $ 0.1 $. \\ On tire au hasard un jeton du sac. 
+     Calculer la probabilité des événement suivants.
+     \begin{enumerate}
+\item E: <<  Le jeton tiré porte un numéro  impair>>.
+\item F: <<  Le  jeton tiré est rouge>>.
+\item  En déduire P(E$ \cup $F).
+ \end{enumerate}
+ \end{exercice}   
+ \end{document}  

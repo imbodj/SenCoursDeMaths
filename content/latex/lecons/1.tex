@@ -326,7 +326,7 @@ Une fonction $ f $ est continue en un réel $ a $ ssi $ a\in D_{f} $ et $\displa
     \draw[red,thick,domain=-4:0,samples=100] plot (\x,{sqrt(-\x)});
     
     % Right part: f(x) = (x-1)^2 + 2 for x > 0
-    \draw[red,thick,domain=0.05:5.5,samples=100] plot (\x,{(\x-1)^2 + 2});
+    \draw[red,thick,domain=0.05:3.5,samples=100] plot (\x,{(\x-1)^2 + 2});
     
     % Dashed lines for point (a, f(a))
     \draw[dashed] (2.8,0) -- (2.8,5.24);
@@ -508,7 +508,7 @@ $$ y=f^{'}(a)(x-a)+ f(a) $$
     \node[left] at (0,0.5) {\small $\vec{\jmath}$};
     
     % Courbe parabole y = 2 + (x-2)²
-    \draw[red,thick,domain=-2:6.5,samples=100,smooth] 
+    \draw[red,thick,domain=-0.25:3.5,samples=100,smooth] 
         plot (\x,{2 + (\x-2)^2});
     
     % Point A
@@ -543,12 +543,12 @@ $$ y=f^{'}(a)(x-a)+ f(a) $$
     \node[left] at (0,0.5) {\small $\vec{\jmath}$};
     
     % Courbe parabole inversée y = 2 - (x-2)²
-    \draw[red,thick,domain=-2:6.5,samples=100,smooth] 
+    \draw[red,thick,domain=-0.25:3.5,samples=100,smooth] 
         plot (\x,{2 - (\x-2)^2});
     
     % Point A
     \fill[black] (2,2) circle (0.1);
-    \node[below] at (2,1.8) {$A$};
+    \node[below] at (2,1.8) {$B$};
     
     % Ligne horizontale verte
     \draw[green,thick,<->] (1,2) -- (3.5,2);
@@ -578,12 +578,12 @@ $$ y=f^{'}(a)(x-a)+ f(a) $$
     \node[left] at (0,0.5) {\small $\vec{\jmath}$};
     
     % Courbe cubique y = 2 + (x-2)³
-    \draw[red,thick,domain=-2:3.2,samples=100,smooth] 
+    \draw[red,thick,domain=-0.01:3.2,samples=100,smooth] 
         plot (\x,{2 + (\x-2)^3});
     
     % Point A
     \fill[black] (2,2) circle (0.1);
-    \node[above] at (2,2.5) {$A$};
+    \node[above] at (2,2.5) {$C$};
     
     % Ligne horizontale verte
     \draw[green,thick,<->] (1,2) -- (3.5,2);
@@ -591,7 +591,7 @@ $$ y=f^{'}(a)(x-a)+ f(a) $$
 
 \vspace{0.5cm}
 
-$A$ est un minimum \hspace{1cm} $A$ est un maximum \hspace{1cm} $A$ est un point d'inflexion
+$A$ est un minimum \hspace{1cm} $B$ est un maximum \hspace{1cm} $C$ est un point d'inflexion
 
 \end{center}
  \item Si $ f $ est dérivable  à droite et à gauche  de $ a $ telle que $ f^{'}_{d}(a)\neq f'_{g}(a) $ alors $ \mathcal{C} $ admet au  point $A(a,f(a))$ deux demi-tangentes de pentes respectives  $ f'_{d}(a)$ et $ f'_{g}(a) $: le point $A$ est un point \textbf{anguleux}.
@@ -609,8 +609,8 @@ $A$ est un minimum \hspace{1cm} $A$ est un maximum \hspace{1cm} $A$ est un point
 &
 \begin{array}{c}
 \bullet\; \displaystyle \lim_{x \to a^-} \dfrac{f(x)-f(a)}{x-a} = +\infty \\
-\text{La courbe de } f \text{ admet au point } A(a, f(a)) \\
-\text{une demi-tangente verticale dirigée vers le bas.}
+\text{La courbe de } f \text{ admet au point } \\A(a, f(a)) 
+\text{une demi-tangente verticale }\\ \text{dirigée vers le bas.}
 \end{array}
 \\
 \hline
@@ -622,8 +622,8 @@ $A$ est un minimum \hspace{1cm} $A$ est un maximum \hspace{1cm} $A$ est un point
 &
 \begin{array}{c}
 \bullet\; \displaystyle \lim_{x \to a^-} \dfrac{f(x)-f(a)}{x-a} = -\infty \\
-\text{La courbe de } f \text{ admet au point } A(a, f(a)) \\
-\text{une demi-tangente verticale dirigée vers le haut.}
+\text{La courbe de } f \text{ admet au point }\\ A(a, f(a)) \\
+\text{une demi-tangente verticale}\\\text{ dirigée vers le haut.}
 \end{array}
 \\
 \hline
@@ -825,7 +825,7 @@ sur  I  alors  $f$  est positive sur  I.
 {$\cdots$, $\alpha$, $\cdots$}
 
 \tkzTabLine{ , + , z , - , }
-\tkzTabVar{-/ , +/$f(\alpha)\leqO$/ , -/}
+\tkzTabVar{-/ , +/$f(\alpha)\leq O$/ , -/}
 \end{tikzpicture}
 
 
@@ -833,10 +833,10 @@ sur  I  alors  $f$  est positive sur  I.
 Si  $f(x)$ admet un maximum négatif 
 sur  I  alors $ f$  est  négative sur  I.
 
-begin{tikzpicture}
+\begin{tikzpicture}
 \tkzTabInit[lgt=2,espcl=1.5]
-{$x$ /1, $f'(x)$ /1, $f(x)$ /2}
-{, $\alpha$, }
+{$x$ /1, $f'(x)$ /1, $f(x)$ /2}%
+{$\cdots$, $\alpha$, $\cdots$}
 
 \tkzTabLine{, +, t, +, }
 
@@ -848,13 +848,18 @@ $f(x)$  est positif si $x \leq \alpha$. \\
 $f(x)$  est négatif si $x \geq \alpha$.
 
 \begin{tikzpicture}
-\tkzTabInit[lgt=2, espcl=2.5]%
-{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
+\tkzTabInit[lgt=2,espcl=1.5]
+{$x$ /1, $f'(x)$ /1, $f(x)$ /2}%
 {$\cdots$, $\alpha$, $\cdots$}
 
 \tkzTabLine{, -, t, -, }
-\tkzTabVar{+/ , -/$0$, -/ , -/}
+
+\tkzTabVar{+/ , -/$0$ , -/}
 \end{tikzpicture}
+
+
+
+
 
 $f(x)$  est négatif si $x \leq \alpha$. \\
 $f(x)$  est positif si  $ x \geq\alpha$.
@@ -878,7 +883,7 @@ $f(x)$  est positif si  $ x \geq\alpha$.
   \end{example}
    \begin{remark}
  $ \centerdot $ $ f^{(n)}$ est aussi appelée \emph{dérivée d'ordre n de $ f. $} \\
-  $ \centerdot $ En \textbf{\color{magenta}Physique} $f' $, $ f'', $ $\cdots$, $ f^{(n)}$ sont notées respectivement $\frac{df}{dx} $, $ \frac{d^{2}f}{dx^{2}} $, $\cdots$, $ \frac{d^{n}f}{dv^{n}}$.
+  $ \centerdot $ En \textbf{\color{magenta}Physique} $f' $, $ f'', $ $\cdots$, $ f^{(n)}$ sont notées respectivement $\dfrac{df}{dx} $, $ \dfrac{d^{2}f}{dx^{2}} $, $\cdots$, $ \dfrac{d^{n}f}{dv^{n}}$.
  \end{remark}
 \subsubsection*{Notion de différentielle}
 Une petite variation $ \Delta x $ de la variable $ x $ provoque une petite variation  $ \Delta y = f(x+ \Delta x)-f(x) $ des images.\\ Lorsque $ \Delta x $ est voisin de $ 0 $, on assimile $ dx=\Delta x $ et on peut écrire: $ \frac{dy}{dx} =f'(x)$ ou $ dy=f'(x)dx $ ou $ dy=f'(x)\Delta x $.
@@ -892,16 +897,12 @@ Une petite variation $ \Delta x $ de la variable $ x $ provoque une petite varia
   \begin{definition}
   On dit que la courbe de $ f $ admet un point d'inflexion d'abscisse $ x_{0} $ si la courbe y traverse sa tangente.
   \end{definition}
-
-   \begin{theorem}
-   Si $ f $ est deux fois dérivable sur  un intervalle ouvert $ I $ contenant $ x_0 $  et si $ f'' $  \emph{ s'annule en changeant de signe  en $ x_0 $} alors le point de la courbe d'abscisse $ x_0 $  est un \textbf{ un point  d'inflexi
-   
-   \begin{tikzpicture}[scale=0.6]
+   \begin{tikzpicture}[scale=0.5]
   % Définition des bornes
-  \def\xmin{-3}
-  \def\xmax{5}
-  \def\ymin{-10}
-  \def\ymax{10}
+  \def\xmin{-5}
+  \def\xmax{3}
+  \def\ymin{-5}
+  \def\ymax{5}
 
   % Axes
   \draw[->] (\xmin,0) -- (\xmax,0) node[right] {};
@@ -918,21 +919,23 @@ Une petite variation $ \Delta x $ de la variable $ x $ provoque une petite varia
   \node[left] at (0,0.5) {\small $\vec{\jmath}$};
 
   % Courbe rouge : f(x) = x^3 - 3x^2
-  \draw[red,thick,domain=\xmin:\xmax,samples=200] plot (\x,{(\x)^3 - 3*(\x)^2});
+  \draw[red,thick,domain=-1:\xmax,samples=100] plot (\x,{(\x)^3 - 3*(\x)^2});
 
   % Tangente bleue : y = -3x + 1
-  \draw[blue,thick,domain=-2:4,samples=100] plot (\x,{-3*\x + 1});
+  \draw[blue,thick,domain=-0.5:2,samples=100] plot (\x,{-3*\x + 1});
 
 \end{tikzpicture}
-on}.
 
 
 \medskip
 
  La courbe traverse sa tangente (en bleu).
+ 
+   \begin{theorem}
+   Si $ f $ est deux fois dérivable sur  un intervalle ouvert $ I $ contenant $ x_0 $  et si $ f'' $  \textit{ s'annule en changeant de signe  en $ x_0 $} alors le point de la courbe d'abscisse $ x_0 $  est un \textbf{ un point  d'inflexion}.
    \end{theorem}
    
-   \begin{example}
+    \begin{example}
    Reprenons l'exemple précédent $ f: x\mapsto x^{3}-3x^{2} $\\ 
    $ f $ est dérivable sur $ \Rr $ car fonction polynôme.\\
    On a $ f'(x)= 6x^2-6x$ et $ f''(x)= 6x-6 $\\
