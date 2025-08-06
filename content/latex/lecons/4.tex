@@ -117,17 +117,14 @@ Des propriétés précédentes, on en déduit facilement le tableau de variation
 
 \begin{center}
 \begin{tikzpicture}
-\tkzTab[lgt=2]
-{
-	$x$ / 0.5 ,
-	$\ln^{\prime}(x)$ / 0.5,
-	$\ln(x)$ /1
-}
-{ $0$ , $\pinf$ }
-{ , + , }
-{-/ $\minf$ , +/$\pinf$ }
-\end{tikzpicture}
+\tkzTabInit[lgt=1,espcl=1]
+{$x$ /1, $(e^x)'$ /1, $e^x$ /1}
+{$-\infty$, $+\infty$}
 
+\tkzTabLine{, +, }
+
+\tkzTabVar{-/$0$, +/$+\infty$ , }
+\end{tikzpicture}
 \end{center}
 
 
