@@ -603,12 +603,13 @@ Si  $f(x)$ admet un maximum négatif
 sur  I  alors $ f$  est  négative sur  I.
 
 \begin{tikzpicture}
-\tkzTabInit[lgt=2, espcl=2.5]%
-{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
-{$\cdots$, $\alpha$, $\cdots$}
+\tkzTabInit[lgt=2,espcl=1.5]
+{$x$ /1, $f'(x)$ /1, $f(x)$ /2}
+{, $\alpha$, }
 
-\tkzTabLine{ , , , + , }
-\tkzTabVar{-/$0$ , +/$0$/}
+\tkzTabLine{, +, z, -, }
+
+\tkzTabVar{-/ , +/ , -/$0$ , }
 \end{tikzpicture}
 
 

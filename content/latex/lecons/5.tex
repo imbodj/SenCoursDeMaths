@@ -120,14 +120,14 @@ On a alors \;$\displaystyle\lim_{x \to \minf}\eexp{ x} = \displaystyle\lim_{y \t
 \end{itemize}
 \subsection*{ Tableau de variations}
 \begin{center}
-
 \begin{tikzpicture}
-\tkzTabInit[lgt=2, espcl=3]%
-{$x$ / 1 , $\paren{\eexp{x}}^{\prime}$ / 1 , $\eexp{x}$ / 2}%
-{$\minf$, $\pinf$}
+\tkzTabInit[lgt=2.5,espcl=2]
+{$x$ /1, $f'(x) = e^x$ /1, $f(x) = e^x$ /2}
+{$-\infty$, $+\infty$}
 
-\tkzTabLine{ , + , }
-\tkzTabVar{-/$O$, +/$+\infty$}
+\tkzTabLine{, +, }
+
+\tkzTabVar{-/$0$, +/$+\infty$ , }
 \end{tikzpicture}
 
 \end{center}
