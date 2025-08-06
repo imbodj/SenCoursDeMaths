@@ -5,7 +5,7 @@
   \lesson{analysis}{20}{Composition  de  deux applications.}
   
    \begin{lemma}
-    On considère les deux applications suivantes: $ f(x)=2x+1 $  et  $ g(x)=\sqrt{x} $.
+    On considère les deux applications suivantes définies par : $ f(x)=2x+1 $  et  $ g(x)=\sqrt{x} $.
   \begin{itemize}
 \item  Précise leurs ensembles de définition.
  \item Calcule $ f(4) $  puis $ g(9) $.
@@ -18,12 +18,23 @@
 \subsection*{Définition - Notation - Exemples}
 
   \begin{definition}
-  Soit $f $ et $g$  deux applications.
+  Soient  deux applications  $f $ et $g$ .
  
- On appelle composée de $ g $  par $ f $ , l'application notée $ g\circ f $ définie par:
+ On appelle composée de $ g $  par $ f $, l'application notée $ g\circ f $ définie par:
   \[\paren{g\circ f}(x)=g\croch{f(x)}\]
  \end{definition}
  
+ \begin{methode}
+ Pour déterminer l’expression de $\paren{g \circ f}(x)$ :
+
+\begin{itemize}
+  \item on cherche d’abord l’image de $x$ par $f$, c’est-à-dire $f(x)$ ;
+  \item puis l’image de $f(x)$ par $g$, c’est-à-dire $g(f(x))$ ;
+  \item on écrit alors : \[ g \circ f(x) = g[f(x)]. \]
+\end{itemize}
+
+ \end{methode}
+ Dans les exemples suivants, déterminons l'expression des applications  $ g\circ f $ et de $ f\circ g $.
   \begin{example}
   Soit $ f(x)= 2x+1 $  et $ g(x)=\sqrt{x} $
 
@@ -58,6 +69,22 @@ Alors \;  $ \paren{g\circ f}(x)=g\croch{f(x)}= \sqrt{\dfrac{x+4}{x}} $
  \begin{remark}
   En général $ \paren{g\circ f} \neq  \paren{f\circ g}$
  \end{remark}
+ \begin{example}[Reconnaissance]
  
+ L'application $h$ définie sur $\mathbb{R}$ par $h(x) = x - 2$ est la composée de l'application
+\[
+f : \mathbb{R} \longrightarrow \mathbb{R}, \quad x \longmapsto x
+\]
+suivie de l'application
+\[
+g : \mathbb{R} \longrightarrow \mathbb{R}, \quad x \longmapsto x - 2.
+\]
+Ainsi, on a : 
+\[
+h(x) = g[f(x)] = (g \circ f)(x).
+\]
+Autrement dit, $h$ est décomposée en $f$ puis $g$.
+
+ \end{example}
   %</content>
 \end{document}
