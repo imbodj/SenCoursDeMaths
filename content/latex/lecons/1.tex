@@ -447,7 +447,7 @@ $$ y=f^{\prime}(a)(x-a)+ f(a) $$
     % Tangente à la courbe en A : y = 0.5(x-3) + 2.25
     \draw[blue,thick,domain=1:7,samples=50] 
         plot (\x,{0.5*(\x-3) + 2.25});
-    \node at (7.2,4.25) {tangente à $C_f$ en $A$};
+    \node at (8,4.25) {tangente à $C_f$ en $A$};
     
     % Point A
     \fill[black] (3,2.25) circle (0.08);
@@ -508,7 +508,7 @@ $$ y=f^{\prime}(a)(x-a)+ f(a) $$
     \node[left] at (0,0.5) {\small $\vec{\jmath}$};
     
     % Courbe parabole y = 2 + (x-2)²
-    \draw[red,thick,domain=-0.15:3.5,samples=100,smooth] 
+    \draw[red,thick,domain=0.15:3.5,samples=100,smooth] 
         plot (\x,{2 + (\x-2)^2});
     
     % Point A
