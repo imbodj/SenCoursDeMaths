@@ -126,7 +126,7 @@ $\displaystyle\lim_{x \to a}f(x)=\infty $ alors  la droite  d'équation (D) $\; 
 }
 
 \draw[thick,blue!50!black] plot[domain=0.26:2,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
-\draw[red] (0.25,3) -- (0.25,-3) node[above right] {(D)};
+\draw[red,thick] (0.25,3) -- (0.25,-3) node[above right] {(D)};
 \end{tikzpicture}
 
 $\displaystyle \lim_{ x \to a^{+}}f(x)=\pinf $
@@ -146,7 +146,7 @@ $\displaystyle \lim_{ x \to a^{+}}f(x)=\pinf $
 }
 \draw[thick,blue!50!black] plot[domain=-3:0.24,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
 
-\draw[red] (0.25,3) -- (0.25,-3) node[above right] {(D)};
+\draw[red,thick] (0.25,3) -- (0.25,-3) node[above right] {(D)};
 \end{tikzpicture}
 
 $ \displaystyle\lim_{ x \to a^{-}}f(x)=\minf $
@@ -176,7 +176,7 @@ Si $\;\displaystyle \lim_{x \to \infty}f(x)=b \;$ (réel) alors  la droite  $\qu
 \draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
 }
 \draw[thick,blue!50!black] plot[domain=-7:7,samples=100] (\x,{(2*\x*\x+\x-1)/(\x*\x+\x+1)}) node[above left] {$\mathscr{C}$};
-\draw[red] (7,2) -- (-7,2) node[below right] {D};
+\draw[red,thick] (7,2) -- (-7,2) node[below right] {D};
 \end{tikzpicture}
 \begin{example}
 Pour la fonction $f : x\mapsto 3+ \dfrac{5}{x-1} $ 
@@ -207,11 +207,11 @@ Si $\displaystyle \lim_{x \to \infty}\left(f(x)-(ax+b)\right)=0$  alors  la droi
 }
 %\draw[thick,blue!50!black] plot[domain=-7:0.24,samples=100] (\x,{(2*\x+1)/(4*\x-1)}) node[above left] {$\mathscr{C}$};
 \draw[thick,blue!50!black] plot[domain=-7:7,samples=100] (\x,{\x+0.3/(\x-1)}) node[above left] {$\mathscr{C}$};
-\draw[red] (5,5) -- (-3,-3) node[above left] {D};
+\draw[red,thick] (5,5) -- (-3,-3) node[above left] {D};
 \end{tikzpicture}
 \begin{example}
 Pour la fonction $f : x\mapsto x+ \dfrac{2}{x-1} $ dont la courbe est représentée ci dessous,
-la droite d'équation   $y = x $ est asymptote oblique à la courbe de $f$.
+la droite d'équation   $y = x $ est asymptote oblique à la courbe.
 
 \end{example}
 
@@ -268,14 +268,14 @@ $ f (x)=\left\{\begin{array}{l} \sqrt{x +4}\quad \text{si} \quad x\geq 2 \\ x+3-
  $\displaystyle\lim_{x \to \pinf }x+4= \pinf $  par composée $\displaystyle\lim_{x \to \pinf}\sqrt{x+4}=\pinf  $ d'où $\displaystyle\lim_{x \to \pinf}f(x)=\pinf  $\\
  $\displaystyle\lim_{x \to \minf}x+3-\frac{2}{x-1}=\displaystyle \lim_{x \to \minf}x+3-\displaystyle\lim_{x \to \minf}\frac{2}{x-1}=\minf  $ d'où $\displaystyle\lim_{x \to \pinf}f(x)=\minf  $\\
  L'étude de la limite en $ 1 $ se fait uniquement sur la restriction $ x \mapsto x+3-\frac{2}{x-1} $\\
-$ \begin{cases}\lim_{x \to 1^{+}}x+3=4  \\ \displaystyle\lim_{x \to 1^{+}}-\frac{2}{x-1}=\minf\end{cases}$  donc $\displaystyle\lim_{x \to 1^{+}}f(x)=\minf  $\\
+$ \begin{cases}\displaystyle\lim_{x \to 1^{+}}x+3=4  \\ \displaystyle\lim_{x \to 1^{+}}-\frac{2}{x-1}=\minf\end{cases}$  donc $\displaystyle\lim_{x \to 1^{+}}f(x)=\minf  $\\
 $ \begin{cases}\displaystyle\lim_{x \to 1^{-}}x+3=4  \\ \displaystyle\lim_{x \to 1^{-}}-\frac{2}{x-1}=\pinf\end{cases}$  donc $\displaystyle\lim_{x \to 1^{-}}f(x)=\pinf  $
 \item Puisque $\displaystyle\lim_{x \to 1^{+}}f(x)=\minf  $ et $\displaystyle\lim_{x \to 1^{-}}f(x)=\pinf  $ donc la droite d'équation $ x=1 $ est une asymptote verticale à la courbe de $ f. $\\
 Puisque la restriction de $ f $ sur $ \intoo{\minf}{2} $ s'écrit sous la forme $ x \mapsto x+3-\frac{2}{x-1} $ et que $ \displaystyle\lim_{x \to \minf}\frac{2}{x-1}= 0 $ donc la droite $ \Delta $ d'équation $ y=x+3 $ est une asymptote oblique à la courbe de $ f. $\\
 D'autre part  $\displaystyle\lim_{x \to \pinf}f(x)=\pinf  $ doc $ \mathcal{C_{f}} $ présente une branche infinie en $ \pinf. $\\ Calculons $\displaystyle \lim_{x \to \pinf}\frac{f(x)}{x} $\\
 $\displaystyle \lim_{x \to \pinf}\frac{\sqrt{x+3}}{x} = \displaystyle\lim_{x \to \pinf} \frac{x+3}{x\sqrt{x+3}}=\displaystyle\lim_{x \to \pinf} \frac{x+3}{x} \times \displaystyle\lim_{x \to \pinf}\frac{1}{\sqrt{x+3}}= 1 \times 0 =0 $ d'où $ \mathcal{C_{f}} $ admet un branche  parabolique d'axe (Ox).
 \item Etudions la position relative de $ \Delta $ et $ \mathcal{C_{f}} $.\\
-Pour cela étudions le signe de $ f(x)-(x+3) = -\frac{2}{x-1} $ pour $ x < 2 $  
+Pour cela étudions le signe de $ f(x)-(x+3) = -\dfrac{2}{x-1} $ pour $ x < 2 $  
 
   \[\begin{array}{|c|ccccc|}
 \hline
@@ -284,8 +284,8 @@ x & \minf & & 1 & & 2\\ \hline
 \hline
 \end{array}\]
  
-  Sur $ \intoo{\minf}{1} $ $-\frac{2}{x-1} > 0  $ donc $ \mathcal{C_{f}} $ est au dessus de $ \Delta. $\\
-   Sur $ \intoo{\minf}{1} $ $-\frac{2}{x-1} < 0  $ donc $ \mathcal{C_{f}} $ est au dessous de $ \Delta. $
+  Sur $ \intoo{\minf}{1} $ $-\dfrac{2}{x-1} > 0  $ donc $ \mathcal{C_{f}} $ est au dessus de $ \Delta. $\\
+   Sur $ \intoo{\minf}{1} $ $-\dfrac{2}{x-1} < 0  $ donc $ \mathcal{C_{f}} $ est au dessous de $ \Delta. $
 \end{enumerate}
 \end{proof}
 \subsection{Continuité}
@@ -326,7 +326,7 @@ Une fonction $ f $ est continue en un réel $ a $ ssi $ a\in D_{f} $ et $\displa
     \draw[red,thick,domain=-4:0,samples=100] plot (\x,{sqrt(-\x)});
     
     % Right part: f(x) = (x-1)^2 + 2 for x > 0
-    \draw[red,thick,domain=0.05:3.5,samples=100] plot (\x,{(\x-1)^2 + 2});
+    \draw[red,thick,domain=0.05:3,samples=100] plot (\x,{(\x-1)^2 + 2});
     
     % Dashed lines for point (a, f(a))
     \draw[dashed] (2.8,0) -- (2.8,5.24);
@@ -337,7 +337,7 @@ Une fonction $ f $ est continue en un réel $ a $ ssi $ a\in D_{f} $ et $\displa
     \node[left] at (0,5.24) {$f(a)$};
     
     % Point at discontinuity
-    \fill[red] (0,2) circle (0.08);
+    \fill[red] (0,3) circle (0.08);
     \draw[red,fill=white] (0,0) circle (0.08);
     
 \end{tikzpicture}
@@ -428,7 +428,7 @@ $ \centerdot $ Si $ f^{'}_{d}(a) \neq f^{'}_{g}(a) $ alors $ f $ n'est pas déri
 \subsubsection*{Interprétation graphique de la dérivabilité}
 \begin{enumerate}
 \item Si $ f $ est dérivable en $ a $ alors sa courbe $ \mathcal{C} $ admet au point d'abscisse  $ a $  c-à-d le point $A(a,f(a))$ une \textbf{ tangente} de coefficient directeur ( ou pente) $  f^{'}(a)$ d'équation:  
-$$ y=f^{'}(a)(x-a)+ f(a) $$
+$$ y=f^{\prime}(a)(x-a)+ f(a) $$
 
 \begin{tikzpicture}[xscale=1,yscale=0.5]
     % Axes
@@ -508,7 +508,7 @@ $$ y=f^{'}(a)(x-a)+ f(a) $$
     \node[left] at (0,0.5) {\small $\vec{\jmath}$};
     
     % Courbe parabole y = 2 + (x-2)²
-    \draw[red,thick,domain=-0.25:3.5,samples=100,smooth] 
+    \draw[red,thick,domain=-0.15:3.5,samples=100,smooth] 
         plot (\x,{2 + (\x-2)^2});
     
     % Point A
@@ -578,7 +578,7 @@ $$ y=f^{'}(a)(x-a)+ f(a) $$
     \node[left] at (0,0.5) {\small $\vec{\jmath}$};
     
     % Courbe cubique y = 2 + (x-2)³
-    \draw[red,thick,domain=-0.01:3.2,samples=100,smooth] 
+    \draw[red,thick,domain=0.5:3.2,samples=100,smooth] 
         plot (\x,{2 + (\x-2)^3});
     
     % Point A
@@ -591,7 +591,7 @@ $$ y=f^{'}(a)(x-a)+ f(a) $$
 
 \vspace{0.5cm}
 
-$A$ est un minimum \hspace{1cm} $B$ est un maximum \hspace{1cm} $C$ est un point d'inflexion
+$A$ est un minimum, $\quad B$ est un maximum,  $\quad C$ est un point d'inflexion
 
 \end{center}
  \item Si $ f $ est dérivable  à droite et à gauche  de $ a $ telle que $ f^{'}_{d}(a)\neq f'_{g}(a) $ alors $ \mathcal{C} $ admet au  point $A(a,f(a))$ deux demi-tangentes de pentes respectives  $ f'_{d}(a)$ et $ f'_{g}(a) $: le point $A$ est un point \textbf{anguleux}.
@@ -682,7 +682,7 @@ Soient $f $ et  $ g$ deux fonctions continues (resp. dérivables) sur un interva
 
 \begin{itemize}
 \item les fonctions $ f+g $ et $ fg $ sont continues ( resp. dérivables ) sur   $ I. $
-\item  Si de plus $ g\neq0 $ sur  $ I $ alors les fonctions $\dfrac{1}{g} $ et  $\dfrac{f}{g} $ sont continues (resp. dérivables) sur $ I. $
+\item  Si de plus $ g\neq0 $ sur  $ I $ alors les fonctions $\;\dfrac{1}{g}\; $ et  $\; \dfrac{f}{g} $ sont continues (resp. dérivables) sur $ I. $
 \end{itemize}
 \end{property}
 
@@ -803,8 +803,8 @@ Soit $ f $ une fonction dérivable sur un intervalle $ I. $
 \text{Les cas classiques:}
 
 \begin{tikzpicture}
-\tkzTabInit[lgt=2, espcl=2.5]%
-{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
+\tkzTabInit[lgt=1, espcl=2]%
+{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 1}%
 {$\cdots$, $\alpha$, $\cdots$}
 
 \tkzTabLine{ , - , z , + , }
@@ -820,8 +820,8 @@ sur  I  alors  $f$  est positive sur  I.
 
 
 \begin{tikzpicture}
-\tkzTabInit[lgt=2, espcl=2.5]%
-{$x$ / 1, $f'(x)$ / 1, $f(x)$ / 2}%
+\tkzTabInit[lgt=1, espcl=2]%
+{$x$ / 1, $f'(x)$ / 1, $f(x)$ /1}%
 {$\cdots$, $\alpha$, $\cdots$}
 
 \tkzTabLine{ , + , z , - , }
@@ -834,38 +834,33 @@ Si  $f(x)$ admet un maximum négatif
 sur  I  alors $ f$  est  négative sur  I.
 
 \begin{tikzpicture}
-\tkzTabInit[lgt=2,espcl=1.5]
-{$x$ /1, $f'(x)$ /1, $f(x)$ /2}%
-{$\cdots$, $\alpha$, $\cdots$}
-
-\tkzTabLine{, +, t, +, }
-
-\tkzTabVar{-/, +/$0$, +/ , }
+   \tkzTabInit[lgt=3,espcl=1.5]
+     {$x$ / 1 , $f'(x)$ / 1, $f(x)$ / 2 }
+     { $\cdots$, $\alpha$, $\cdots$}
+   \tkzTabLine
+     {, , + , ,}
+   \tkzTabVar
+     {-/ , R/, +/}
+   \tkzTabIma{1}{3}{2}{0}
 \end{tikzpicture}
-
-
-$f(x)$  est positif si $x \leq \alpha$. \\
-$f(x)$  est négatif si $x \geq \alpha$.
-
-\begin{tikzpicture}
-\tkzTabInit[lgt=2,espcl=1.5]
-{$x$ /1, $f'(x)$ /1, $f(x)$ /2}%
-{$\cdots$, $\alpha$, $\cdots$}
-
-\tkzTabLine{, -, t, -, }
-
-\tkzTabVar{+/ , -/$0$ , -/}
-\end{tikzpicture}
-
-
-
-
 
 $f(x)$  est négatif si $x \leq \alpha$. \\
 $f(x)$  est positif si  $ x \geq\alpha$.
 
+\begin{tikzpicture}
+   \tkzTabInit[lgt=3,espcl=1.5]
+     {$x$ / 1 , $f'(x)$ / 1, $f(x)$ / 2 }
+     {$\cdots$, $\alpha$, $\cdots$}
+   \tkzTabLine
+     {, , - ,  , }
+   \tkzTabVar
+     { +/, R/ , -/}
+   \tkzTabIma{1}{3}{2}{0}
+  
+\end{tikzpicture}
 
-
+$f(x)$  est positif si $x \leq \alpha$. \\
+$f(x)$  est négatif si $x \geq \alpha$.
 
  \subsubsection*{Dérivées successives}
 
@@ -899,10 +894,10 @@ Une petite variation $ \Delta x $ de la variable $ x $ provoque une petite varia
   \end{definition}
    \begin{tikzpicture}[scale=0.5]
   % Définition des bornes
-  \def\xmin{-5}
-  \def\xmax{3}
+  \def\xmin{-2}
+  \def\xmax{5}
   \def\ymin{-5}
-  \def\ymax{5}
+  \def\ymax{3}
 
   % Axes
   \draw[->] (\xmin,0) -- (\xmax,0) node[right] {};
@@ -919,7 +914,7 @@ Une petite variation $ \Delta x $ de la variable $ x $ provoque une petite varia
   \node[left] at (0,0.5) {\small $\vec{\jmath}$};
 
   % Courbe rouge : f(x) = x^3 - 3x^2
-  \draw[red,thick,domain=-1:\xmax,samples=100] plot (\x,{(\x)^3 - 3*(\x)^2});
+  \draw[red,thick,domain=-1:3,samples=100] plot (\x,{(\x)^3 - 3*(\x)^2});
 
   % Tangente bleue : y = -3x + 1
   \draw[blue,thick,domain=-0.5:2,samples=100] plot (\x,{-3*\x + 1});
