@@ -1,0 +1,72 @@
+\input{../common}
+
+\begin{document}
+  %<*content>
+  \sheet{analysis}{suites-numeriques}{Suites numériques (TL)}
+ \summary{Aide-mémoire sur les suites}
+\begin{proposition}
+\[\begin{array}{|c|c|c|}
+\hline
+\textbf{Propriétés} & \textbf{Suite arithmétique} & \textbf{Suite géométrique} \\
+\hline
+\textbf{Définition} & u_{n+1} = u_n + r & u_{n+1} = u_n \times q \\
+\hline
+\textbf{Terme général} & 
+\begin{cases}
+u_n = u_0 + n r \\
+u_n = u_1 + (n-1)r
+\end{cases}
+& 
+\begin{cases}
+u_n = u_0 \cdot q^n \\
+u_n = u_1 \cdot q^{n-1}
+\end{cases}
+\\
+\hline
+\textbf{Raison} & r = u_{n+1} - u_n & q = \dfrac{u_{n+1}}{u_n} \quad (u_n \ne 0) \\
+\hline
+\textbf{Variation} & 
+\begin{cases}
+r > 0 \Rightarrow \text{croissante} \\
+r < 0 \Rightarrow \text{décroissante} \\
+r = 0 \Rightarrow \text{constante}
+\end{cases}
+&
+\begin{cases}
+q > 1 \Rightarrow \text{croissante si } u_0 > 0 \\
+0 < q < 1 \Rightarrow \text{décroissante si } u_0 > 0 \\
+q < 0 \Rightarrow \text{oscillante}
+\end{cases}
+\\
+\hline
+\textbf{Somme} & 
+S_n = \dfrac{n}{2} (u_0 + u_{n-1}) 
+& 
+\begin{cases}
+q \ne 1 \Rightarrow S_n = u_0 \cdot \dfrac{1 - q^n}{1 - q} \\
+q = 1 \Rightarrow S_n = n \cdot u_0
+\end{cases}
+\\
+\hline
+\textbf{Modèle} &
+\begin{array}{l}
+\text{Évolution linéaire} \\
+\text{Ex : salaires, loyers} \\
+\text{ajout ou retrait fixe}
+\end{array}
+&
+\begin{array}{l}
+\text{Évolution exponentielle} \\
+\text{Ex : intérêts, population} \\
+\text{+ }p\% : q = 1 + \dfrac{p}{100} \\
+\text{– }p\% : q = 1 - \dfrac{p}{100}
+\end{array}
+\\
+\hline
+\end{array}
+\]
+
+\end{proposition}
+
+  %</content>
+\end{document}

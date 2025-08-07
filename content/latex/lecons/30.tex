@@ -1,0 +1,460 @@
+\input{../common}
+
+\begin{document}
+  %<*content>
+  \lesson{analysis}{30}{Suites numériques}
+  
+ Lorsqu'on compte  des nombres réels, on obtient   une liste  ordonnée de nombres réels numérotés généralement par des indices, entiers naturels consécutifs 0, 1, 2  $\cdots$. Une telle liste est appelée suite numérique.\\
+Par exemple pour traduire l'évolution du prix d'un produit, on notera $ p_0 $  le prix initial, $ p_1 $ le prix au cours du premier  mois,  $ p_2 $ le prix au cours du deuxième   mois, $ \cdots $  , $ p_n $ le prix au cours du  n$^{\text{ième}}$  mois.\\
+L'un des premiers travaux portant sur les suites de nombres semble provenir  dès l'Antiquité d'un certain ARCHIMÈDE  pour trouver une valeur approchée de $ \pi $.\\ Un formalisme plus rigoureux de la notion de suite n'apparaîtra qu'au
+début du XIXe siècle avec le mathématicien français Augustin Louis
+Cauchy (1789 ; 1857). \\
+De nos jours, les suites sont devenues un outil essentiel:  elles sont à la base des algorithmes qui constituent le << cerveau >> des calculatrices et les ordinateurs.. \\
+Elles  interviennent  aussi  dans beaucoup de problèmes de géographie, mathématiques financières , ....\\
+ L'objectif de ce  chapitre  est de rappeler les notions de base et  les propriétés des suites arithmétiques et géométriques vues en classe de première.\\
+Ensuite nous  étudierons le sens de variation et la convergence de suites.
+
+\subsection*{Généralités}
+\begin{definition}
+$\Nn  $   désigne l'ensemble des entiers naturels n.\\
+On appelle \textbf{ suite numérique } toute fonction  $u$  de  $\Nn  $  vers $ \Rr $.
+    \[ \begin{array}{lrcl}
+   u  : & \Nn  &   \longrightarrow & \Rr \\ 
+  &  n & \longmapsto & u(n)
+   \end{array}\]
+   \end{definition}
+ \textbf{Notation et vocabulaire} 
+  \begin{itemize}
+  \item[\textbullet]L'image de $n$ est $u(n)$ elle est notée  $u_{n} $ (lire $u$ indice $ n $).\\ $u_{n} $ est appelé le terme d'indice $ n $ ou le terme de rang $ n $.
+  \item [\textbullet] La suite  $u$  est notée  ($u_{n})_{n\in\Nn}$ ou  ($u_{n})$.
+ \item [\textbullet] Si les indices de la suite commencent à   partir d'un entier naturel $ k $ alors on dit que la suite est définie  à  partir du rang $ k $.\;
+ Dans ce cas on notera la suite par  ($u_{n})_{n\geq k}$.
+ \item [\textbullet] La suite est dite \textbf{ positive} (respectivement  \textbf{ négative}) lorsque tous ses termes sont positifs (respectivement négatifs).
+ \end{itemize}
+
+ \begin{methode}[Attention à l'écriture indicielle.]
+ $\bullet$ ($u_{n} ) $ désigne la suite alors que  $u_{n} $ désigne la valeur du terme de rang $n$. \\   
+ $\bullet$ $u_{n+1}$ est le terme d'indice $n+1$
+
+ $\bullet$ $u_n+1$ est la somme du terme $u_n$ d'indice $n$ et du nombre 1.\\
+$\bullet$   Les indices sont rangés ainsi:\; 1, 2, 3, $ \cdots $, $ \;{n-1}$,   $\; n $,  $\; {n+1} $,  $\; {n+2} $,   $\; \cdots $   
+\end{methode}
+
+\subsection*{Différentes façons de définir une suite} 
+ On distingue deux façons de présenter une suite:\\
+  \textbf{ Suite définie par une formule explicite }\\ 
+On peut définir  une suite  en donnant une \textbf{formule explicite} qui permet de calculer directement à partir de $n$, le terme d'indice $n$. \\ Elle est du type  $u_{n} = f (n) $ où $f$ est une fonction numérique.
+
+\begin{example}
+
+Soit $ (u_{n}) $ la suite définie par :  $ u_{n} = 2n + 4 $ \\
+ Calculons les quatre premiers termes de la suite ainsi que $ u_{10} $ .\\
+ \textsl{Réponse} :
+ $ u_{0}=  4 $ , $\quad u_{1} =  6 $ , $\quad u_{2} =  8 $ ,  $ \quad u_{3}=  10 \quad$ et  $ \quad u_{10} =  44 $
+  \end{example}
+ \textbf{Suite définie  par une relation de récurrence}\\
+ Une suite est  définie par  récurrence  par la donnée du premier terme et la relation liant deux termes consécutifs de la suite en général du type : $\;  u_{n+1} = f(u_{n}) $ ou $ \; u_{n} = f(u_{n-1}) $
+     
+     \begin{example}
+     
+     Soit la suite $ (u_{n})$ définie par $ u_{1}=-2 $ et $ u_{n+1} = 2u_{n}+4 $\\
+Calculons les quatre premiers termes de la suite ainsi que $ u_{10} $ .\\
+  \textsl{Réponse }: \\
+  $ u_{1}=  -2 $,  $\quad u_{2}= 2u_{1}+4= -4+4=0 $, $\quad     u_{3} =  0+4= 4 $  $ \quad u_{4} =  12 $ \\
+  Pour calculer  $ u_{10} $ cette fois-ci, il faut connaître la valeur de  $ u_{9} $ car $ u_{10}=2u_{9}+4 $, il faut connaître $ u_{8} $ ... ainsi de suite: pour calculer un terme il faut connaître le précédent: on dit que la suite  $ (u_{n})$ est définie par récurrence ou qu'elle est héréditaire. On ne peut calculer directement la valeur de  $ u_{10} $ contrairement à l'exemple précédent.
+  \end{example}
+
+\begin{example} 
+Pour la suite $ (v_{n})$ définie par : \; $v_{0}=3 $  et  $ v_{n}= 2v_{n-1}-5 $  on a:\\
+  $ v_{0}=  3 $,  $\quad v_{1}= 2v_{0}-5= 6-5=1 $, $\quad v_{2} =  2-5= -3 $ , $\quad v_{3} =  -11 $ 
+ \end{example}
+ L'objet de certains exercices est de transformer une suite  donnée par une relation de récurrence  en une suite écrite par une formule explicite pour pouvoir calculer directement la valeur d'un terme de rang donné. Pour cela on utilise une  suite auxiliaire qui soit arithmétique ou géométrique (qu'on verra ultérieurement). 
+  
+\subsection{Sens de variation d'une suite}
+Une suite est une fonction particulière, on retrouve donc naturellement la notion de sens de variation pour une suite.
+
+\begin{definition} Soit $(u_{n})$ une suite, $ k $ un entier naturel. On dit que :
+\begin{itemize}
+\item[\textbullet] la suite $(u_{n})$   est  \textbf{croissante}  à partir du rang $ k $ si, pour tout entier  $ n \geq k $ :  $ \; u_{n+1}\geq u_{n} $ ;
+\item[\textbullet]la suite $(u_{n})$   est   \textbf{décroissante} à partir du rang $ k $ si, pour tout entier  $ n \geq  k $ :  $ \;u_{n+1}\leq u_{n}$ ;
+\item[\textbullet] la suite $(u_{n})$  est   \textbf{constante} à partir du rang $ k $  si, pour tout entier $ n\geq k $ :  $ \;u_{n+1}= u_{n}$.\\
+
+ \item[\textbullet] On dit que $(u_{n})$ est  \textbf{monotone}  si son sens
+de variation ne change pas (elle reste croissante  ou décroissante  à partir d'un rang ).\\
+Étudier la monotonie d'une suite c'est donc étudier son sens de  variation.
+\end{itemize}
+\end{definition}
+
+\bigskip
+\begin{methode}
+
+ Pour étudier le sens de variation d'une suite, on peut étudier le signe de la différence   $  u_{n+1}- u_{n} $.
+
+Si $ u_{n+1}- u_{n}\geq 0 $ alors $(u_{n})$ est croissante.
+
+Si $ u_{n+1}- u_{n}\leq 0 $ alors $(u_{n})$ est décroissante.
+
+Si $ u_{n+1}- u_{n}=0 $ alors $(u_{n})$ est constante.
+\end{methode}
+
+\begin{example} 
+ Soit $(u_{n})$ la suite définie, pour tout $ n\in\Nn $ par $ u_{n} = n^{2} -n $.  \\ On a, pour tout $ n\in\Nn $ :
+
+ $ u_{n+1}- u_{n} = (n +1)^{2} -(n +1)-n^{2} +n = n^{2} +2n +1-n -1-n^{2} +n = 2n$.\\
+Pour tout $ n\in\Nn $, $\; 2n \geq 0  $ donc   $\; u_{n+1}- u_{n}\geq 0\; $  càd  $ \;u_{n+1}\geq u_{n} $.\;  
+La suite  $(u_{n})$  est croissante.
+\end{example}
+
+\begin{methode}
+
+ Pour étudier le sens de variation d'une suite à \textbf {termes strictement positifs } , on peut comparer $ \dfrac{u_{n+1}}{u_{n}} $   à 1.
+
+Si $ \dfrac{u_{n+1}}{u_{n}}>1 $ alors $(u_{n})$ est croissante.
+
+Si $ \dfrac{u_{n+1}}{u_{n}}<1 $ alors $(u_{n})$ est décroissante.
+
+Si $ \dfrac{u_{n+1}}{u_{n}}=1 $ alors $(u_{n})$ est constante.
+\end{methode}
+\begin{example}
+
+Soit $(u_{n})$ la suite définie, pour tout $n\in \Nne $, par $ u_{n}=2^{-n} $.\\ La suite $(u_{n})$ est à termes strictement positifs .\\
+On a :$ \dfrac{u_{n+1}}{u_{n}}=\dfrac{2^{-n-1}}{2^{-n}}=2^{-1}=\dfrac{1}{2}<1 $.
+ La suite  $(u_{n})$  est donc décroissante.
+\end{example}
+\begin{methode}
+[Cas d'une suite en mode explicite ]
+Soit $(u_{n})$ une suite définie par $ u_{n} = f (n) $ où $f$ est une fonction définie sur $ \Rrp $.
+\begin{itemize}
+\item[\textbullet] Si $ f $ est croissante sur $ \Rrp $ alors $(u_{n})$ est croissante.
+ \item[\textbullet] Si $ f $ est décroissante  sur $ \Rrp $ alors $(u_{n})$ est décroissante.
+\end{itemize}
+\end{methode}
+\begin{example}
+
+On considère la suite $(u_{n})$  définie par:\; $ u_n=-n^{2}-2n+7 $\\
+$(u_{n})$  est une suite de la forme \; $ u_{n} = f (n) $ où $f$ est la fonction définie sur $ \Rr $  par $ f(x)=-x^{2}-2x+7 $. \\ Or $ f $  est dérivable sur $ \Rr $ et $ f'(x)=-2x-2 $.\\Ainsi si $ x\geq -1 $ alors $ f $ est décroissante par conséquent la suite  $(u_{n})$  est décroissante.
+\end{example}
+
+\subsection{Suites arithmétiques}
+\begin{definition}
+
+Une suite $(u_{n})$ est dite   \textbf{suite arithmétique} s'il existe un réel $ r $ tel que   pour tout entier naturel $n$ on a :   $\; u_{n+1}=u_{n}+r $.\\
+$r$ est appelé  \textbf{la raison} de la suite arithmétique.
+\end{definition}
+
+\begin{example}
+
+$ \bullet $ La suite définie par $ u_0=7 $  et $ u_{n+1}=u_{n} +5$  pour $ n\geq 0 $, est une suite arithmétique  de raison $ 5 $.\\
+$ \bullet $ La suite des entiers naturels est une suite arithmétique  de premier terme 0 et de raison 1. 
+
+\end{example}
+
+
+\begin{remark}
+
+$ \bullet $ La raison d'une suite arithmétique est un réel indépendant de $ n$. \\  
+$ \bullet $ Dans une suite arithmétique, on passe d'un terme au terme de rang suivant en ajoutant toujours $ r$.
+\end{remark} 
+\begin{methode}
+\begin{itemize}
+\item [\textbullet] Pour montrer qu'une suite est arithmétique, on peut montrer que la différence $ u_{n+1}-u_{n} $ \\  ( ou $ u_{n}-u_{n-1} $ ) est constante.\; Cette constante est la raison $ r $.
+ \item [\textbullet] Pour montrer qu'une suite est arithmétique, on peut aussi  exprimer $ u_{n+1} $ en fonction de  $ u_{n}$ et vérifier que  $ u_{n+1} $ se met sous la forme   $ u_{n+1}=u_{n}+r $. \\
+ Ou   exprimer $ u_{n} $ en fonction de  $ u_{n-1}$ et vérifier que  $ u_{n} $ se met sous la forme   $ u_{n}=u_{n-1}+r $. 
+ \end{itemize}
+ 
+ \end{methode}
+ 
+ \begin{example}
+ 
+  Soit la suite $(u_{n})$ définie, pour tout $ n\in\Nn $ , par $ u_{n}=-6n+1 $.\\ Montrons que cette suite est arithmétique: \\
+ $ u_{n+1}-u_{n}= -6(n+1)+6n-1=-6n-6+6n+1=-6 $.  
+ La suite $(u_{n})$ est arithmétique  de raison $ -6 $.
+ \end{example}
+\textbf{Expression du terme général en fonction de n}
+
+\medskip
+
+  \begin{property}
+  
+   Soit $(u_{n})$ une  suite arithmétique  de premier terme $u_{0} $ et de raison $ r $.\\ Alors pour tout  entier naturel $ n $,  $\; u_{n}= u_{0}+nr$. 
+  \end{property}
+ 
+\begin{example} 
+
+ Soit $(u_{n})$ la suite  arithmétique  de premier terme $u_{0}=2 $ et de raison $ r=3$.\\ Déterminons sa forme explicite.\\ D'après la propriété précédente pour tout $n $ de $\Nn $, $ u_{n}=u_{0}+nr=2-3n $.\\ On peut alors directement calculer n'importe quel terme à partir de son rang.\\ Par exemple $ u_{5}=2-3\times5=-13 $.
+\end{example}
+
+ \begin{property}[Cas général]
+
+   Soit $(u_{n})$ une  suite  arithmétique   de raison $ r $.\\ Alors pour tous   entiers naturels $ p $  et $ n $,  on a :\; $u_{n}= u_{p}+ (n-p)r $.
+  \end{property}
+   
+\begin{example}
+
+
+ Soit la suite arithmétique ( $v _n $ ) de raison 5 et telle que v$_{10} = 7$. Déterminons sa forme explicite.
+
+Pour tout entier naturel $n$,\; on a:\\ $v _n = v _{10} + ( n -10 )r$ équivaut à  $ v_n = 7 + 5 ( n -10 ) = 5n - 43$.
+  \end{example}
+\textbf{Sens de variation}
+ \begin{property}  Soit $(u_{n})$ une  suite est arithmétique  de raison $ r $.
+  \begin{itemize}
+  \item[$  \bullet$] si $ r>0 $ alors la suite  $(u_{n})$ est strictement croissante;
+   \item[$  \bullet$] si $ r=0 $ alors la suite  $(u_{n})$ est strictement constante;
+    \item[$  \bullet$] si $ r<0 $ alors la suite  $(u_{n})$ est strictement décroissante.
+  \end{itemize}
+  \end{property}
+ 
+  \textbf{Somme de termes consécutifs}\\
+  Soit $(u_{n})$ une  suite, $p$ et  $q $   deux entiers naturels tels que $ p\leq q $.\\ On retiendra le  résultat suivant :
+  
+  \bigskip
+La somme $u_{p}+u_{p+1}+ \cdots + u_{q} $ comporte $q-p+1$ termes .
+ \begin{example} 
+ 
+ La somme $ u_{0}+u_{1}+ \cdots + u_{10} $ contient $ 10-0+1=11 $ termes.\\
+ La somme $ u_{4}+u_{1}+ \cdots + u_{21} $ contient $ 21-4+1=18 $ termes.\\
+ La somme $ u_{0}+u_{1}+ \cdots + u_{n} $ contient $ n-0+1=n+1 $ termes.\\
+ La somme $ u_{1}+u_{1}+ \cdots + u_{n} $ contient $ n-1+1=n$ termes.
+ \end{example}
+
+    \medskip
+   \textbf{\color{blue}A retenir}\\ 
+ Plus généralement la somme de termes consécutifs d'une suite arithmétique est égale au produit du nombre de termes  par la demi somme des termes extrêmes.
+   \[ S=\text{nombre  de termes}\times\dfrac{\text{premier terme}+\text{dernier terme} }{2} \]
+   \begin{example}
+   
+   $ (u_n) $  est la suite arithmétique de raison $ r=2 $  telle que $ u_0=3 $.
+   
+   Calculer  la somme   S des 30 premiers  termes de cette suite.
+   
+   \medskip
+   
+   S$ =u_0+u_1+\cdots +u_{29}= 30\times \dfrac{u_0+u_{29}}{2}$.\\
+   Or $ u_{29}=u_0+  29\times 2=3+58=61 $.
+   
+   Donc $ S=30 \times \dfrac{3+61}{2}=960 $
+    \end{example}
+  
+
+   
+\begin{example}
+[Etude  d'une situation modélisée par une suite arithmétique]
+           
+           
+            Chaque année depuis le  1$^{\text{er}} $ janvier  1997, la population d'une ville  s'accroît du même  nombre d'habitants. On note $ u_n $   cette population  $ n $  années après  le  1$^{\text{er}} $  janvier  1997.
+           \begin{enumerate}
+           \item Justifier que la suite   $ (u_n) $ est arithmétique.
+           \item  La population  s'élevait à 15 850 habitants  le 1$^{\text{er}} $  janvier  1999  et à 23 290  habitants à la fin de l'année 2011.  Calculer la raison $ r $ de la suite $ (u_n) $.
+           \end{enumerate}
+            \end{example}
+           \bigskip
+           
+   \begin{proof}
+   
+   \begin{enumerate}
+   \item L'augmentation annuelle  de population  est constante   depuis le  1$^{\text{er}} $  janvier  1997, la différence $ u_{n+1}-u_n $  est égale à cette augmentation, la suite est donc arithmétique.
+   \item Les données se traduisent par $ u_2= 15 850$  et $ u_{14}= 23 290$.
+   
+   \bigskip
+   Or $ u_{14}=u_{2} +12r$, donc $ r=\dfrac{23 290- 15 850}{12}=620$
+   \end{enumerate}
+\end{proof}
+
+
+\subsection{ Suites géométriques}
+
+
+
+ \begin{definition}
+ Une suite $(u_{n})$ est dite   \textbf{suite géométrique} s'il existe un réel $ q $ tel que   pour tout entier naturel $n$ on a : \; $u_{n+1}=qu_{n}$.\\
+$q$ est appelé  \textbf{la raison} de la suite géométrique.
+\end{definition}
+
+\medskip
+
+
+\begin{example}
+
+$ \bullet $ La suite définie  par  $ u_{0}=0,5 $ et $ u_{n+1}=-3u_{n} $ est la suite géométrique  de premier terme $0,5   $ et de raison $ -3 $.\\
+$\bullet $ La suite des  puissances entières de 3\;  $ (1;3;9;27;81...etc) $ est la suite géométrique  de premier terme 1 et de raison 3 .
+
+\end{example}
+
+
+\begin{remark}
+
+La raison d'une suite géométrique est un réel indépendant de $ n$.\\  Dans une suite géométrique, on passe d'un terme au terme de rang suivant en multipliant toujours  par $ q$. 
+\end{remark}
+\medskip
+
+\begin{methode}
+\begin{itemize}
+\item [\textbullet] Pour montrer qu'une suite de termes non nuls est géométrique, on peut  montrer que le quotient \; $ \dfrac{u_{n+1}}{u_{n}} $ \; (ou\; $ \dfrac{u_{n}}{u_{n-1}} $ )\;  est constant.
+ \item [\textbullet] Pour montrer qu'une suite est géométrique, on peut  exprimer $ u_{n+1} $ en fonction de  $ u_{n}$ et vérifier que  $ u_{n+1} $ se met sous la forme $ u_{n+1}=qu_{n} $. \\
+Ou  exprimer $ u_{n} $ en fonction de  $ u_{n-1}$ et vérifier que  $ u_{n} $ se met sous la forme   $ u_{n}=qu_{n-1} $. 
+ \end{itemize}
+ \end{methode} 
+ 
+ \begin{example}
+
+ Soit la suite $(u_{n})$ définie, pour tout $ n\in\Nn $ , par $ u_{n}=\dfrac{3}{5^{n}} $. Montrons que cette suite est géométrique .\\
+ $ \dfrac{u_{n+1}}{u_{n}}=\dfrac{\dfrac{3}{5^{n+1}}}{\dfrac{3}{5^{n}}}=\dfrac{5^{n}}{5^{n+1}}=\dfrac{1}{5} $.\;
+ La suite $(u_{n})$ est géométrique  de raison $ \dfrac{1}{5} $.
+ \end{example}
+\textbf{Expression du terme général en fonction de n}
+\begin{property}
+
+ Soit $(u_{n})$ une  suite  géométrique de premier terme $u_{0} $ et de raison $ q\neq 0 $. \\Alors pour tout   entier naturel $ n$, $\; u_{n}= u_{0}q^{n}$.
+\end{property}
+
+
+\medskip
+\begin{example} 
+
+Soit $(u_{n})$ la  suite géométrique  de premier terme $u_{0}=-1 $ et de raison $ q=2$, donc pour tout $n $ de $\Nn $ , $ u_{n}=u_{0}q^{n}=-1\times2^{n} $.\\ On peut alors directement calculer n'importe quel terme à partir de son rang. \\Par exemple $ u_{5}=-1\times 2^{5}=-32 $.
+\end{example}
+
+\medskip
+ 
+ \begin{property}[Cas général.]
+ 
+ \medskip
+ \noindent Soit $(u_{n})$ une  suite  géométrique  de premier terme $u_{0} $ et de raison $ q $.\\   Alors pour tous   entiers  naturels $ p $ et  $ n$ ,  $\; u_{n}= u_{p}q^{n-p}$.
+ \end{property}
+
+\medskip
+
+\begin{example}
+
+Soit la suite géométrique $( u_n )$ telle que $u_4 = 21$ et de raison 3. Déterminons sa forme explicite.\\
+ $ u_n = u_{4} q^{n-4} = 2\times 3^{n-4}$
+ \end{example}
+  
+ 
+  \textbf{Somme de termes consécutifs d'une suite géométrique}
+ \begin{property}
+  La  somme  des  $ n+1 $  premiers  termes  d'une  suite  géométrique de raison $ q $  et de  premier terme $ u_0 $ \;  est   :  \[  u_0+u_1+\cdots +u_n =u_{0}\times\dfrac{1-q^{n+1}}{1-q}\]
+  \end{property}
+
+  
+  \begin{example}
+  
+  Soit $ (u_n) $  la suite géométrique de raison $ 2 $ et de premier terme 1.\\
+  On a:\;  $ \;u_0+u_1+\cdots +u_n =1+2+ \cdots +2^{64}=1\times\dfrac{1-2^{65}}{1-2}=2^{65} -1$.
+  
+  \end{example}
+ 
+
+   \textbf{\color{blue}A retenir} \\
+   Plus généralement la somme de termes consécutifs d'une suite géométrique peut-être retenue comme suit:
+  
+   \[S=\textrm{premier terme}\times\dfrac{1-\textrm{raison}^{\textrm{nombre de termes}}}{1-\textrm{raison}}\]
+\begin{example}
+
+ Soit $(u_{n})$ la  suite est géométrique  de premier terme $u_{4}= 2$ et de raison $ q= \frac{1}{2}$.\\ On se propose de calculer la somme  $ S=u_{4}+u_{5}+\cdots +u_{14}$. \\
+ Elle comporte $ 14-4+1 =11$ termes . \\ On a :
+$$ S=u_{4}\dfrac{1-q^{11}}{1-q} =u_{4}\dfrac{1-(\frac{1}{2})^{11}}{1-\frac{1}{2}}= 4\croch{1-\paren{\frac{1}{2}}^{11}}=3.998$$
+\end{example}
+ 
+   
+   
+ \begin{example}[ Etude  d'une situation modélisée par une suite géométrique]
+
+ \medskip
+           Une personne place dans une banque une somme de 100 000F le 1$^{\text{er}} $  janvier 2010. \\Cette somme  augmente de $5\%$  à la fin de chaque année.\\
+           On note par $ u_0 $ la somme initialement déposée et $ u_n $  la somme obtenue  au bout de l'année 2010 $ +n $ où $ n $  désigne un entier naturel.
+           \begin{enumerate}
+           \item Calculer les sommes  $ u_1 $  et $ u_2 $ obtenues  en 2011 et en 2012.
+           \item  Conjecturer une expression de  $u_{n+1} $ en fonction de  $ u_n$ pour un entier $ n $ donné.\\Quelle est la nature de la suite $( u_n )$ ?
+           \item Exprimer  $ u_n $ en fonction de $ n $.
+           \item  Calculer la somme obtenue en 2020.
+           \end{enumerate}
+            \end{example}
+           \bigskip
+           
+   \begin{proof}
+   
+   \begin{enumerate}
+   \item   On a $ u_0=100 000 $.\\
+   $ u_{1} =\paren{1+\dfrac{5}{100}}\times u_0=1.05 \times u_0= 1.05\times 100  000=105 000$.\\
+    $ u_{2} =\paren{1+\dfrac{5}{100}}\times u_1=1.05 \times u_1= 1.05\times 105  000=110  250$.
+   \item D'après les réponses précédentes, on peut conjecturer que:\; $ u_{n+1}=1.05 u_n $ pour tout entier  naturel  $ n $.\\
+   Ainsi la suite des sommes obtenues $( u_n )$  est géométrique de raison $ q=1.05 $  et de premier terme $ u_0=100 000 $.
+   \item On a \; $ u_n= u_{0}\times q^{n} =100 000\times 1.05^{n}$, pour tout entier naturel $ n $.
+   \item En 2020 on a : $ u_{10}=100 000\times1.05^{10}=162 889.463 $
+   \end{enumerate}
+\end{proof}
+
+\subsection{Convergence d'une suite}
+ \begin{definition}
+ Une suite $(u_{n})$  est dite  \textbf{convergente} si elle admet une limite finie $ l $ lorsque $ n $ tend vers  $ \pinf $. \\
+  On dit  que la suite $(u_{n})$  converge vers $ l $  et on note $  \lim_{n \to  +\infty} u_{n}=l$.\\
+  Dans le cas contraire, la suite est dite divergente.
+  \end{definition}
+\begin{example}
+
+ Soit $ u_{n}=5+\dfrac{1}{n} $ ,  $ \quad n\in\Nne $ \\
+ $ \displaystyle \lim_{n \to  +\infty} u_{n}=5\quad$  donc la suite $(u_{n})$  converge vers $ 5 $.
+ \end{example}
+ \begin{remark} 
+ 
+ 
+  Dire qu'une suite est divergente  signifie qu'elle n'a pas de limite, par exemple $ u_{n}=(-1)^{n} $ ou que sa limite est $+\infty $ ou $-\infty $ par exemple $ u_{n}=3n+2 $
+ \end{remark}
+ \textbf{Cas d'une suite géométrique} 
+ \begin{property}
+ Soit $(u_{n})$ une suite géométrique de raison $ q $.
+ \begin{itemize}
+ \item[$  \bullet$] si $ q\in\intoo{-1}{1} $ alors la suite $(u_{n})$ est convergente et converge vers $ 0 $.
+ \item[$  \bullet$] si $ q< -1  $ , alors $u_{n}$ n'a pas de limite ,  alors la suite $(u_{n})$ est divergente.
+ \item[$  \bullet$] si $ q >1  $  alors la suite $(u_{n})$ est divergente.
+
+ \end{itemize}
+  \end{property}
+ 
+ \medskip
+ \begin{corollary}
+ \begin{itemize}
+ \item[$  \bullet$] Si $ q\in\intoo{-1}{1} $ alors $ \displaystyle \lim_{n \to  +\infty} q^{n}= 0 $
+ \item[$  \bullet$] Si $ q>1 $  alors $ \displaystyle \lim_{n \to  +\infty} q^{n}= +\infty $
+  \end{itemize}
+ 
+ \end{corollary}
+
+\begin{example}
+
+\begin{itemize}
+ \item[$  \bullet$] $ \displaystyle \lim_{n \to  +\infty} 3^{n}= \pinf $.
+ \item[$  \bullet$] $ \displaystyle \lim_{n \to  +\infty} 3^{-n}=\displaystyle\lim_{n \to  +\infty} \dfrac{1}{3^{n}} =0 $.
+ \item[$  \bullet$] $  \displaystyle\lim_{n \to  +\infty} 0.3^{n}= 0 $.
+ \item[$  \bullet$] $ \displaystyle \lim_{n \to  +\infty}1+ \paren{\dfrac{4}{7}}^{n}= 1 $.
+  \end{itemize}
+\end{example}
+
+\subsection{Raisonnement par récurrence} 
+\begin{methode}
+    Pour démontrer une propriété dépendant d'un entier naturel  (comme très souvent avec les suites), on 
+    fait une \textbf{démonstration par récurrence}.
+    
+    Le principe est très simple,:
+        \begin{enumerate}
+            \item On  démontre   d'abord la propriété au rang initial (en général pour $u_0$ ou $u_1$), c'est l'\textbf{initialisation}.
+            \item  Puis on suppose la propriété vraie à un certain rang $k$ quelconque puis on démontre que la propriété est vraie au rang $k+1$ (en utilisant la propriété définissant la suite), c'est l'\textbf{hérédité}.
+                    \item Enfin, on conclut que la propriété est vraie pour tout  entier  naturel  $ n $, c'est la \textbf{conclusion}.
+        \end{enumerate}
+\end{methode}
+
+\begin{example}
+Une  somme vaut initialement $ u_0=100 $. Cette  somme  augmente de $ 4\% $   chaque mois. On note $ u_n $ la somme générée au n-ième  mois  Démontrer que $ u_{n} =1.04^{n}\times100$ pour tout entier naturel $ n\geq1 $.
+    \begin{enumerate}
+        \item \textbf{Initialisation}: pour $n=0$, \; $ u_{0} =1.04^{0} \times 100=100$.\\
+                La propriété est donc vraie au rang $1$.
+        \item \textbf{Hérédité}: on suppose  que   la propriété est vraie pour un entier  naturel $ k $ quelconque. On suppose donc que :  \;$u_{k} =1.04^{k}\times100 $.\;
+        Il faut maintenant calculer $u_{k+1}$.\par
+        Par définition : $u_{k+1}=\paren{1+\dfrac{4}{100}} u_{k}=1.04u_{k}= 1.04\times\underbrace{1.04^{k}\times100}_{u_{k} =1.04^{k}\times100}=1.04^{k+1}\times100$.
+ \item Comme nous avons démarré avec $n=0$, la propriété  est vraie pour tout $n \geq1 $.
+    \end{enumerate}
+\end{example}
+ 
+ \end{document}  

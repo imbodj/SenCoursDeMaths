@@ -464,7 +464,7 @@ $$ y=f^{\prime}(a)(x-a)+ f(a) $$
     % Construction géométrique de la dérivée
     % Flèche horizontale (+1)
     \draw[dashed,->] (3,2.25) -- (6,2.25);
-    \node[below] at (4.5,1.9) {+1};
+    \node[below] at (4.5,1.9) {$ \Delta x $};
     
     % Flèche verticale (f'(a))
     \draw[dashed,->] (6,2.25) -- (6,3.75);
@@ -476,7 +476,7 @@ $$ y=f^{\prime}(a)(x-a)+ f(a) $$
 
 
 \begin{methode}[Méthode pour construire la tangente]
- On part de $A$, on << avance >> vers la droite du dénominateur(positif) de la pente $f'(a)$  et on << monte >> (ou << descend >>) du numérateur de  $f'(a)$: ce qui donne un deuxième point que l'on relie à $A.$.
+ Si la pente s'écrit sous la forme $f'(a)=\dfrac{\Delta} y{\Delta x}$. Alors on part de $A$, on << avance >> vers la droite du dénominateur(positif)  $ \Delta x $  et on << monte >> (ou << descend >>) du numérateur $ \Delta y $: ce qui donne un deuxième point que l'on relie à $A.$.
 
 \end{methode}
 
@@ -705,8 +705,8 @@ Le tableau suivant donne les images de quelques intervalles simples par une fonc
 $$
 \begin{array}{|c|c|c|}
 \hline
-& \text{\(f(I)\)} & \text{\(f(I)\)} \\
-& \text{si \(f\) continue et strictement croissante} & \text{si \(f\) continue et strictement décroissante} \\
+& f(I) & f(I) \\
+& \text{si $f$ continue et strictement croissante} & \text{si $f$ continue et strictement décroissante} \\
 \hline
 I = [a,b] & [f(a), f(b)] & [f(b), f(a)] \\
 \hline
@@ -760,16 +760,13 @@ $\begin{array}{|c|c|c|c|}
 \hline
    v\circ u  &  \sin u  &  \cos u  & \tan u \\
 \hline
- u'\times (v'\circ u)   &  u'\cos u  & -u'\sin u &  \dfrac{u'}{\cos^{2}u}\\     
+ u'\times (v'\circ u)   &  u'\cos u  & -u'\sin u &  \dfrac{u'}{\cos^{2}u}\; \text{ou}\; u'(1+\tan^2 u)\\     
  \hline
 \end{array}$
-
-
-
 \begin{exercice}
 Soit $ f (x)=\dfrac{(x+1)\sqrt{x-2}}{x-1}.$
  \begin{enumerate}
-\item Etudier la continuité  de $ f $ sur son $D_{f}$.
+\item Justifier la continuité  de $ f $ sur son $D_{f}$.
 \item Etudier  la dérivabilité de $ f $ sur son $D_{f}$.
 \item Calculer $ f'(x). $
 \end{enumerate}
@@ -881,7 +878,7 @@ $f(x)$  est négatif si $x \geq \alpha$.
   $ \centerdot $ En \textbf{\color{magenta}Physique} $f' $, $ f'', $ $\cdots$, $ f^{(n)}$ sont notées respectivement $\dfrac{df}{dx} $, $ \dfrac{d^{2}f}{dx^{2}} $, $\cdots$, $ \dfrac{d^{n}f}{dv^{n}}$.
  \end{remark}
 \subsubsection*{Notion de différentielle}
-Une petite variation $ \Delta x $ de la variable $ x $ provoque une petite variation  $ \Delta y = f(x+ \Delta x)-f(x) $ des images.\\ Lorsque $ \Delta x $ est voisin de $ 0 $, on assimile $ dx=\Delta x $ et on peut écrire: $ \frac{dy}{dx} =f'(x)$ ou $ dy=f'(x)dx $ ou $ dy=f'(x)\Delta x $.
+Une petite variation $ \Delta x $ de la variable $ x $ provoque une petite variation  $ \Delta y = f(x+ \Delta x)-f(x) $ des images.\\ Lorsque $ \Delta x $ est voisin de $ 0 $, on assimile $ dx=\Delta x $ et on peut écrire: $ \dfrac{dy}{dx} =f'(x)$ ou $ dy=f'(x)dx $ ou $ dy=f'(x)\Delta x $.
 \begin{example}
  Pour la fonction $ y=2x^2-x $ avec $x=1 $  et $\Delta x= 0,01 $ \\ Vérifier que la différentielle $dy=0,03  $ et l'accroissement $ \Delta y= 0,0302 $
 \end{example}
@@ -948,13 +945,14 @@ D'après le tableau de signes,  $ f'' $ s'annule en  $ 1 $ en changeant de signe
    \end{example}
    
   \subsubsection*{Inégalité des accroissements finis}
-  Nous admettons le théorème de l'inégalité des accroissements finis et nous donnons ici les deux formes.\\
+  Nous admettons le théorème de l'inégalité des accroissements finis et nous donnons ici les deux formes.
+  \begin{theorem}
 \textbf{\color{magenta}Première forme} \\
- Soit $ f $ une fonction dérivable sur un intervalle $ I $. On suppose qu'il existe deux réels $m $ et $ M$ tels que :\colorbox{green!20!}{ $ m\leq f'(x) \leq M $} \quad pour tout $ x\in I $. \\ Alors pour tous $a $ et $ b$ de $ I $  $(b < a)  $ on a :\colorbox{green!20!} {$ m(b-a)\leq f(b)-f(a) \leq M(b-a) $}  \\
+ Soit $ f $ une fonction dérivable sur un intervalle $ I $. On suppose qu'il existe deux réels $m $ et $ M$ tels que :\colorbox{green!20!}{ $ m\leq f'(x) \leq M $} \quad pour tout $ x\in I $. \\ Alors pour tous $a $ et $ b$ de $ I $  $(b > a)  $ on a :\colorbox{green!20!} {$ m(b-a)\leq f(b)-f(a) \leq M(b-a) $}  \\
  
  \textbf{\color{magenta}Deuxième forme} \\
  Soit $ f $ une fonction dérivable sur un intervalle $ I $. On suppose qu'il existe un réel $ M$ tel que :\colorbox{green!20!}{ $ \abs{ f'(x)} \leq M $} \quad pour tout $ x\in I $. \\ Alors pour tous $a $ et $ b$ de $ I $   on a :\colorbox{green!20!} {$ \abs{ f(b)-f(a)}\leq M \abs{b-a}$}
- 
+  \end{theorem}
 \begin{exercice}
  Soit $ f $ la fonction définie sur $ \intff{0}{\frac{\pi}{4}} $ par $ f(x)= \sin x $\\
  Démontrer que $ \forall x \in \intff{0}{\frac{\pi}{4}} $ on a: $ \frac{\sqrt{2}}{2}x \leq \sin x \leq x $\\
