@@ -1,0 +1,90 @@
+\input{../common}
+\everymath{\displaystyle}
+\begin{document}
+  %<*content>
+  \development{algebra}{derivee-ts}{Calcul de dérivées (TS2)}
+
+  \summary{}
+
+\begin{exercice}
+ Montrer les dérivées suivantes. 
+ \begin{enumerate}
+ \item 
+  $  f(x)=\dfrac{2x-3}{(2x+1)^2} $
+   $\hspace*{0.5cm} f^{\prime}(x)=\dfrac{-4x+14}{(2x+1)^3} $
+ \item $ g(x)=\dfrac{x\sqrt{x}}{2x+1} \hspace*{0.5cm} g^{\prime}(x)=\dfrac{2x^2+3x}{2\sqrt{x}\left(2x+1\right)^2} $.
+ \item $ f(x)=\sin^ 2 x \cos 2x \hspace*{0.5cm} f^{\prime}(x)= 2 \sin x \cos 3x $
+  \item $ h(x)=\dfrac{2x-1}{\sqrt{x-x^2}} \hspace*{0.5cm} h^{\prime\prime}(x)=\dfrac{6x-3}{4\left(\sqrt{x-x^2}\right)^5} $
+   \item $ k(x)=\dfrac{1+\cos 3x}{\cos^3 x} \hspace*{0.5cm}  k^{\prime}(x)=\dfrac{3\sin x(1-2\cos x)}{\cos^4 x} $
+ \end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Calculer la dérivée $ f^{\prime} $  dans chacun des cas suivants en simplifiant le résultat:
+\begin{enumerate}
+\item  $ f(x)=\dfrac{-2x+3}{\sqrt{x^3-1}}$
+\item  $ f(x)=\dfrac{1}{1+\sqrt{1-x}} $
+\item  $ f(x)=(x^2-1)\sqrt{1-x} $
+\item    $ f(x)=5\sin^2(3x-1) $
+\item $ f(x)=-\cos 2x +2\sin^2 x$
+\item   $ f(x)=x(1-\cos x)^2 $ 
+\end{enumerate}
+\end{exercice}
+\begin{exercice}
+Le but de l'exercice est d'appliquer la formule suivante\; $ \left( (f\circ g)\right)^{\prime}(x) = g^{\prime}(x)\times  f^{\prime}\paren{g(x)}$\\
+ Soit la fonction $ g $ définie sur $ \mathbb{R} $ telle  que $ g^{\prime}(x)=\dfrac{1}{x^2+1} $.
+ \begin{enumerate}
+\item  Calculer la dérivée des fonctions $x\longmapsto g\left( \sqrt{x}\right) $ \; et $ x\longmapsto g\left( \tan x\right) $.
+\item Exprimer en fonction de $ g(x) $ la dérivée des fonctions $x\longmapsto  \sqrt{g(x)} $ \; et $x\longmapsto \tan\left(g(x) \right) $.
+ \end{enumerate}
+\end{exercice}
+\begin{exercice}
+Soit  la fonction $f$ définie par 
+$
+f(x)=\begin{cases} 
+x^3+1\ \ \ & \text{si $\leq 1$.}\\
+2\cos(x-1) & \text{si $x> 1$.}
+\end{cases}
+$
+
+ Étudier  la dérivabilité de  $f$  en 1. Interpréter  graphiquement  le résultat.
+ 
+ Calculer $ f'(x) $.
+ \end{exercice}
+\begin{exercice}
+Soit  la fonction $f$ définie par 
+$
+f(x)=\begin{cases} 
+x+1+\frac{4x}{x^2+1}\ \ \ & \text{si $x < -1$.}\\[0.25cm]
+2x+\sqrt{x+1} & \text{si $x\geq -1$.}
+\end{cases}
+$
+\begin{enumerate}
+\item Étudier la continuité de  $f$  en $-1$.
+\item Étudier la dérivabilité de  $f$  en $-1$. Interpréter  graphiquement  le résultat obtenu.
+\item Étudier la dérivabilité de $ f $ sur $]\minf; \;-1[ $ et $]-1; \; \pinf[ $.
+\item Calculer $ f'(x) $  puis établir le tableau de variation  de $ f $.
+\end{enumerate}
+\end{exercice}
+\begin{exercice} 
+\textit{Les questions sont indépendantes}
+\begin{enumerate}
+\item Déterminer les abscisses des points de la courbe de la fonction  $ x\mapsto x^3 $ où la tangente parallèle à la droite $ y=6x-1 $.
+\item Si  $\displaystyle \limi{x}{2^+}{\dfrac{f(x)-f(2)}{x-2}=\minf} $   alors $ \mathcal{C}_{f} $ admet au point d'abscisse 2 une tangente d'équation $ \cdots $
+\item Si  $ f_{d}'(1)=-3 $  et  $ f_{g}'(1)=0 $  alors   $ \mathcal{C}_{f} $ admet au point d'abscisse 1 $ \cdots $
+\end{enumerate}
+\end{exercice}
+\begin{exercice}
+Le plan est muni d'un repère orthonormé $ \oij. $
+Soit une fonction $ f $  d\'efinie par $ f(x)=ax^2+bx+c $ pour tout $x\in \mathbb{R} $.
+\begin{itemize}
+\item la tangente à $\mathscr{ C}$ au point A$ (1; -2) $ est parall\'ele à l'axe des abscisses;
+\item la tangente à $\mathscr{ C}$ au point d'abscisse $ 0 $ est parall\'ele à  la droite $ 2x+y+3=0 $.
+\end{itemize}
+D\'eterminer les r\'eels $ a$, $ b $ et  $c $.
+
+\end{exercice}
+
+
+  %</content>
+\end{document}

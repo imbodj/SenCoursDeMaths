@@ -2,7 +2,7 @@
 
 Ce site regroupe mes cours de mathématiques, accompagnés d'exercices et de fiches de révision, conçus pour les programmes du secondaire. Vous y trouverez notamment :
 
-* Une [liste de cours](/lecons/). Par manque de temps, j'ai fait l'impasse sur  certaines leçons.
+* Une [liste de leçons](/lecons/). Par manque de temps, j'ai fait l'impasse sur  certaines leçons.
 * Une selection d'[exercices](/developpements/) progressifs.
 * Quelques [fiches](/fiches/) de révision.
 * Des [conseils méthodologiques](/fiches/conseils-generaux/) pour mieux apprendre et enseigner.

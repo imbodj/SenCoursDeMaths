@@ -57,41 +57,42 @@ La fonction inconnue est souvent notée $ y $ et ses dérivées successives $\; 
 
 \subsection{Équations différentielles du premier ordre}
 \begin{definition}
-Une équation différentielle linéaire homogène du 1\up{er} ordre  à coefficients constants  est une équation du type  $ y^{\prime} -ay=0$\; ou toute équation s'y ramenant,  $a $ et $ b$ sont des constantes réelles et $ y $ une fonction inconnue à déterminer, définie et dérivable sur un intervalle $ I$ de  $ \Rr.$
+Une équation différentielle linéaire homogène du 1$ ^{\text{er}} $ ordre  à coefficients constants  est une équation du type  $ \;y^{\prime} -ay=0\;$ ou toute équation s'y ramenant,  $a $ une de constante réelle et $ y $ une fonction inconnue à déterminer, définie et dérivable sur un intervalle $ I$ de  $ \Rr.$
 \end{definition}
-\subsection*{Résolution}
+\medskip
+
+\begin{theorem}
+Les solutions sur $ \Rr $ de l'équation différentielle $\;\; y^{\prime}-ay=0 \;\;$ sont les fonctions définies par  $\;\; x\mapsto k\eexp{ax}\; (k\in\Rr) $.
+\end{theorem}
+
+\subsection*{Démonstration}
 On se propose de résoudre sur $ \Rr $ l'équation différentielle (E) $ y^{\prime} -ay=0$\; ($ a\in \Rr) $\\
 $ \bullet $ La fonction nulle est solution de (E) \;(évident).\\
 Soit $ y $  une solution de (E) ne s'annulant pas sur $ \Rr.$
 \begin{align*}
 \text{On \;a:\;}   y^{\prime} -ay=0& \Longleftrightarrow  \frac{y^{\prime}}{y}=a\\
-&\Longrightarrow \exists c\in \Rr, \; \ln\abs{y}=ax+c \\
-&\Longrightarrow \exists c\in \Rr, \abs{y}=\eexp{c}\eexp{ax}.
+&\Longrightarrow  \; \ln\abs{y}=ax+c \\
+&\Longrightarrow  \abs{y}=\eexp{c}\eexp{ax}.
 \end{align*}
-La fonction $ y $ ne s'annule pas sur $ \Rr $; donc elle est de signe constant.\\ On en déduit que:  $ \exists k\in \Rre,\text{tel que}\; y=k\eexp{ax} $.\\  \textbf{ Ainsi, en ajoutant la fonction nulle, les fonctions \; $ x\longmapsto k\eexp{ax} $\;  $ (k\in \Rr) $\; sont solutions de (E)}.\\
+La fonction $ y $ ne s'annule pas sur $ \Rr $; donc elle est de signe constant.\\ On en déduit qu'il existe :  $ k\in \Rre,\text{tel que}\; y=k\eexp{ax} $.\\  \textbf{ Ainsi, en ajoutant la fonction nulle, les fonctions \; $ x\longmapsto k\eexp{ax} $\;  $ (k\in \Rr) $\; sont solutions de (E)}.\\
 $ \bullet $ Démontrons que toute solution de (E) est de  cette forme.\\Soit
 $ y $  une solution de (E) et $ h $ la fonction \;$ x  \longmapsto y(x)\eexp{-ax} $\\La fonction $ h $ est dérivable sur $ \Rr $   et sa dérivée est la fonction $ h^{\prime}: x\longmapsto \croch{y^{\prime}(x)-ay(x)}\eexp{-ax} $\\ Or \; $ y^{\prime}-ay=0 $\; donc $ h^{\prime} $ est la fonction nulle et $ h $ est une fonction constante.\\ Il existe un nombre réel  $ k $ tel que: $ \forall x\in\Rr,\; y(x)\eexp{-ax}=k $\\ c'est à dire: $ \forall x\in\Rr, \; y(x)=k\eexp{ax} $;\\ Donc toute solution de (E) est de la forme\; $ x\longmapsto k\eexp{ax}\; (k\in\Rr) $\\
 De cette étude, on en déduit la propriété suivante:
 
-\medskip
-
-\begin{property}
-Les solutions sur $ \Rr $ de l'équation différentielle\;$ y^{\prime}-ay=0 $\; sont les fonctions \; $ x\mapsto k\eexp{ax}\; (k\in\Rr) $.
-\end{property}
 
 \begin{example}
-Résoudre sur $ \Rr $ les équations différentielles\;$ y^{\prime}-y=0 $\;  et\; $ y^{\prime}+3y=0 $
+Résoudre sur $ \Rr $ les équations différentielles $\; y^{\prime}-y=0 $\;  et\; $ y^{\prime}+3y=0 $
+
+\textbf{Réponses}
+$ \bullet $ Les solutions sur $ \Rr $ de l'équation différentielle $ \;y^{\prime}-y=0 $  sont les fonctions  $ x\mapsto k\eexp{x}\; (k\in\Rr) $\\
+$ \bullet $ Les solutions sur $ \Rr $ de l'équation différentielle\\                                         $ y^{\prime}+3y=0 \;$ sont les fonctions  $ x\mapsto k\eexp{-3x}\; (k\in\Rr) $
 \end{example}
-\begin{proof}
-$ \bullet $ Les solutions sur $ \Rr $ de l'équation différentielle\;$ y^{\prime}-y=0 $  sont les fonctions  $ x\mapsto k\eexp{x}\; (k\in\Rr) $\\
-$ \bullet $ Les solutions sur $ \Rr $ de l'équation différentielle\\                                         $ y^{\prime}+3y=0 $\;sont les fonctions  $ x\mapsto k\eexp{-3x}\; (k\in\Rr) $
-\end{proof}
 
 \subsection*{Solution vérifiant une condition initiale}
 
-Reprenons l'équation différentielle (E)  $\quad  y^{\prime}-ay=0 $\\
+Reprenons l'équation différentielle (E)  $\; y^{\prime}-ay=0 $\\
 Soit $ x_{0}$ et $y_{0} $  deux nombres réels.\\
-On se propose de déterminer les solutions  $ y $ sur $ \Rr $  de (E)  vérifiant \; $ y(x_{0})=y_{0} $.
+On se propose de déterminer les solutions  $ y $ sur $ \Rr $  de (E)  vérifiant  $\; y(x_{0})=y_{0} $.
 \begin{align*}
 \text{On \;a }\;: y(x_{0})=y_{0} &\Leftrightarrow k\eexp{ax_{0}}=y_{0}\\
 &\Leftrightarrow k=y_{0}\eexp{-ax_{0}}\quad \text{unique}
@@ -100,11 +101,11 @@ Donc la fonction \; $ x\mapsto y_{0}\eexp{-a(x-x_{0})} $\; est l'unique solution
 On en déduit la propriété suivante:
 
 \begin{property}
-Pour tout couple \;$ (x_{0}$ , $y_{0}) $\; de nombres réels, l'équation différentielle  \; $ y^{\prime}-ay=0 \;(a\in\Rr)$\; admet une unique solution $ y $ sur $ \Rr $  qui prend la valeur $y_{0} $ en $x_{0} $.
+Pour tout couple $\; (x_{0}$, $y_{0}) \;$ de nombres réels, l'équation différentielle   $ \;y^{\prime}-ay=0 \;(a\in\Rr)\;$ admet une unique solution $ y $ sur $ \Rr $  qui prend la valeur $y_{0} $ en $x_{0} $.
 \end{property}
 
 \begin{exercice}
-Résoudre sur $ \Rr $ l'équation  différentielle \; $ y^{\prime}-\frac{1}{3}y=0 $\\ 
+Résoudre sur $ \Rr $ l'équation  différentielle  $ \; y^{\prime}-\frac{1}{3}y=0 $\\ 
 En déduire la solution qui prend la valeur $1 $ en $ \ln 8$.
 
 \end{exercice}
@@ -123,6 +124,34 @@ de cette substance dans une grande quantité d'eau.\\
 Sachant que les dix premiers grammes se dissolvent en cinq minutes, déterminer une expression de la
 quantité non dissoute $f(t)$, en grammes, en fonction de $t$.
 \end{exercice}
+\begin{proof}
+Le processus de dissolution  est régi par :
+\[
+f'(t) = -a\,f(t),
+\]
+ce qui admet pour solution générale :
+\[
+f(t) = f(0)\,e^{-a t}.
+\]
+On sait que \(f(0) = 20\) g et que \(f(5) = 10\) g (les dix premiers grammes sont dissous en cinq minutes).  
+Ainsi :
+\[
+10 = 20\,e^{-5a} \quad\Longrightarrow\quad e^{-5a} = \frac12.
+\]
+En prenant le logarithme népérien :
+\[
+-5a = \ln\left(\frac12\right) = -\ln 2,
+\]
+donc :
+\[
+a = \dfrac{\ln 2}{5}.
+\]
+Finalement, l'expression de la quantité non dissoute est :
+\[
+f(t) = 20\,e^{-\frac{\ln 2}{5}t} = 20 \cdot 2^{-t/5} \quad \text{(en grammes)}.
+\]
+
+\end{proof}
 \subsection*{Cas d'une équation différentielle avec second membre}
 \begin{exercice}
   Soient les équations différentielles :\; (E$_{0})$ \;$  y'+y=0 $\; et \; (E) \;$  y'+y=\eexp{-x}\cos x $.\\
@@ -159,18 +188,19 @@ Les solutions sur $ \Rr $ de l'équation différentielle\;$ y^{\prime}+y= \eexp{
 
 \subsection{Équations différentielles du second ordre}
 \begin{definition}
-Une équation différentielle linéaire homogène du 2\up{nd} ordre  à coefficients constants  est une équation du type  $y^{\prime \prime} +ay^{\prime}+by= 0$\; ou toute équation s'y ramenant, et $a $ et $ b$ sont des constantes réelles et $ y $ une fonction inconnue à déterminer, définie et dérivable sur un intervalle $ I$ de  $ \Rr.$
+Une équation différentielle linéaire homogène du 2$ ^{\text{nd}} $ ordre  à coefficients constants  est une équation du type  $y^{\prime \prime} +ay^{\prime}+by= 0$\; ou toute équation s'y ramenant, et $a $ et $ b$ sont des constantes réelles et $ y $ une fonction inconnue à déterminer, définie et dérivable sur un intervalle $ I$ de  $ \Rr.$
 \end{definition}
 
 
- \begin{definition}{ Équation  caractéristique}
-On appelle  \textbf{équation caractéristique} de l'équation différentielle: $\; y^{\prime \prime} +ay^{\prime}+by=0 \;\;\;(A\in\Rr,\; B\in\Rr)$, l'équation du second degré  d'inconnue $ r :\;\; $  $\; r^{2}+ar+b=0 $.
+ \begin{definition}[Équation  caractéristique]
+ 
+On appelle  \textbf{équation caractéristique} de l'équation différentielle: $\; y^{\prime \prime} +ay^{\prime}+by=0 \;\;\;(a\in\Rr,\; b\in\Rr)$, l'équation du second degré  d'inconnue $ r :\;\; $  $\; r^{2}+ar+b=0 $.
 \end{definition}
 \begin{example}
-Les équations caractéristique de chacune des   équations différentielles suivantes \\$ y^{\prime \prime}-4y+3y=0 \;$ et \;$ y^{\prime \prime}-36y=0 $ sont respectivement  $\; r^{2} -4r+3=0\;$ et $\; r^{2}-36=0.$. 
+Les équations caractéristiques de chacune des   équations différentielles suivantes \\$ y^{\prime \prime}-4y+3y=0 \;$ et \;$ y^{\prime \prime}-36y=0 $ sont respectivement  $\; r^{2} -4r+3=0\;$ et $\; r^{2}-36=0.$. 
 \end{example}
 \subsection*{Méthode de résolution}
-Pour résoudre sur $ \Rr $  une équation différentielle du type $ y^{\prime \prime}+ ay^{\prime}+by=0\;\;(A\in\Rr,\; B\in\Rr)$, on peut  résoudre l'équation caractéristique \\ $\; r^{2}+ar+b=0 \;$  et utiliser le tableau suivant.
+Pour résoudre sur $ \Rr $  une équation différentielle du type $ y^{\prime \prime}+ ay^{\prime}+by=0\;\;(a\in\Rr,\; b\in\Rr)$, on peut  résoudre l'équation caractéristique \\ $\; r^{2}+ar+b=0 \;$  et utiliser le tableau suivant.
 
 
 
@@ -212,17 +242,17 @@ $$
  \end{proof}
  \subsection*{Solution vérifiant une condition initiale}
 \begin{property}
-Pour tous nombres réels $x_{0} $, $ y_{0} $  et $z_{0} $,\;l'équation différentielle $ y^{\prime \prime}+ ay^{\prime}+by=0\;\;(A\in\Rr,\; B\in\Rr)$ admet une unique solution  $ y $ sur $ \Rr $ telle que: $ y(x_{0})=y_{0} $ et  $ y^{\prime}(x_{0})=z_{0} $
+Pour tous nombres réels $x_{0} $, $ y_{0} $  et $z_{0} $,\;l'équation différentielle $ y^{\prime \prime}+ ay^{\prime}+by=0\;\;(a\in\Rr,\; b\in\Rr)$ admet une unique solution  $ y $ sur $ \Rr $ telle que: $ y(x_{0})=y_{0} $ et  $ y^{\prime}(x_{0})=z_{0} $
 \end{property}
 \begin{example}
-Déterminons la solution $ h $ sur $ \Rr $ l'équation différentielle\;  $ y^{\prime \prime}-y^{\prime} -2y=0 $\; sachant que  $ y(0)=1 $ et $ y^{\prime}(0)=0 $ . 
+Déterminons la solution $ h $ sur $ \Rr $  de l'équation différentielle\;  $ y^{\prime \prime}-y^{\prime} -2y=0 $\; sachant que  $ y(0)=1 $ et $ y^{\prime}(0)=0 $ . 
 
 \end{example}
 \begin{proof}
  Les solutions sur $ \Rr $ de l'équation différentielle  \;$ y^{\prime \prime}-y^{\prime}-2y=0 $  sont les fonctions
 $$ x\mapsto A\eexp{2 x}+B\eexp{-x} \;\;(A\in\Rr,\; B\in\Rr))$$  
-Pour  $ y(0)=1 $ et $ y^{\prime}(0)=0 $, on a $ A+B=1 $  et $ 2A-B=0 $ \; donc  $ A=\frac{1}{3}$ et $B=\frac{2}{3} $ . \\
-D'où \; $ h: x\mapsto \frac{1}{3} \eexp{2 x}+\frac{2}{3}\eexp{-x} \;\;(A\in\Rr,\; B\in\Rr)$
+Pour  $ y(0)=1 $ et $ y^{\prime}(0)=0 $, on a $ A+B=1 $  et $ 2A-B=0 \; $ donc  $ A=\frac{1}{3}$ et $B=\frac{2}{3} $ . \\
+D'où  $\; h: x\mapsto \frac{1}{3} \eexp{2 x}+\frac{2}{3}\eexp{-x}$
 
 \end{proof}
 

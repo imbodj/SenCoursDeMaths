@@ -62,15 +62,13 @@ Une fonction $ f $ définie sur $\mathbb{R}\setminus\{-1\} $ tel que: $\displays
 \begin{exercice}
 Une fonction $ f $ a pour tableau de variations celui donné ci-dessous.
 \begin{center}
-$$
-\begin{array}{|c|ccccccccc|}
-\hline
-x & -\infty & & & -1 & & & 2 & & +\infty \\
-\hline
-f(x) & 0 & \searrow & -\infty & || & +\infty & \searrow & 0 & \nearrow & 1 \\
-\hline
-\end{array}
-$$
+\begin{tikzpicture}
+  \tkzTabInit[lgt=2,espcl=3]%
+  {$x$/1, $f(x)$/2}%
+  {$-\infty$, $-1$, $2$, $+\infty$}
+
+  \tkzTabVar{-/0, +D-/$+\infty$, -/0, +/1}
+\end{tikzpicture}
 
 
 

@@ -12,7 +12,7 @@
  \item Calcule $ f(40) $  puis $ g(f(40)) $.
  \item Calcule $ f(0) $  puis $ g(f(0)) $.
  \item Calcule  $ g(f(3)) $.
- \item Calcule $ f(a) $  puis donne l'expression de $ g(f(a)) $  en fonction du  un nombre positif $ a $.
+ \item Calcule $ f(a) $  puis donne l'expression de $ g(f(a)) $  en fonction du  nombre positif $ a $.
  \end{itemize}
  \end{lemma}
 \subsection*{Définition - Notation - Exemples}
@@ -72,19 +72,19 @@ Alors \;  $ \paren{g\circ f}(x)=g\croch{f(x)}= \sqrt{\dfrac{x+4}{x}} $
  \begin{example}[Reconnaissance]
  
  L'application $h$ définie sur $\mathbb{R}$ par $h(x) = (x - 2)^2$ est la composée de l'application
-\[
-f : \mathbb{R} \longrightarrow \mathbb{R}, \quad x \longmapsto x^2
-\]
+ \[ \begin{array}{lrcl}
+   f  : & \mathbb{R}  &   \longrightarrow & \mathbb{R} \\ 
+  &  x & \longmapsto & x^2
+\end{array}\]
 par l'application
-\[
-g : \mathbb{R} \longrightarrow \mathbb{R}, \quad x \longmapsto x - 2.
-\]
+ \[ \begin{array}{lrcl}
+   g  : & \mathbb{R}  &   \longrightarrow & \mathbb{R} \\ 
+  &  x & \longmapsto & x-2
+\end{array}\]
 Ainsi, on a : 
 \[
 h(x) = f[g(x)] = (f \circ g)(x).
 \]
-Autrement dit, $h$ est décomposée en $f$ puis $g$.
-
  \end{example}
   %</content>
 \end{document}
