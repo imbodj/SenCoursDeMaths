@@ -497,21 +497,31 @@ Dans une situation où l'on effectue un choix sans ordre ni répétition (cas d'
 Pour calculer le cardinal d'un ensemble on peut utiliser : le comptage, des diagrammes de Venn, un arbre de choix, un tableau à double entrée etc.\\
 On peut aussi utiliser les  trois outils fondamentaux:  p-listes,  arrangements,  combinaisons. \\ Dans tous les cas devant un problème de dénombrement, on doit se poser les questions suivantes:
  \begin{center}
- % définition des styles
-\tikzstyle{lien}=[->,>=stealth,rounded corners=5pt,thick]
-\tikzset{individu/.style={draw,thick,fill=#1!25},
-individu/.default={green}}
- \begin{tikzpicture}[scale=2,thick, ->,>=stealth]
- \tikzstyle{level 1}=[sibling distance=25mm]
-\tikzstyle{level 2}=[sibling distance=23mm]
-\tikzstyle{level 3}=[sibling distance=20mm]
-\node [individu] {\bf y a -t-il ordre ? }[grow=right]
-child {node[individu=teal]{\bf OUI} child {node [individu=green]{\bf répétition?}
-child {node[individu=teal]{ \bf OUI}child {node[individu=blue] { $ \bf n^{p} $}}}child {node[individu=teal]{\bf NON}child {node[individu=blue] { $\bf A_{n}^{p} $}}}
- }
-}
-child {node[individu=teal] {\bf NON} child {node[individu=blue] {$\bf C_{n}^{p} $}}};
+ \begin{tikzpicture}[
+  level 1/.style={sibling distance=35mm},
+  level 2/.style={sibling distance=30mm},
+  level 3/.style={sibling distance=25mm},
+  edge from parent/.style={->, draw, thick, >=stealth, rounded corners=5pt},
+  every node/.style={draw, thick, align=center, minimum width=2cm, fill=green!20}
+]
+
+\node {\textbf{y a-t-il ordre ?}}
+  child {node[fill=teal!30]{\textbf{OUI}}
+    child {node[fill=green!30]{\textbf{répétition ?}}
+      child {node[fill=teal!30]{\textbf{OUI}}
+        child {node[fill=blue!20]{$\mathbf{n^p}$}}
+      }
+      child {node[fill=teal!30]{\textbf{NON}}
+        child {node[fill=blue!20]{$\mathbf{A_n^p}$}}
+      }
+    }
+  }
+  child {node[fill=teal!30]{\textbf{NON}}
+    child {node[fill=blue!20]{$\mathbf{C_n^p}$}}
+  };
+
 \end{tikzpicture}
+
 \end{center}
  
  $ n= $ nombre d'objets dans lesquels on tire, on choisit etc...\\
