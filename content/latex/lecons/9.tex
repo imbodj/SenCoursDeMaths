@@ -34,13 +34,13 @@ Une loi de probabilité est définie sur un ensemble $ \Omega $  d'issues.\\ $ X
 \begin{remark}
  On présente souvent la loi de probabilité d'une variable aléatoire  discrète $ X $ à l'aide d'un tableau.
 
-\begin{tabularx}{\textwidth}{|X|X|X|X|X|}
+$\begin{array}{|c|c|c|c|c|}
 \hline
-Valeurs de $ X$ &$ x_{1}$& $x_{2}$ &$\cdots$  &$x_{n}$\\
+\text{Valeurs de}\;\;  X & x_{1}& x_{2} &\cdots  &x_{n}\\
 \hline
-$ P(X=x_{i}) $ & $ p_{1} $& $ p_{2} $  &$\cdots  $ & $ p_{n} $\\
+ P(X=x_{i})  &  p_{1} &  p_{2}   &\cdots   &  p_{n} \\
 \hline
-\end{tabularx}
+\end{array}$
 
 On a: $ P(X=x_{1})+P(X=x_{2})+\cdots +P(X=x_{n})= p_{1}+p_{2}+\cdots + p_{n}=\displaystyle\sum_{k=1}^n p_{k}= 1 $
 \end{remark}
@@ -51,13 +51,13 @@ On reprend l'exemple de l'activité d'introduction.
 La probabilité de l'événement  $ (X= 3) $  est la somme des  probabilités des issues $ (P,F) $  et  $ (F,P) $ c'est-à-dire $ P(X=3) =\frac{1}{4}+\frac{1}{4}=\frac{1}{2}$.\\
 La probabilité de l'événement  $ (X= 10) $  est la probabilité de l'issue $ (P,P) $ c'est-à-dire $ P(X=10) =\frac{1}{4}$\\ La loi de la variable aléatoire $ X $ est résumée dans le tableau ci-dessous.\\
 
-\begin{tabularx}{\textwidth}{|X|X|X|X|X|}
+$\begin{array}{|c|c|c|c|c|}
 \hline
- $ x_{i}$ & $ -4$ & $ 3$ & $10 $\\
+  x_{i} &  -4 &  3 & 10 \\
 \hline
-$ P(X=x_{i}) $ & $ \frac{1}{4} $& $ \frac{1}{2} $   & $ \frac{1}{4} $\\
+ P(X=x_{i})  &  \frac{1}{4} &  \frac{1}{2}    &  \frac{1}{4} \\
 \hline
-\end{tabularx}
+\end{array}$
 \end{example}
 \subsection{Fonction de répartition}
 \begin{definition}
@@ -108,13 +108,13 @@ $ F $ est définie par: $\sysq{F(x)=0,\;\; \text{si}\;\; x< -4}{F(x)=\frac{1}{4}
  Une loi de probabilité est définie sur un ensemble $ \Omega $  d'issues.\\ $ X $  est une variable aléatoire  définie sur $ \Omega $ dont la loi de probabilité est résumée dans le tableau ci-dessous.
 \bigskip
 
-\begin{tabularx}{\textwidth}{|X|X|X|X|X|}
+$\begin{array}{|c|c|c|c|c|}
 \hline
-Valeurs de $ X$ &$ x_{1}$& $x_{2}$ &$\cdots$  &$x_{n}$\\
+\text{Valeurs de} \;\; X & x_{1}& x_{2} &\cdots  &x_{n}\\
 \hline
-$ P(X=x_{i}) $ & $ p_{1} $& $ p_{2} $  &$\cdots  $ & $ p_{n} $\\
+ P(X=x_{i})  &  p_{1} &  p_{2}   &\cdots   &  p_{n} \\
 \hline
-\end{tabularx}
+\end{array}$
 
 
 \begin{itemize}
@@ -128,7 +128,7 @@ $ P(X=x_{i}) $ & $ p_{1} $& $ p_{2} $  &$\cdots  $ & $ p_{n} $\\
 \end{definition}
 
 \begin{example}
-On reprend l'exemple de la variable aléatoire $ X $ précédent.\\ $\text{E}(X)=\frac{1}{4}(-4)+\frac{1}{2}\times 3 +\frac{1}{4}\times 10 =3$ francs.\quad $ \text{E}(X)=3$ francs    signifie qu'en jouant un grand  nombre de fois  à ce jeu , un joueur peut espérer gagner $ 3$ francs    en moyenne.\\ $ \text{V}(X)= \dfrac{1}{4}(-4-3)^{2}+\dfrac{1}{2}(3-3)^{2}+\dfrac{1}{4}(10-3)^{2}=\dfrac{49}{2} $ \;\;et \quad $ \sigma(X)=\dfrac{7\sqrt{2}}{2} $.
+On reprend l'exemple de la variable aléatoire $ X $ précédent.\\ $\text{E}(X)=\frac{1}{4}(-4)+\frac{1}{2}\times 3 +\frac{1}{4}\times 10 =3$ francs. $ \quad\text{E}(X)=3$ francs    signifie qu'en jouant un grand  nombre de fois  à ce jeu , un joueur peut espérer gagner $ 3$ francs    en moyenne.\\ $ \text{V}(X)= \dfrac{1}{4}(-4-3)^{2}+\dfrac{1}{2}(3-3)^{2}+\dfrac{1}{4}(10-3)^{2}=\dfrac{49}{2} $ \;\;et \quad $ \sigma(X)=\dfrac{7\sqrt{2}}{2} $.
 \end{example}
 \begin{remark}
 \begin{itemize}
