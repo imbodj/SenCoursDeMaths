@@ -5,8 +5,20 @@
   \development{algebra}{exos-limites}{Limites (TS2)}
 
   \summary{}
+  \begin{exercice}
+     Vrai ou faux?
+      \begin{enumerate}
+      \item Si   $ \;\displaystyle\lim_{x \to a}\; g(x)=a $ \; et \;  $\; \displaystyle\lim_{x \to b}\; f(x)=a \;$\;  alors  \;  $\; \lim_{x \to b}\; \paren{g \circ f}(x)=a $.
+       \item Soit la fonction $ u $  telle que $ x-2\leq u(x)\leq x+3 $  pour tout $  x>1 $.  Alors $\limi{x}{+\infty}{\dfrac{u(x)}{\sqrt{x}}}=\pinf $.
+       \item  Si une fonction  $ f $ définie et  strictement croissante  sur $ \mathbb{R} $ telle que: $ \;\displaystyle\lim_{x \to \minf}f(x)=0$  et $\;\displaystyle \lim_{x \to \pinf}f(x)=1$ alors :
+
+\medskip
+
+\textbf{a)} $ \;\displaystyle\lim_{x \to \pinf}f(-x+1)=0$   $\quad \textbf{b)} \;\displaystyle\lim_{x \to 0^{+}}f\paren{x+\frac{1}{x}}=1$  $ \quad \textbf{c)}\;\displaystyle\lim_{x \to \minf}\frac{f(x)+x}{f(|x|)-1}=+\infty$.
 
 
+       \end{enumerate}
+\end{exercice}
   \begin{exercice}
       Étudier les limites suivantes.
       \begin{enumerate}
@@ -22,8 +34,8 @@
      $ \displaystyle \lim_{x \to 0} \dfrac{\sqrt{x+4}-2}{x}$ 
      
        En déduire :
-        $$ \displaystyle \lim_{x \to \dfrac{\pi}{2}} \dfrac{\sqrt{4+\cos x}-2}{\cos x}$$
-       $$ \displaystyle \lim_{x \to \dfrac{\pi}{2}} \dfrac{\sqrt{4+\sin x}-2}{ x}$$
+        $$ \displaystyle \lim_{x \to \dfrac{\pi}{2}} \dfrac{\sqrt{4+\cos x}-2}{\cos x}\hspace*{0.5cm}\text{et}\hspace*{0.5cm}
+       \displaystyle \lim_{x \to \dfrac{\pi}{2}} \dfrac{\sqrt{4+\sin x}-2}{ x}$$
         \end{exercice}
         \begin{exercice}
         On considère la fonction $ f $ définie sur $ [2,\;+\infty[ $ par $ f(x)=\dfrac{3x+\sin x}{x-1} $
@@ -65,6 +77,38 @@ Montrer que , pour tout $ x\geq 2 $ ,  $ \;\left |f(x) -3\right | \leq \dfrac{4}
 \item $ \displaystyle \lim_{x \to  \dfrac{\pi}{6}} \; \dfrac{2\sin x-1}{6x-\pi}$
 \item  $ \displaystyle  \lim_{x \to 0} \; \dfrac{\cos^5 x+\sin 2x-1}{x} $ 
 \end{enumerate}
+\end{exercice}
+ \begin{exercice}
+
+ Soit $ f $ une  fonction  définie et dérivable sur  $\;\mathbb{R} \;$   tel que $ f(1)=0 \;$   et   $\; f'(1)=-1 $.
+ 
+ \medskip
+ 
+  $ \mathcal{C}_{f} $ admet  une asymptote d'équation $ y=3 $  en $ \minf $  et une asymptote d'équation $ y=x+4 $  en $ \pinf $.
+
+\medskip
+\begin{enumerate}
+\item Calculer les limites suivantes.
+
+\begin{enumerate}
+\item $ \displaystyle\lim_{x \to 0}\; f\paren{\dfrac{x-1}{x^2}}$
+\item $ \displaystyle\lim_{x \to +\infty}\;\;\dfrac{f(x)}{ x+f(x)}$
+\item $\displaystyle \lim_{x \to +\infty}\; \dfrac{1}{f(x)-x+3}$
+\end{enumerate}
+
+\medskip
+\item On considère  la limite  suivante  $\displaystyle \lim_{x \to +\infty}\; xf\paren{1+\dfrac{1}{x}}$.
+
+\medskip 
+\begin{enumerate}
+\item Justifier qu'il y a une présence de forme indéterminée.
+\item En posant $ X=1+\frac{1}{x} $,   calculer cette limite.
+\end{enumerate}
+
+
+\end{enumerate}
+
+ 
 \end{exercice}
   %</content>
 \end{document}
