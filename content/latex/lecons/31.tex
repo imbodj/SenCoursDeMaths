@@ -14,14 +14,14 @@ Calcule la dérivée de chacune des fonctions F ; G ; H définies par :
 F$ (x)=x^{2} +3x+7$;  G$ (x)= x^{2} +3x-30$  et  H$ (x)=\paren{x+\frac{3}{2}}^{2} +10$. Que remarques-tu ?
 \medskip
 
-Pour tout $ x\in \mathscr{D}f $,  F$' (x)=f(x)$;  H$' (x)=f(x)$;  G$' (x)=f(x)$;
+Pour tout $ x\in \mathscr{D}_f,\; $  F$' (x)=f(x),\;$  H$' (x)=f(x),\;$  G$' (x)=f(x)$.
 \end{lemma}
 
 \medskip
 On dit que F ; G ; H sont  \textbf{des primitives de f sur Df}.
 
 \begin{definition}
-Soit $ f $ une fonction définie sur un intervalle $I$.
+Soit $ f $ une fonction continue sur un intervalle $I$.
 
  On appelle fonction primitive de $f$ sur $I$ , toute fonction $F$ telle que :\\
 $ \text{pour tout } \; x\in \text{I},\;  \text{F}'(x) = f (x).$
@@ -47,9 +47,9 @@ Ainsi $F$ est une primitive de $ f. $
 
 
 
-\begin{remark}
- Si $F$ est une primitive de $ f $ sur I alors  toute  autre primitive   de $ f $ est de la  forme $ F(x)+c $ où $ c $ est une constante réelle.
-\end{remark}
+\begin{property}
+ Si $F$ est une primitive de $ f $ sur I alors  toute  autre  fonction   de la  forme $ F(x)+c $ où $ c $ est une constante   est aussi primitive  de $ f $ sur I.
+\end{property}
 
 \medskip
 \subsection*{Primitives des fonctions usuelles}
@@ -74,7 +74,7 @@ x^{n}    & \dfrac{x^{n+1}}{n+1} \\
 \subsection*{Opérations sur les primitives}
 \begin{property}
 \noindent
-Si F est une primitive de $f$ sur I et si G est une primitive de $g$ sur I alors:
+Si F est une primitive de $f$ sur I et  G est une primitive de $g$ sur I alors:
 
 \medskip
 \noindent
@@ -103,7 +103,7 @@ $$\begin{array}{|c|c|}
 \hline
 u'\eexp{u}   &   \eexp{u}    \\
 \hline
-\dfrac{u'}{u^{n}}     &- \dfrac{1}{n-1} \frac{1}{u^{n-1}} \\
+\dfrac{u'}{u^{n}}     &- \dfrac{1}{n-1} \dfrac{1}{u^{n-1}} \\
 \hline
 
 \end{array}$$
@@ -149,23 +149,20 @@ K$(x)= \dfrac{1}{2}x^{2} + 2x-2\ln (2x-2)$
 \end{enumerate}
  \end{proof}
 
-\subsection{Intégrales de fonctions}
+\subsection{Intégrale d'une fonction}
 \begin{definition}
-Soient $ f $ une fonction définie sur un intervalle I et $  F $ une de ces primitives, soient $ a $ et $ b $ deux réels   de I.
+Soit $ f $ une fonction continue sur un intervalle I et $  F $ une de ces primitives, soient $ a $ et $ b $ deux réels   de I.
 
 Le nombre réel $ F(b)-F(a) $ est appelé intégrale de $ f $ entre $ a $ et $ b $ et est notée   $\; \inte{a}{b}{f(x)}{x} $. 
 \\ Ainsi on a:
 $$ \inte{a}{b}{f(x)}{x} =F(b)-F(a) $$
 
 \end{definition}
- \textbf{Attention}\\
-L'ordre de $a$ et de $b$ est important.\\
-Le nombre $a$ est appelé borne inférieure et $b$ la borne supérieure de l'intégrale.
-\medskip
- 
+
  \textbf{Vocabulaire  et notations}
  \begin{itemize}
  \item Le réel  $\; \inte{a}{b}{f(x)}{x}\;  $ \; se lit  <<  intégrale  de $a$  à $b$  \;f$(x)\; dx$  >>
+ \item Le nombre $a$ est appelé borne inférieure et $b$ la borne supérieure de l'intégrale
 \item Pour toute primitive F de f, on écrit \;   $ \inte{a}{b}{f(x)}{x}=\croch {F(x)}^{b}_{a} =F(b)-F(a) $.\\
 L'expression \;$ \croch {F(x)}^{b}_{a} $\; se lit <<  $ F(x) $>>  pris entre a et b.
 \item  Dans l'écriture  $ \inte{a}{b}{f(x)}{x} $, on peut remplacer la lettre $ x $ par n'importe quelle    lettre  et on peut écrire   $ \;\inte{a}{b}{f(x)}{x}  =  \inte{a}{b}{f(u)}{u} =  \inte{a}{b}{f(t)}{t} $.\; On dit que $ x $ est une variable muette,  elle n'intervient pas dans le résultat.
@@ -207,7 +204,7 @@ On a donc  $\;  \inte{-1}{0}{\eexp{-2x}}{x}=G(0)-G(-1)= \frac{\eexp{2} -1}{2}$
  
 
  
- \subsection{Calcul d'aires}
+ \subsection{Calculs d'aires}
 
 Le plan est muni d'un repère orthogonal  $ \oij $. \\ L'unité d'aire notée par \textbf{u.a},\;  est l'aire du rectangle de dimensions     $ ||\overrightarrow{i}|| $  et   $ ||\overrightarrow{j}|| $.
 
@@ -249,7 +246,7 @@ Le plan est muni d'un repère orthogonal  $ \oij $. \\ L'unité d'aire notée pa
 \node[below left] at (0,0) {\tiny O};
 \draw[thick,blue!50!black] plot[domain=-4:3,samples=100] (\x,{0.125*\x*\x*\x+0.125*\x*\x-\x+1}) node[right] {$\mathscr{C}_f$};
 \draw[very thick,blue!50!black] plot[domain=-3:2,samples=100] (\x,{0.125*\x*\x*\x+0.125*\x*\x-\x+1});
-\node[white] at (-1.5,1) {$\pmb{ \inte{a}{b}{f(x)}{x}}$};
+\node[white] at (-1.5,1) {$ \inte{a}{b}{f(x)}{x}$};
 \node  at (-3,-0.5) {$ a $};
 \node  at (2,-0.5) {$ b $};
 \end{tikzpicture}

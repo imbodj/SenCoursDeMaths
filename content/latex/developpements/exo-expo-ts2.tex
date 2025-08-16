@@ -1,0 +1,136 @@
+\input{../common}
+
+\begin{document}
+	%<*content>
+	\development{algebra}{exo-expo-ts2}{Fonction expo (TS2)}
+
+ \summary{Initiation expo}
+ 
+	
+\begin{exercice}
+\begin{enumerate}
+\item Simplifier  au maximum les expressions suivantes:\medskip
+
+ $A= \dfrac{\text{e}^{3+\ln x^{2}}}{2x} \quad $  $ B=\dfrac{\text{e}^{3x}+\text{e}^{x}}{\text{e}^{2x}+1}$ 
+\item Prouver que pour tout réel $ x $:\medskip
+
+  \textbf{a)} $\; \dfrac{\text{e}^{x}-\text{e}^{-x}}{\text{e}^{x}+\text{e}^{-x}}=\dfrac{\text{e}^{2x}-1}{\text{e}^{2x}+1}=\dfrac{1-\text{e}^{-2x}}{1+\text{e}^{-2x}}$ 
+
+\medskip
+
+ \textbf{b)} $\; \ln\Bigl(1+ \text{e}^{x}\Bigr)= x+\ln\Bigl(1+ \text{e}^{-x}\Bigr)$
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+On considère le polynôme $ P(x)=2x^{3}-9x^{2}+x+12$.
+\begin{enumerate}
+\item Résoudre dans $ \mathbb{R}:\quad $    $ P(x)\leq0 $.
+\item En déduire les  solutions de l'équation et l' inéquation suivantes.
+
+\medskip
+
+\textbf{a)} $ \;2\text{e}^{3x}-9\text{e}^{2x}+\text{e}^{x}+12=0\hspace*{1cm} $ 
+\textbf{b)} $\;\dfrac{\text{e}^{2x}\bigl(2\text{e}^{x}-9\bigr)}{\text{e}^{x}+12} \leq -1 $.
+\end{enumerate}
+\end{exercice}
+\begin{exercice}
+ Résoudre dans $ \mathbb{R}^{2} $  les systèmes suivants:
+
+\medskip
+
+\textbf{a)} $\; \left\{\begin{array}{l}  2\text{e}^{x} +3\text{e}^{1+y}=13 \\[0.25cm] \text{e}^{x}+\text{e}^{1+y}=5 \end{array}\right.\hspace*{0.5cm}$
+\textbf{b)} $ \;  \left\{\begin{array}{l} xy=-15 \\[0.25cm]  \text{e}^{x}\times\text{e}^{y}=\text{e}^{2} \end{array}\right.$
+
+\end{exercice}
+
+\begin{exercice}
+Calculer la dérivée de chacune des fonctions suivantes.
+
+\medskip
+
+1) $\; f(x)=(x^2-5x+1)\text{e}^{3x-1}\quad  $  2) $ f(x)=\sqrt{x}\text{e}^{-x^2} \quad
+3) \; f(x)=\ln \bigl(1+\text{e}^{x}\bigr)\quad $
+
+$   4) \; f(x)= \dfrac{\text{e}^{x}+\text{e}^{-x}} {\text{e}^{x}-\text{e}^{-x}} \quad
+  5) \; f(x)= \ln\Bigl(\dfrac{\text{e}^{x}-1} {x+\text{e}^{x}}\Bigr)\qquad $  6) $ f(x)=\text{exp}\Bigr ( \dfrac{1}{x^2-x}\Bigl) $ 
+\end{exercice}
+\begin{exercice}
+Etudier les limites suivantes:
+\medskip
+
+  1) $\displaystyle \lim_{x \to +\infty} {\bigl(\text{e}^{x}-x^2-x \bigr)}\qquad $ 2) $\displaystyle \lim_{x \to 0} \dfrac{1-\text{e}^{-2x}}{3x}   
+   \hspace*{0.5cm}
+    3) \; \displaystyle \lim_{x \to 0} \dfrac{\text{e}^{2x}-\text{e}^{-x}}{x}  \hspace*{0.5cm} 
+   4) \; \displaystyle\lim_{x \to-\infty }\text{e}^{-2x}+3x  $ \medskip
+ 
+ 
+  5) $ \displaystyle\lim_{x \to 0^{+} }\dfrac{\ln(2-\text{e}^{-x})}{x} \qquad $ 
+   6) $ \displaystyle\lim_{|x| \to +\infty }(x+2)\text{e}^{-x}  $ 
+\end{exercice}
+
+\begin{exercice}
+Dresser le tableau de variations  des fonctions suivantes.\medskip
+
+1) $ \;f(x)=\text{e}^{2x}-\text{e}^{-2x}-4x \quad $  2) $\; f(x)= (x^2-5x+7)\text{e}^{2x} \quad
+ 3)  \;f(x)= x-\dfrac{\text{e}^{x}}{\text{e}^{x}+2}$   
+ 
+4) $ \;f(x)=x- \text{e}^{\frac{x-2}{2} }\quad $    5) $\; f(x)= (x-1)\paren{2-\text{e}^{-x}}$
+\end{exercice}
+
+
+
+\begin{exercice} 
+Soit  f$(x)=1-\dfrac{4\text{e}^{x}}{1+\text{e}^{2x}} \;$ et $\; \mathcal{C}\; $\ sa courbe. 
+\begin{enumerate}
+\item Démontrer que pour tout   $ x $, f$ (-x)=\text{f}(x) $. Que peut-on en déduire pour la courbe  $ \mathcal{C} $?
+\item Déterminer $\displaystyle \lim_{x \to +\infty }{\text{f}(x)} $. 
+Interpréter.
+\item Vérifier que $ \forall x \in \mathbb{R}\;$\; f$ ^{\prime}(x)=\dfrac{4\text{e}^{x}\paren{\text{e}^{2x}-1}}{\paren{\text{e}^{2x}+1}^{2}} $
+\item En déduire le sens de variation de la fonction f sur l'intervalle \;$ [0,\;+\infty[ $.
+\item Montrer que la courbe \;$ \mathcal{C} $\; coupe  l'axe des abscisses en un unique point A \;d'abscisse \; $ a $\; positive.\ Montrer que \; $1,31 <  a < 1,32$. Donner une allure de   $ \mathcal{C} $ dans le repère.
+\item Donner le signe de f$ (x) $  pour   $ x  \in \mathbb{R}$.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice} 
+ Soit   
+ $\; f(x)= \left\{\begin{array}{l}  -x+7-4\text{e}^{x}\;\;\;\text{si}\;x \leq 0  \\[0.25cm] 
+ x+3-x\ln x\;\;\;\text{si} \; x >0
+\end{array}\right.$
+ \begin{enumerate}
+ \item
+\begin{enumerate} 
+\item Etudier la continuité de $ f $  en $ 0 $.
+\item Etudier la dérivabilité de $ f $  en $ 0 \;$. Interpréter le résultat graphiquement. 
+\item Ecrire l'équation de la tangente à $ \mathcal{C}_{f} $ au point d'abscisse $ \text{e} $.
+\end{enumerate}
+\item Déterminer les limites aux bornes de D$ f $.
+\item Etudier les  branches infinies de $ \mathcal{C}_{f} $.
+\item Établir le tableau de variations de $ f $. 
+\item Démontrer que l'équation $ f(x)=0 $  admet une solution unique $ \alpha >0$.
+\item Construire la courbe $ \mathcal{C}_{f} $. 
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+On considère la suite $\left(U_n\right)$ de nombres réels  définie pour tout entier naturel $n$ par : 
+$\quad\left\{\begin{array}{l c l}
+U_0		& =& 0\\
+U_{n+1}& =& \ln\left(1+\text{e}^{U_n}\right)
+\end{array}\right.$
+ \begin{enumerate}
+\item Calculer  $ U_3$.
+\item Exprimer $ U_{n} $ en fonction de  $ U_{n+1} $.
+\item Soit la suite  $\left(V_n\right)$ définie par: \; $\; V_n= \text{e}^{U_n}$, $\quad n\in\mathbb{N} $.
+\begin{enumerate}
+\item  Montrer que  $ ( V_n )$ est une suite arithmétique  dont on précisera la  raison et le premier terme.
+\item Exprimer $  V_n $  puis  $  U_n $  en fonction de $ n. $ 
+\item Etudier la convergence de la suite $ ( U_n) $ et préciser sa limite.
+ \end{enumerate} 
+
+  \end{enumerate}
+\end{exercice}
+
+	%</content>
+\end{document}

@@ -1,0 +1,258 @@
+\input{../common}
+
+\begin{document}
+	%<*content>
+	\development{algebra}{prob-ln-expo}{Etude de fonctions ln et expo}
+
+ \summary{Fonctions de raccordement}
+ 
+	
+\textbf{PROBLÈME 1} 
+
+
+
+On considère la fonction $ f $ définie   par:\\    $f(x)=\left \{\begin{array}{l} x-1-\dfrac{1}{\ln(x-2)}~~~~~~ \textrm{si}~~ x> 2  \\[0,5cm] x-\eexp{\frac{x-2}{2}}\hspace{2cm}\textrm{si}~~ x\leq 2 ~\end{array}\right.$
+
+ \begin{enumerate}
+\item Montrer que   $ f $ est définie sur $ \mathbb{R}\setminus\{3\} $.
+\item Étudier les limites de $ f $ aux bornes de son ensemble de définition.
+\item Déterminer la nature des branches infinies de  $\mathscr{C}_{f}$.
+\item  Montrer que $ f $ est continue en 2.
+\item Étudier la   dérivabilité de $ f $  en $ 2 $. Interpréter graphiquement les résultats.
+\item Calculer la dérivée $ f^{\prime} (x)$ pour $x<2$  et pour $ x> 2$.
+\item Déterminer le sens de variations de $ f $ puis établir  son tableau de  variations. 
+\item Montrer que l'équation  $ f(x)=0 $  admet une unique solution $ \alpha $ dans $ \intff{0}{1} $. En déduire que $ 0,4< \alpha<0,5 $.
+\item Tracer $\mathscr{C}_{f}$   dans un  repère orthonormé.
+\item Une population d'insectes se développe initialement dans un environnement aux ressources limitées, puis prolifère une fois que les conditions deviennent favorables. On modélise l'évolution de cette population en fonction du temps (en semaines) par la fonction:\\ $ F(x)= 5+\frac{x^{2}}{2}-2\eexp{\frac{x-2}{2}} $  
+où \( F(x) \) représente le nombre d'individus (en milliers) au temps $\; x\in[0,\; 2]$.
+
+\begin{enumerate}
+        \item Calculer \( F(0) \) et interpréter ce résultat.       
+        \item Calculer la population minimale au cours de  ces deux premières semaines.
+  
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{PROBLÈME 2}
+
+
+\textbf{Partie A}
+\medskip
+
+
+Soit $ g $ la fonction définie par $ g(x)=1-x\eexp{-x} $
+ \begin{enumerate}
+\item Étudier les variations de $ g $ sur $ \mathbb{R} $.
+ \item En déduire le signe de $ g(x) $ sur $ \mathbb{R} $.
+\end{enumerate}
+
+
+\medskip
+\textbf{Partie B}
+
+
+\medskip
+Soit la fonction $ f $ définie par: 
+
+
+\medskip
+   $f(x)=\left \{\begin{array}{l} \ln|x|~~~ \textrm{si}~~ x< -1 ~\\ (x+1)(1+\eexp{-x})~~~ \textrm{si}~~ x\geq -1 \end{array}\right.$
+
+\begin{enumerate}
+\item Déterminer $ D_{f} $
+\item Étudier la continuité et  la dérivabilité de $ f $  en $ -1 $. 
+\item Dresser le tableau de variations de $ f $.
+\item  Montrer que la droite $ \Delta $: $ y=x+1$  une asymptote  $\mathscr{C}_{f}$  en $ \pinf $.
+\item  Étudier la position de  $\mathscr{C}_{f}$ et $ \Delta $ .
+\item Montrer qu'il existe un unique point A  de  $\mathscr{C}_{f}$ où la tangente  $ (T) $ est parallèle à   $ \Delta $. 
+\item Tracer $ \Delta $ , $\; (T) \;$   et   $\;\mathscr{C}_{f}$.
+
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{PROBLÈME  3}
+
+\medskip
+
+\textbf{PARTIE A}\\
+
+ Soit $ u $ la fonction définie par :
+  $ u(x)= \dfrac{1+x}{2+x} +\ln x  $ 
+  \begin{enumerate}
+ \item Dresser le tableau de  variations de $ u $ . 
+ \item En déduire que la fonction $ u $ s'annule pour un unique réel $ \alpha $ puis
+ vérifier  que $ 0,54 <\alpha  < 0,55 $ 
+ \item Donner le signe de $ u(x) $.
+ \end{enumerate}
+ \bigskip
+ 
+ 
+ \textbf{PARTIE B}
+ 
+  On considère  la fonction $ f $ définie par :\medskip
+  
+   $f(x)=\begin{cases}  
+\dfrac{-x^{2}\ln x}{1 +x} & \text{ si } x > 0 \\[0.25cm]
+\text{e}^{-x}  + x^{2}- 1  & \text{ si }  x \leq 0  
+\end{cases} $ 
+
+
+ On désigne par $\mathscr{C}_{f}$ la courbe représentative de $ f $ dans le plan muni d'un repère orthonormal $(O ;\overrightarrow{u},\overrightarrow{v})$ d 'unité $ 4  $ cm.
+ 
+ \begin{enumerate}
+ \item Déterminer les limites aux bornes de $ D_{f}$ .
+ \item  Étudier la continuité et la dérivabilité de $ f $ en $ 0 $.
+ \item Étudier les branches infinies de $\mathscr{C}_{f}$.
+ \item 
+ \begin{enumerate}
+ \item Pour $ x > 0 $ , calculer $ f^{'}(x)  $ .Vérifier que $ f^{'}(x) $ et $- u(x) $ ont le même signe .
+ \item Pour $ x < 0 $ , donner le signe de  $ f^{'}(x) $.
+ \item Montrer que $ f(\alpha)=\dfrac{\alpha^{2}}{2+\alpha} $ 
+ \item Établir le tableau de variations de  $ f $.
+ \item Tracer la courbe $ C $ .On prend $ \alpha = 0,55 $ 
+ \end{enumerate}
+ \item Soit $ h $ la restriction de $ f $ à $ ]-\infty , 0] $.
+ \begin{enumerate}
+ \item Montrer que $ h $ réalise une bijection de $ ]-\infty , 0] $ vers un intervalle $ J $ à préciser .
+ \item Tracer la courbe de  $ h^{-1 } $ dans le repère.
+ \end{enumerate}
+ \end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{PROBLÈME 4}
+
+\vspace{0,2cm}
+
+\begin{enumerate}
+\item Soit $ g(x)=1+(1-x)\eexp{2-x} $,\; $ x\leq0 $\\ Étudier les variations de $ g $. 
+
+En  déduire le signe de $ g $  sur $ \intof{\minf}{0} $.
+
+\item  Soit la fonction $ f $ définie par: \\ 
+
+  $f(x)=\left \{\begin{array}{l} x(1+\eexp{2-x})~~~ \textrm{si}~~ x  \leq 0 ~\\ [0.23cm]
+   \ln|x^{2}-1|~~~ \textrm{si}~~ x > 0 \end{array}\right.$
+
+
+\begin{enumerate}
+
+\item Déterminer l'ensemble de définition de $ f $.
+\item Étudier la continuité et  la dérivabilité de $ f $  en $ 0 $.
+\item Étudier les variations de $ f $. 
+\item Déterminer les points d'intersection de $\mathscr{C}_{f}$  avec les axes du repère.
+\end{enumerate}
+\item Soit $ h $  la restriction de $ f $ à $ \intff{0}{1} $.\\ Montrer que $ h $  admet une bijection  réciproque dont on dressera le tableau de variation.
+
+\item Expliciter $ h^{-1} $
+\item Tracer $\mathscr{C}_{f}$  et $\mathscr{C}_{h^{-1}}$.
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\textbf{PROBLÈME 5}
+
+\vspace{0,2cm}
+
+ \textbf{ PARTIE A}\\ 
+   On considère  la fonction $ f $ définie par :\\ $f(x)=\begin{cases}  
+x+2 +\ln\begin{vmatrix}\dfrac{x-1}{x+1}\end{vmatrix} & \text{ si } x < 0 \\
+
+(2+x)\text{e}^{-x}  & \text{si}  x\geq 0 \\ 
+\end{cases} $ \medskip
+
+ On désigne par  $\mathscr{C}_{f}$ la courbe représentative de $ f $ dans le plan muni d'un repère
+ orthonormal $(O ;\overrightarrow{i},\overrightarrow{j})$ d'unité $ 1  $ cm.
+ \begin{enumerate}
+ \item Montrer que $ f $ est définie sur $  \mathbb{R}\setminus\lbrace-1\rbrace $.
+ \item 
+ \begin{enumerate}
+ \item Calculer les limites aux bornes du domaine de définition de $ f $. Préciser les asymptotes parallèles aux axes de coordonnées.
+ \item Calculer $ \displaystyle \lim_{x \to - \infty}[f(x)-(x+2)]  $ .Interpréter graphiquement le résultat . 
+ \end{enumerate}
+ \item
+ \begin{enumerate}
+ \item Étudier la continuité de $ f $ en 0.
+ \item Démontrer que $ \displaystyle \lim_{x \to 0}\dfrac{\text{e}^{-x}-1}{x} =-1 $  et $ \displaystyle \lim_{x \to 0}\dfrac{\ln(1-x) }{x} =-1 $.
+ \item En déduire que $ f $ est dérivable à  droite et à  gauche en 0 . $ f $ est - elle dérivable en 0?
+ \end{enumerate}
+ \item Calculer $ f^{'}(x) $ pour $ x\in]0 , +\infty[ $ puis pour $ x\in]-\infty ,-1[\cup]-1  ,0[ $.
+ \item Étudier le signe de $  f^{'}(x)  $ pour $ x\in]0 , +\infty[ $ puis pour $ x\in]-\infty ,-1[\cup]-1  ,0[ $.
+ \item Dresser le tableau de variations de $ f $ .
+ \item Montrer que l'équation  $ f(x)= 0 $ admet une unique solution $ \alpha $ appartenant à $ ]-3, -2[ $
+ \item Tracer $( C) $ dans le repère.On mettra en évidence l'allure de $( C) $ au point d'abscisse 0 et les droites asymptotes.  
+
+ 
+\item 
+ Soit $ g $ la restriction de $ f $ à $]-\infty , -1[ $ 
+ \begin{enumerate}
+ \item Montrer que $ g $ définit une bijection  de $ ]-\infty , -1[ $ sur un  intervalle   $J $ à préciser.
+ \item On note $ g^{-1} $ sa bijection réciproque.
+
+Représenter la courbe de $ g^{-1} $ dans le repère précèdent.
+
+ \end{enumerate}
+  \end{enumerate}
+  \vspace*{1cm}
+  
+  \textbf{PROBLÈME 6}
+  \medskip
+  
+ \textbf{PARTIE A}   
+\begin{enumerate}
+ \item Étudier sur $ \mathbb{R} $ le signe  de\; $ 4\text{e}^{2x} -5\text{e}^{x}+1$.
+ \item 
+Soit  : \;  $\; g(x)=\ln x-2\sqrt{x}+2$.
+
+\begin{enumerate}
+ \item Déterminer  les limites de $ g $ aux bornes de son  domaine de définition.
+  
+  \item Étudier ses variations et dresser son tableau de variations.
+  
+\item En déduire son signe.
+\end{enumerate} 
+\end{enumerate}
+
+ 
+
+\textbf{ PARTIE B}   
+ 
+\medskip
+
+Soit 
+ $f(x)=\left \{\begin{array}{l} x+\dfrac{\text{e}^{x}}{2\text{e}^{x}-1}\qquad  \text{si} \; x\leq 0 \\[0.5cm] 1-x+\sqrt{x}\; \ln x \quad  \text{si}\; x >0 
+ \end{array}\right.$
+
+\medskip
+  On désigne par $\mathscr{C}$
+ la courbe représentative de $ f $ dans un repère orthonormé d'unité 2 cm.
+ \begin{enumerate}
+ \item
+ \begin{enumerate}
+  \item Déterminer D$_{f} $ le domaine de définition de $ f $.
+  \item Calculer les limites de $ f $ aux bornes de D$_{f} $ et étudier les branches infinies de $\mathscr{C}$.
+ 
+  \item Étudier la position de $\mathscr{C}$ par rapport à l'asymptote oblique  dans $ ]-\infty, \; 0]$.
+
+   \end{enumerate}
+   
+ 
+ \item  
+ \begin{enumerate}
+  \item  Étudier la continuité de $ f $ en 0. 
+\item  Étudier la dérivabilité de $ f $ en 0 et interpréter graphiquement les résultats. 
+   \end{enumerate}
+
+\item Déterminer la dérivée de $ f $ et dresser le tableau de variations de $ f $.  
+
+
+\item Construire dans le repère les asymptotes, la courbe  $\mathscr{C}$ et les demi-tangentes.
+
+
+ On remarquera que $f(1) = 0$ et $f'(1) = 0$.  
+\end{enumerate}
+\end{enumerate}
+	%</content>
+\end{document}
