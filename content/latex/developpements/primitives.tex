@@ -7,24 +7,73 @@
  \summary{}
  
 \begin{exercice}
-Déterminer une primitive de chacune des fonctions suivantes :
+Pour chacune des fonctions définies ci-dessous, trouver :
 \begin{enumerate}
-  \item $f_1(x) = x^3+2$
-  \item $f_2(x) = \dfrac{2}{x^2}$
-  \item $f_3(x) = \cos(3x)$
-  \item $f_4(x) = \dfrac{4}{\sqrt{x}}$
-  \item $f_5(x) = 2\cos x \sin x$
+    \item le(s) plus grand(s) intervalle(s) $I$ sur le(s)quel(s) admet des primitives.
+    \item l'expression d'une primitive sur chaque intervalle.
 \end{enumerate}
+
+1) $f(x)=3x^2 - 2x + 5$ \hspace*{1cm} 2)$ f(x)= (2x+1)(x^2+x - 5)$ \hspace*{1cm} 3) $f(x) = \dfrac{x}{(1-x^2)^2}$
+
+4) $f(x) = \dfrac{1}{4x^2 -4x + 1}$ \hspace*{1cm}  5) $f(x) = \dfrac{1}{x^3 - 3x^2+3x - 1}$ \hspace*{1cm}  6) $f(x) = \cos 2x\cos 3x$\\
+
+7) $f(x) = \sin^3 x \cos^4 x $\hspace*{1cm}  8) $f(x) = \cos x\sin 3x$
+
 \end{exercice}
 
 \begin{exercice}
-Déterminer une primitive de chacune des fonctions suivantes, en posant une substitution adaptée si nécessaire :
+Pour chaque fonction $f$, déterminer une primitive sur $I$, prenant la valeur $b$ au point $a$ :
+\begin{align*}
+1)\quad & f(x) = \dfrac{2}{(3-x)^3}, \quad I = ]-\infty,3], \quad a=0, \ b=4 
+\\[0.3cm]
+2)\quad & f(x) = \dfrac{\sin x}{\cos^3 x}, \quad I = ]0,\tfrac{\pi}{2}[, \quad a=\tfrac{\pi}{3}, \ b=1
+\\[0.3cm]
+3)\quad & f(x) = \dfrac{x}{\sqrt{1+x^2}}, \quad I =\mathbb{R}, \quad a=0, \ b=1
+\\[0.3cm]
+4)\quad & f(x) = \dfrac{x\sin x+\cos x}{x^2}, \quad I = ]-\infty, 0[, \quad a=0, \ b=1
+\\[0.3cm]
+5)\quad & f(x) = \dfrac{1+\sin x}{\cos^2 x}, \quad I = [0,  \tfrac{\pi}{2}[ \quad a=\tfrac{\pi}{4}, \ b=1
+\end{align*}
+\end{exercice}
+\pagebreak
+\begin{exercice}
+Déterminer une primitive $F$ dans chacun des cas suivants :
+\begin{align*}
+1)\quad & f(x) = (x^2+x+1)\sqrt{x} 
+& 8)\quad & f(x)= \dfrac{12}{(x-1)^2}\left(1 + \dfrac{3}{x-1}\right)^3
+\\[0.3cm]
+2)\quad & f(x)= (x^2+x+1)\sqrt{x+1} 
+& 9)\quad & f(x)= 1+ \dfrac{1}{\tan^2 x}
+\\[0.3cm]
+3)\quad & f(x)= x\sqrt{3-x}
+& 10)\quad & f(x)= \dfrac{\cos(\sqrt{x})}{\sqrt{x}}
+\\[0.3cm]
+4)\quad & f(x)= \dfrac{x+1}{(x^2+2x+3)\sqrt{x^2+2x+3}}
+& 11)\quad & f(x)= \dfrac{x^2-2x}{(x-1)^2} 
+\\[0.3cm]
+5)\quad & f(x)= \sin(x^2+2x) + (2x^2+2x)\cos (x^2+2x)
+& 12)\quad & f(x)= \dfrac{x^3+3x}{(x^2-1)^3} \; \left(Écrire\; f(x)= \frac{a}{(x-1)^3}+\frac{b}{(x+1)^3}\right) 
+\\[0.3cm]
+6)\quad & f(x)= \dfrac{1}{1+\cos x} 
+& 13)\quad & f(x)= \dfrac{x^2+1}{(x^2-1)^2} \; \left(Écrire\; x^2+1= \frac{1}{2}\left((x+1)^2+(x-1)^2\right)\right)
+\\[0.3cm]
+7)\quad & f(x)=\sqrt{x+1} +\frac{1}{2}\dfrac{x}{\sqrt{x+1}}& 14)\quad & f(x)=\dfrac{3x^2+4x+4}{(x^2+2x)^2}\; \left(Écrire\; f(x)= \frac{a}{x^2}+\frac{b}{(x+2)^2}\right) 
+\end{align*}
+
+\end{exercice}
+\begin{exercice}
+On se propose de déterminer une primitive sur $\mathbb{R}$ des fonctions :
+\[
+f(x) = x\cos^2 x, \quad g(x) = x\sin^2 x
+\]
+
 \begin{enumerate}
-  \item $f(x) = x(3x^2 - 1)^3$
-  \item $f(x) = \dfrac{x}{(x^2 + 1)^2}$
-  \item $f(x) = (x- 1)\sqrt{x-1}$
-  \item $f(x) = \dfrac{\cos x}{1 + \sin x}$
+    \item Déterminer une primitive de $f+g$.
+    \item Linéariser $\cos^2 x -\sin^2 x$. En déduire  qu'il existe deux réels $ a$ et $ b$ tels que  la fonction $x \mapsto a \sin 2x + b \cos 2x$ soit une primitive  sur $ \mathbb{R} $ de $f - g$.
+    \item Conclure.
 \end{enumerate}
+
+
 \end{exercice}
 \begin{exercice}
  Soit la fonction $ f $  définie sur $  [0,\; +\infty[ $  par : \; $ f(x)=\dfrac{x^3}{(1+x^2)^3}+ \dfrac{x^2}{(1+x^3)^2\sqrt{1+x^3}} $.
@@ -42,26 +91,6 @@ Soit la fonction $ g $  définie sur $ \mathbb{R} $  par : \\ $ g(x)=\paren{\cos
 \end{enumerate}
 \end{exercice}
 
-\begin{exercice}
-Soit $f$ la fonction définie sur $]0,+\infty[$ par $f(x) = \ln x$.
-
-\begin{enumerate}
-  \item Justifier que $f$ admet une primitive sur $]0,+\infty[$.
-  \item On considère la fonction $F(x) = x\ln x-x$. Montrer que $F$ est une primitive de $f$ sur $]0,+\infty[$.
-  \item Déterminer une primitive de $g(x) = \ln (3x)$ sur $]0,+\infty[$.
-\end{enumerate}
-\end{exercice}
-
-\begin{exercice}
-Soit $f$ la fonction définie sur $\mathbb{R}$ par $f(x) = xe^x$.
-
-\begin{enumerate}
-  \item Montrer que $f$ est continue sur $\mathbb{R}$.
-  \item Justifier que $f$ admet une primitive sur $\mathbb{R}$.
-  \item En posant $F(x) = (x - 1)e^x$, montrer que $F$ est une primitive de $f$.
-  \item Déterminer la primitive $G$ de $f$ dont la courbe passe  par le  point  $(0; 1)$ .
-\end{enumerate}
-\end{exercice}
 
 
 \begin{exercice}
