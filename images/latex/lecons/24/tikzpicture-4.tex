@@ -1,0 +1,37 @@
+\documentclass[tikz]{standalone}
+\RequirePackage{luatex85}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{tkz-tab}
+\usepackage{fourier-otf}
+\usepackage{fontspec}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{3d}
+\usepackage{pgfplots}
+
+\tikzset{
+  every picture/.append style={scale=2, every node/.style={scale=2}}
+}
+
+
+
+\begin{document}
+  \begin{tikzpicture}[>=stealth', scale=0.5]
+\clip (-3,-5) rectangle (6,3);
+\draw[->,thick] (-3,0) -- (3,0);
+\draw[->,thick] (0,-3) -- (0,3);
+\foreach\x in {}
+{
+\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+}
+\foreach\y in {}
+{
+\draw[thick] (0.1,\y) -- (-0.1,\y) node[left] {\y};
+}
+\draw[thick,blue!50!black] plot[domain=-3:-0.25,samples=100] (\x,{(-2*\x+2.5)/(-4*\x-0.06)}) node[above left] {};
+\draw[very thick,red] (-0.25,4) -- (-0.25,-2) node[above left] {D};
+\node () at (-0.4,-0.3) {$  a$};
+\node () at (0, -3.5) {$ \displaystyle\lim_{ x \to a^{-}}f(x)=\pinf $};
+\end{tikzpicture}
+\end{document}
